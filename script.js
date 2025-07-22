@@ -332,8 +332,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Current text:', testElement.textContent);
     }
     
-    // Initialize rotating text
-    initRotatingText();
+    // Initialize rotating text - DISABLED (using inline version in services.html)
+    // initRotatingText();
     
     // Preload critical images
     const criticalImages = [
