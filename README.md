@@ -60,7 +60,7 @@ Signal Labs/
 ### 3. SaaS Page (saas.html)
 - CIx platform introduction and features
 - Interactive product mockups
-- Product roadmap (Q1 2025 - Q3 2025)
+- Product roadmap (Q3 2025 - Q1 2026)
 - Detailed waitlist signup form
 - Beta launch information
 
