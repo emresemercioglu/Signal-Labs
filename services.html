@@ -377,36 +377,35 @@
                 function typeWriter() {
                     const fullText = teams[currentIndex];
                     
-                    // Update display text BEFORE making any changes
-                    const displayText = fullText.substring(0, Math.max(0, charIndex));
+                    // Create display text from current word and current position
+                    const displayText = fullText.substring(0, charIndex);
                     element.textContent = displayText;
-                    console.log(`"${displayText}" (${teams[currentIndex]}, Index: ${charIndex}, Deleting: ${isDeleting})`);
+                    console.log(`"${displayText}" (Word: ${teams[currentIndex]}, CharIndex: ${charIndex}, isDeleting: ${isDeleting})`);
                     
-                    let typeSpeed = 100; // Normal typing speed
+                    let typeSpeed = 100;
                     
-                    // Check completion conditions FIRST
-                    if (!isDeleting && charIndex >= fullText.length) {
-                        // Finished typing, wait then start deleting
-                        typeSpeed = 2000; // Pause at the end
-                        isDeleting = true;
-                        setTimeout(typeWriter, typeSpeed);
-                        return;
-                    } else if (isDeleting && charIndex <= 0) {
-                        // Finished deleting completely, move to next word
-                        isDeleting = false;
-                        currentIndex = (currentIndex + 1) % teams.length;
-                        charIndex = 0; // Reset for new word
-                        typeSpeed = 300; // Pause before typing next word
-                        setTimeout(typeWriter, typeSpeed);
-                        return;
-                    }
-                    
-                    // Now update character index for next iteration
                     if (isDeleting) {
+                        // We are deleting - go backwards
                         charIndex--;
-                        typeSpeed = 50; // Faster when deleting
+                        typeSpeed = 50;
+                        
+                        // Check if we finished deleting (reached 0)
+                        if (charIndex === 0) {
+                            // ONLY NOW move to next word
+                            isDeleting = false;
+                            currentIndex = (currentIndex + 1) % teams.length;
+                            typeSpeed = 300; // Pause before starting next word
+                        }
                     } else {
+                        // We are typing - go forwards
                         charIndex++;
+                        
+                        // Check if we finished typing this word
+                        if (charIndex === fullText.length) {
+                            // Start deleting after a pause
+                            isDeleting = true;
+                            typeSpeed = 2000; // Long pause to read the word
+                        }
                     }
                     
                     setTimeout(typeWriter, typeSpeed);
