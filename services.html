@@ -351,7 +351,7 @@
 
     <script src="script.js"></script>
     <script>
-        // Typewriter effect for rotating text
+        // Typewriter effect for rotating text - Fixed Version
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Typewriter script loaded!');
             
@@ -372,23 +372,24 @@
                 
                 let currentIndex = 0;
                 let isDeleting = false;
-                let currentText = '';
                 let charIndex = 0;
                 
                 function typeWriter() {
                     const fullText = teams[currentIndex];
+                    let displayText = '';
                     
                     if (isDeleting) {
                         // Delete characters
-                        currentText = fullText.substring(0, charIndex - 1);
                         charIndex--;
+                        displayText = fullText.substring(0, charIndex);
                     } else {
-                        // Add characters
-                        currentText = fullText.substring(0, charIndex + 1);
+                        // Add characters  
+                        displayText = fullText.substring(0, charIndex);
                         charIndex++;
                     }
                     
-                    element.textContent = currentText;
+                    element.textContent = displayText;
+                    console.log(`Display: "${displayText}" (Index: ${charIndex}, Deleting: ${isDeleting})`);
                     
                     let typeSpeed = 100; // Normal typing speed
                     
@@ -396,15 +397,18 @@
                         typeSpeed = 50; // Faster when deleting
                     }
                     
-                    if (!isDeleting && charIndex === fullText.length) {
+                    // Check completion conditions
+                    if (!isDeleting && charIndex > fullText.length) {
                         // Finished typing, wait then start deleting
                         typeSpeed = 2000; // Pause at the end
                         isDeleting = true;
+                        charIndex = fullText.length; // Reset to end position
                     } else if (isDeleting && charIndex === 0) {
                         // Finished deleting, move to next word
                         isDeleting = false;
                         currentIndex = (currentIndex + 1) % teams.length;
-                        typeSpeed = 200; // Small pause before typing next word
+                        typeSpeed = 300; // Pause before typing next word
+                        charIndex = 0; // Start from beginning
                     }
                     
                     setTimeout(typeWriter, typeSpeed);
@@ -412,6 +416,9 @@
                 
                 console.log('Starting typewriter effect in 2 seconds...');
                 setTimeout(() => {
+                    // Initialize first word
+                    charIndex = 0;
+                    isDeleting = false;
                     typeWriter();
                 }, 2000);
             } else {
