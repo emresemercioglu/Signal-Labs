@@ -376,20 +376,19 @@
                 
                 function typeWriter() {
                     const fullText = teams[currentIndex];
-                    let displayText = '';
                     
                     if (isDeleting) {
                         // Delete characters
                         charIndex--;
-                        displayText = fullText.substring(0, charIndex);
                     } else {
                         // Add characters  
-                        displayText = fullText.substring(0, charIndex);
                         charIndex++;
                     }
                     
+                    // Always use current word for display
+                    const displayText = fullText.substring(0, charIndex);
                     element.textContent = displayText;
-                    console.log(`Display: "${displayText}" (Index: ${charIndex}, Deleting: ${isDeleting})`);
+                    console.log(`"${displayText}" (${teams[currentIndex]}, Index: ${charIndex}, Deleting: ${isDeleting})`);
                     
                     let typeSpeed = 100; // Normal typing speed
                     
@@ -398,12 +397,11 @@
                     }
                     
                     // Check completion conditions
-                    if (!isDeleting && charIndex > fullText.length) {
+                    if (!isDeleting && charIndex >= fullText.length) {
                         // Finished typing, wait then start deleting
                         typeSpeed = 2000; // Pause at the end
                         isDeleting = true;
-                        charIndex = fullText.length; // Reset to end position
-                    } else if (isDeleting && charIndex === 0) {
+                    } else if (isDeleting && charIndex <= 0) {
                         // Finished deleting, move to next word
                         isDeleting = false;
                         currentIndex = (currentIndex + 1) % teams.length;
