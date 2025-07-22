@@ -1179,6 +1179,9 @@ body {
     position: relative;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .pricing-card:hover {
@@ -1238,6 +1241,79 @@ body {
 
 .pricing-card .btn {
     width: 100%;
+    margin-top: auto;
+}
+
+/* Add-Ons Section */
+.addons-section {
+    margin-top: var(--space-16);
+    padding-top: var(--space-12);
+    border-top: 1px solid var(--border);
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+}
+
+.addon-category {
+    background: rgba(79, 70, 229, 0.02);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    transition: all 0.2s ease;
+}
+
+.addon-category:hover {
+    border-color: var(--primary);
+    background: rgba(79, 70, 229, 0.05);
+    transform: translateY(-2px);
+}
+
+.addon-category h4 {
+    color: var(--primary);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+}
+
+.addon-category ul {
+    list-style: none;
+    text-align: left;
+}
+
+.addon-category li {
+    padding: var(--space-2) 0;
+    position: relative;
+    padding-left: var(--space-6);
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.addon-category li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: var(--font-size-base);
+}
+
+.addon-note {
+    text-align: center;
+    margin-top: var(--space-8);
+    padding: var(--space-4);
+    background: rgba(79, 70, 229, 0.05);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.addon-note p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
 }
 
 /* Product Badge */
