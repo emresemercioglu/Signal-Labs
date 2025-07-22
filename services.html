@@ -370,45 +370,41 @@
                     'Leadership Teams'
                 ];
                 
-                let currentIndex = 0;
-                let isDeleting = false;
-                let charIndex = 0;
+                let currentWordIndex = 0;
+                let currentWord = teams[0];
+                let currentDisplay = '';
+                let isTyping = true; // true = typing, false = deleting
                 
                 function typeWriter() {
-                    const fullText = teams[currentIndex];
+                    console.log(`Current: "${currentDisplay}" | Target: "${currentWord}" | Typing: ${isTyping}`);
                     
-                    // Create display text from current word and current position
-                    const displayText = fullText.substring(0, charIndex);
-                    element.textContent = displayText;
-                    console.log(`"${displayText}" (Word: ${teams[currentIndex]}, CharIndex: ${charIndex}, isDeleting: ${isDeleting})`);
-                    
-                    let typeSpeed = 100;
-                    
-                    if (isDeleting) {
-                        // We are deleting - go backwards
-                        charIndex--;
-                        typeSpeed = 50;
-                        
-                        // Check if we finished deleting (reached 0)
-                        if (charIndex === 0) {
-                            // ONLY NOW move to next word
-                            isDeleting = false;
-                            currentIndex = (currentIndex + 1) % teams.length;
-                            typeSpeed = 300; // Pause before starting next word
+                    if (isTyping) {
+                        // TYPING: Add one letter
+                        if (currentDisplay.length < currentWord.length) {
+                            currentDisplay = currentWord.substring(0, currentDisplay.length + 1);
+                            element.textContent = currentDisplay;
+                            setTimeout(typeWriter, 100); // Type speed
+                        } else {
+                            // Finished typing - pause then start deleting
+                            setTimeout(() => {
+                                isTyping = false;
+                                typeWriter();
+                            }, 2000); // Pause to read
                         }
                     } else {
-                        // We are typing - go forwards
-                        charIndex++;
-                        
-                        // Check if we finished typing this word
-                        if (charIndex === fullText.length) {
-                            // Start deleting after a pause
-                            isDeleting = true;
-                            typeSpeed = 2000; // Long pause to read the word
+                        // DELETING: Remove one letter
+                        if (currentDisplay.length > 0) {
+                            currentDisplay = currentDisplay.substring(0, currentDisplay.length - 1);
+                            element.textContent = currentDisplay;
+                            setTimeout(typeWriter, 50); // Delete speed (faster)
+                        } else {
+                            // Finished deleting - move to next word
+                            currentWordIndex = (currentWordIndex + 1) % teams.length;
+                            currentWord = teams[currentWordIndex];
+                            isTyping = true;
+                            setTimeout(typeWriter, 200); // Pause before next word
                         }
                     }
-                    
-                    setTimeout(typeWriter, typeSpeed);
                 }
                 
                 console.log('Starting typewriter effect in 2 seconds...');
