@@ -377,36 +377,36 @@
                 function typeWriter() {
                     const fullText = teams[currentIndex];
                     
-                    if (isDeleting) {
-                        // Delete characters
-                        charIndex--;
-                    } else {
-                        // Add characters  
-                        charIndex++;
-                    }
-                    
-                    // Always use current word for display
-                    const displayText = fullText.substring(0, charIndex);
+                    // Update display text BEFORE making any changes
+                    const displayText = fullText.substring(0, Math.max(0, charIndex));
                     element.textContent = displayText;
                     console.log(`"${displayText}" (${teams[currentIndex]}, Index: ${charIndex}, Deleting: ${isDeleting})`);
                     
                     let typeSpeed = 100; // Normal typing speed
                     
-                    if (isDeleting) {
-                        typeSpeed = 50; // Faster when deleting
-                    }
-                    
-                    // Check completion conditions
+                    // Check completion conditions FIRST
                     if (!isDeleting && charIndex >= fullText.length) {
                         // Finished typing, wait then start deleting
                         typeSpeed = 2000; // Pause at the end
                         isDeleting = true;
+                        setTimeout(typeWriter, typeSpeed);
+                        return;
                     } else if (isDeleting && charIndex <= 0) {
-                        // Finished deleting, move to next word
+                        // Finished deleting completely, move to next word
                         isDeleting = false;
                         currentIndex = (currentIndex + 1) % teams.length;
+                        charIndex = 0; // Reset for new word
                         typeSpeed = 300; // Pause before typing next word
-                        charIndex = 0; // Start from beginning
+                        setTimeout(typeWriter, typeSpeed);
+                        return;
+                    }
+                    
+                    // Now update character index for next iteration
+                    if (isDeleting) {
+                        charIndex--;
+                        typeSpeed = 50; // Faster when deleting
+                    } else {
+                        charIndex++;
                     }
                     
                     setTimeout(typeWriter, typeSpeed);
