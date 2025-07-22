@@ -51,13 +51,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Handling
+// Form Handling - Real Formspree Integration
 function handleContactForm(event) {
     event.preventDefault();
     
     const form = event.target;
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
     
     // Show loading state
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -65,21 +64,36 @@ function handleContactForm(event) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual endpoint)
-    setTimeout(() => {
-        // Show success message
-        showNotification('Thank you! Your message has been sent. We\'ll get back to you soon.', 'success');
-        
-        // Reset form
-        form.reset();
-        
+    // Submit to Formspree
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success - email sent to emre@usesignallabs.com
+            showNotification('Thank you! Your consultation request has been sent. We\'ll get back to you within 24 hours.', 'success');
+            form.reset();
+            
+            // Track successful form submission
+            trackEvent('Contact', 'form_submit', 'consultation_request');
+        } else {
+            throw new Error('Form submission failed');
+        }
+    })
+    .catch(error => {
+        // Error handling
+        console.error('Form submission error:', error);
+        showNotification('Sorry, there was an error sending your message. Please try again or email us directly at emre@usesignallabs.com', 'error');
+    })
+    .finally(() => {
         // Reset button
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-        
-        // For demo purposes, log the data
-        console.log('Form data:', data);
-    }, 1000);
+    });
 }
 
 function handleWaitlistForm(event) {
