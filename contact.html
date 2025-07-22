@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Signal Labs</title>
+    <meta name="description" content="Get in touch with Signal Labs. Schedule a free consultation for competitive intelligence services or learn more about our CIx platform.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%234F46E5'/><text x='50' y='60' font-family='Arial' font-size='40' fill='white' text-anchor='middle'>S</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <div class="logo-icon">S</div>
+                    <span class="logo-text">Signal Labs</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="saas.html" class="nav-link">SaaS Platform</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link" style="color: var(--primary);">Contact</a>
+                <a href="#consultation-form" class="nav-link nav-cta">Book Consultation</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Get in Touch</h1>
+            <p class="page-subtitle">
+                Ready to transform your competitive intelligence? Let's discuss how we can help your team win.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-options">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Directly</h3>
+                    <p>Get in touch with our founder directly for strategic discussions and partnership opportunities.</p>
+                    <a href="mailto:emre@usesignal.com" class="contact-link" onclick="handleEmailClick('emre@usesignal.com')">emre@usesignal.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📅</div>
+                    <h3>Schedule a Call</h3>
+                    <p>Book a free 30-minute consultation to discuss your competitive intelligence needs and goals.</p>
+                    <a href="#consultation-form" class="contact-link">Book Free Consultation</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🚀</div>
+                    <h3>Join CIx Waitlist</h3>
+                    <p>Interested in our SaaS platform? Join the waitlist for early access and beta testing opportunities.</p>
+                    <a href="saas.html#waitlist" class="contact-link">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Form -->
+    <section class="content-section" style="background: var(--bg-secondary);" id="consultation-form">
+        <div class="container">
+            <div class="contact-form-section">
+                <div class="form-content">
+                    <div class="form-intro">
+                        <h2>Schedule Your Free Consultation</h2>
+                        <p>Tell us about your competitive intelligence challenges and goals. We'll get back to you within 24 hours to schedule a free consultation.</p>
+                        
+                        <div class="consultation-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>Free 30-minute strategy session</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>Competitive landscape assessment</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>Customized recommendations</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>No obligation, no sales pitch</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form onsubmit="handleContactForm(event)" class="form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">First Name</label>
+                                    <input type="text" id="first-name" name="first_name" class="form-input" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">Last Name</label>
+                                    <input type="text" id="last-name" name="last_name" class="form-input" required placeholder="Smith">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Work Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" required placeholder="john@company.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" id="company" name="company" class="form-input" required placeholder="Acme Corp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="role" class="form-label">Your Role</label>
+                                    <select id="role" name="role" class="form-input" required>
+                                        <option value="">Select your role</option>
+                                        <option value="product-marketing">Product Marketing Manager</option>
+                                        <option value="marketing">Marketing Manager</option>
+                                        <option value="growth">Growth Manager</option>
+                                        <option value="sales-enablement">Sales Enablement</option>
+                                        <option value="sales">Sales Manager</option>
+                                        <option value="founder">Founder/CEO</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company-size" class="form-label">Company Size</label>
+                                <select id="company-size" name="company_size" class="form-input" required>
+                                    <option value="">Select company size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-1000">201-1000 employees</option>
+                                    <option value="1000+">1000+ employees</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="interest" class="form-label">Primary Interest</label>
+                                <select id="interest" name="interest" class="form-input" required>
+                                    <option value="">What are you most interested in?</option>
+                                    <option value="consulting">Competitive Intelligence Consulting</option>
+                                    <option value="saas">CIx SaaS Platform</option>
+                                    <option value="both">Both Consulting and SaaS</option>
+                                    <option value="general">General Information</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="challenge" class="form-label">Current Challenge</label>
+                                <textarea id="challenge" name="challenge" class="form-textarea" placeholder="Tell us about your current competitive intelligence challenges, goals, or questions. The more context you provide, the better we can help." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline" class="form-label">Timeline</label>
+                                <select id="timeline" name="timeline" class="form-input" required>
+                                    <option value="">When are you looking to get started?</option>
+                                    <option value="asap">As soon as possible</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="2-3-months">2-3 months</option>
+                                    <option value="exploring">Just exploring options</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Schedule Free Consultation
+                            </button>
+                            
+                            <p style="font-size: var(--font-size-sm); color: var(--text-muted); text-align: center; margin-top: var(--space-4);">
+                                We'll respond within 24 hours. Your information is kept confidential.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Contact Methods -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Other Ways to Connect</h2>
+                <p class="section-subtitle">Choose the method that works best for you</p>
+            </div>
+            
+            <div class="alternative-contacts">
+                <div class="alt-contact-item">
+                    <h3>Quick Questions</h3>
+                    <p>Have a quick question about our services or pricing? Send us a direct email and we'll respond promptly.</p>
+                    <a href="mailto:emre@usesignal.com" class="btn btn-outline" onclick="handleEmailClick('emre@usesignal.com')">
+                        Email Us
+                    </a>
+                </div>
+                
+                <div class="alt-contact-item">
+                    <h3>Partnership Opportunities</h3>
+                    <p>Interested in partnering with Signal Labs or exploring integration opportunities? Let's discuss.</p>
+                    <a href="mailto:emre@usesignal.com?subject=Partnership%20Opportunity" class="btn btn-outline">
+                        Explore Partnerships
+                    </a>
+                </div>
+                
+                <div class="alt-contact-item">
+                    <h3>CIx Beta Access</h3>
+                    <p>Want early access to our SaaS platform? Join the waitlist and be among the first to try CIx.</p>
+                    <a href="saas.html#waitlist" class="btn btn-outline">
+                        Join Beta Waitlist
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about working with Signal Labs</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What happens during the free consultation?</h3>
+                    <p>We'll discuss your current competitive intelligence challenges, assess your competitive landscape, and provide initial recommendations. No sales pitch, just valuable insights.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How quickly can you get started?</h3>
+                    <p>For consulting engagements, we can typically start within 1-2 weeks. For the CIx platform, we're currently in beta and onboarding new users monthly.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you work with companies of all sizes?</h3>
+                    <p>Yes, we work with startups, scale-ups, and enterprise companies. Our consulting packages are flexible and the CIx platform is designed for teams of all sizes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What if I'm not sure what I need?</h3>
+                    <p>That's exactly what the free consultation is for. We'll help you understand your options and recommend the best approach for your specific situation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is there a minimum engagement?</h3>
+                    <p>Our Strategic Assessment package is a 2-week engagement. For ongoing consulting, we work on quarterly contracts. The CIx platform has flexible monthly plans.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer training?</h3>
+                    <p>Yes, we provide training and workshops on competitive intelligence best practices, sales enablement, and how to use competitive insights effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">S</div>
+                        <span class="logo-text">Signal Labs</span>
+                    </div>
+                    <p>Competitive Intelligence & Innovation Studio</p>
+                    <div style="margin-top: var(--space-4);">
+                        <a href="mailto:emre@usesignal.com" style="color: var(--text-secondary); text-decoration: none;">
+                            📧 emre@usesignal.com
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="services.html">Consulting</a>
+                        <a href="saas.html">SaaS Platform</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Signal Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
