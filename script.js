@@ -101,7 +101,6 @@ function handleWaitlistForm(event) {
     
     const form = event.target;
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
     
     // Show loading state
     const submitBtn = form.querySelector('button[type="submit"]');
@@ -109,21 +108,36 @@ function handleWaitlistForm(event) {
     submitBtn.textContent = 'Adding...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual endpoint)
-    setTimeout(() => {
-        // Show success message
-        showNotification('Welcome to the waitlist! We\'ll notify you when CIx launches.', 'success');
-        
-        // Reset form
-        form.reset();
-        
+    // Submit to Formspree
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success - email sent to emre@usesignallabs.com
+            showNotification('Welcome to the CIx waitlist! We\'ll notify you as soon as we launch the beta.', 'success');
+            form.reset();
+            
+            // Track successful waitlist signup
+            trackEvent('Waitlist', 'signup', 'cix_beta');
+        } else {
+            throw new Error('Waitlist signup failed');
+        }
+    })
+    .catch(error => {
+        // Error handling
+        console.error('Waitlist signup error:', error);
+        showNotification('Sorry, there was an error joining the waitlist. Please try again or email us directly at emre@usesignallabs.com', 'error');
+    })
+    .finally(() => {
         // Reset button
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-        
-        // For demo purposes, log the data
-        console.log('Waitlist data:', data);
-    }, 1000);
+    });
 }
 
 // Notification System
