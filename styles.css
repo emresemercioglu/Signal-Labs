@@ -1208,6 +1208,243 @@ body {
     font-weight: 600;
 }
 
+/* Popular and Enterprise Pricing Cards */
+.pricing-card.popular {
+    position: relative;
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.02);
+}
+
+.pricing-card.enterprise {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 2px solid var(--border-light);
+}
+
+/* SaaS Pricing Specific Styles */
+.pricing-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.pricing-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    color: var(--text-primary);
+}
+
+.pricing-price {
+    margin-bottom: var(--space-3);
+}
+
+.price-amount {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.price-period {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin-left: var(--space-1);
+}
+
+.pricing-description {
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+}
+
+.pricing-features {
+    margin-bottom: var(--space-8);
+}
+
+.pricing-features .feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-md);
+}
+
+.pricing-features .feature-icon {
+    font-size: var(--font-size-lg);
+    width: 24px;
+    text-align: center;
+}
+
+.pricing-cta {
+    margin-top: auto;
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid #bfdbfe;
+}
+
+.pricing-note p {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-md);
+}
+
+/* Battlecards Tooltip */
+.battlecards-tooltip {
+    position: relative;
+    cursor: help;
+    border-bottom: 1px dotted var(--text-secondary);
+}
+
+.battlecards-tooltip .tooltip-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-primary);
+    color: white;
+    text-align: center;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.battlecards-tooltip .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--text-primary) transparent transparent transparent;
+}
+
+.battlecards-tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Add-Ons Info Box */
+.addons-info-box {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.addons-info-box h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    color: var(--text-primary);
+}
+
+.addons-info-box p {
+    font-size: var(--font-size-md);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Billing Toggle */
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-2);
+}
+
+.toggle-label {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.savings-text {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* Savings Badge */
+.savings-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: var(--success);
+    color: white;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.pricing-card.popular .savings-badge {
+    right: -12px;
+    top: -12px;
+}
+
 .pricing-card h3 {
     font-size: var(--font-size-xl);
     font-weight: 600;

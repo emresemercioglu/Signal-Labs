@@ -346,20 +346,8 @@ function initRotatingText() {
     setInterval(changeText, 2000);
 }
 
-// Test if JavaScript is working
-console.log('Script loaded!');
-
 // Performance Optimization
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing...');
-    
-    // Test if element exists
-    const testElement = document.getElementById('rotating-teams');
-    console.log('Element found:', testElement);
-    if (testElement) {
-        console.log('Current text:', testElement.textContent);
-    }
-    
     // Initialize rotating text - DISABLED (using inline version in services.html)
     // initRotatingText();
     
@@ -387,4 +375,75 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     lazyImages.forEach(img => imageObserver.observe(img));
-}); 
+});
+
+// BILLING TOGGLE SCRIPT LOADED! 
+console.log('🚀 BILLING TOGGLE SCRIPT: File loaded at', new Date().toLocaleTimeString());
+
+// Billing Toggle Functionality - Fresh Version
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📄 BILLING TOGGLE: DOM loaded, waiting 500ms...');
+    
+    // Add delay to ensure DOM is fully loaded
+    setTimeout(() => {
+        console.log('🔄 BILLING TOGGLE: Starting initialization...');
+        
+        const billingToggle = document.getElementById('billing-toggle');
+        const priceElements = document.querySelectorAll('.price-amount[data-annual]');
+        const savingsBadges = document.querySelectorAll('.savings-badge');
+        
+        console.log('🔍 BILLING TOGGLE: Found elements:', { 
+            toggle: !!billingToggle, 
+            toggleElement: billingToggle,
+            prices: priceElements.length, 
+            badges: savingsBadges.length 
+        });
+        
+        if (billingToggle) {
+            console.log('✅ BILLING TOGGLE: Toggle element found, setting up listener...');
+            
+            function updatePricing() {
+                const isAnnual = billingToggle.checked;
+                console.log('🔄 BILLING TOGGLE: Updating to:', isAnnual ? 'Annual' : 'Monthly');
+                
+                // Update prices
+                priceElements.forEach((element, index) => {
+                    const annualPrice = element.getAttribute('data-annual');
+                    const monthlyPrice = element.getAttribute('data-monthly');
+                    
+                    if (annualPrice && monthlyPrice) {
+                        const newPrice = isAnnual ? annualPrice : monthlyPrice;
+                        const formattedPrice = `$${formatPrice(newPrice)}`;
+                        element.textContent = formattedPrice;
+                        console.log(`💰 BILLING TOGGLE: Price ${index}: ${formattedPrice} (annual:${annualPrice}, monthly:${monthlyPrice})`);
+                    }
+                });
+                
+                // Show/hide savings badges
+                savingsBadges.forEach((badge, index) => {
+                    badge.style.display = isAnnual ? 'block' : 'none';
+                    console.log(`🏷️ BILLING TOGGLE: Badge ${index} ${isAnnual ? 'shown' : 'hidden'}`);
+                });
+            }
+            
+            billingToggle.addEventListener('change', updatePricing);
+            billingToggle.addEventListener('click', updatePricing);
+            
+            // Initialize with annual pricing
+            console.log('🎯 BILLING TOGGLE: Initializing with annual pricing...');
+            updatePricing();
+            
+        } else {
+            console.error('❌ BILLING TOGGLE: Toggle element not found!');
+            console.log('🔍 BILLING TOGGLE: Available elements with billing in ID:');
+            document.querySelectorAll('[id*="billing"]').forEach(el => {
+                console.log('  -', el.id, el);
+            });
+        }
+    }, 500);
+});
+
+// Helper function to format price with commas
+function formatPrice(price) {
+    return parseInt(price).toLocaleString();
+} 
