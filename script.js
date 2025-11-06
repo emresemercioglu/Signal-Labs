@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Track waitlist button clicks
-    const waitlistButtons = document.querySelectorAll('a[href*="saas"]');
+    const waitlistButtons = document.querySelectorAll('a[href*="cix"], a[href*="saas"]');
     waitlistButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             trackEvent('CTA', 'waitlist_click', btn.textContent);
