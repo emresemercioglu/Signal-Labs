@@ -1980,6 +1980,16 @@ input:checked + .toggle-slider:before {
 }
 
 @media (max-width: 768px) {
+    .showcase-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .features-showcase.reverse .showcase-text,
+    .features-showcase.reverse .showcase-visual {
+        order: unset;
+    }
+    
     .roadmap-item {
         grid-template-columns: 80px 1fr;
         gap: var(--space-4);
@@ -2543,6 +2553,7 @@ input:checked + .toggle-slider:before {
     
     .core-feature-card {
         padding: var(--space-6);
+        grid-column: 1 !important;
     }
     
     .core-feature-icon {
