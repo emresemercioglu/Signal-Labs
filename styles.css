@@ -1985,9 +1985,12 @@ input:checked + .toggle-slider:before {
         gap: var(--space-8);
     }
     
-    .features-showcase.reverse .showcase-text,
+    .features-showcase.reverse .showcase-text {
+        order: 1;
+    }
+    
     .features-showcase.reverse .showcase-visual {
-        order: unset;
+        order: 2;
     }
     
     .roadmap-item {
