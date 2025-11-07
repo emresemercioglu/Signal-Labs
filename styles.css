@@ -1964,13 +1964,16 @@ input:checked + .toggle-slider:before {
 /* Responsive Design for SaaS Page */
 @media (max-width: 1024px) {
     .showcase-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: var(--space-12);
     }
     
-    .features-showcase.reverse .showcase-text,
+    .features-showcase.reverse .showcase-text {
+        order: 1 !important;
+    }
+    
     .features-showcase.reverse .showcase-visual {
-        order: unset;
+        order: 2 !important;
     }
     
     .waitlist-content {
@@ -1981,16 +1984,16 @@ input:checked + .toggle-slider:before {
 
 @media (max-width: 768px) {
     .showcase-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: var(--space-8);
     }
     
     .features-showcase.reverse .showcase-text {
-        order: 1;
+        order: 1 !important;
     }
     
     .features-showcase.reverse .showcase-visual {
-        order: 2;
+        order: 2 !important;
     }
     
     .roadmap-item {
