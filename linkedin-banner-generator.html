@@ -152,7 +152,7 @@
             </div>
             <div class="banner-option" data-banner="4">
                 <h3>Banner 4: Custom Intelligence</h3>
-                <p>Tailor CIx to your brand's tone, playbooks, and data — so every insight feels uniquely yours.</p>
+                <p>Tailor CIx to your brand's tone, playbooks and data so every battlecard reflects your brand.</p>
             </div>
             <div class="banner-option" data-banner="5">
                 <h3>Banner 5: Try CIx for Free</h3>
@@ -209,11 +209,11 @@
             },
             3: {
                 title: "CI for Every Team",
-                subtitle: "Enablement tailored for each team - Sales, Marketing, Product and Leadership"
+                subtitle: "Enablement tailored for each team - Sales, Marketing, Product and Leadership."
             },
             4: {
                 title: "Custom Intelligence",
-                subtitle: "Tailor CIx to your brand's tone and data so every insight uniquely yours"
+                subtitle: "Tailor CIx to your brand's tone, playbooks and data so every battlecard reflects your brand."
             },
             5: {
                 title: "Try CIx for Free",
@@ -276,7 +276,7 @@
             // Profile photo is ~140x140px in bottom-left, so we align text to the right
             // Positioned higher to avoid slider buttons overlap at bottom
             const textXRight = BANNER_WIDTH - 80; // Right padding
-            const textY = BANNER_HEIGHT / 2 - 40; // Moved up 40px to avoid slider buttons
+            const textY = BANNER_HEIGHT / 2 - 41; // Moved up 41px (40px + 1px adjustment)
             const maxWidth = 1304; // Keep same width as before (BANNER_WIDTH - 200 - 80)
             
             // Title - bold, large, with text shadow
@@ -290,11 +290,11 @@
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 2;
             
-            // Headline: 800 weight, 56px (slightly reduced to avoid overlap) - matching reference font stack
-            ctx.font = '800 56px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            // Headline: 800 weight, 55px (reduced by 1px) - matching reference font stack
+            ctx.font = '800 55px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
             
             const titleLines = wrapText(ctx, banner.title, maxWidth);
-            const titleLineHeight = 56 * 1.05; // line-height 1.05
+            const titleLineHeight = 55 * 1.05; // line-height 1.05
             let currentY = textY - (titleLines.length > 1 ? (titleLineHeight * (titleLines.length - 1)) / 2 : 0);
             
             titleLines.forEach((line, index) => {
@@ -307,12 +307,12 @@
             ctx.shadowOffsetY = 1;
             
             // Subtitle - medium weight, with text shadow (no italic) - matching reference font stack
-            ctx.font = '500 32px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            ctx.font = '500 31px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
             ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
             
             const subtitleY = currentY + (titleLines.length * titleLineHeight) + 20;
             const subtitleLines = wrapText(ctx, banner.subtitle, maxWidth);
-            const subtitleLineHeight = 32 * 1.25; // line-height 1.25
+            const subtitleLineHeight = 31 * 1.25; // line-height 1.25
             
             subtitleLines.forEach((line, index) => {
                 ctx.fillText(line, textXRight, subtitleY + (index * subtitleLineHeight));
