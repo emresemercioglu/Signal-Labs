@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Banner Generator - Signal Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #272d46;
+        }
+        .banner-selector {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .banner-option {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .banner-option:hover {
+            border-color: #06B6D4;
+            background: #f0fdfa;
+        }
+        .banner-option.selected {
+            border-color: #06B6D4;
+            background: #e0f2fe;
+        }
+        .banner-option h3 {
+            margin: 0 0 5px 0;
+            color: #272d46;
+            font-size: 16px;
+        }
+        .banner-option p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+        .preview-section {
+            margin-top: 30px;
+        }
+        .preview-container {
+            position: relative;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            margin-bottom: 20px;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .controls {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        button {
+            background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .info {
+            margin-top: 30px;
+            padding: 15px;
+            background: #e0f2fe;
+            border-left: 4px solid #06B6D4;
+            border-radius: 4px;
+        }
+        .info p {
+            margin: 5px 0;
+            color: #0c4a6e;
+            font-size: 14px;
+        }
+        .safe-zone {
+            position: absolute;
+            border: 2px dashed rgba(255, 0, 0, 0.3);
+            pointer-events: none;
+            display: none;
+        }
+        .show-safe-zone {
+            display: block;
+        }
+        .safe-zone-toggle {
+            margin-bottom: 10px;
+        }
+        .safe-zone-toggle label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #64748b;
+        }
+        .safe-zone-toggle input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LinkedIn Banner Generator</h1>
+        
+        <div class="banner-selector">
+            <h2 style="margin-bottom: 20px; color: #272d46; font-size: 18px;">Select Banner:</h2>
+            <div class="banner-option selected" data-banner="1">
+                <h3>Banner 1: From Static Slides to Living Intelligence</h3>
+                <p>Meet the new standard of competitive enablement.</p>
+            </div>
+            <div class="banner-option" data-banner="2">
+                <h3>Banner 2: Instant AI Battlecards</h3>
+                <p>Generate competitive insights, SWOT analysis, and win strategies in seconds.</p>
+            </div>
+            <div class="banner-option" data-banner="3">
+                <h3>Banner 3: CI for Every Team</h3>
+                <p>Enablement tailored for each team's focus — Sales, Marketing, Product, and Leadership.</p>
+            </div>
+            <div class="banner-option" data-banner="4">
+                <h3>Banner 4: Custom Intelligence</h3>
+                <p>Tailor CIx to your brand's tone, playbooks, and data — so every insight feels uniquely yours.</p>
+            </div>
+            <div class="banner-option" data-banner="5">
+                <h3>Banner 5: Try CIx for Free</h3>
+                <p>Fresh. Actionable. Measurable. usesignallabs.com</p>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <div class="safe-zone-toggle">
+                <label>
+                    <input type="checkbox" id="showSafeZone">
+                    <span>Show safe zone (profile photo area)</span>
+                </label>
+            </div>
+            <div class="preview-container">
+                <canvas id="bannerCanvas" width="1584" height="396"></canvas>
+                <div class="safe-zone" id="safeZone"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="exportBanner()">Download Banner as PNG</button>
+        </div>
+
+        <div class="info">
+            <p><strong>LinkedIn Banner Specifications:</strong></p>
+            <p>• Size: 1584 x 396 pixels (4:1 aspect ratio)</p>
+            <p>• Format: PNG, JPG, or GIF (max 8MB)</p>
+            <p>• Note: Profile photo overlaps bottom-left corner. Keep important content in the center-right area.</p>
+            <p>• Mobile devices may crop ~30% from both sides, so keep essential elements centered.</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('bannerCanvas');
+        const ctx = canvas.getContext('2d');
+        const bannerOptions = document.querySelectorAll('.banner-option');
+        const safeZone = document.getElementById('safeZone');
+        const showSafeZoneCheckbox = document.getElementById('showSafeZone');
+        
+        // LinkedIn banner dimensions
+        const BANNER_WIDTH = 1584;
+        const BANNER_HEIGHT = 396;
+        
+        // Banner content definitions
+        const banners = {
+            1: {
+                title: "From Static Slides to Living Intelligence",
+                subtitle: "Meet the new standard of competitive enablement."
+            },
+            2: {
+                title: "Instant AI Battlecards",
+                subtitle: "Generate competitive insights, SWOT analysis, and win strategies in seconds."
+            },
+            3: {
+                title: "CI for Every Team",
+                subtitle: "Enablement tailored for each team - Sales, Marketing, Product and Leadership"
+            },
+            4: {
+                title: "Custom Intelligence",
+                subtitle: "Tailor CIx to your brand's tone and data so every insight uniquely yours"
+            },
+            5: {
+                title: "Try CIx for Free",
+                subtitle: "Fresh. Actionable. Measurable.",
+                url: "usesignallabs.com"
+            }
+        };
+
+        let currentBanner = 1;
+
+        function drawBanner(bannerNum) {
+            // Clear canvas
+            ctx.clearRect(0, 0, BANNER_WIDTH, BANNER_HEIGHT);
+            
+            // Draw gradient background - matching reference: linear-gradient(180deg, #0E2A3A 0%, #0F647A 55%, #08B6C5 100%)
+            const bgGradient = ctx.createLinearGradient(0, 0, 0, BANNER_HEIGHT);
+            bgGradient.addColorStop(0, '#0E2A3A');
+            bgGradient.addColorStop(0.55, '#0F647A');
+            bgGradient.addColorStop(1, '#08B6C5');
+            ctx.fillStyle = bgGradient;
+            ctx.fillRect(0, 0, BANNER_WIDTH, BANNER_HEIGHT);
+            
+            // Draw subtle circular arcs on the right side (matching reference design)
+            // SVG positioned with right-[-12%]: SVG extends 12% beyond right edge
+            // SVG viewBox 400x400, circles at (200,200) with radii 140, 200, 260
+            // Scale factor: banner height 396 / viewBox height 400 = 0.99
+            const scale = BANNER_HEIGHT / 400; // Scale from viewBox to canvas
+            const offsetPercent = 0.12;
+            const svgRightEdge = BANNER_WIDTH + (BANNER_WIDTH * offsetPercent); // SVG right edge position
+            // In viewBox, center is at 200, and viewBox width is 400, so center is 200px from left of SVG
+            // SVG left edge = svgRightEdge - (400 * scale)
+            const svgLeftEdge = svgRightEdge - (400 * scale);
+            const centerX = svgLeftEdge + (200 * scale); // Center X in canvas coordinates
+            const centerY = BANNER_HEIGHT / 2; // Vertically centered (200 in viewBox = center)
+            
+            // Draw three concentric circles with very subtle opacity (ghost-like effect)
+            ctx.lineWidth = 1;
+            
+            // Inner circle - very subtle (radius 140 in viewBox)
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 140 * scale, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Middle circle - even more subtle (radius 200 in viewBox)
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.10)';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 200 * scale, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Outer circle - most subtle (radius 260 in viewBox)
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 260 * scale, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            const banner = banners[bannerNum];
+            
+            // Text positioning - right-aligned to avoid profile photo overlap
+            // Profile photo is ~140x140px in bottom-left, so we align text to the right
+            // Positioned higher to avoid slider buttons overlap at bottom
+            const textXRight = BANNER_WIDTH - 80; // Right padding
+            const textY = BANNER_HEIGHT / 2 - 40; // Moved up 40px to avoid slider buttons
+            const maxWidth = 1304; // Keep same width as before (BANNER_WIDTH - 200 - 80)
+            
+            // Title - bold, large, with text shadow
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'right';
+            ctx.textBaseline = 'middle';
+            
+            // Set up text shadow for headline
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.30)';
+            ctx.shadowBlur = 8;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 2;
+            
+            // Headline: 800 weight, 56px (slightly reduced to avoid overlap) - matching reference font stack
+            ctx.font = '800 56px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            
+            const titleLines = wrapText(ctx, banner.title, maxWidth);
+            const titleLineHeight = 56 * 1.05; // line-height 1.05
+            let currentY = textY - (titleLines.length > 1 ? (titleLineHeight * (titleLines.length - 1)) / 2 : 0);
+            
+            titleLines.forEach((line, index) => {
+                ctx.fillText(line, textXRight, currentY + (index * titleLineHeight));
+            });
+            
+            // Reset shadow for subtitle (lighter shadow)
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.22)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetY = 1;
+            
+            // Subtitle - medium weight, with text shadow (no italic) - matching reference font stack
+            ctx.font = '500 32px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
+            
+            const subtitleY = currentY + (titleLines.length * titleLineHeight) + 20;
+            const subtitleLines = wrapText(ctx, banner.subtitle, maxWidth);
+            const subtitleLineHeight = 32 * 1.25; // line-height 1.25
+            
+            subtitleLines.forEach((line, index) => {
+                ctx.fillText(line, textXRight, subtitleY + (index * subtitleLineHeight));
+            });
+            
+            // Reset shadow
+            ctx.shadowColor = 'transparent';
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            
+            // URL (for banner 5) - medium weight, slightly smaller - matching reference font stack
+            // Positioned to the left to avoid slider overlap
+            if (banner.url) {
+                ctx.font = '500 28px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                ctx.textAlign = 'right';
+                ctx.fillText(banner.url, textXRight - 120, subtitleY + (subtitleLines.length * subtitleLineHeight) + 5);
+            }
+            
+            // Update safe zone
+            updateSafeZone();
+        }
+
+        function wrapText(ctx, text, maxWidth) {
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                const word = words[i];
+                const width = ctx.measureText(currentLine + ' ' + word).width;
+                if (width < maxWidth) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        function updateSafeZone() {
+            if (showSafeZoneCheckbox.checked) {
+                // Profile photo area: approximately 140x140px in bottom-left
+                // Show safe zone to indicate where profile photo overlaps
+                safeZone.style.left = '0px';
+                safeZone.style.bottom = '0px';
+                safeZone.style.width = '200px';
+                safeZone.style.height = '200px';
+                safeZone.style.border = '2px dashed rgba(255, 0, 0, 0.5)';
+                safeZone.style.display = 'block';
+            } else {
+                safeZone.style.display = 'none';
+            }
+        }
+
+        function exportBanner() {
+            const link = document.createElement('a');
+            link.download = `signal-labs-linkedin-banner-${currentBanner}.png`;
+            link.href = canvas.toDataURL('image/png');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Banner selection
+        bannerOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                bannerOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                currentBanner = parseInt(option.dataset.banner);
+                drawBanner(currentBanner);
+            });
+        });
+
+        // Safe zone toggle
+        showSafeZoneCheckbox.addEventListener('change', () => {
+            updateSafeZone();
+        });
+
+        // Initial draw
+        drawBanner(1);
+        
+        // Make canvas responsive
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            const containerWidth = container.clientWidth - 2; // Account for border
+            const aspectRatio = BANNER_WIDTH / BANNER_HEIGHT;
+            canvas.style.width = containerWidth + 'px';
+            canvas.style.height = (containerWidth / aspectRatio) + 'px';
+        }
+        
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+    </script>
+</body>
+</html>
+
