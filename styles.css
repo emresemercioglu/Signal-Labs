@@ -3046,6 +3046,10 @@ input:checked + .toggle-slider:before {
     border-bottom: 1px solid var(--border);
 }
 
+.credits-table th:last-child {
+    text-align: right;
+}
+
 .credits-table td {
     padding: var(--space-4);
     border-bottom: 1px solid var(--border);
@@ -3057,7 +3061,7 @@ input:checked + .toggle-slider:before {
 }
 
 .credits-table td:last-child {
-    text-align: center;
+    text-align: right;
     font-weight: 600;
     color: var(--primary);
 }
@@ -3111,6 +3115,12 @@ input:checked + .toggle-slider:before {
     color: var(--text-secondary);
     font-size: var(--font-size-sm);
     margin: 0;
+}
+
+.topup-equivalent {
+    color: var(--text-muted);
+    font-size: var(--font-size-xs);
+    margin: var(--space-2) 0 0 0;
 }
 
 .topup-cta {
