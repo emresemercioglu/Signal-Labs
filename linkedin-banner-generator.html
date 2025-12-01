@@ -163,6 +163,10 @@
                 <h3>Banner 5: Try CIx for Free</h3>
                 <p>Fresh. Actionable. Measurable. usesignallabs.com</p>
             </div>
+            <div class="banner-option" data-banner="6">
+                <h3>Banner 6: Personal Profile (with logo)</h3>
+                <p>From Static Slides to Living Intelligence - with logo and URL</p>
+            </div>
         </div>
 
         <div class="preview-section">
@@ -224,6 +228,12 @@
                 title: "Try CIx for Free",
                 subtitle: "Fresh. Actionable. Measurable.",
                 url: "usesignallabs.com"
+            },
+            6: {
+                title: "From Static Slides to Living Intelligence",
+                subtitle: "Meet the new standard of competitive enablement.",
+                showLogo: true,
+                logoUrl: "usesignallabs.com"
             }
         };
 
@@ -338,8 +348,54 @@
                 ctx.fillText(banner.url, textXRight - 120, subtitleY + (subtitleLines.length * subtitleLineHeight) + 5);
             }
             
+            // Logo and URL for banner 6 (personal profile)
+            if (banner.showLogo && banner.logoUrl) {
+                const logoY = subtitleY + (subtitleLines.length * subtitleLineHeight) + 30;
+                const logoSize = 60; // Logo size
+                
+                // Draw logo (rounded square with gradient and 's')
+                const logoGradient = ctx.createLinearGradient(textXRight - logoSize, logoY, textXRight - logoSize, logoY + logoSize);
+                logoGradient.addColorStop(0, '#272d46');
+                logoGradient.addColorStop(1, '#06B6D4');
+                
+                // Draw rounded square for logo
+                const logoCornerRadius = logoSize * 0.234375; // Same ratio as main logo
+                ctx.fillStyle = logoGradient;
+                roundRect(ctx, textXRight - logoSize, logoY, logoSize, logoSize, logoCornerRadius);
+                ctx.fill();
+                
+                // Draw white 's' in logo
+                ctx.fillStyle = 'white';
+                ctx.font = `500 ${logoSize * 0.68}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('s', textXRight - logoSize / 2, logoY + logoSize / 2);
+                
+                // Draw URL to the left of logo
+                ctx.font = '500 24px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                const urlX = textXRight - logoSize - 15; // 15px spacing between URL and logo
+                ctx.fillText(banner.logoUrl, urlX, logoY + logoSize / 2);
+            }
+            
             // Update safe zone
             updateSafeZone();
+        }
+
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
         }
 
         function wrapText(ctx, text, maxWidth) {
