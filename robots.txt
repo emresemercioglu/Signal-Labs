@@ -1,0 +1,40 @@
+# Robots.txt for Signal Labs (usesignallabs.com)
+# Updated: 2025-12-02
+
+User-agent: *
+Allow: /
+
+# Disallow internal tools/generators (low SEO value)
+Disallow: /logo-export.html
+Disallow: /linkedin-banner-generator.html
+Disallow: /og-image-generator.html
+
+# Disallow deprecated redirects
+Disallow: /cix.html
+Disallow: /cix/
+
+# Allow all major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Allow AI/LLM crawlers (important for ChatGPT, Claude, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location
+Sitemap: https://usesignallabs.com/sitemap.xml
