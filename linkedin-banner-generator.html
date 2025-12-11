@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Banner Generator - Signal Labs</title>
+    <title>Social Media Banner Generator - Signal Labs</title>
     <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" sizes="64x64" />
     <link rel="icon" href="/icon.png?v=4" type="image/png" sizes="64x64" />
     <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
@@ -139,7 +139,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>LinkedIn Banner Generator</h1>
+        <h1>Social Media Banner Generator</h1>
         
         <div class="banner-selector">
             <h2 style="margin-bottom: 20px; color: #272d46; font-size: 18px;">Select Banner:</h2>
@@ -167,13 +167,21 @@
                 <h3>Banner 6: Personal Profile (with logo)</h3>
                 <p>From Static Slides to Living Intelligence - with logo and URL</p>
             </div>
+            <div class="banner-option" data-banner="7">
+                <h3>Banner 7: YouTube Thumbnail (1024 x 576)</h3>
+                <p>From Static Slides to Living Intelligence - optimized for YouTube thumbnails</p>
+            </div>
+            <div class="banner-option" data-banner="8">
+                <h3>Banner 8: YouTube Channel Art (2560 x 1440)</h3>
+                <p>From Static Slides to Living Intelligence - full YouTube channel banner</p>
+            </div>
         </div>
 
         <div class="preview-section">
             <div class="safe-zone-toggle">
                 <label>
                     <input type="checkbox" id="showSafeZone">
-                    <span>Show safe zone (profile photo area)</span>
+                    <span id="safeZoneLabel">Show safe zone (profile photo area)</span>
                 </label>
             </div>
             <div class="preview-container">
@@ -186,7 +194,7 @@
             <button onclick="exportBanner()">Download Banner as PNG</button>
         </div>
 
-        <div class="info">
+        <div class="info" id="bannerInfo">
             <p><strong>LinkedIn Banner Specifications:</strong></p>
             <p>• Size: 1584 x 396 pixels (4:1 aspect ratio)</p>
             <p>• Format: PNG, JPG, or GIF (max 8MB)</p>
@@ -234,35 +242,60 @@
                 subtitle: "Meet the new standard of competitive enablement.",
                 showLogo: true,
                 logoUrl: "usesignallabs.com"
+            },
+            7: {
+                title: "From Static Slides to Living Intelligence",
+                subtitle: "Meet the new standard of competitive enablement.",
+                showLogo: true,
+                logoUrl: "usesignallabs.com",
+                isYouTube: true,
+                width: 1024,
+                height: 576
+            },
+            8: {
+                title: "From Static Slides to Living Intelligence",
+                subtitle: "Meet the new standard of competitive enablement.",
+                showLogo: false,
+                isYouTubeChannel: true,
+                width: 2560,
+                height: 1440
             }
         };
 
         let currentBanner = 1;
 
         function drawBanner(bannerNum) {
+            const banner = banners[bannerNum];
+            
+            // Set canvas dimensions based on banner type
+            const width = banner.width || BANNER_WIDTH;
+            const height = banner.height || BANNER_HEIGHT;
+            canvas.width = width;
+            canvas.height = height;
+            
             // Clear canvas
-            ctx.clearRect(0, 0, BANNER_WIDTH, BANNER_HEIGHT);
+            ctx.clearRect(0, 0, width, height);
             
             // Draw gradient background - matching reference: linear-gradient(180deg, #0E2A3A 0%, #0F647A 55%, #08B6C5 100%)
-            const bgGradient = ctx.createLinearGradient(0, 0, 0, BANNER_HEIGHT);
+            const bgGradient = ctx.createLinearGradient(0, 0, 0, height);
             bgGradient.addColorStop(0, '#0E2A3A');
             bgGradient.addColorStop(0.55, '#0F647A');
             bgGradient.addColorStop(1, '#08B6C5');
             ctx.fillStyle = bgGradient;
-            ctx.fillRect(0, 0, BANNER_WIDTH, BANNER_HEIGHT);
+            ctx.fillRect(0, 0, width, height);
             
             // Draw subtle circular arcs on the right side (matching reference design)
             // SVG positioned with right-[-12%]: SVG extends 12% beyond right edge
             // SVG viewBox 400x400, circles at (200,200) with radii 140, 200, 260
             // Scale factor: banner height 396 / viewBox height 400 = 0.99
-            const scale = BANNER_HEIGHT / 400; // Scale from viewBox to canvas
+            const scale = height / 400; // Scale from viewBox to canvas
             const offsetPercent = 0.12;
-            const svgRightEdge = BANNER_WIDTH + (BANNER_WIDTH * offsetPercent); // SVG right edge position
+            const svgRightEdge = width + (width * offsetPercent); // SVG right edge position
             // In viewBox, center is at 200, and viewBox width is 400, so center is 200px from left of SVG
             // SVG left edge = svgRightEdge - (400 * scale)
             const svgLeftEdge = svgRightEdge - (400 * scale);
             const centerX = svgLeftEdge + (200 * scale); // Center X in canvas coordinates
-            const centerY = BANNER_HEIGHT / 2; // Vertically centered (200 in viewBox = center)
+            const centerY = height / 2; // Vertically centered (200 in viewBox = center)
             
             // Draw three concentric circles with very subtle opacity (ghost-like effect)
             ctx.lineWidth = 1;
@@ -285,18 +318,25 @@
             ctx.arc(centerX, centerY, 260 * scale, 0, Math.PI * 2);
             ctx.stroke();
             
-            const banner = banners[bannerNum];
-            
             // Text positioning - right-aligned to avoid profile photo overlap
             // Profile photo is ~140x140px in bottom-left, so we align text to the right
             // Positioned higher to avoid slider buttons overlap at bottom
-            const textXRight = BANNER_WIDTH - 80; // Right padding
-            const textY = BANNER_HEIGHT / 2 - 41; // Moved up 41px (40px + 1px adjustment)
-            const maxWidth = 1304; // Keep same width as before (BANNER_WIDTH - 200 - 80)
+            const scaleFactor = banner.isYouTube ? 1.0 : 1.0; // Scale factor for YouTube vs LinkedIn
+            
+            // YouTube Channel Art: safe area is 1546x423 centered, so we center everything
+            if (banner.isYouTubeChannel) {
+                var textXRight = width / 2; // Center horizontally
+                var textY = height / 2 - 30; // Vertically centered, slightly up to account for logo below
+                var maxWidth = 1400; // Within safe zone
+            } else {
+                var textXRight = width - (banner.isYouTube ? 60 : 80); // Right padding
+                var textY = height / 2 - (banner.isYouTube ? 20 : 41); // Adjusted for YouTube
+                var maxWidth = banner.isYouTube ? width - 120 : width - 280; // More width for YouTube
+            }
             
             // Title - bold, large, with text shadow
             ctx.fillStyle = 'white';
-            ctx.textAlign = 'right';
+            ctx.textAlign = banner.isYouTubeChannel ? 'center' : 'right';
             ctx.textBaseline = 'middle';
             
             // Set up text shadow for headline
@@ -305,11 +345,14 @@
             ctx.shadowOffsetX = 0;
             ctx.shadowOffsetY = 2;
             
-            // Headline: 800 weight, 55px (reduced by 1px) - matching reference font stack
-            ctx.font = '800 55px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            // Headline: 800 weight, scaled for banner type - matching reference font stack
+            let titleSize = 55;
+            if (banner.isYouTube) titleSize = 36;
+            if (banner.isYouTubeChannel) titleSize = 70;
+            ctx.font = `800 ${titleSize}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
             
             const titleLines = wrapText(ctx, banner.title, maxWidth);
-            const titleLineHeight = 55 * 1.05; // line-height 1.05
+            const titleLineHeight = titleSize * 1.05; // line-height 1.05
             let currentY = textY - (titleLines.length > 1 ? (titleLineHeight * (titleLines.length - 1)) / 2 : 0);
             
             titleLines.forEach((line, index) => {
@@ -322,12 +365,15 @@
             ctx.shadowOffsetY = 1;
             
             // Subtitle - medium weight, with text shadow (no italic) - matching reference font stack
-            ctx.font = '500 31px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            let subtitleSize = 31;
+            if (banner.isYouTube) subtitleSize = 22;
+            if (banner.isYouTubeChannel) subtitleSize = 40;
+            ctx.font = `500 ${subtitleSize}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
             ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
             
             const subtitleY = currentY + (titleLines.length * titleLineHeight) + 20;
             const subtitleLines = wrapText(ctx, banner.subtitle, maxWidth);
-            const subtitleLineHeight = 31 * 1.25; // line-height 1.25
+            const subtitleLineHeight = subtitleSize * 1.25; // line-height 1.25
             
             subtitleLines.forEach((line, index) => {
                 ctx.fillText(line, textXRight, subtitleY + (index * subtitleLineHeight));
@@ -348,20 +394,36 @@
                 ctx.fillText(banner.url, textXRight - 120, subtitleY + (subtitleLines.length * subtitleLineHeight) + 5);
             }
             
-            // Logo and URL for banner 6 (personal profile)
+            // Logo and URL for banner 6, 7, and 8 (personal profile and YouTube)
             if (banner.showLogo && banner.logoUrl) {
-                const logoY = subtitleY + (subtitleLines.length * subtitleLineHeight) + 30;
-                const logoSize = 60; // Logo size
+                const logoY = subtitleY + (subtitleLines.length * subtitleLineHeight) + (banner.isYouTubeChannel ? 50 : 30);
+                let logoSize = 60;
+                if (banner.isYouTube) logoSize = 55;
+                if (banner.isYouTubeChannel) logoSize = 70; // Smaller for better proportion
+                
+                // Calculate logo position
+                // For YouTube channel: center the logo+URL combo horizontally
+                // First measure URL width to calculate total width
+                let urlFontSize = 24;
+                if (banner.isYouTube) urlFontSize = 22;
+                if (banner.isYouTubeChannel) urlFontSize = 28;
+                
+                ctx.font = `500 ${urlFontSize}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
+                const urlWidth = ctx.measureText(banner.logoUrl).width;
+                const spacing = 20;
+                const totalWidth = logoSize + spacing + urlWidth;
+                
+                const logoX = banner.isYouTubeChannel ? (width / 2) - (totalWidth / 2) : textXRight - logoSize;
                 
                 // Draw logo (rounded square with gradient and 's')
-                const logoGradient = ctx.createLinearGradient(textXRight - logoSize, logoY, textXRight - logoSize, logoY + logoSize);
+                const logoGradient = ctx.createLinearGradient(logoX, logoY, logoX, logoY + logoSize);
                 logoGradient.addColorStop(0, '#272d46');
                 logoGradient.addColorStop(1, '#06B6D4');
                 
                 // Draw rounded square for logo
                 const logoCornerRadius = logoSize * 0.234375; // Same ratio as main logo
                 ctx.fillStyle = logoGradient;
-                roundRect(ctx, textXRight - logoSize, logoY, logoSize, logoSize, logoCornerRadius);
+                roundRect(ctx, logoX, logoY, logoSize, logoSize, logoCornerRadius);
                 ctx.fill();
                 
                 // Draw white 's' in logo
@@ -369,15 +431,25 @@
                 ctx.font = `500 ${logoSize * 0.68}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillText('s', textXRight - logoSize / 2, logoY + logoSize / 2);
+                ctx.fillText('s', logoX + logoSize / 2, logoY + logoSize / 2);
                 
-                // Draw URL to the left of logo
-                ctx.font = '500 24px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+                // Draw URL to the left of logo (or right for YouTube channel)
+                // urlFontSize already set above for measurement
                 ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
-                ctx.textAlign = 'right';
-                ctx.textBaseline = 'middle';
-                const urlX = textXRight - logoSize - 15; // 15px spacing between URL and logo
-                ctx.fillText(banner.logoUrl, urlX, logoY + logoSize / 2);
+                
+                if (banner.isYouTubeChannel) {
+                    // Position URL to the right of logo for centered layout
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'middle';
+                    const urlX = logoX + logoSize + spacing;
+                    ctx.fillText(banner.logoUrl, urlX, logoY + logoSize / 2);
+                } else {
+                    // Right-aligned layout
+                    ctx.textAlign = 'right';
+                    ctx.textBaseline = 'middle';
+                    const urlX = logoX - 15; // 15px spacing between URL and logo
+                    ctx.fillText(banner.logoUrl, urlX, logoY + logoSize / 2);
+                }
             }
             
             // Update safe zone
@@ -418,15 +490,40 @@
         }
 
         function updateSafeZone() {
+            const banner = banners[currentBanner];
             if (showSafeZoneCheckbox.checked) {
-                // Profile photo area: approximately 140x140px in bottom-left
-                // Show safe zone to indicate where profile photo overlaps
-                safeZone.style.left = '0px';
-                safeZone.style.bottom = '0px';
-                safeZone.style.width = '200px';
-                safeZone.style.height = '200px';
-                safeZone.style.border = '2px dashed rgba(255, 0, 0, 0.5)';
-                safeZone.style.display = 'block';
+                if (banner.isYouTubeChannel) {
+                    // YouTube Channel Art safe zone: 1546x423 centered
+                    // Calculate position in the canvas preview
+                    const containerWidth = canvas.parentElement.clientWidth - 2;
+                    const aspectRatio = canvas.width / canvas.height;
+                    const displayWidth = containerWidth;
+                    const displayHeight = containerWidth / aspectRatio;
+                    
+                    // Safe zone dimensions in display pixels
+                    const safeWidth = (1546 / 2560) * displayWidth;
+                    const safeHeight = (423 / 1440) * displayHeight;
+                    const safeLeft = ((2560 - 1546) / 2 / 2560) * displayWidth;
+                    const safeTop = ((1440 - 423) / 2 / 1440) * displayHeight;
+                    
+                    safeZone.style.left = safeLeft + 'px';
+                    safeZone.style.top = safeTop + 'px';
+                    safeZone.style.width = safeWidth + 'px';
+                    safeZone.style.height = safeHeight + 'px';
+                    safeZone.style.border = '3px dashed rgba(100, 255, 100, 0.7)';
+                    safeZone.style.bottom = 'auto';
+                    safeZone.style.display = 'block';
+                } else {
+                    // Profile photo area: approximately 140x140px in bottom-left
+                    // Show safe zone to indicate where profile photo overlaps
+                    safeZone.style.left = '0px';
+                    safeZone.style.bottom = '0px';
+                    safeZone.style.top = 'auto';
+                    safeZone.style.width = '200px';
+                    safeZone.style.height = '200px';
+                    safeZone.style.border = '2px dashed rgba(255, 0, 0, 0.5)';
+                    safeZone.style.display = 'block';
+                }
             } else {
                 safeZone.style.display = 'none';
             }
@@ -434,11 +531,58 @@
 
         function exportBanner() {
             const link = document.createElement('a');
-            link.download = `signal-labs-linkedin-banner-${currentBanner}.png`;
+            const banner = banners[currentBanner];
+            let bannerType = 'linkedin';
+            if (banner.isYouTubeChannel) bannerType = 'youtube-channel';
+            else if (banner.isYouTube) bannerType = 'youtube-thumbnail';
+            link.download = `signal-labs-${bannerType}-banner-${currentBanner}.png`;
             link.href = canvas.toDataURL('image/png');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+
+        function updateSafeZoneLabel() {
+            const label = document.getElementById('safeZoneLabel');
+            const banner = banners[currentBanner];
+            
+            if (banner.isYouTubeChannel) {
+                label.textContent = 'Show safe zone (viewable on all devices)';
+            } else {
+                label.textContent = 'Show safe zone (profile photo area)';
+            }
+        }
+
+        function updateInfo() {
+            const infoDiv = document.getElementById('bannerInfo');
+            const banner = banners[currentBanner];
+            
+            if (banner.isYouTubeChannel) {
+                infoDiv.innerHTML = `
+                    <p><strong>YouTube Channel Art Specifications:</strong></p>
+                    <p>• Size: 2560 x 1440 pixels (recommended)</p>
+                    <p>• Safe area (viewable on all devices): 1546 x 423 pixels (centered)</p>
+                    <p>• Format: PNG or JPG (max 6MB)</p>
+                    <p>• Important content must be in the safe area to be visible on all devices</p>
+                    <p>• Full image visible on TV, cropped on smaller devices</p>
+                `;
+            } else if (banner.isYouTube) {
+                infoDiv.innerHTML = `
+                    <p><strong>YouTube Thumbnail Specifications:</strong></p>
+                    <p>• Size: 1024 x 576 pixels (16:9 aspect ratio)</p>
+                    <p>• Format: PNG or JPG (max 6MB)</p>
+                    <p>• Perfect for YouTube thumbnails and social media sharing</p>
+                    <p>• Optimized for widescreen displays</p>
+                `;
+            } else {
+                infoDiv.innerHTML = `
+                    <p><strong>LinkedIn Banner Specifications:</strong></p>
+                    <p>• Size: 1584 x 396 pixels (4:1 aspect ratio)</p>
+                    <p>• Format: PNG, JPG, or GIF (max 8MB)</p>
+                    <p>• Note: Profile photo overlaps bottom-left corner. Keep important content in the center-right area.</p>
+                    <p>• Mobile devices may crop ~30% from both sides, so keep essential elements centered.</p>
+                `;
+            }
         }
 
         // Banner selection
@@ -448,6 +592,9 @@
                 option.classList.add('selected');
                 currentBanner = parseInt(option.dataset.banner);
                 drawBanner(currentBanner);
+                resizeCanvas();
+                updateInfo();
+                updateSafeZoneLabel();
             });
         });
 
@@ -463,14 +610,36 @@
         function resizeCanvas() {
             const container = canvas.parentElement;
             const containerWidth = container.clientWidth - 2; // Account for border
-            const aspectRatio = BANNER_WIDTH / BANNER_HEIGHT;
+            const aspectRatio = canvas.width / canvas.height;
             canvas.style.width = containerWidth + 'px';
             canvas.style.height = (containerWidth / aspectRatio) + 'px';
         }
         
-        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            updateSafeZone();
+        });
         resizeCanvas();
     </script>
+    
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+    _linkedin_partner_id = "8367866";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8367866&fmt=gif" />
+    </noscript>
 </body>
 </html>
 

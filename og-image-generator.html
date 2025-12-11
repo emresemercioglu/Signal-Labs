@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator - Signal Labs</title>
+    <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" sizes="64x64" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #272d46;
+        }
+        .image-selector {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .image-option {
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .image-option:hover {
+            border-color: #06B6D4;
+            background: #f0fdfa;
+        }
+        .image-option.selected {
+            border-color: #06B6D4;
+            background: #e0f2fe;
+        }
+        .image-option h3 {
+            margin: 0 0 5px 0;
+            color: #272d46;
+            font-size: 16px;
+        }
+        .image-option p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+        .preview-section {
+            margin-top: 30px;
+        }
+        .preview-container {
+            position: relative;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            margin-bottom: 20px;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .controls {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        button {
+            background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .info {
+            margin-top: 30px;
+            padding: 15px;
+            background: #e0f2fe;
+            border-left: 4px solid #06B6D4;
+            border-radius: 4px;
+        }
+        .info p {
+            margin: 5px 0;
+            color: #0c4a6e;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OG Image Generator - Signal Labs</h1>
+        
+        <div class="image-selector">
+            <h2 style="margin-bottom: 20px; color: #272d46; font-size: 18px;">Select OG Image:</h2>
+            <div class="image-option selected" data-image="home">
+                <h3>Home - CIx Platform</h3>
+                <p>Fresh. Actionable. Measurable.</p>
+            </div>
+            <div class="image-option" data-image="services">
+                <h3>CI Services</h3>
+                <p>Expert competitive intelligence consulting</p>
+            </div>
+            <div class="image-option" data-image="about">
+                <h3>About</h3>
+                <p>Competitive Intelligence & Innovation Studio</p>
+            </div>
+            <div class="image-option" data-image="blog">
+                <h3>Blog</h3>
+                <p>Insights on competitive intelligence and strategy</p>
+            </div>
+            <div class="image-option" data-image="blog-post-1">
+                <h3>Blog Post 1</h3>
+                <p>The CI Treadmill Is Broken: Why Battlecards Age in Days, Not Quarters</p>
+            </div>
+            <div class="image-option" data-image="blog-post-2">
+                <h3>Blog Post 2</h3>
+                <p>Competing in Real Time: A CI Playbook for High-Growth Teams</p>
+            </div>
+            <div class="image-option" data-image="faq">
+                <h3>FAQ</h3>
+                <p>Common questions about CIx Platform</p>
+            </div>
+            <div class="image-option" data-image="contact">
+                <h3>Contact</h3>
+                <p>Get in touch with our team</p>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <div class="preview-container">
+                <canvas id="ogCanvas" width="1200" height="630"></canvas>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="exportOGImage()">Download OG Image as PNG</button>
+        </div>
+
+        <div class="info">
+            <p><strong>Open Graph Image Specifications:</strong></p>
+            <p>• Size: 1200 x 630 pixels (recommended by Facebook, LinkedIn, Twitter)</p>
+            <p>• Format: PNG or JPG</p>
+            <p>• File size: Keep under 8MB (ideally under 1MB)</p>
+            <p>• These images appear when you share links on social media platforms</p>
+            <p>• Make sure text is readable even when scaled down</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('ogCanvas');
+        const ctx = canvas.getContext('2d');
+        const imageOptions = document.querySelectorAll('.image-option');
+        
+        // OG image dimensions
+        const OG_WIDTH = 1200;
+        const OG_HEIGHT = 630;
+        
+        // Image content definitions
+        const ogImages = {
+            home: {
+                title: "Meet CIx",
+                subtitle: "Fresh. Actionable. Measurable.",
+                description: "AI competitive intelligence and enablement platform",
+                fileName: "og-image-home.png"
+            },
+            services: {
+                title: "Expert CI Services",
+                subtitle: "Competitive Intelligence Consulting",
+                description: "Strategic guidance from CI experts",
+                fileName: "og-image-services.png"
+            },
+            about: {
+                title: "Signal Labs",
+                subtitle: "Competitive Intelligence & Innovation Studio",
+                description: "Helping teams stay ahead with AI-powered CI",
+                fileName: "og-image-about.png"
+            },
+            blog: {
+                title: "Signal Labs Blog",
+                subtitle: "Insights on Competitive Intelligence",
+                description: "Strategy, tactics, and best practices",
+                fileName: "og-image-blog.png"
+            },
+            'blog-post-1': {
+                title: "The CI Treadmill Is Broken:",
+                subtitle: "Why Battlecards Age in Days, Not Quarters",
+                description: "",
+                fileName: "og-image-blog-post-1.png"
+            },
+            'blog-post-2': {
+                title: "Competing in Real Time:",
+                subtitle: "A CI Playbook for High-Growth Teams",
+                description: "",
+                fileName: "og-image-blog-post-2.png"
+            },
+            faq: {
+                title: "Frequently Asked Questions",
+                subtitle: "Everything You Need to Know",
+                description: "Learn about CIx Platform and Credits",
+                fileName: "og-image-faq.png"
+            },
+            contact: {
+                title: "Get in Touch",
+                subtitle: "Let's Talk Competitive Intelligence",
+                description: "Request a demo or consultation",
+                fileName: "og-image-contact.png"
+            }
+        };
+
+        let currentImage = 'home';
+
+        function drawOGImage(imageKey) {
+            // Clear canvas
+            ctx.clearRect(0, 0, OG_WIDTH, OG_HEIGHT);
+            
+            // Draw gradient background - using the teal gradient from the banner
+            const bgGradient = ctx.createLinearGradient(0, 0, 0, OG_HEIGHT);
+            bgGradient.addColorStop(0, '#0E2A3A');
+            bgGradient.addColorStop(0.55, '#0F647A');
+            bgGradient.addColorStop(1, '#08B6C5');
+            ctx.fillStyle = bgGradient;
+            ctx.fillRect(0, 0, OG_WIDTH, OG_HEIGHT);
+            
+            // Draw subtle circular arcs on the right side
+            const scale = OG_HEIGHT / 400;
+            const offsetPercent = 0.12;
+            const svgRightEdge = OG_WIDTH + (OG_WIDTH * offsetPercent);
+            const svgLeftEdge = svgRightEdge - (400 * scale);
+            const centerX = svgLeftEdge + (200 * scale);
+            const centerY = OG_HEIGHT / 2;
+            
+            ctx.lineWidth = 1;
+            
+            // Inner circle
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 140 * scale, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Middle circle
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.10)';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 200 * scale, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            // Outer circle
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 260 * scale, 0, Math.PI * 2);
+            ctx.stroke();
+            
+            const image = ogImages[imageKey];
+            
+            // Draw logo in the top-left
+            const logoSize = 80;
+            const logoX = 60;
+            const logoY = 50;
+            
+            // Draw logo (rounded square with gradient and 's')
+            const logoGradient = ctx.createLinearGradient(logoX, logoY, logoX, logoY + logoSize);
+            logoGradient.addColorStop(0, '#272d46');
+            logoGradient.addColorStop(1, '#06B6D4');
+            
+            const logoCornerRadius = logoSize * 0.234375;
+            ctx.fillStyle = logoGradient;
+            roundRect(ctx, logoX, logoY, logoSize, logoSize, logoCornerRadius);
+            ctx.fill();
+            
+            // Draw white 's' in logo
+            ctx.fillStyle = 'white';
+            ctx.font = `500 ${logoSize * 0.68}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('s', logoX + logoSize / 2, logoY + logoSize / 2);
+            
+            // Draw "Signal Labs" text next to logo
+            ctx.fillStyle = 'white';
+            ctx.font = '600 28px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('Signal Labs', logoX + logoSize + 20, logoY + logoSize / 2);
+            
+            // Text positioning - centered vertically, left-aligned
+            const textX = 60;
+            const textY = OG_HEIGHT / 2;
+            const maxWidth = 1050; // Increased to allow longer single-line text
+            
+            // Title - bold, large, with text shadow
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            
+            // Set up text shadow for title
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.30)';
+            ctx.shadowBlur = 8;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 2;
+            
+            // Title: 800 weight, 58px (reduced from 64px for better single-line fit)
+            ctx.font = '800 58px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            
+            // Force single line for title
+            let currentY = textY - 60;
+            ctx.fillText(image.title, textX, currentY);
+            
+            // Reset shadow for subtitle (lighter shadow)
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.22)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetY = 1;
+            
+            // Subtitle - medium weight, single line
+            ctx.font = '600 42px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
+            
+            const subtitleY = currentY + 70;
+            ctx.fillText(image.subtitle, textX, subtitleY);
+            
+            // Description - lighter weight (only if not empty)
+            if (image.description && image.description.trim() !== '') {
+                ctx.font = '500 32px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+                
+                const descriptionY = subtitleY + 55;
+                ctx.fillText(image.description, textX, descriptionY);
+            }
+            
+            // Reset shadow
+            ctx.shadowColor = 'transparent';
+            ctx.shadowBlur = 0;
+            ctx.shadowOffsetX = 0;
+            ctx.shadowOffsetY = 0;
+            
+            // Draw URL at the bottom
+            ctx.font = '500 24px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.textAlign = 'left';
+            ctx.fillText('usesignallabs.com', textX, OG_HEIGHT - 50);
+        }
+
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+
+        function wrapText(ctx, text, maxWidth) {
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                const word = words[i];
+                const width = ctx.measureText(currentLine + ' ' + word).width;
+                if (width < maxWidth) {
+                    currentLine += ' ' + word;
+                } else {
+                    lines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        function exportOGImage() {
+            const image = ogImages[currentImage];
+            const link = document.createElement('a');
+            link.download = image.fileName;
+            link.href = canvas.toDataURL('image/png');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Image selection
+        imageOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                imageOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                currentImage = option.dataset.image;
+                drawOGImage(currentImage);
+            });
+        });
+
+        // Initial draw
+        drawOGImage('home');
+        
+        // Make canvas responsive
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            const containerWidth = container.clientWidth - 2;
+            const aspectRatio = OG_WIDTH / OG_HEIGHT;
+            canvas.style.width = containerWidth + 'px';
+            canvas.style.height = (containerWidth / aspectRatio) + 'px';
+        }
+        
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+    </script>
+    
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+    _linkedin_partner_id = "8367866";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=8367866&fmt=gif" />
+    </noscript>
+</body>
+</html>
+
