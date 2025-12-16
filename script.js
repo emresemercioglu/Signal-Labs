@@ -281,18 +281,45 @@ function handleEmailClick(email) {
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
 }
 
-// Analytics Event Tracking (placeholder)
+// Analytics Event Tracking with Google Ads & LinkedIn Conversions
 function trackEvent(category, action, label = '') {
-    // Replace with your analytics implementation
     console.log('Event tracked:', { category, action, label });
     
-    // Example for Google Analytics
-    // if (typeof gtag !== 'undefined') {
-    //     gtag('event', action, {
-    //         event_category: category,
-    //         event_label: label
-    //     });
-    // }
+    // Track to PostHog (already working)
+    if (typeof posthog !== 'undefined') {
+        posthog.capture(action, {
+            category: category,
+            label: label
+        });
+    }
+    
+    // Google Ads Conversion Tracking
+    if (typeof gtag !== 'undefined') {
+        // Track form submissions as conversions
+        if ((category === 'Contact' && action === 'form_submit') || 
+            (category === 'Waitlist' && action === 'signup')) {
+            
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17805025780/dIx5CNnRzdIbEPTDjKpC',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': function() {
+                    console.log('Google Ads: Form conversion tracked -', category, action);
+                }
+            });
+        }
+    }
+    
+    // LinkedIn Conversion Tracking
+    if (typeof window.lintrk !== 'undefined') {
+        // Track form submissions as conversions
+        if ((category === 'Contact' && action === 'form_submit') || 
+            (category === 'Waitlist' && action === 'signup')) {
+            
+            window.lintrk('track', { conversion_id: 25017098 });
+            console.log('LinkedIn: Form conversion tracked -', category, action);
+        }
+    }
 }
 
 // Track CTA clicks
