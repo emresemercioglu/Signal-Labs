@@ -116,15 +116,23 @@
                 <p class="section-subtitle">How CIx automates competitive intelligence</p>
             </div>
             <div style="max-width: 900px; margin: 0 auto;">
-                <div style="position: relative; padding-bottom: 64.63195691202873%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
-                    <iframe 
-                        src="https://www.loom.com/embed/cee4b34448684a54b44c9d3ad4619b54?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&hide_speed=true&captions=false&speed=1" 
-                        frameborder="0" 
-                        webkitallowfullscreen 
-                        mozallowfullscreen 
-                        allowfullscreen 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                    </iframe>
+                <div id="loom-video-container" style="position: relative; padding-bottom: 64.63195691202873%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); cursor: pointer; background: #000;">
+                    <!-- Placeholder with real Loom thumbnail -->
+                    <div id="video-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #1a1a2e;">
+                        <!-- Thumbnail image - using local screenshot -->
+                        <img src="assets/loomthumbnail1.png" 
+                             alt="CIx Demo Video Thumbnail" 
+                             loading="eager"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <!-- Dark overlay for better play button visibility -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3);"></div>
+                        <!-- Play button overlay -->
+                        <div style="position: relative; z-index: 2; width: 80px; height: 80px; background: rgba(255, 255, 255, 0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease, background 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.background='rgba(255, 255, 255, 1)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.95)';">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="margin-left: 4px;">
+                                <path d="M8 5.14v13.72L19 12L8 5.14z" fill="#272d46" stroke="#272d46" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -373,6 +373,39 @@ function initRotatingText() {
     setInterval(changeText, 2000);
 }
 
+// Lazy Load Loom Video - Performance Optimization
+document.addEventListener('DOMContentLoaded', function() {
+    const videoContainer = document.getElementById('loom-video-container');
+    const videoPlaceholder = document.getElementById('video-placeholder');
+    
+    if (videoContainer && videoPlaceholder) {
+        // Load video when user clicks
+        videoContainer.addEventListener('click', function() {
+            console.log('🎬 Loading Loom video...');
+            
+            // Create iframe
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.loom.com/embed/cee4b34448684a54b44c9d3ad4619b54?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true&hide_speed=true&captions=false&speed=1&autoplay=1';
+            iframe.frameBorder = '0';
+            iframe.allowFullscreen = true;
+            iframe.setAttribute('webkitallowfullscreen', '');
+            iframe.setAttribute('mozallowfullscreen', '');
+            iframe.title = 'CIx Platform Demo Video';
+            iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;';
+            
+            // Replace placeholder with iframe
+            videoPlaceholder.remove();
+            videoContainer.appendChild(iframe);
+            videoContainer.style.cursor = 'default';
+            
+            // Track video load
+            trackEvent('Video', 'loom_video_loaded', 'homepage_demo');
+            
+            console.log('✅ Loom video loaded successfully');
+        });
+    }
+});
+
 // Performance Optimization
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize rotating text - DISABLED (using inline version in services.html)
