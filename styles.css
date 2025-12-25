@@ -335,7 +335,7 @@ body {
     color: rgba(255, 255, 255, 0.8);
     font-size: var(--font-size-xl);
     margin-bottom: var(--space-8);
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .hero-content {
@@ -366,7 +366,7 @@ body {
     font-size: var(--font-size-xl);
     color: var(--text-secondary);
     margin-bottom: var(--space-8);
-    max-width: 600px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
