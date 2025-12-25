@@ -25,15 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Navbar Scroll Effect
+// Navbar Scroll Effect - Triggers after hero section
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+    const hero = document.querySelector('.hero, .hero-dark');
+    
+    if (hero && navbar) {
+        // Get the height of the hero section
+        const heroHeight = hero.offsetHeight;
+        
+        // Add 'scrolled' class when past hero section
+        if (window.scrollY > heroHeight - 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     }
 });
 

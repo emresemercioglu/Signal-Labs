@@ -89,11 +89,18 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: transparent;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: none;
     z-index: 1000;
     transition: all 0.3s ease;
+}
+
+/* Navbar when scrolled past hero */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: none;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -110,9 +117,14 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-primary);
+    color: white;
     font-weight: 600;
     font-size: var(--font-size-lg);
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-logo a {
+    color: var(--text-primary);
 }
 
 .logo-icon {
@@ -145,27 +157,72 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
 }
 
 .nav-link:hover {
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.nav-link.active {
+    color: white;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Nav links when scrolled */
+.navbar.scrolled .nav-link {
+    color: var(--text-secondary);
+}
+
+.navbar.scrolled .nav-link:hover {
     color: var(--text-primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.navbar.scrolled .nav-link.active {
+    color: var(--primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary);
 }
 
 .nav-link.nav-cta {
-    background: var(--primary);
+    background: transparent;
     color: white;
     padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-md);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-link.nav-cta:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Start Free button when scrolled */
+.navbar.scrolled .nav-link.nav-cta {
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.navbar.scrolled .nav-link.nav-cta:hover {
     background: var(--primary-hover);
     color: white;
+    border: 2px solid var(--primary-hover);
+    border-bottom: 2px solid var(--primary-hover);
 }
 
 .nav-toggle {
@@ -178,8 +235,12 @@ body {
 .nav-toggle span {
     width: 24px;
     height: 2px;
-    background: var(--text-primary);
+    background: white;
     transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-toggle span {
+    background: var(--text-primary);
 }
 
 /* Hero Section */
@@ -959,6 +1020,32 @@ body {
     
     .nav-menu.active {
         display: flex;
+    }
+    
+    /* Mobile menu links always dark (even on hero) */
+    .nav-menu .nav-link {
+        color: var(--text-secondary);
+    }
+    
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary);
+    }
+    
+    /* Mobile Start Free button - always filled */
+    .nav-menu .nav-link.nav-cta {
+        background: var(--primary);
+        color: white;
+        border: 2px solid var(--primary);
+        border-bottom: 2px solid var(--primary);
+    }
+    
+    .nav-menu .nav-link.nav-cta:hover {
+        background: var(--primary-hover);
+        color: white;
+        border: 2px solid var(--primary-hover);
+        border-bottom: 2px solid var(--primary-hover);
     }
     
     .nav-toggle {
