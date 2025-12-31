@@ -1054,6 +1054,17 @@ body.homepage .navbar.scrolled .nav-toggle span {
     }
 }
 
+/* Mobile: 1 column for challenge boxes */
+@media (max-width: 768px) {
+    .solutions-grid-4col {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .marketing-use-cases-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .nav-menu {
         display: none;
