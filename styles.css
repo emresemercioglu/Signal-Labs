@@ -515,11 +515,13 @@ body.homepage .navbar.scrolled .nav-toggle span {
     background: transparent;
     color: var(--primary);
     border: 2px solid var(--primary);
+    transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
     background: var(--primary);
-    color: white;
+    color: white !important;
+    border-color: var(--primary);
 }
 
 /* Hero Buttons */
@@ -845,7 +847,8 @@ body.homepage .navbar.scrolled .nav-toggle span {
 
 .cta-section .btn-outline:hover {
     background: white;
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
+    border-color: white;
 }
 
 /* Footer */
