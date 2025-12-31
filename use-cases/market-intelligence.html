@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17805025780"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-17805025780');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Intelligence Platform | Competitive & Market Intelligence</title>
+    <meta name="description" content="Track market trends, industry dynamics, and competitive movements. Continuous market intelligence that connects competitive intelligence to broader market forces.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://usesignallabs.com/use-cases/market-intelligence">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://usesignallabs.com/use-cases/market-intelligence">
+    <meta property="og:title" content="Market Intelligence Platform | Competitive & Market Intelligence">
+    <meta property="og:description" content="Track market trends, industry dynamics, and competitive movements. Understand how competitive moves connect to broader market forces.">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Signal Labs">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://usesignallabs.com/use-cases/market-intelligence">
+    <meta name="twitter:title" content="Market Intelligence Platform | Competitive & Market Intelligence">
+    <meta name="twitter:description" content="Track market trends, industry dynamics, and competitive movements. Connect competitive intelligence to broader market forces.">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://us.i.posthog.com">
+    <link rel="preconnect" href="https://us-assets.i.posthog.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://snap.licdn.com">
+    <link rel="preconnect" href="https://px.ads.linkedin.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        .navbar{border-bottom:none !important;box-shadow:none !important;transition:all 0.3s ease}.navbar.scrolled{border-bottom:1px solid var(--border-light) !important;box-shadow:0 2px 8px rgba(0,0,0,0.04) !important}.nav-logo a{display:flex;align-items:center;text-decoration:none;color:#0F172A !important;font-weight:600;font-size:var(--font-size-lg)}.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#272d46 0%,#06B6D4 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:500;font-size:25px;margin-right:var(--space-3);line-height:1}.logo-icon span,.logo-letter{margin-top:-4px;display:block}.logo-text{color:#0F172A !important}.nav-link{text-decoration:none;color:#64748B !important;font-weight:500;transition:color 0.3s ease;position:relative;padding-bottom:4px;border-bottom:2px solid transparent}.nav-link:hover,.nav-link.active{color:#0F172A !important;border-bottom-color:#272d46 !important}.nav-link.nav-cta{background:#272d46 !important;color:white !important;padding:0.5rem 1rem !important;border-radius:0.5rem !important;border:none !important;padding-bottom:0.5rem !important}.nav-link.nav-cta:hover{background:#1f2338 !important;border-bottom:none !important}.nav-toggle{background:none !important;border:none !important;box-shadow:none !important;padding:0 !important}.nav-toggle span{width:24px;height:2px;background:#0F172A !important;transition:all 0.3s ease}
+        
+        /* Chart milestone dots */
+        .chart-milestone {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .chart-milestone:hover .milestone-dot,
+        .chart-milestone:active .milestone-dot,
+        .chart-milestone.active-tooltip .milestone-dot {
+            transform: scale(1.6);
+            animation: none;
+        }
+        
+        .milestone-dot {
+            transition: all 0.2s ease;
+        }
+        
+        /* Show tooltip when active */
+        .chart-milestone.active-tooltip .milestone-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Color-specific pulse animations */
+        .milestone-green .milestone-dot {
+            animation: pulse-green 2s ease-in-out infinite;
+        }
+        .milestone-blue .milestone-dot {
+            animation: pulse-blue 2s ease-in-out infinite 0.4s;
+        }
+        .milestone-yellow .milestone-dot {
+            animation: pulse-yellow 2s ease-in-out infinite 0.8s;
+        }
+        .milestone-orange .milestone-dot {
+            animation: pulse-orange 2s ease-in-out infinite 1.2s;
+        }
+        .milestone-red .milestone-dot {
+            animation: pulse-red 2s ease-in-out infinite 1.6s;
+        }
+        
+        @keyframes pulse-green {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(52, 211, 153, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(52, 211, 153, 0.15), 0 2px 8px rgba(52, 211, 153, 0.6);
+            }
+        }
+        
+        @keyframes pulse-blue {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(96, 165, 250, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(96, 165, 250, 0.15), 0 2px 8px rgba(96, 165, 250, 0.6);
+            }
+        }
+        
+        @keyframes pulse-yellow {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(245, 158, 11, 0.15), 0 2px 8px rgba(245, 158, 11, 0.6);
+            }
+        }
+        
+        @keyframes pulse-orange {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(249, 115, 22, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(249, 115, 22, 0.15), 0 2px 8px rgba(249, 115, 22, 0.6);
+            }
+        }
+        
+        @keyframes pulse-red {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(239, 68, 68, 0.15), 0 2px 8px rgba(239, 68, 68, 0.6);
+            }
+        }
+        
+        .chart-milestone .milestone-tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            color: var(--text-secondary);
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        .milestone-green .milestone-tooltip {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(52, 211, 153, 0.15), 0 0 20px rgba(52, 211, 153, 0.2);
+        }
+        
+        .milestone-blue .milestone-tooltip {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(96, 165, 250, 0.15), 0 0 20px rgba(96, 165, 250, 0.2);
+        }
+        
+        .milestone-yellow .milestone-tooltip {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(245, 158, 11, 0.15), 0 0 20px rgba(245, 158, 11, 0.2);
+        }
+        
+        .milestone-orange .milestone-tooltip {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(249, 115, 22, 0.15), 0 0 20px rgba(249, 115, 22, 0.2);
+        }
+        
+        .milestone-red .milestone-tooltip {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1), 0 0 0 1px rgba(239, 68, 68, 0.15), 0 0 20px rgba(239, 68, 68, 0.2);
+        }
+        
+        .chart-milestone .milestone-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: white;
+        }
+        
+        .chart-milestone:hover .milestone-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile and tablet responsive - prevent tooltips from going off-screen */
+        @media (max-width: 1400px) {
+            /* Make chart responsive on mobile */
+            .chart-container {
+                overflow-x: auto;
+            }
+            
+            .milestone-tooltip {
+                white-space: normal !important;
+                min-width: 260px;
+                max-width: 400px;
+                font-size: 13px;
+                padding: 10px 14px !important;
+                text-align: left;
+            }
+            
+            .milestone-tooltip span {
+                display: block;
+                margin-bottom: 6px;
+                margin-right: 0 !important;
+            }
+            
+            /* Prevent first tooltip from going off-screen on mobile */
+            .milestone-green .milestone-tooltip {
+                left: -70px;
+                transform: translateX(0);
+            }
+            
+            .milestone-green .milestone-tooltip::after {
+                left: 70px !important;
+                transform: none !important;
+            }
+            
+            /* Prevent last tooltip from going off-screen on mobile */
+            .milestone-red .milestone-tooltip {
+                left: auto;
+                right: -20px;
+                transform: translateX(0);
+            }
+            
+            .milestone-red .milestone-tooltip::after {
+                left: auto !important;
+                right: 20px !important;
+                transform: none !important;
+            }
+        }
+        
+        /* Keep 2x2 grid on all screen sizes */
+        
+        /* Tablet responsive - 2 boxes per row */
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            .integration-text-mobile {
+                white-space: normal !important;
+            }
+        }
+        
+        /* Mobile responsive for challenge conclusion text */
+        @media (max-width: 768px) {
+            .challenge-conclusion {
+                font-size: var(--font-size-lg) !important;
+                line-height: 1.4;
+                padding: 0 var(--space-4);
+            }
+            
+            .problem-solution-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .integration-text-mobile {
+                white-space: normal !important;
+            }
+            
+            .battlecard-comparison-grid {
+                grid-template-columns: 1fr !important;
+                gap: var(--space-8) !important;
+            }
+            
+            .analytics-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .roi-stats-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: var(--space-4) !important;
+            }
+            
+            .roi-stats-grid > div p:first-child {
+                font-size: var(--font-size-sm) !important;
+            }
+            
+            .roi-stats-grid > div p:nth-child(2) {
+                font-size: 1.75rem !important;
+            }
+            
+            .roi-stats-box {
+                padding: var(--space-6) var(--space-4) !important;
+            }
+            
+            .related-solutions-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Adjust for slightly larger screens (tablets/small desktops) */
+        @media (min-width: 1401px) and (max-width: 1600px) {
+            .milestone-red .milestone-tooltip {
+                left: auto;
+                right: -20px;
+                transform: translateX(0);
+            }
+            
+            .milestone-red .milestone-tooltip::after {
+                left: auto !important;
+                right: 20px !important;
+                transform: none !important;
+            }
+        }
+    </style>
+    
+    <!-- Mega Menu Styles -->
+    <style>
+        .solutions-nav-wrapper {
+            position: relative;
+        }
+        
+        .solutions-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .solutions-nav-link svg {
+            transition: transform 0.2s ease;
+        }
+        
+        .solutions-nav-wrapper:hover .solutions-nav-link svg {
+            transform: rotate(180deg);
+        }
+        
+        .mega-menu {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            z-index: 9999;
+            margin-top: 8px;
+            width: 950px;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+            display: none;
+        }
+        
+        .mega-menu-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 32px 36px;
+        }
+        
+        .mega-menu-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mega-menu-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #F1F5F9;
+        }
+        
+        .mega-menu-title svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2.5;
+        }
+        
+        .mega-menu-link {
+            color: #475569;
+            text-decoration: none;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.15s ease;
+            margin: 0 -12px;
+        }
+        
+        .mega-menu-link:hover {
+            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+            color: white;
+        }
+        
+        .mega-menu-header {
+            display: none;
+        }
+        
+        @media (max-width: 1024px) {
+            .mega-menu-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 24px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: white;
+                border-bottom: 1px solid #E2E8F0;
+                z-index: 10002;
+            }
+            
+            .mega-menu-back {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background: none;
+                border: none;
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--text-primary);
+                cursor: pointer;
+                padding: 8px 0;
+                pointer-events: auto;
+                z-index: 10003;
+            }
+            
+            .mega-menu-back svg {
+                color: var(--text-primary);
+            }
+            
+            .mega-menu-close {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 32px;
+                line-height: 1;
+                color: var(--text-primary);
+                cursor: pointer;
+                padding: 0;
+                width: 32px;
+                height: 32px;
+                pointer-events: auto;
+                z-index: 10003;
+            }
+            
+            .mega-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100vh;
+                transform: none;
+                border: none;
+                border-radius: 0;
+                padding: 100px 0 24px;
+                overflow-y: auto;
+                z-index: 10000;
+            }
+            
+            .mega-menu-content {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                padding: 24px;
+            }
+            
+            .mega-menu-column {
+                padding-bottom: 24px;
+                border-bottom: 1px solid #F1F5F9;
+            }
+            
+            .mega-menu-column:last-child {
+                border-bottom: none;
+            }
+            
+            .mega-menu-link {
+                padding: 14px 16px;
+                font-size: 16px;
+                margin: 0 -16px;
+            }
+        }
+    </style>
+    
+    <!-- Critical Footer CSS - Mobile responsive -->
+    <style>
+        /* CRITICAL: Hide duplicate footer columns on mobile - INLINE */
+        @media (max-width: 1175px) {
+            .footer .footer-links > .footer-column.footer-hide-mobile {
+                display: none !important;
+            }
+            
+            .footer .footer-links .footer-column-group .footer-column.footer-hide-mobile {
+                display: none !important;
+            }
+        }
+    </style>
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="../styles.css?v=5">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does CIx connect competitive moves to market trends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIx aggregates industry news, analyst reports, regulatory changes, and market signals alongside competitive intelligence. AI-powered correlation analysis links competitor actions (pricing changes, feature launches, market entries) to broader market forces, helping you understand the 'why' behind competitive behavior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sources does CIx monitor for market intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIx monitors industry news sites, analyst reports (Gartner, Forrester), financial data (funding, earnings), regulatory sources, social media sentiment, and competitive intelligence sources. All intelligence is aggregated in one platform, eliminating manual research across disconnected tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is market intelligence different from competitive intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Competitive Intelligence tells you WHAT competitors do. Market Intelligence tells you WHY they're doing it. CIx provides both in one platform—track competitor actions while understanding the market forces, industry trends, and strategic context driving those actions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who should own market intelligence in our organization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically Strategy, Competitive Intelligence, or Product Marketing teams. Market intelligence benefits Leadership (strategic planning), Product (market-driven roadmaps), Marketing (positioning and messaging), and Sales (market context for deals)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often is market intelligence updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CIx monitors market intelligence sources continuously in real-time. Industry news, analyst reports, regulatory changes, and competitive moves are tracked as they happen—no more waiting for quarterly market research reports or manually aggregating intelligence across dozens of sources."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we predict competitive moves with market intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. By analyzing market trends alongside competitive behavior patterns, CIx identifies signals that precede competitor moves. See which market forces correlate with pricing changes, feature launches, or market entries—allowing you to anticipate rather than react."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="../">
+                    <div class="logo-icon"><span class="logo-letter">s</span></div>
+                    <span class="logo-text">Signal Labs</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../" class="nav-link">CIx Platform</a>
+                
+                <div class="solutions-nav-wrapper">
+                    <a href="../solutions/" class="nav-link solutions-nav-link">
+                        Solutions
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                        </svg>
+                    </a>
+                    
+                    <div class="mega-menu">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">×</button>
+                        </div>
+                        <!-- Hidden SVG for gradient definition -->
+                        <svg width="0" height="0" style="position: absolute;">
+                            <defs>
+                                <linearGradient id="menuIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    BY TEAM
+                                </h3>
+                                <a href="../solutions/sales" class="mega-menu-link">Sales & Revenue</a>
+                                <a href="../solutions/marketing" class="mega-menu-link">Marketing & Growth</a>
+                                <a href="../solutions/product" class="mega-menu-link">Product & Engineering</a>
+                                <a href="../solutions/leadership" class="mega-menu-link">Strategy & Leadership</a>
+                                <a href="../solutions/competitive-intelligence" class="mega-menu-link">CI & Research</a>
+                                <a href="../solutions/investors" class="mega-menu-link">Investors & VCs</a>
+                                <a href="../solutions/ai-agents" class="mega-menu-link">AI Agents</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                    BY USE CASE
+                                </h3>
+                                <a href="../use-cases/sales-enablement" class="mega-menu-link">Sales Enablement</a>
+                                <a href="../use-cases/win-loss-analysis" class="mega-menu-link">Win/Loss Analysis</a>
+                                <a href="../use-cases/product-positioning" class="mega-menu-link">Product Positioning</a>
+                                <a href="../use-cases/market-intelligence" class="mega-menu-link">Market Intelligence</a>
+                                <a href="../use-cases/competitor-monitoring" class="mega-menu-link">Competitor Monitoring</a>
+                                <a href="../use-cases/battlecard-generation" class="mega-menu-link">Battlecard Generation</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    BY INDUSTRY
+                                </h3>
+                                <a href="../industries/saas" class="mega-menu-link">B2B SaaS</a>
+                                <a href="../industries/legal" class="mega-menu-link">Legal</a>
+                                <a href="../industries/financial-services" class="mega-menu-link">Financial Services</a>
+                                <a href="../industries/healthcare" class="mega-menu-link">Healthcare</a>
+                                <a href="../industries/ecommerce" class="mega-menu-link">E-commerce & Retail</a>
+                                <a href="../industries/deep-tech" class="mega-menu-link">Deep Tech</a>
+                                <a href="../industries/gaming" class="mega-menu-link">Gaming</a>
+                                <a href="../industries/defense" class="mega-menu-link">Defense</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2" stroke-linecap="round">
+                                        <path d="M18 20V10M12 20V4M6 20V14"></path>
+                                    </svg>
+                                    BY SIZE
+                                </h3>
+                                <a href="../startups" class="mega-menu-link">Startups</a>
+                                <a href="../enterprise" class="mega-menu-link">Enterprise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="../services" class="nav-link">CI Services</a>
+                <a href="../about" class="nav-link">About</a>
+                <a href="../blog" class="nav-link">Blog</a>
+                <a href="../contact" class="nav-link">Contact</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding-top: 140px; padding-bottom: 80px; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; color: var(--text-primary); line-height: 1.1; margin-bottom: var(--space-6);">
+                    Market Intelligence <span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Beyond Competitor Tracking</span>
+                </h1>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-8);">
+                    Track market trends, industry dynamics, and competitive movements. Understand how competitive moves connect to broader market forces with continuous market intelligence.
+                </p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                    <a href="../contact" class="btn btn-primary btn-lg">Book Demo</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section id="challenge" class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1100px;">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 class="section-title" style="font-size: var(--font-size-4xl); margin-bottom: var(--space-4); line-height: 1.3;">Endless Signals. Zero Clarity.</h2>
+                <p style="font-size: var(--font-size-base); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Most companies drown in market noise — tracking competitor moves, industry shifts, and customer signals without the ability to filter what matters from what doesn't.
+                </p>
+            </div>
+            
+            <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-10); margin-bottom: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                <!-- Win/Loss Intelligence Gap Chart -->
+                <div style="margin-bottom: var(--space-3);">
+                    <div style="text-align: center; margin-bottom: var(--space-3);">
+                                <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-1);">From Market Noise to Strategic Intelligence</h3>
+                        <p style="font-size: var(--font-size-sm); color: var(--text-secondary);">CIx filters thousands of signals into actionable market intelligence</p>
+                    </div>
+                    
+                    <!-- Market Intelligence Noise Filter Visualization -->
+                    <div style="max-width: 1400px; margin: 0 auto; padding: 0; position: relative;">
+                        <svg width="100%" viewBox="0 0 1400 350" style="display: block; height: auto;">
+                            <defs>
+                                <!-- Gradients for the clean output lines -->
+                                <linearGradient id="line1Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FB923C;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="line2Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#34D399;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="line3Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                </linearGradient>
+                                <!-- Funnel gradient -->
+                                <linearGradient id="funnelGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#E0E7FF;stop-opacity:0.8" />
+                                    <stop offset="50%" style="stop-color:#C7D2FE;stop-opacity:0.9" />
+                                    <stop offset="100%" style="stop-color:#A5B4FC;stop-opacity:1" />
+                                </linearGradient>
+                                
+                                <!-- Glow filters for the lines -->
+                                <filter id="orangeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 0.5 0 0 0  0 0 0.1 0 0  0 0 0 1 0"/>
+                                    <feMerge>
+                                        <feMergeNode/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                                
+                                <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                                    <feColorMatrix in="blur" type="matrix" values="0 0.6 0 0 0  0 0.7 0 0 0  0 0 0.5 0 0  0 0 0 1 0"/>
+                                    <feMerge>
+                                        <feMergeNode/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                                
+                                <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                                    <feColorMatrix in="blur" type="matrix" values="0.2 0 0 0 0  0 0.5 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+                                    <feMerge>
+                                        <feMergeNode/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            
+                            <style>
+                                @keyframes pulse-line-1 {
+                                    0%, 100% { opacity: 1; }
+                                    50% { opacity: 0.5; }
+                                }
+                                @keyframes pulse-line-2 {
+                                    0%, 100% { opacity: 1; }
+                                    50% { opacity: 0.5; }
+                                }
+                                @keyframes pulse-line-3 {
+                                    0%, 100% { opacity: 1; }
+                                    50% { opacity: 0.5; }
+                                }
+                                .pulse-line-1 {
+                                    animation: pulse-line-1 2.5s ease-in-out infinite;
+                                }
+                                .pulse-line-2 {
+                                    animation: pulse-line-2 2.5s ease-in-out infinite 0.4s;
+                                }
+                                .pulse-line-3 {
+                                    animation: pulse-line-3 2.5s ease-in-out infinite 0.8s;
+                                }
+                            </style>
+                            
+                            <!-- Background -->
+                            <rect x="0" y="0" width="1400" height="350" fill="#FFFFFF"/>
+                            
+                            <!-- Left Side: Market Noise (many chaotic lines converging) -->
+                            <g opacity="0.25">
+                                <!-- Many noise lines converging toward funnel -->
+                                <path d="M 50 30 L 600 140" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 50 L 600 145" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 70 L 600 150" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 90 L 600 155" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 110 L 600 160" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 130 L 600 165" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 150 L 600 170" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 170 L 600 175" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 190 L 600 180" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 210 L 600 185" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 230 L 600 190" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 250 L 600 195" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 270 L 600 200" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 290 L 600 205" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 310 L 600 210" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 40 L 600 142" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 60 L 600 147" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 80 L 600 152" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 100 L 600 157" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 120 L 600 162" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 140 L 600 167" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 160 L 600 172" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 180 L 600 177" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 200 L 600 182" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 220 L 600 187" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 240 L 600 192" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 260 L 600 197" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 280 L 600 202" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 300 L 600 207" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 320 L 600 212" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 35 L 600 141" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 55 L 600 146" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 75 L 600 151" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 95 L 600 156" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 115 L 600 161" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 135 L 600 166" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 155 L 600 171" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 175 L 600 176" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 195 L 600 181" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 215 L 600 186" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 235 L 600 191" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 255 L 600 196" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 275 L 600 201" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 295 L 600 206" stroke="#64748B" stroke-width="1" fill="none"/>
+                                <path d="M 50 315 L 600 211" stroke="#64748B" stroke-width="1" fill="none"/>
+                            </g>
+                            
+                            <!-- Center: Funnel/Filter Shape -->
+                            <ellipse cx="700" cy="175" rx="100" ry="175" fill="url(#funnelGradient)" opacity="0.7"/>
+                            <text x="700" y="170" text-anchor="middle" style="font-size: 32px; font-weight: 700; fill: #1E40AF; font-family: 'Inter', sans-serif;">CIx</text>
+                            <text x="700" y="195" text-anchor="middle" style="font-size: 14px; font-weight: 600; fill: #3B82F6; font-family: 'Inter', sans-serif;">Filters Noise</text>
+                            
+                            <!-- Right Side: Clean Output Lines (thin with glow and pulse) -->
+                            <!-- Glow layers (behind - static, no pulse) -->
+                            <path d="M 800 130 L 1350 130" stroke="#60A5FA" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.2" style="filter: blur(3px);"/>
+                            <path d="M 800 175 L 1350 175" stroke="#4ABCCA" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.2" style="filter: blur(3px);"/>
+                            <path d="M 800 220 L 1350 220" stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.2" style="filter: blur(3px);"/>
+                            
+                            <!-- Main lines (on top - with pulse animation) -->
+                            <path class="pulse-line-1" d="M 800 130 L 1350 130" stroke="#60A5FA" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <path class="pulse-line-2" d="M 800 175 L 1350 175" stroke="#4ABCCA" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            <path class="pulse-line-3" d="M 800 220 L 1350 220" stroke="#34D399" stroke-width="4" fill="none" stroke-linecap="round"/>
+                            
+                            <!-- Labels -->
+                            <text x="325" y="50" text-anchor="middle" style="font-size: 18px; font-weight: 600; fill: #64748B; font-family: 'Inter', sans-serif;">Market Noise</text>
+                            <text x="1075" y="50" text-anchor="middle" style="font-size: 18px; font-weight: 600; fill: #1E40AF; font-family: 'Inter', sans-serif;">Clear Intelligence</text>
+                            
+                            <!-- Labels for the clean lines on the right -->
+                            <text x="1350" y="120" text-anchor="end" style="font-size: 14px; font-weight: 600; fill: #60A5FA; font-family: 'Inter', sans-serif;">Market Trends</text>
+                            <text x="1350" y="165" text-anchor="end" style="font-size: 14px; font-weight: 600; fill: #4ABCCA; font-family: 'Inter', sans-serif;">Competitive Context</text>
+                            <text x="1350" y="210" text-anchor="end" style="font-size: 14px; font-weight: 600; fill: #34D399; font-family: 'Inter', sans-serif;">Strategic Signals</text>
+                        </svg>
+                    </div>
+                    
+                    <!-- Conclusion Statement -->
+                    <p style="font-size: var(--font-size-2xl); font-weight: 700; color: var(--text-primary); text-align: center; margin: var(--space-8) 0 0;">
+                        CIx filters market noise into clear intelligence: trends, context, and signals.
+                    </p>
+                    
+                    <!-- Original Chart Area (hidden as we replaced with comparison) -->
+                    <div style="display: none;">
+                        <!-- Y-axis labels -->
+                        <div style="position: absolute; left: 0; top: 0; bottom: 40px; display: flex; flex-direction: column; justify-content: space-between; font-size: 12px; color: var(--text-tertiary); padding-right: 12px;">
+                            <span>100%</span>
+                            <span>75%</span>
+                            <span>50%</span>
+                            <span>25%</span>
+                            <span>0%</span>
+                        </div>
+                        
+                        <!-- Chart area -->
+                        <div style="position: absolute; left: 50px; right: 0; top: 0; bottom: 40px; border-left: 2px solid #E2E8F0; border-bottom: 2px solid #E2E8F0;">
+                            <!-- Declining line -->
+                            <svg style="position: absolute; width: 100%; height: 100%;" viewBox="0 0 500 250" preserveAspectRatio="none">
+                                <!-- Grid lines -->
+                                <line x1="0" y1="62.5" x2="500" y2="62.5" stroke="#F1F5F9" stroke-width="1"/>
+                                <line x1="0" y1="125" x2="500" y2="125" stroke="#F1F5F9" stroke-width="1"/>
+                                <line x1="0" y1="187.5" x2="500" y2="187.5" stroke="#F1F5F9" stroke-width="1"/>
+                                
+                                <!-- Declining curve -->
+                                <path d="M 0 20 L 125 62.5 L 250 125 L 375 187.5 L 500 220" 
+                                      fill="none" 
+                                      stroke="url(#declineGradient)" 
+                                      stroke-width="4" 
+                                      stroke-linecap="round"/>
+                                
+                                <!-- Area under curve -->
+                                <path d="M 0 20 L 125 62.5 L 250 125 L 375 187.5 L 500 220 L 500 250 L 0 250 Z" 
+                                      fill="url(#areaGradient)" 
+                                      opacity="0.1"/>
+                                
+                                <defs>
+                                    <linearGradient id="declineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+                                    </linearGradient>
+                                    <linearGradient id="areaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            
+                            <!-- Milestone markers -->
+                            <div class="chart-milestone milestone-green" style="position: absolute; left: 0%; top: 8%; transform: translateX(-50%) translateY(-50%);">
+                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #34d399; border: 3px solid white; border-radius: 50%;"></div>
+                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #059669; margin-right: 12px;">Week 0</span>Sales team loves them. Usage is high. You're a hero.</div>
+                            </div>
+                            <div class="chart-milestone milestone-blue" style="position: absolute; left: 25%; top: 25%; transform: translateX(-50%) translateY(-50%);">
+                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #60a5fa; border: 3px solid white; border-radius: 50%;"></div>
+                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #2563eb; margin-right: 12px;">Week 1</span>Competitor changes pricing. Your battlecard has wrong information.</div>
+                            </div>
+                            <div class="chart-milestone milestone-yellow" style="position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);">
+                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #f59e0b; border: 3px solid white; border-radius: 50%;"></div>
+                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #d97706; margin-right: 12px;">Week 2</span>Rep asks "Do we have a battlecard on Competitor Y?" You don't.</div>
+                            </div>
+                            <div class="chart-milestone milestone-orange" style="position: absolute; left: 75%; top: 75%; transform: translateX(-50%) translateY(-50%);">
+                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #f97316; border: 3px solid white; border-radius: 50%;"></div>
+                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #ea580c; margin-right: 12px;">Week 3</span>Reps create their own "updated" battlecards. Inconsistent messaging.</div>
+                            </div>
+                            <div class="chart-milestone milestone-red" style="position: absolute; left: 100%; top: 88%; transform: translateX(-50%) translateY(-50%);">
+                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #ef4444; border: 3px solid white; border-radius: 50%;"></div>
+                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #dc2626; margin-right: 12px;">Week 4</span>Usage has dropped. Battlecards feel stale. The cycle repeats.</div>
+                            </div>
+                        </div>
+                        
+                        <!-- X-axis labels (timeline) -->
+                        <div style="position: absolute; left: 50px; right: 0; bottom: 0; height: 40px; padding-top: 12px;">
+                            <div style="position: absolute; left: 0%; transform: translateX(-50%); text-align: center;">
+                                <div style="font-weight: 700; color: #34d399; font-size: 14px;">Week 0</div>
+                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Launch</div>
+                            </div>
+                            <div style="position: absolute; left: 25%; transform: translateX(-50%); text-align: center;">
+                                <div style="font-weight: 700; color: #60a5fa; font-size: 14px;">Week 1</div>
+                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">First crack</div>
+                            </div>
+                            <div style="position: absolute; left: 50%; transform: translateX(-50%); text-align: center;">
+                                <div style="font-weight: 700; color: #f59e0b; font-size: 14px;">Week 2</div>
+                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Gaps appear</div>
+                            </div>
+                            <div style="position: absolute; left: 75%; transform: translateX(-50%); text-align: center;">
+                                <div style="font-weight: 700; color: #f97316; font-size: 14px;">Week 3</div>
+                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Chaos</div>
+                            </div>
+                            <div style="position: absolute; left: 100%; transform: translateX(-50%); text-align: center;">
+                                <div style="font-weight: 700; color: #ef4444; font-size: 14px;">Week 4</div>
+                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Abandoned</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Challenge Stats Grid -->
+            <div class="container" style="max-width: 1100px;">
+                <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); margin-top: var(--space-6);">
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light);">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                        Isolated Data Points
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm);">
+                        Competitive moves tracked without understanding market context
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light);">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                        Fragmented Intelligence
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm);">
+                        Market trends and competitive data live in separate tools and reports
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light);">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                        Reactive Strategy
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm);">
+                        Missing market signals means reacting late instead of anticipating
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light);">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                        Manual Research
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm);">
+                        Weeks spent aggregating market reports, industry news, and trend data
+                    </p>
+                </div>
+                </div>
+            </div>
+
+            <!-- Problem vs Solution Grid -->
+            <div class="container" style="max-width: 1100px;">
+            <div class="problem-solution-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); margin-top: var(--space-6);">
+                <!-- The Problem -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.1), 0 4px 20px rgba(239, 68, 68, 0.15), 0 8px 40px rgba(239, 68, 68, 0.1);">
+                    <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); color: var(--text-primary); font-weight: 700; margin: 0;">The Problem</h3>
+                    </div>
+                    <p style="font-size: var(--font-size-base); color: var(--text-primary); font-weight: 600; margin-bottom: var(--space-3);">
+                        Tracking moves without understanding market context
+                    </p>
+                    <ul style="margin: 0; padding-left: var(--space-5); color: var(--text-secondary); line-height: 1.8; font-size: var(--font-size-sm);">
+                        <li style="margin-bottom: var(--space-2);">Competitive data <strong>without market trends</strong></li>
+                        <li style="margin-bottom: var(--space-2);">Can't predict <strong>next competitive moves</strong></li>
+                        <li style="margin-bottom: var(--space-2);">Miss <strong>market shifts</strong> driving competitor behavior</li>
+                        <li>Strategy becomes <strong>reactive</strong> instead of proactive</li>
+                    </ul>
+                </div>
+
+                <!-- The Solution -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.1), 0 4px 20px rgba(52, 211, 153, 0.15), 0 8px 40px rgba(52, 211, 153, 0.1);">
+                    <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); color: var(--text-primary); font-weight: 700; margin: 0;">The Solution</h3>
+                    </div>
+                    <p style="font-size: var(--font-size-base); color: var(--text-primary); font-weight: 600; margin-bottom: var(--space-3);">
+                        Market intelligence connected to competitive moves
+                    </p>
+                    <ul style="margin: 0; padding-left: var(--space-5); color: var(--text-secondary); line-height: 1.8; font-size: var(--font-size-sm);">
+                        <li style="margin-bottom: var(--space-2);"><strong>Trend correlation:</strong> connect competitor moves to market forces</li>
+                        <li style="margin-bottom: var(--space-2);"><strong>Market signals:</strong> anticipate competitive shifts early</li>
+                        <li style="margin-bottom: var(--space-2);"><strong>Industry intelligence:</strong> automated news and report aggregation</li>
+                        <li><strong>Strategic context:</strong> understand the "why" behind competitive behavior</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 class="section-title" style="font-size: var(--font-size-4xl);">
+                    Market Intelligence That Connects the Dots
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Track competitive moves within market context. Connect competitor behavior to industry trends, market forces, and strategic opportunities.
+                </p>
+            </div>
+
+            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); margin-bottom: var(--space-10);">
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #60a5fa; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Market Trend Tracking
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
+                        Monitor industry trends, market shifts, and broader forces affecting your competitive landscape. Stay ahead of market dynamics.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Industry trend aggregation</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Market shift identification</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Economic and regulatory signals</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #34d399; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Competitive Move Contextualization
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
+                        Connect competitive moves to market trends. Understand why competitors launch features, change pricing, or enter markets.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Link moves to market forces</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Understand competitive strategy drivers</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Predict next competitive moves</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #60a5fa; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Industry Intelligence Aggregation
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
+                        Automated aggregation of industry news, analyst reports, and market signals. Stay informed without manual research.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Automated industry news monitoring</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Analyst report synthesis</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Market signal detection</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #34d399; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Strategic Market Intelligence
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
+                        High-level market intelligence for leadership and strategy teams. Move beyond tactical CI to strategic market understanding.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Executive-level market insights</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Strategic opportunity identification</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Market threat early warning</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #60a5fa; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Competitive + Market Integration
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
+                        One platform for both competitive and market intelligence. Stop switching between tools to understand the full picture.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Unified intelligence platform</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Competitive data + market context</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Complete strategic picture</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-top: 4px solid #34d399; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Predictive Market Intelligence
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-4);">
+                        Anticipate market shifts before they happen. Use trend data and competitive signals to stay ahead of industry changes.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Trend-based predictions</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Early market shift detection</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; color: var(--text-secondary);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Proactive strategy recommendations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Enablement Integration Ecosystem Section -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1100px;">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 class="section-title" style="font-size: var(--font-size-4xl);">
+                    Aggregate Market Intelligence from Every Source
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    CIx monitors market trends, industry dynamics, and competitive movements across all channels. One platform for comprehensive market intelligence.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
+                <!-- Industry News Integration -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <img src="https://img.logo.dev/techcrunch.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true" alt="Industry News" style="width: 48px; height: 48px; margin-right: var(--space-3); object-fit: contain;">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Industry News</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Automated news monitoring</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Industry trend identification</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Market signal detection</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Analyst Reports Integration -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <img src="https://img.logo.dev/gartner.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true" alt="Analyst Reports" style="width: 48px; height: 48px; margin-right: var(--space-3); object-fit: contain;">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Analyst Reports</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Gartner & Forrester insights</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Market research synthesis</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Analyst predictions tracking</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Financial Data Integration -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <img src="https://img.logo.dev/crunchbase.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true" alt="Financial Data" style="width: 48px; height: 48px; margin-right: var(--space-3); object-fit: contain;">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Financial Data</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Funding rounds & valuations</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Earnings & revenue signals</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>M&A activity tracking</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Integration -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <img src="https://img.logo.dev/linkedin.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true" alt="Social Media" style="width: 48px; height: 48px; margin-right: var(--space-3); object-fit: contain;">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Social Media</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Industry sentiment tracking</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Thought leader insights</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Real-time market conversations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Regulatory Data Integration -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <img src="https://img.logo.dev/sec.gov?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true" alt="Regulatory Data" style="width: 48px; height: 48px; margin-right: var(--space-3); object-fit: contain;">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Regulatory Data</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Compliance & regulation changes</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Policy impact analysis</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Industry legislation tracking</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Competitive Intelligence Integration -->
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <img src="https://img.logo.dev/g2.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true" alt="User Reviews" style="width: 48px; height: 48px; margin-right: var(--space-3); object-fit: contain;">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">User Reviews</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Customer sentiment & satisfaction trends</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Competitive win/loss signals from reviews</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 8px; margin-bottom: 10px; color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Feature gaps & product feedback patterns</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%); border-radius: var(--radius-lg); padding: var(--space-8); margin-top: var(--space-10); color: white; text-align: center;">
+                <p style="font-size: var(--font-size-xl); font-weight: 600; margin-bottom: var(--space-3);">
+                    Market Intelligence Drives ROI
+                </p>
+                <p class="integration-text-mobile" style="font-size: var(--font-size-base); opacity: 0.95; max-width: 1000px; margin: 0 auto; white-space: nowrap;">
+                    Organizations leveraging market intelligence report 15–25% higher ROI on strategic initiatives through better prioritization.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="content-section">
+        <div class="container" style="max-width: 1100px;">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 class="section-title" style="font-size: var(--font-size-4xl);">
+                    Track, Analyze, Predict Market Dynamics
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Monitor market intelligence effectiveness, measure strategic impact, and prove ROI with comprehensive market and competitive intelligence.
+                </p>
+            </div>
+
+            <div class="analytics-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); margin-bottom: var(--space-10);">
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-right: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Market Intelligence Capture</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Market trends tracked
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Industry signals monitored
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Competitive moves contextualized
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Market force identification
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Intelligence breadth coverage
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-right: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Trend Analysis</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Market trend velocity
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Industry shift indicators
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Competitive pattern detection
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Market timing insights
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Trend correlation scores
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-right: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Competitive Context</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Move-to-trend correlation
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Market force attribution
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Strategic intent analysis
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Prediction accuracy rating
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Intelligence depth index
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-right: var(--space-3);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0;">Strategic Impact ROI</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Decision quality improvement
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Threat avoidance metrics
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Opportunity capture rate
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Strategic timing advantage
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 16px; color: var(--text-secondary); position: relative;">
+                            <span style="position: absolute; left: 0; color: #60a5fa;">•</span>Intelligence value index
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="roi-stats-box" style="background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%); border-radius: var(--radius-xl); padding: var(--space-10); color: white; text-align: center;">
+                <h3 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-6); color: white;">Market Intelligence ROI</h3>
+                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6);">
+                    <div>
+                        <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: 4px;">Market research time</p>
+                        <p style="font-size: 2.5rem; font-weight: 700;">-?%</p>
+                        <p style="font-size: var(--font-size-sm); opacity: 0.8;">saved with automation</p>
+                    </div>
+                    <div>
+                        <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: 4px;">Strategic decisions</p>
+                        <p style="font-size: 2.5rem; font-weight: 700;">+?x</p>
+                        <p style="font-size: var(--font-size-sm); opacity: 0.8;">better quality with context</p>
+                    </div>
+                    <div>
+                        <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: 4px;">Opportunity capture</p>
+                        <p style="font-size: 2.5rem; font-weight: 700;">+?%</p>
+                        <p style="font-size: var(--font-size-sm); opacity: 0.8;">with early market signals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: var(--bg-secondary);">
+        <div class="container" style="max-width: 900px;">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div>
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How does CIx connect competitive moves to market trends?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx aggregates industry news, analyst reports, regulatory changes, and market signals alongside competitive intelligence. AI-powered correlation analysis links competitor actions (pricing changes, feature launches, market entries) to broader market forces, helping you understand the "why" behind competitive behavior.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">What sources does CIx monitor for market intelligence?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx monitors industry news sites, analyst reports (Gartner, Forrester), financial data (funding, earnings), regulatory sources, social media sentiment, and competitive intelligence sources. All intelligence is aggregated in one platform, eliminating manual research across disconnected tools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How is market intelligence different from competitive intelligence?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Competitive Intelligence tells you WHAT competitors do. Market Intelligence tells you WHY they're doing it. CIx provides both in one platform—track competitor actions while understanding the market forces, industry trends, and strategic context driving those actions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Who should own market intelligence in our organization?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Typically Strategy, Competitive Intelligence, or Product Marketing teams. Market intelligence benefits Leadership (strategic planning), Product (market-driven roadmaps), Marketing (positioning and messaging), and Sales (market context for deals).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How often is market intelligence updated?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx monitors market intelligence sources continuously in real-time. Industry news, analyst reports, regulatory changes, and competitive moves are tracked as they happen—no more waiting for quarterly market research reports or manually aggregating intelligence across dozens of sources.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Can we predict competitive moves with market intelligence?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Yes. By analyzing market trends alongside competitive behavior patterns, CIx identifies signals that precede competitor moves. See which market forces correlate with pricing changes, feature launches, or market entries—allowing you to anticipate rather than react.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Solutions Section -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1100px;">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">
+                    Competitive Intelligence Across Functions
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Sales enablement works best when aligned with other functions
+                </p>
+            </div>
+
+            <div class="related-solutions-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8);">
+                <a href="../solutions/sales" style="text-decoration: none;">
+                    <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%; display: flex; flex-direction: column;">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">For Sales Teams</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7; flex-grow: 1;">Intelligence for deals and conversations</p>
+                        <div style="margin-top: var(--space-4); color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                            Learn more →
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../solutions/marketing" style="text-decoration: none;">
+                    <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%; display: flex; flex-direction: column;">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">For Marketing Teams</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7; flex-grow: 1;">Positioning and messaging alignment</p>
+                        <div style="margin-top: var(--space-4); color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                            Learn more →
+                        </div>
+                    </div>
+                </a>
+
+                <a href="../solutions/competitive-intelligence" style="text-decoration: none;">
+                    <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%; display: flex; flex-direction: column;">
+                        <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">For CI Teams</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.7; flex-grow: 1;">Scale competitive intelligence organization-wide</p>
+                        <div style="margin-top: var(--space-4); color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                            Learn more →
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Stop Tracking Moves. Start Understanding Why.</h2>
+                <p class="cta-subtitle">Transform competitive data into strategic market intelligence with context-driven insights.</p>
+                <div class="cta-buttons">
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
+                    <a href="../contact" class="btn btn-outline btn-lg" style="border-color: white; color: white;">Book Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><span class="logo-letter">s</span></div>
+                        <span class="logo-text">Signal Labs</span>
+                    </div>
+                    <p>Competitive Intelligence & Enablement Platform</p>
+                    <a href="https://www.linkedin.com/company/signal-labs-cix/" target="_blank" rel="noopener noreferrer" class="footer-linkedin-link" aria-label="Visit Signal Labs on LinkedIn" style="margin-bottom: 20px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Mobile-only sections - shown only on mobile -->
+                    <div class="footer-column footer-brand-extra">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>By Size</h3>
+                        <a href="../size/startups">Startups</a>
+                        <a href="../size/enterprise">Enterprise</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column-group footer-column-group-by-team" style="margin-top: 132px;">
+                        <div class="footer-column">
+                            <h3>By Team</h3>
+                            <a href="../solutions/sales">Sales & Revenue</a>
+                            <a href="../solutions/marketing">Marketing & Growth</a>
+                            <a href="../solutions/product">Product & Engineering</a>
+                            <a href="../solutions/leadership">Strategy & Leadership</a>
+                            <a href="../solutions/ci-research">CI & Research</a>
+                            <a href="../solutions/investors">Investors & VCs</a>
+                            <a href="../solutions/ai-agents">AI Agents</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>By Use Case</h3>
+                            <a href="../use-cases/sales-enablement">Sales Enablement</a>
+                            <a href="../use-cases/win-loss-analysis">Win/Loss Analysis</a>
+                            <a href="../use-cases/product-positioning">Product Positioning</a>
+                            <a href="../use-cases/market-intelligence">Market Intelligence</a>
+                            <a href="../use-cases/competitor-monitoring">Competitor Monitoring</a>
+                            <a href="../use-cases/battlecard-generation">Battlecard Generation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column-group">
+                        <div class="footer-column">
+                            <h3>By Industry</h3>
+                            <a href="../industries/saas">SaaS</a>
+                            <a href="../industries/legal">Legal</a>
+                            <a href="../industries/financial-services">Financial Services</a>
+                            <a href="../industries/healthcare">Healthcare</a>
+                            <a href="../industries/ecommerce">E-commerce & Retail</a>
+                            <a href="../industries/deep-tech">Deep Tech</a>
+                            <a href="../industries/gaming">Gaming</a>
+                            <a href="../industries/defense">Defense</a>
+                        </div>
+                        <div class="footer-column footer-hide-mobile">
+                            <h3>By Size</h3>
+                            <a href="../size/startups">Startups</a>
+                            <a href="../size/enterprise">Enterprise</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    
+    <!-- Mega Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsLink = document.querySelector('.solutions-nav-link');
+            const megaMenu = document.querySelector('.mega-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const closeButton = megaMenu ? megaMenu.querySelector('.mega-menu-close') : null;
+            const backButton = megaMenu ? megaMenu.querySelector('.mega-menu-back') : null;
+            
+            if (solutionsWrapper && megaMenu && solutionsLink && navMenu) {
+                let timeout;
+                const isMobile = () => window.innerWidth <= 1024;
+                
+                // Initialize menu state
+                megaMenu.style.visibility = 'hidden';
+                megaMenu.style.opacity = '0';
+                megaMenu.style.display = 'none';
+                
+                function closeMegaMenu() {
+                    megaMenu.style.visibility = 'hidden';
+                    megaMenu.style.opacity = '0';
+                    setTimeout(() => {
+                        megaMenu.style.display = 'none';
+                    }, 300);
+                }
+                
+                function openMegaMenu() {
+                    megaMenu.style.display = 'block';
+                    megaMenu.offsetHeight;
+                    megaMenu.style.visibility = 'visible';
+                    megaMenu.style.opacity = '1';
+                }
+                
+                function closeAllNavs() {
+                    closeMegaMenu();
+                    navMenu.classList.remove('active');
+                }
+                
+                // Desktop hover behavior
+                if (!isMobile()) {
+                    solutionsWrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        openMegaMenu();
+                    });
+                    
+                    solutionsWrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!megaMenu.matches(':hover')) {
+                                closeMegaMenu();
+                            }
+                        }, 100);
+                    });
+                    
+                    megaMenu.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        openMegaMenu();
+                    });
+                    
+                    megaMenu.addEventListener('mouseleave', function() {
+                        closeMegaMenu();
+                    });
+                }
+                
+                // Mobile click behavior
+                solutionsLink.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        if (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block') {
+                            closeMegaMenu();
+                        } else {
+                            openMegaMenu();
+                        }
+                    }
+                });
+                
+                // Close and back buttons
+                if (closeButton) {
+                    ['click', 'touchend'].forEach(event => {
+                        closeButton.addEventListener(event, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            closeAllNavs();
+                        });
+                    });
+                }
+                
+                if (backButton) {
+                    ['click', 'touchend'].forEach(event => {
+                        backButton.addEventListener(event, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            closeMegaMenu();
+                        });
+                    });
+                }
+                
+                // Close mega menu on window resize to desktop
+                window.addEventListener('resize', function() {
+                    if (!isMobile() && (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block')) {
+                        closeMegaMenu();
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const content = faqItem.querySelector('.faq-content');
+                    const icon = this.querySelector('.faq-icon');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-item-collapsible').forEach(item => {
+                        if (item !== faqItem) {
+                            item.querySelector('.faq-content').style.maxHeight = '0';
+                            item.querySelector('.faq-icon').textContent = '+';
+                            item.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        content.style.maxHeight = '0';
+                        icon.textContent = '+';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.textContent = '−';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Chart Auto-Play Animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const milestones = document.querySelectorAll('.chart-milestone');
+            let hasPlayed = false;
+            let isPlaying = false;
+            
+            console.log('Chart auto-play initialized. Found', milestones.length, 'milestones');
+            
+            // Detect when chart comes into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !hasPlayed) {
+                        console.log('Chart came into view, starting auto-play...');
+                        hasPlayed = true;
+                        setTimeout(() => {
+                            playTooltipSequence();
+                        }, 500); // Small delay before starting
+                    }
+                });
+            }, {
+                threshold: 0.3 // Trigger when 30% of chart is visible (lowered threshold)
+            });
+            
+            // Observe the chart container
+            const chartContainer = document.querySelector('#challenge');
+            if (chartContainer) {
+                console.log('Found chart container, observing...');
+                observer.observe(chartContainer);
+            } else {
+                console.error('Chart container #challenge not found!');
+            }
+            
+            function playTooltipSequence() {
+                isPlaying = true;
+                let currentIndex = 0;
+                
+                function showNextTooltip() {
+                    // Check if still playing (user might have hovered)
+                    if (!isPlaying) {
+                        console.log('Auto-play stopped by user interaction');
+                        return;
+                    }
+                    
+                    // Hide all tooltips first
+                    milestones.forEach(milestone => {
+                        milestone.classList.remove('active-tooltip');
+                    });
+                    
+                    if (currentIndex < milestones.length) {
+                        const currentMilestone = milestones[currentIndex];
+                        currentMilestone.classList.add('active-tooltip');
+                        
+                        currentIndex++;
+                        setTimeout(showNextTooltip, 3000); // Show each for 3 seconds
+                    } else {
+                        // Sequence complete
+                        isPlaying = false;
+                        console.log('Auto-play sequence completed');
+                        // Remove all active classes to allow hover to take over
+                        milestones.forEach(milestone => {
+                            milestone.classList.remove('active-tooltip');
+                        });
+                    }
+                }
+                
+                showNextTooltip();
+            }
+            
+            // Stop auto-play on hover
+            milestones.forEach(milestone => {
+                milestone.addEventListener('mouseenter', function() {
+                    if (isPlaying) {
+                        console.log('User hovered during auto-play, stopping auto-play...');
+                        isPlaying = false;
+                        // Remove all active classes to give user full control
+                        milestones.forEach(m => {
+                            m.classList.remove('active-tooltip');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

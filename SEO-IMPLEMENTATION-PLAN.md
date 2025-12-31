@@ -1669,3 +1669,6 @@ You'll need to create Open Graph images (1200x630px) for social sharing:
 **Last Updated:** December 2, 2025  
 **Owner:** Signal Labs  
 **Next Review:** March 1, 2026 (or when adding significant new content)
+
+
+

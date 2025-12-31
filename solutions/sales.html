@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17805025780"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-17805025780');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Intelligence for Sales & Revenue Teams | CIx</title>
+    <meta name="description" content="Real-time competitive intelligence for sales teams. Battlecards, win/loss analysis, and competitive insights that help reps close deals faster. Embedded in Salesforce, Gong, and your workflow.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://usesignallabs.com/solutions/sales">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://usesignallabs.com/solutions/sales">
+    <meta property="og:title" content="Competitive Intelligence for Sales Teams | Real-Time Battlecards & Win Strategies">
+    <meta property="og:description" content="Empower your sales team with real-time battlecards, competitor discovery, and strategic intelligence. Close more competitive deals with CIx.">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Signal Labs">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://usesignallabs.com/solutions/sales">
+    <meta name="twitter:title" content="Competitive Intelligence for Sales Teams | Real-Time Battlecards & Win Strategies">
+    <meta name="twitter:description" content="Real-time competitive intelligence for sales teams. Battlecards, win/loss analysis, and competitive insights that help reps close deals faster.">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://us.i.posthog.com">
+    <link rel="preconnect" href="https://us-assets.i.posthog.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://snap.licdn.com">
+    <link rel="preconnect" href="https://px.ads.linkedin.com">
+    
+    <!-- Critical CSS -->
+    <style>
+        .navbar{border-bottom:none !important;box-shadow:none !important;transition:all 0.3s ease}.navbar.scrolled{border-bottom:1px solid var(--border-light) !important;box-shadow:0 2px 8px rgba(0,0,0,0.04) !important}.nav-logo a{display:flex;align-items:center;text-decoration:none;color:#0F172A !important;font-weight:600;font-size:var(--font-size-lg)}.logo-text{color:#0F172A !important}.nav-link{text-decoration:none;color:#64748B !important;font-weight:500;transition:color 0.3s ease;position:relative;padding-bottom:4px;border-bottom:2px solid transparent}.nav-link:hover,.nav-link.active{color:#0F172A !important;border-bottom-color:#272d46 !important}.nav-link.nav-cta{background:#272d46 !important;color:white !important;padding:0.5rem 1rem !important;border-radius:0.5rem !important;border:none !important;padding-bottom:0.5rem !important}.nav-link.nav-cta:hover{background:#1f2338 !important;border-bottom:none !important}.nav-toggle{background:none !important;border:none !important;box-shadow:none !important;padding:0 !important}.nav-toggle span{width:24px;height:2px;background:#0F172A !important;transition:all 0.3s ease}
+        
+        /* Mobile responsive grid for "How CIx Solves This" sections */
+        @media (max-width: 768px) {
+            .solutions-grid-4col {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            /* Stats section - keep 3 items in one line on mobile */
+            .stats-section-mobile {
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: var(--space-4) !important;
+            }
+            
+            .stats-section-mobile > div {
+                padding: var(--space-4) !important;
+            }
+            
+            .stats-number {
+                font-size: 2.5rem !important;
+            }
+            
+            .stats-label {
+                font-size: var(--font-size-sm) !important;
+            }
+        }
+    </style>
+    
+    <!-- Mega Menu Styles -->
+    <style>
+        .solutions-nav-wrapper {
+            position: relative;
+        }
+        
+        .solutions-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .solutions-nav-link svg {
+            transition: transform 0.2s ease;
+        }
+        
+        .solutions-nav-wrapper:hover .solutions-nav-link svg {
+            transform: rotate(180deg);
+        }
+        
+        .mega-menu {
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 950px;
+            z-index: 1001;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+        
+        .mega-menu-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding: 32px 36px;
+        }
+        
+        .mega-menu-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .mega-menu-title {
+            font-size: 11px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .mega-menu-link {
+            text-decoration: none;
+            color: #0F172A;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+            display: block;
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+        
+        .mega-menu-link:hover {
+            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+            color: #ffffff;
+        }
+        
+        .mega-menu-header {
+            display: none;
+        }
+        
+        @media (max-width: 1024px) {
+            .mega-menu-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 24px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background: white;
+                border-bottom: 1px solid #E2E8F0;
+                z-index: 10002;
+            }
+            
+            .mega-menu-back {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background: none;
+                border: none;
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--text-primary);
+                cursor: pointer;
+                padding: 8px 0;
+                pointer-events: auto;
+                z-index: 10003;
+            }
+            
+            .mega-menu-back svg {
+                color: var(--text-primary);
+            }
+            
+            .mega-menu-close {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 32px;
+                line-height: 1;
+                color: var(--text-primary);
+                cursor: pointer;
+                padding: 0;
+                width: 32px;
+                height: 32px;
+                pointer-events: auto;
+                z-index: 10003;
+            }
+            
+            .mega-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100vh;
+                transform: none;
+                border: none;
+                border-radius: 0;
+                padding: 100px 0 24px;
+                overflow-y: auto;
+                z-index: 10000;
+            }
+            
+            .mega-menu-content {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                padding: 0;
+                max-width: 100%;
+            }
+            
+            .mega-menu-section {
+                gap: 4px;
+                padding: 0 24px;
+            }
+            
+            .mega-menu-title {
+                font-size: 12px;
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+            }
+            
+            .mega-menu-link {
+                font-size: 15px;
+                padding: 12px 24px;
+                margin: 0 -24px;
+                border-radius: 0;
+            }
+        }
+    </style>
+    
+    <!-- Critical Footer CSS - Mobile responsive -->
+    <style>
+        /* CRITICAL: Hide duplicate footer columns on mobile - INLINE */
+        @media (max-width: 1175px) {
+            .footer .footer-links > .footer-column.footer-hide-mobile {
+                display: none !important;
+            }
+            
+            .footer .footer-links .footer-column-group .footer-column.footer-hide-mobile {
+                display: none !important;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../styles.css?v=5">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" sizes="64x64" />
+    <link rel="icon" href="/icon.png?v=4" type="image/png" sizes="64x64" />
+    <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.ico?v=4" />
+    <link rel="apple-touch-icon" href="/apple-icon.png?v=4" sizes="180x180" />
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Or Ar ci Tr Cr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_bXWnjXhc5Ck6JRn79m2TPIAvAi3Vg28dwHovbKNu8Fc', {
+            api_host: 'https://us.i.posthog.com',
+            person_profiles: 'identified_only'
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <div class="logo-icon"><span class="logo-letter">s</span></div>
+                    <span class="logo-text">Signal Labs</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="/" class="nav-link">CIx Platform</a>
+                <div class="solutions-nav-wrapper">
+                    <a href="/solutions" class="nav-link solutions-nav-link">
+                        Solutions
+                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <!-- Mega Menu Dropdown -->
+                    <div class="mega-menu">
+                        <!-- Header with back button for mobile -->
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">×</button>
+                        </div>
+                        <!-- Hidden SVG for gradient definition -->
+                        <svg width="0" height="0" style="position: absolute;">
+                            <defs>
+                                <linearGradient id="menuIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    BY TEAM
+                                </h3>
+                                <a href="sales" class="mega-menu-link">Sales & Revenue</a>
+                                <a href="marketing" class="mega-menu-link">Marketing & Growth</a>
+                                <a href="product" class="mega-menu-link">Product & Engineering</a>
+                                <a href="leadership" class="mega-menu-link">Strategy & Leadership</a>
+                                <a href="competitive-intelligence" class="mega-menu-link">CI & Research</a>
+                                <a href="investors" class="mega-menu-link">Investors & VCs</a>
+                                <a href="ai-agents" class="mega-menu-link">AI Agents</a>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                    BY USE CASE
+                                </h3>
+                                <a href="../use-cases/sales-enablement" class="mega-menu-link">Sales Enablement</a>
+                                <a href="../use-cases/win-loss-analysis" class="mega-menu-link">Win/Loss Analysis</a>
+                                <a href="../use-cases/product-positioning" class="mega-menu-link">Product Positioning</a>
+                                <a href="../use-cases/market-intelligence" class="mega-menu-link">Market Intelligence</a>
+                                <a href="../use-cases/competitor-monitoring" class="mega-menu-link">Competitor Monitoring</a>
+                                <a href="../use-cases/battlecard-generation" class="mega-menu-link">Battlecard Generation</a>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    BY INDUSTRY
+                                </h3>
+                                <a href="../industries/saas" class="mega-menu-link">B2B SaaS</a>
+                                <a href="../industries/financial-services" class="mega-menu-link">Financial Services</a>
+                                <a href="../industries/legal" class="mega-menu-link">Legal</a>
+                                <a href="../industries/healthcare" class="mega-menu-link">Healthcare & Pharma</a>
+                                <a href="../industries/ecommerce" class="mega-menu-link">Ecommerce & Retail</a>
+                                <a href="../industries/deep-tech" class="mega-menu-link">Deep Tech</a>
+                                <a href="../industries/gaming" class="mega-menu-link">Gaming</a>
+                                <a href="../industries/defense" class="mega-menu-link">Defense & Aerospace</a>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2" stroke-linecap="round">
+                                        <path d="M18 20V10M12 20V4M6 20V14"></path>
+                                    </svg>
+                                    BY SIZE
+                                </h3>
+                                <a href="../startups" class="mega-menu-link">Startups & Founders</a>
+                                <a href="../enterprise" class="mega-menu-link">Enterprise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="../services" class="nav-link">CI Services</a>
+                <a href="../about" class="nav-link">About</a>
+                <a href="../blog" class="nav-link">Blog</a>
+                <a href="../contact" class="nav-link">Contact</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Light Background Like Solutions Page -->
+    <section class="hero" style="padding-top: 140px; padding-bottom: 80px; background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; color: var(--text-primary); line-height: 1.1; margin-bottom: var(--space-6);">
+                    Competitive Intelligence for <span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Sales & Revenue Teams</span>
+                </h1>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); line-height: 1.7; margin-bottom: var(--space-8);">
+                    Real-time battlecards, competitive insights, and win strategies that help your revenue team close more deals. From discovery to close - give your sales team the competitive edge they need.
+                </p>
+                <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
+                    <a href="contact" class="btn btn-outline btn-lg">Book Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1400px;">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 class="section-title" style="font-size: var(--font-size-4xl); margin-bottom: var(--space-4);">Outdated Intelligence. Lost Deals.</h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                    Manual research, outdated battlecards, and lost deals - this is the reality for most sales teams.
+                </p>
+            </div>
+            
+            <!-- Pain Points Grid -->
+            <div class="solutions-grid-4col" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-8); margin-bottom: var(--space-10);">
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-10); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Manual Research
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-base);">
+                        Sales reps spend hours researching competitors before big calls instead of selling.
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-10); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Outdated Battlecards
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-base);">
+                        Battlecards are outdated within days of being published as competitors move fast.
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-10); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Intelligence Scattered
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-base);">
+                        Competitive intelligence lives in scattered Slack threads, old emails, and forgotten PDFs.
+                    </p>
+                </div>
+
+                <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-10); box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--border-light); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Revenue Left on Table
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-base);">
+                        Lost deals. Missed quota. Revenue opportunities slipping away to better-prepared competitors.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Solution Callout -->
+            <div style="background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-xl); padding: var(--space-10); text-align: center; color: white;">
+                <h3 style="font-size: var(--font-size-3xl); font-weight: 700; margin-bottom: var(--space-4); color: white;">
+                    Win Deals with Real-Time CI
+                </h3>
+                <p style="font-size: var(--font-size-xl); line-height: 1.7; max-width: 1000px; margin: 0 auto; opacity: 0.95;">
+                    Real-time competitive intelligence that meets your sales team where they work - in Salesforce, on Zoom calls, in Gmail, on Slack. Not another tool to remember. Not another PDF to download. Competitive intelligence embedded in your sales workflow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 class="section-title" style="font-size: var(--font-size-4xl);">
+                    Stop Losing Deals. Start Winning with <span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Real-Time CI</span>
+                </h2>
+            </div>
+            
+            <div class="core-features-grid">
+                <!-- Benefit 1 -->
+                <div class="core-feature-card">
+                    <div class="core-feature-icon" style="background: #272d46;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Discover Competitors Before They're Mentioned
+                    </h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-4); text-align: left;">
+                        Don't wait for prospects to bring up competitors. CIx identifies which competitors might enter your deal based on your product, industry, and deal size.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Prep for competitor objections before first calls</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Position against likely competitors from discovery</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Never be caught off-guard by competitive mentions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="core-feature-card">
+                    <div class="core-feature-icon" style="background: #272d46;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 3v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Real-Time Battlecards That Never Go Stale
+                    </h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-4); text-align: left;">
+                        Forget quarterly battlecard updates. CIx battlecards update automatically when competitors change pricing, launch features, or shift positioning.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Generate battlecards in 60 seconds</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Automatic updates when competitors move</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Always-current competitive intelligence</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="core-feature-card">
+                    <div class="core-feature-icon" style="background: #272d46;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Win with Strategic Positioning
+                    </h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-4); text-align: left;">
+                        Get winning talk tracks, objection handlers, and differentiation points for every competitive scenario.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Know exactly what to say when competitors come up</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Consistent messaging across your team</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Confidence in competitive conversations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="core-feature-card">
+                    <div class="core-feature-icon" style="background: #272d46;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Ask Discovery Questions That Win
+                    </h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-4); text-align: left;">
+                        CIx suggests strategic discovery questions that expose your competitors' weaknesses while highlighting your advantages.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Control the conversation from discovery</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Surface pain points competitors can't solve</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Frame evaluation criteria around your strengths</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="core-feature-card">
+                    <div class="core-feature-icon" style="background: #272d46;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        Meet Your Team Where Deals Happen
+                    </h3>
+                    <p style="font-size: var(--font-size-base); line-height: 1.7; color: var(--text-secondary); margin-bottom: var(--space-4); text-align: left;">
+                        CIx embeds directly into your sales workflow - Salesforce, Gmail, Zoom, Slack, Gong. No context switching required.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">CI in Salesforce opportunity records</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Competitive prompts during Zoom/Gong calls</span>
+                        </li>
+                        <li style="padding: var(--space-2) 0; display: flex; gap: var(--space-2); align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span style="color: var(--text-primary);">Instant answers in Slack & email</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Sales Enablement Leaders -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1100px;">
+            <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-12); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: var(--space-10);">
+                        <h2 style="font-size: var(--font-size-3xl); font-weight: 800; margin-bottom: var(--space-4); letter-spacing: -0.02em; color: var(--text-primary);">
+                            Competitive Intelligence for <span style="background: linear-gradient(135deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Sales Enablement Leaders</span>
+                        </h2>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 400; margin-bottom: var(--space-6); color: var(--text-secondary); line-height: 1.4;">
+                            Automate Battlecards, Scale CI Across Your Team
+                        </h3>
+                        <p style="font-size: var(--font-size-base); color: var(--text-secondary); max-width: 750px; margin: 0 auto; line-height: 1.7;">
+                            You spend weeks creating the perfect battlecard. It's thorough, well-researched, and formatted beautifully. You roll it out to the sales team with enthusiasm.
+                        </p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); border-radius: var(--radius-lg); padding: var(--space-8); margin-bottom: var(--space-8); border: 1px solid #e2e8f0;">
+                        <p style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin: 0 0 var(--space-6) 0;">
+                            Sound Familiar?
+                        </p>
+                        
+                        <div style="display: grid; gap: var(--space-4);">
+                            <div style="display: flex; gap: var(--space-3); align-items: start;">
+                                <div style="width: 6px; height: 6px; background: #64748b; border-radius: 50%; margin-top: 8px; flex-shrink: 0;"></div>
+                                <p style="font-size: var(--font-size-base); color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                                    The competitor launches a new pricing tier the next week. Your battlecard is already outdated.
+                        </p>
+                            </div>
+                            <div style="display: flex; gap: var(--space-3); align-items: start;">
+                                <div style="width: 6px; height: 6px; background: #64748b; border-radius: 50%; margin-top: 8px; flex-shrink: 0;"></div>
+                                <p style="font-size: var(--font-size-base); color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                                    A rep asks a question that's answered in the battlecard - they clearly haven't read it.
+                        </p>
+                            </div>
+                            <div style="display: flex; gap: var(--space-3); align-items: start;">
+                                <div style="width: 6px; height: 6px; background: #64748b; border-radius: 50%; margin-top: 8px; flex-shrink: 0;"></div>
+                                <p style="font-size: var(--font-size-base); color: var(--text-secondary); line-height: 1.7; margin: 0;">
+                                    Another rep creates their own "updated" version, now you have inconsistent messaging.
+                        </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-6); margin-top: var(--space-8); color: var(--text-primary);">
+                        How CIx Solves This
+                    </h4>
+
+                    <div class="solutions-grid-4col" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);">
+                        <div>
+                            <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                Automated Battlecards
+                            </h5>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                Generate comprehensive battlecards in 60 seconds using AI. Role-specific battlecards for every team.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                </svg>
+                            </div>
+                            <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                Automatic Updates
+                            </h5>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                Keep battlecards current without manual work. Updates when competitors move.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M3 3h18v18H3V3z M9 3v18 M3 9h18 M3 15h18"/>
+                                </svg>
+                            </div>
+                            <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                Usage Analytics
+                            </h5>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                See which battlecards are viewed, used in deals, and driving wins.
+                            </p>
+                        </div>
+
+                        <div>
+                            <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                Self-Service for Reps
+                            </h5>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">
+                                Empower reps to find competitive answers themselves. Reduce requests by 80%.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For SDRs & BDRs -->
+    <section class="content-section">
+        <div class="container" style="max-width: 1100px;">
+            <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-12); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: var(--space-8);">
+                        <h2 style="font-size: var(--font-size-3xl); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-6); color: var(--text-primary);">
+                            Competitive Intelligence for <span style="background: linear-gradient(135deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">SDRs & BDRs</span>
+                        </h2>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 400; line-height: 1.4; margin-bottom: var(--space-4); color: var(--text-secondary);">
+                            Prep for Calls in Seconds, Not Hours
+                        </h3>
+                        <p style="font-size: var(--font-size-base); color: var(--text-secondary); max-width: 800px; margin: 0 auto var(--space-8); line-height: 1.7;">
+                            You've got 5 discovery calls today. Each prospect is evaluating different competitors. You've got 10 minutes between calls to research each one.
+                        </p>
+                    </div>
+
+                    <!-- Sound Familiar Section -->
+                    <div style="background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%); border-radius: var(--radius-lg); padding: var(--space-8); margin-bottom: var(--space-12); max-width: 900px; margin-left: auto; margin-right: auto;">
+                        <p style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-6); color: var(--text-primary); letter-spacing: -0.01em;">
+                            Sound Familiar?
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-4);">
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <span style="flex-shrink: 0; width: 8px; height: 8px; background: #64748B; border-radius: 50%; margin-top: 8px;"></span>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">You spend hours researching competitors before calls instead of focusing on outreach.</p>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <span style="flex-shrink: 0; width: 8px; height: 8px; background: #64748B; border-radius: 50%; margin-top: 8px;"></span>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">Every prospect evaluates different competitors - you can't prep for every scenario.</p>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <span style="flex-shrink: 0; width: 8px; height: 8px; background: #64748B; border-radius: 50%; margin-top: 8px;"></span>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">You wing discovery questions because you don't have time to craft strategic, competitor-specific angles.</p>
+                            </li>
+                        </ul>
+                        </div>
+
+                    <!-- How CIx Solves This -->
+                    <div style="max-width: 1100px; margin: 0 auto var(--space-10);">
+                        <h4 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-8); text-align: left; color: var(--text-primary); letter-spacing: -0.01em;">
+                            How CIx Solves This
+                            </h4>
+                        <div class="solutions-grid-4col" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-10);">
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Instant Account Prep
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Get account-specific competitive intelligence in 30 seconds based on prospect industry and size.
+                            </p>
+                        </div>
+
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Competitor Lookup
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Search any competitor and get instant, relevant intelligence with key differentiation points.
+                            </p>
+                        </div>
+
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                        <line x1="9" y1="10" x2="15" y2="10"></line>
+                                        <line x1="12" y1="7" x2="12" y2="13"></line>
+                                    </svg>
+                        </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    AI Opening Angles
+                            </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Get personalized, competitor-aware opening angles for every call. Position from minute one.
+                            </p>
+                    </div>
+
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 11l3 3L22 4"></path>
+                                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                                    </svg>
+                    </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Discovery Questions
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Pre-built questions that expose competitor weaknesses while highlighting your strengths.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Account Executives -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1100px;">
+            <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-12); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: var(--space-8);">
+                        <h2 style="font-size: var(--font-size-3xl); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-6); color: var(--text-primary);">
+                            Competitive Intelligence for <span style="background: linear-gradient(135deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Account Executives</span>
+                        </h2>
+                        <h3 style="font-size: var(--font-size-xl); font-weight: 400; line-height: 1.4; margin-bottom: var(--space-4); color: var(--text-secondary);">
+                            Close Competitive Deals with Real-Time Intelligence
+                        </h3>
+                        <p style="font-size: var(--font-size-base); color: var(--text-secondary); max-width: 800px; margin: 0 auto var(--space-8); line-height: 1.7;">
+                            You're deep in a competitive deal. The prospect just mentioned your main competitor. You need to differentiate confidently and understand exactly where you have competitive advantage.
+                        </p>
+                    </div>
+
+                    <!-- Sound Familiar Section -->
+                    <div style="background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%); border-radius: var(--radius-lg); padding: var(--space-8); margin-bottom: var(--space-12); max-width: 900px; margin-left: auto; margin-right: auto;">
+                        <p style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-6); color: var(--text-primary); letter-spacing: -0.01em;">
+                            Sound Familiar?
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-4);">
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <span style="flex-shrink: 0; width: 8px; height: 8px; background: #64748B; border-radius: 50%; margin-top: 8px;"></span>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">You're caught off guard when a prospect mentions a competitor you didn't prep for.</p>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <span style="flex-shrink: 0; width: 8px; height: 8px; background: #64748B; border-radius: 50%; margin-top: 8px;"></span>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">You lose deals because your competitive positioning is based on outdated information from last quarter.</p>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                <span style="flex-shrink: 0; width: 8px; height: 8px; background: #64748B; border-radius: 50%; margin-top: 8px;"></span>
+                                <p style="color: var(--text-secondary); line-height: 1.6; margin: 0;">You waste time digging through PDFs and Slack threads when you need competitive intelligence most - during live deals.</p>
+                            </li>
+                        </ul>
+                            </div>
+
+                    <!-- How CIx Solves This -->
+                    <div style="max-width: 1100px; margin: 0 auto var(--space-10);">
+                        <h4 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-8); text-align: left; color: var(--text-primary); letter-spacing: -0.01em;">
+                            How CIx Solves This
+                        </h4>
+                        <div class="solutions-grid-4col" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-10);">
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Deal-Stage Insights
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Context-aware competitive insights tailored to exactly where you are in your deal cycle.
+                                </p>
+                        </div>
+
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                        <line x1="12" y1="19" x2="12" y2="22"></line>
+                                </svg>
+                            </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Live Deal Support
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Real-time competitive intelligence during active calls and deal conversations when you need it most.
+                                </p>
+                        </div>
+
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="M9 12l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Avoid Landmines
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Avoid common competitive traps, positioning mistakes, and deal-killing objections before they happen.
+                                </p>
+                        </div>
+
+                            <div>
+                                <div style="background: linear-gradient(135deg, #60a5fa, #34d399); width: 48px; height: 48px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3);">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                        <path d="M3 3v18h18"></path>
+                                        <path d="m19 9-5 5-4-4-3 3"></path>
+                                </svg>
+                            </div>
+                                <h5 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">
+                                    Win/Loss Insights
+                                </h5>
+                                <p style="color: var(--text-secondary); line-height: 1.6;">
+                                    Learn from past competitive deals. Understand what works, what doesn't, and how to improve.
+                                </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI/Stats Section -->
+    <section class="content-section">
+        <div class="container" style="max-width: 1100px;">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">
+                    The ROI Your Sales Team Needs
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Sales teams with real-time competitive intelligence see measurable performance improvements
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); margin-bottom: var(--space-8);">
+                <div style="background: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <h3 style="margin-bottom: var(--space-3);">
+                        <span style="display: block; font-size: 3.5rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: var(--space-2);">
+                            25-35%
+                        </span>
+                        <span style="display: block; font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary);">
+                            Faster Deal Cycles
+                        </span>
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-2);">
+                        Close deals faster with real-time competitive intelligence vs. quarterly battlecard updates
+                    </p>
+                </div>
+
+                <div style="background: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <h3 style="margin-bottom: var(--space-3);">
+                        <span style="display: block; font-size: 3.5rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: var(--space-2);">
+                            15-25%
+                        </span>
+                        <span style="display: block; font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary);">
+                            Higher Win Rates
+                        </span>
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-2);">
+                        Win more competitive deals with structured competitive intelligence programs
+                    </p>
+                </div>
+
+                <div style="background: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                    <h3 style="margin-bottom: var(--space-3);">
+                        <span style="display: block; font-size: 3.5rem; font-weight: 700; background: linear-gradient(135deg, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: var(--space-2);">
+                            70-80%
+                        </span>
+                        <span style="display: block; font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary);">
+                            Less Research Time
+                        </span>
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-2);">
+                        Reduce time spent on manual competitive research, giving reps more time to sell
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: var(--space-12);">
+                <h3 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-8); text-align: center; color: var(--text-primary);">
+                    Real Impact for Your Team
+                </h3>
+                <div class="real-impact-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6);">
+                    <div style="background: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                        <p style="font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-3); font-size: var(--font-size-xl);">SDRs & BDRs</p>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Prep for calls in minutes, skip hours of competitive research</p>
+                            </div>
+                    <div style="background: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <p style="font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-3); font-size: var(--font-size-xl);">Account Executives</p>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Win 15-20% more deals with better competitive objection handling</p>
+                    </div>
+                    <div style="background: white; padding: var(--space-8); border-radius: var(--radius-lg); box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <p style="font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-3); font-size: var(--font-size-xl);">Enablement Leaders</p>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Create battlecards in 60 seconds instead of 2 weeks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Solutions Section -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 1100px;">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">
+                    Competitive Intelligence for Your Entire Team
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Sales doesn't operate in isolation. Give your entire go-to-market team competitive intelligence
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-8);">
+                <a href="../solutions/marketing" style="text-decoration: none; display: flex; flex-direction: column; background: white; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: var(--space-8); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04);" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'; this.style.transform='translateY(0)';">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        For Marketing Teams
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4); flex-grow: 1;">
+                        Help your marketing team differentiate your brand with competitive positioning, messaging intelligence, and campaign insights.
+                    </p>
+                    <span style="color: #60a5fa; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                        Explore Marketing Solutions
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="../solutions/product" style="text-decoration: none; display: flex; flex-direction: column; background: white; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: var(--space-8); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04);" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'; this.style.transform='translateY(0)';">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <path d="M3 9h18"></path>
+                            <path d="M9 21V9"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        For Product Teams
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4); flex-grow: 1;">
+                        Give your product team competitive context to build winning products and prioritize roadmaps with feature gap analysis.
+                    </p>
+                    <span style="color: #60a5fa; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                        Explore Product Solutions
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="../solutions/competitive-intelligence" style="text-decoration: none; display: flex; flex-direction: column; background: white; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: var(--space-8); transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04);" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'; this.style.transform='translateY(0)';">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: var(--font-size-xl); font-weight: 700; margin-bottom: var(--space-3); color: var(--text-primary);">
+                        For CI Teams
+                    </h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-4); flex-grow: 1;">
+                        Transform your CI team from manual researchers to strategic enablers with automation and self-service intelligence.
+                    </p>
+                    <span style="color: #60a5fa; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                        Explore CI Solutions
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="content-section">
+        <div class="container" style="max-width: 1100px;">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">
+                    Solve Specific Sales Challenges
+                </h2>
+                <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+                    Explore competitive intelligence solutions for specific sales use cases
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6);">
+                <a href="../use-cases/sales-enablement" style="text-decoration: none; display: flex; flex-direction: column; background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'; this.style.transform='translateY(0)';">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">Sales Enablement</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-bottom: var(--space-3); flex-grow: 1;">
+                        Automate battlecard creation, keep content current, and scale CI across your revenue team
+                    </p>
+                    <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-sm); display: inline-flex; align-items: center; gap: 6px; margin-top: auto;">
+                        Learn more →
+                    </span>
+                </a>
+
+                <a href="../use-cases/battlecard-generation" style="text-decoration: none; display: flex; flex-direction: column; background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'; this.style.transform='translateY(0)';">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">Battlecard Generation</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-bottom: var(--space-3); flex-grow: 1;">
+                        Generate comprehensive, role-specific battlecards in 60 seconds using AI
+                    </p>
+                    <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-sm); display: inline-flex; align-items: center; gap: 6px; margin-top: auto;">
+                        Learn more →
+                    </span>
+                </a>
+
+                <a href="../use-cases/win-loss-analysis" style="text-decoration: none; display: flex; flex-direction: column; background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.04)'; this.style.transform='translateY(0)';">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">Win/Loss Analysis</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.6; font-size: var(--font-size-sm); margin-bottom: var(--space-3); flex-grow: 1;">
+                        Understand why deals are won or lost with competitive intelligence and pattern detection
+                    </p>
+                    <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-sm); display: inline-flex; align-items: center; gap: 6px; margin-top: auto;">
+                        Learn more →
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: var(--bg-secondary); padding-top: 80px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 900px;">
+            <div style="text-align: center; margin-bottom: var(--space-12);">
+                <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary);">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+                            <div>
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How is CIx different from Crayon or Klue?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx is built for real-time competitive intelligence with AI at its core. While traditional CI tools require manual content creation and updates, CIx automates battlecard generation, monitors competitors 24/7, and updates intelligence automatically. We also embed directly into your workflow (Salesforce, Slack, Gong) rather than being a separate platform. Traditional tools are designed for CI teams to create content. CIx is designed for every team to access intelligence.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How long does it take to get our sales team using CIx?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Most sales teams are up and running the same day. Add your competitors (or use AI discovery), generate battlecards, integrate with Salesforce/Slack, and start enabling your team within hours. No lengthy implementations or training required.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Can CIx integrate with our existing sales tools?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Yes. CIx integrates with Salesforce, HubSpot, Slack, Microsoft Teams, Gong, Chorus, and major sales enablement platforms (Highspot, Seismic, Guru). We meet your team where they already work, embedding competitive intelligence directly into their daily workflow.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Where does CIx get its competitive data?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx monitors public sources (competitor websites, product updates, pricing pages, press releases, reviews, social media) and can also integrate your internal data sources (sales calls, win/loss interviews, internal docs, CRM data). You control what intelligence is tracked and how it's organized.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How much does CIx cost for sales teams?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx offers flexible pricing based on team size and features. Most sales teams start with our Team plan, which includes automated battlecards, real-time monitoring, and core integrations. Enterprise plans include custom integrations, advanced analytics, and dedicated support. <a href="../contact" style="color: #60a5fa; text-decoration: none;">Contact us</a> for detailed pricing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Do we need a dedicated CI team to use CIx?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">No. CIx is designed for sales teams to use directly without requiring a CI team. However, if you have a CI team, CIx amplifies their impact by automating research and distribution, letting them focus on strategy instead of manual updates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How accurate is the AI-generated content?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx uses source-verified intelligence with citations for every claim. You can review sources, edit content, and add internal context. Think of CIx as an intelligent research assistant that drafts content 80-90% complete, which you can refine and approve before distribution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                    <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Can we customize battlecards for our brand?</h3>
+                        <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Yes. CIx supports custom battlecard templates, brand guidelines, tone of voice, and role-specific formats. You can create different battlecard types for SDRs, AEs, leadership, or customer success teams - all auto-generated from the same intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: var(--font-size-4xl); font-weight: 700; margin-bottom: var(--space-12); color: white;">
+                The Competitive Intelligence Your Sales Team Needs
+            </h2>
+            <div class="stats-section-mobile" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-8);">
+                <div style="padding: var(--space-6);">
+                    <div class="stats-number" style="font-size: 4.5rem; font-weight: 700; margin-bottom: var(--space-2); color: #60a5fa;">60s</div>
+                    <div class="stats-label" style="font-size: var(--font-size-xl); font-weight: 600; opacity: 0.95;">Generate a battlecard</div>
+                </div>
+                <div style="padding: var(--space-6);">
+                    <div class="stats-number" style="font-size: 4.5rem; font-weight: 700; margin-bottom: var(--space-2); color: #34d399;">24/7</div>
+                    <div class="stats-label" style="font-size: var(--font-size-xl); font-weight: 600; opacity: 0.95;">Competitor monitoring</div>
+                </div>
+                <div style="padding: var(--space-6);">
+                    <div class="stats-number" style="font-size: 4.5rem; font-weight: 700; margin-bottom: var(--space-2); color: #60a5fa;">80%</div>
+                    <div class="stats-label" style="font-size: var(--font-size-xl); font-weight: 600; opacity: 0.95;">Reduction in CI requests</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Win More Competitive Deals?</h2>
+                <p class="cta-subtitle">Start giving your sales team real-time competitive intelligence today.</p>
+                <div class="cta-buttons">
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
+                    <a href="../contact" class="btn btn-outline btn-lg" style="border-color: white; color: white;">Book Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><span class="logo-letter">s</span></div>
+                        <span class="logo-text">Signal Labs</span>
+                    </div>
+                    <p>Competitive Intelligence & Enablement Platform</p>
+                    <a href="https://www.linkedin.com/company/signal-labs-cix/" target="_blank" rel="noopener noreferrer" class="footer-linkedin-link" aria-label="Visit Signal Labs on LinkedIn" style="margin-bottom: 20px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Mobile-only sections - shown only on mobile -->
+                    <div class="footer-column footer-brand-extra">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                </div>
+                
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>By Size</h3>
+                        <a href="../size/startups">Startups</a>
+                        <a href="../size/enterprise">Enterprise</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column-group footer-column-group-by-team" style="margin-top: 132px;">
+                    <div class="footer-column">
+                            <h3>By Team</h3>
+                            <a href="../solutions/sales">Sales & Revenue</a>
+                            <a href="../solutions/marketing">Marketing & Growth</a>
+                            <a href="../solutions/product">Product & Engineering</a>
+                            <a href="../solutions/leadership">Strategy & Leadership</a>
+                            <a href="../solutions/ci-research">CI & Research</a>
+                            <a href="../solutions/investors">Investors & VCs</a>
+                            <a href="../solutions/ai-agents">AI Agents</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>By Use Case</h3>
+                            <a href="../use-cases/sales-enablement">Sales Enablement</a>
+                            <a href="../use-cases/win-loss-analysis">Win/Loss Analysis</a>
+                            <a href="../use-cases/product-positioning">Product Positioning</a>
+                            <a href="../use-cases/market-intelligence">Market Intelligence</a>
+                            <a href="../use-cases/competitor-monitoring">Competitor Monitoring</a>
+                            <a href="../use-cases/battlecard-generation">Battlecard Generation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column-group">
+                    <div class="footer-column">
+                            <h3>By Industry</h3>
+                            <a href="../industries/saas">SaaS</a>
+                            <a href="../industries/legal">Legal</a>
+                            <a href="../industries/financial-services">Financial Services</a>
+                            <a href="../industries/healthcare">Healthcare</a>
+                            <a href="../industries/ecommerce">E-commerce & Retail</a>
+                            <a href="../industries/deep-tech">Deep Tech</a>
+                            <a href="../industries/gaming">Gaming</a>
+                            <a href="../industries/defense">Defense</a>
+                    </div>
+                        <div class="footer-column footer-hide-mobile">
+                            <h3>By Size</h3>
+                            <a href="../size/startups">Startups</a>
+                            <a href="../size/enterprise">Enterprise</a>
+                </div>
+            </div>
+            
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    
+    <!-- Mega Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsLink = document.querySelector('.solutions-nav-link');
+            const megaMenu = document.querySelector('.mega-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const closeButton = megaMenu ? megaMenu.querySelector('.mega-menu-close') : null;
+            const backButton = megaMenu ? megaMenu.querySelector('.mega-menu-back') : null;
+            
+            if (solutionsWrapper && megaMenu && solutionsLink && navMenu) {
+                let timeout;
+                const isMobile = () => window.innerWidth <= 1024;
+                
+                // Initialize menu state
+                megaMenu.style.visibility = 'hidden';
+                megaMenu.style.opacity = '0';
+                megaMenu.style.display = 'none';
+                
+                function closeMegaMenu() {
+                    megaMenu.style.visibility = 'hidden';
+                    megaMenu.style.opacity = '0';
+                    setTimeout(() => {
+                        megaMenu.style.display = 'none';
+                    }, 300);
+                }
+                
+                function openMegaMenu() {
+                    megaMenu.style.display = 'block';
+                    megaMenu.offsetHeight;
+                    megaMenu.style.visibility = 'visible';
+                    megaMenu.style.opacity = '1';
+                }
+                
+                function closeAllNavs() {
+                    closeMegaMenu();
+                    navMenu.classList.remove('active');
+                }
+                
+                // Desktop hover behavior
+                if (!isMobile()) {
+                    solutionsWrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        openMegaMenu();
+                    });
+                    
+                    solutionsWrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!megaMenu.matches(':hover')) {
+                                closeMegaMenu();
+                            }
+                        }, 100);
+                    });
+                    
+                    megaMenu.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        openMegaMenu();
+                    });
+                    
+                    megaMenu.addEventListener('mouseleave', function() {
+                        closeMegaMenu();
+                    });
+                }
+                
+                // Mobile click behavior
+                solutionsLink.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        if (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block') {
+                            closeMegaMenu();
+                        } else {
+                            openMegaMenu();
+                        }
+                    }
+                }, true);
+                
+                // Close button (closes all navs)
+                if (closeButton) {
+                    closeButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeAllNavs();
+                    });
+                    closeButton.addEventListener('touchend', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeAllNavs();
+                    });
+                }
+                
+                // Back button (closes only mega menu)
+                if (backButton) {
+                    backButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeMegaMenu();
+                    });
+                    backButton.addEventListener('touchend', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeMegaMenu();
+                    });
+                }
+                
+                // Close mega menu when clicking a link
+                const megaMenuLinks = megaMenu.querySelectorAll('.mega-menu-link');
+                megaMenuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobile()) {
+                            closeAllNavs();
+                        }
+                    });
+                });
+                
+                // Close mega menu on window resize to desktop
+                window.addEventListener('resize', function() {
+                    if (!isMobile() && (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block')) {
+                                closeMegaMenu();
+                        }
+                    });
+                }
+        });
+    </script>
+
+    <!-- FAQ Accordion JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const content = faqItem.querySelector('.faq-content');
+                    const icon = this.querySelector('.faq-icon');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-item-collapsible').forEach(item => {
+                        if (item !== faqItem) {
+                            item.querySelector('.faq-content').style.maxHeight = '0';
+                            item.querySelector('.faq-icon').textContent = '+';
+                            item.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                        content.style.maxHeight = '0';
+                        icon.textContent = '+';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.textContent = '−';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

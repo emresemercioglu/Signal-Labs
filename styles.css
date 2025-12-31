@@ -235,11 +235,16 @@ body {
 .nav-toggle span {
     width: 24px;
     height: 2px;
-    background: white;
+    background: var(--text-primary);
     transition: all 0.3s ease;
 }
 
-.navbar.scrolled .nav-toggle span {
+/* Homepage only: white toggle before scroll */
+body.homepage .nav-toggle span {
+    background: white;
+}
+
+body.homepage .navbar.scrolled .nav-toggle span {
     background: var(--text-primary);
 }
 
@@ -845,20 +850,21 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, rgb(30, 58, 95) 0%, rgb(26, 26, 26) 50%);
     padding: var(--space-16) 0 var(--space-8);
-    border-top: 1px solid var(--border);
+    border-top: none;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 280px 1fr;
     gap: var(--space-16);
     margin-bottom: var(--space-8);
+    align-items: start;
 }
 
 .footer-brand {
-    max-width: 300px;
+    max-width: 280px;
 }
 
 .footer-logo {
@@ -872,66 +878,106 @@ body {
 }
 
 .footer-brand p {
-    color: var(--text-secondary);
+    color: #9ca3af;
     font-size: var(--font-size-sm);
+    white-space: nowrap;
+}
+
+.footer-logo .logo-text {
+    color: white !important;
 }
 
 .footer-linkedin-link {
     display: inline-block;
     margin-top: var(--space-3);
-    color: var(--text-secondary) !important;
+    color: #9ca3af !important;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .footer-linkedin-link:hover {
-    color: var(--text-secondary) !important;
+    color: white !important;
     transform: translateY(-2px);
 }
 
 .footer-linkedin-link svg {
     display: block;
-    fill: var(--text-secondary) !important;
-    transition: fill 0.3s ease;
+    fill: #9ca3af !important;
+    transition: fill 0.2s ease;
 }
 
 .footer-linkedin-link:hover svg {
-    fill: var(--text-secondary) !important;
-    opacity: 0.8;
+    fill: #60a5fa !important;
 }
 
 .footer-links {
     display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.footer-column-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
+/* Desktop grid - only above 1175px */
+@media (min-width: 1176px) {
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     gap: var(--space-12);
+        align-items: start;
+    }
+    
+    /* Hide footer-brand extra sections on desktop only */
+    .footer-brand-extra {
+        display: none !important;
+    }
+    
+    /* Reset margin for BY TEAM on desktop */
+    .footer-column-group-by-team {
+        margin-top: 0 !important;
+    }
+}
+
+.footer-column {
+    min-width: 160px;
+    flex: 0 0 auto;
 }
 
 .footer-column h3,
 .footer-column h4 {
     font-weight: 600;
-    margin-bottom: var(--space-3);
-    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+    color: white;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .footer-column a {
     display: block;
-    color: var(--text-secondary);
+    color: #9ca3af;
     text-decoration: none;
-    margin-bottom: var(--space-2);
-    transition: color 0.3s ease;
+    margin-bottom: var(--space-3);
+    transition: color 0.2s ease;
+    font-size: var(--font-size-sm);
 }
 
 .footer-column a:hover {
-    color: var(--primary);
+    color: white;
 }
 
 .footer-bottom {
     padding-top: var(--space-8);
-    border-top: 1px solid var(--border);
+    border-top: 1px solid #333;
     text-align: center;
 }
 
 .footer-bottom p {
-    color: var(--text-muted);
+    color: #6b7280;
     font-size: var(--font-size-sm);
 }
 
@@ -994,17 +1040,18 @@ body {
         gap: var(--space-12);
     }
     
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
+    /* Challenge boxes - 2 per row on tablet */
+    .solutions-grid-4col {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
     
-    .footer-links {
-        justify-content: center;
+    /* Marketing use cases - 2 per row on tablet/mobile */
+    .marketing-use-cases-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-menu {
         display: none;
         position: absolute;
@@ -1088,15 +1135,85 @@ body {
     .nav-container {
         padding: 0 var(--space-4);
     }
-    
-    .cta-buttons {
-        flex-direction: column;
-        align-items: center;
+}
+
+/* Mobile Footer Layout - v7 Direct children */
+@media (max-width: 1175px) {
+    .footer-content {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: var(--space-6) !important;
+        align-items: flex-start !important;
+        flex-wrap: nowrap !important;
     }
     
+    /* Left column - Brand + mobile sections */
+    .footer-brand {
+        width: 50% !important;
+        flex-shrink: 0 !important;
+        max-width: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    
+    .footer-brand > * {
+        margin-bottom: var(--space-4);
+    }
+    
+    .footer-brand > *:last-child {
+        margin-bottom: 0;
+    }
+    
+    .footer-brand p {
+        white-space: nowrap !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Ensure footer-brand extra sections are visible on mobile */
+    .footer-brand .footer-column.footer-brand-extra {
+        display: block !important;
+    }
+    
+    /* Right column - BY TEAM + USE CASE and BY INDUSTRY */
     .footer-links {
-        flex-direction: column;
-        gap: var(--space-6);
+        width: 46% !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--space-8) !important;
+    }
+    
+    /* Align BY TEAM with PLATFORM on mobile only */
+    .footer-column-group-by-team {
+        margin-top: 125px !important;
+    }
+    
+    /* Show BY TEAM + USE CASE group */
+    .footer .footer-links > .footer-column-group:nth-child(2) {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--space-8) !important;
+    }
+    
+    /* Show BY INDUSTRY + SIZE group */
+    .footer .footer-links > .footer-column-group:nth-child(3) {
+        display: block !important;
+    }
+    
+    .footer-column-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--space-8) !important;
+    }
+    
+    /* CRITICAL: Hide duplicate footer columns on mobile */
+    .footer .footer-links > .footer-column.footer-hide-mobile {
+        display: none !important;
+    }
+    
+    .footer .footer-links .footer-column-group .footer-column.footer-hide-mobile {
+        display: none !important;
     }
 }
 
@@ -1211,6 +1328,11 @@ body {
     
     .tagline-sub {
         font-size: var(--font-size-sm);
+    }
+    
+    /* Real Impact grid - 2 columns on mobile */
+    .real-impact-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 

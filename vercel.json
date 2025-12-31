@@ -38,6 +38,16 @@
       "permanent": true
     },
     {
+      "source": "/solutions.html",
+      "destination": "/solutions",
+      "permanent": true
+    },
+    {
+      "source": "/sales.html",
+      "destination": "/solutions/sales",
+      "permanent": true
+    },
+    {
       "source": "/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters.html",
       "destination": "/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters",
       "permanent": true
