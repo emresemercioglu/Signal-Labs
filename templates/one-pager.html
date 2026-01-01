@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal Labs - Competitive Intelligence Platform | One-Pager</title>
+    
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: white;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #272d46;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 48px;
+            padding-left: 2px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0F172A;
+        }
+        
+        .website {
+            color: #64748B;
+            font-size: 14px;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            font-weight: 700;
+            color: #272d46;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #64748B;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .section {
+            margin-bottom: 32px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #272d46;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #E2E8F0;
+        }
+        
+        .problem-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .box {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+        }
+        
+        .box-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: #64748B;
+        }
+        
+        .box-content {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #334155;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .benefit {
+            background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+        }
+        
+        .benefit-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #272d46;
+            margin-bottom: 6px;
+        }
+        
+        .benefit-desc {
+            font-size: 13px;
+            color: #64748B;
+            line-height: 1.5;
+        }
+        
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        
+        .use-case {
+            padding: 12px 16px;
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #334155;
+        }
+        
+        .use-case strong {
+            color: #272d46;
+            font-weight: 600;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: linear-gradient(135deg, #272d46 0%, #1e3a5f 100%);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+        
+        .stat {
+            text-align: center;
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .cta-contact {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #272d46, #1e3a5f);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(39, 45, 70, 0.3);
+        }
+        
+        .download-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                padding: 20mm;
+            }
+            
+            .header {
+                margin-bottom: 10mm;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="logo-icon">s</div>
+            <div class="logo-text">Signal Labs</div>
+        </div>
+        <button class="download-btn" onclick="window.print()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download PDF
+        </button>
+    </div>
+    
+    <div class="tagline">
+        Real-Time Competitive Intelligence That Wins Deals
+    </div>
+    
+    <div class="subtitle">
+        CIx is the AI-powered competitive intelligence platform that gives your teams the insights they need to win—automatically updated, always current, embedded in your workflow.
+    </div>
+    
+    <div class="problem-solution">
+        <div class="box">
+            <div class="box-title">The Problem</div>
+            <div class="box-content">
+                Sales teams lose deals because battlecards are outdated within days. Marketing can't differentiate because everyone claims the same things. Product teams build in the dark without competitive context. Manual research is too slow for today's market pace.
+            </div>
+        </div>
+        
+        <div class="box solution">
+            <div class="box-title">The Solution</div>
+            <div class="box-content">
+                CIx monitors competitors 24/7, generates battlecards in 60 seconds, and updates intelligence automatically. Your teams get real-time competitive insights without the manual research work.
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Core Capabilities</div>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <div class="benefit-title">AI Battlecard Generation</div>
+                <div class="benefit-desc">Generate comprehensive battlecards in 60 seconds vs 2 weeks manually</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-title">24/7 Monitoring</div>
+                <div class="benefit-desc">Automatic tracking of competitor moves across all channels</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-title">CI for Every Team</div>
+                <div class="benefit-desc">Enablement tailored for each team's focus—Sales, Marketing, Product, and Leadership</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-title">Feature Gap Analysis</div>
+                <div class="benefit-desc">Side-by-side product and feature level comparisons</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-title">Multi-Source Intelligence</div>
+                <div class="benefit-desc">Aggregates data from websites, reviews, news, social, and more</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-title">Self-Service for Teams</div>
+                <div class="benefit-desc">Reps find answers instantly—no waiting for CI team responses</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Who Uses CIx</div>
+        <div class="use-cases">
+            <div class="use-case"><strong>Sales Teams:</strong> Win more deals with always-current battlecards and competitive talk tracks</div>
+            <div class="use-case"><strong>Marketing Teams:</strong> Differentiate positioning and messaging with competitive intelligence</div>
+            <div class="use-case"><strong>Product Teams:</strong> Build winning products with feature gap analysis and roadmap intelligence</div>
+            <div class="use-case"><strong>Enablement Teams:</strong> Scale CI across the organization without manual battlecard updates</div>
+            <div class="use-case"><strong>CI Teams:</strong> Transform from manual researchers to strategic advisors with automation</div>
+            <div class="use-case"><strong>Leadership:</strong> Make strategic decisions with board-ready competitive intelligence</div>
+        </div>
+    </div>
+    
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">10-20%</div>
+            <div class="stat-label">Higher Win Rates<br>with Strong CI Programs</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">68%</div>
+            <div class="stat-label">Buyers Say Poor Differentiation<br>Loses Deals (Not Price)</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">40-60%</div>
+            <div class="stat-label">Less Time on Manual Research<br>with CI Automation</div>
+        </div>
+    </div>
+    
+    <div class="stats" style="margin-top: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #272d46 100%);">
+        <div class="stat">
+            <div class="stat-number">60s</div>
+            <div class="stat-label">Battlecard Generation<br>(vs 2 Weeks Manually)</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Automated Competitor<br>Monitoring</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">100x</div>
+            <div class="stat-label">Scale Battlecard Production<br>vs Manual Methods</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Key Differentiators</div>
+        <div class="box-content" style="padding-left: 20px;">
+            <p style="margin-bottom: 12px;"><strong>vs Traditional CI Tools:</strong> CIx automates battlecard creation and updates with AI. Traditional tools require manual content creation and quarterly updates.</p>
+            <p style="margin-bottom: 12px;"><strong>vs Manual Research:</strong> CIx monitors competitors 24/7 automatically. Manual research takes hours per competitor and becomes outdated immediately.</p>
+            <p><strong>vs Scattered Intelligence:</strong> CIx centralizes all competitive intelligence and embeds it in your workflow. No more digging through Slack threads, PDFs, or old emails.</p>
+        </div>
+    </div>
+    
+    <div class="cta">
+        <div class="cta-title">Ready to Transform Your Competitive Intelligence?</div>
+        <div class="cta-contact">
+            <strong>Contact:</strong> usesignallabs.com | Book a demo to see CIx in action
+        </div>
+    </div>
+</body>
+</html>
+
