@@ -3509,9 +3509,10 @@ input:checked + .toggle-slider:before {
 /* Blog Styles */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: var(--space-8);
     margin-top: var(--space-8);
+    max-width: 100%;
 }
 
 .blog-card {
