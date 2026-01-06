@@ -148,6 +148,10 @@
                 <h3>Blog Post 2</h3>
                 <p>Competing in Real Time: A CI Playbook for High-Growth Teams</p>
             </div>
+            <div class="image-option" data-image="blog-post-3">
+                <h3>Blog Post 3</h3>
+                <p>Competitive Intelligence for Solopreneurs: A Founder's Guide</p>
+            </div>
             <div class="image-option" data-image="faq">
                 <h3>FAQ</h3>
                 <p>Common questions about CIx Platform</p>
@@ -224,6 +228,12 @@
                 subtitle: "A CI Playbook for High-Growth Teams",
                 description: "",
                 fileName: "og-image-blog-post-2.png"
+            },
+            'blog-post-3': {
+                title: "Competitive Intelligence\nFor Solopreneurs:",
+                subtitle: "A Founder's Guide",
+                description: "",
+                fileName: "og-image-blog-post-3.png"
             },
             faq: {
                 title: "Frequently Asked Questions",
@@ -331,9 +341,19 @@
             // Title: 800 weight, 58px (reduced from 64px for better single-line fit)
             ctx.font = '800 58px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
             
-            // Force single line for title
+            // Check if title has multiple lines (separated by \n)
+            const titleLines = image.title.split('\n');
             let currentY = textY - 60;
-            ctx.fillText(image.title, textX, currentY);
+            
+            // If multi-line title, adjust starting position
+            if (titleLines.length > 1) {
+                currentY = textY - 80;
+            }
+            
+            // Draw title lines (all bold, same size)
+            titleLines.forEach((line, index) => {
+                ctx.fillText(line, textX, currentY + (index * 70));
+            });
             
             // Reset shadow for subtitle (lighter shadow)
             ctx.shadowColor = 'rgba(0, 0, 0, 0.22)';
@@ -344,7 +364,8 @@
             ctx.font = '600 42px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif';
             ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
             
-            const subtitleY = currentY + 70;
+            // Position subtitle after all title lines
+            const subtitleY = currentY + (titleLines.length * 70) + 10;
             ctx.fillText(image.subtitle, textX, subtitleY);
             
             // Description - lighter weight (only if not empty)

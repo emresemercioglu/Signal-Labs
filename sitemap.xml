@@ -34,13 +34,21 @@
   
   <!-- Blog Post 1 -->
   <url>
+    <loc>https://usesignallabs.com/blog/competitive-intelligence-for-solopreneurs</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Post 2 -->
+  <url>
     <loc>https://usesignallabs.com/blog/competing-in-real-time-a-ci-playbook-for-high-growth-teams</loc>
     <lastmod>2024-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-  <!-- Blog Post 2 -->
+  <!-- Blog Post 3 -->
   <url>
     <loc>https://usesignallabs.com/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters</loc>
     <lastmod>2025-11-03</lastmod>
