@@ -3746,7 +3746,7 @@ input:checked + .toggle-slider:before {
 /* Blog Responsive Design */
 @media (max-width: 768px) {
     .blog-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: var(--space-6);
     }
     
