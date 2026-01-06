@@ -27,6 +27,31 @@
             background: #f5f5f5;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .logo-letter {
+            margin-top: -4px;
+            display: block;
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -36,7 +61,7 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         h1 {
-            margin-bottom: 30px;
+            margin: 0;
             color: #272d46;
         }
         .controls {
@@ -117,7 +142,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Logo Export Tool</h1>
+        <div class="page-header">
+            <div class="logo-icon"><span class="logo-letter">s</span></div>
+            <h1>Logo Export Tool</h1>
+        </div>
         
         <div class="controls">
             <div class="control-group">
@@ -125,10 +153,21 @@
                 <input type="number" id="size" value="1024" min="100" max="4096" step="100">
             </div>
             <div class="control-group">
-                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                    <input type="checkbox" id="squareCorners" style="width: auto; cursor: pointer;">
-                    <span>Square corners (for LinkedIn)</span>
-                </label>
+                <label>Corner Style:</label>
+                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="radio" name="cornerStyle" value="rounded" checked style="width: auto; cursor: pointer;">
+                        <span>Rounded corners (default)</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="radio" name="cornerStyle" value="square" style="width: auto; cursor: pointer;">
+                        <span>Square corners (for LinkedIn)</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="radio" name="cornerStyle" value="circle" style="width: auto; cursor: pointer;">
+                        <span>Perfect circle (for Google/Favicon)</span>
+                    </label>
+                </div>
             </div>
             <button onclick="exportPNG()">Export as PNG</button>
             <button onclick="exportSVG()">Download SVG</button>
@@ -142,11 +181,12 @@
         </div>
 
         <div class="info">
-            <p><strong>Recommended sizes for LinkedIn:</strong></p>
-            <p>• Profile picture: 400x400 pixels (minimum)</p>
-            <p>• Company logo: 300x300 pixels (minimum)</p>
-            <p>• For best quality, export at 1024x1024 or higher</p>
-            <p><strong>Tip:</strong> Use "Square corners" option to avoid white gaps on LinkedIn profile pictures</p>
+            <p><strong>Recommended sizes and styles:</strong></p>
+            <p>• <strong>Google (Organization Schema):</strong> 512x512 or 1024x1024 pixels - use Circle or Rounded</p>
+            <p>• <strong>Favicon:</strong> 512x512 pixels - use Circle for modern look</p>
+            <p>• <strong>LinkedIn profile/company:</strong> 400x400 or 1024x1024 pixels - use Square corners</p>
+            <p>• <strong>General use:</strong> 1024x1024 or higher for best quality</p>
+            <p><strong>Tip:</strong> For Google search results, use Circle or Rounded at 512x512 minimum. For LinkedIn, use Square corners to avoid white gaps.</p>
         </div>
     </div>
 
@@ -154,9 +194,16 @@
         const canvas = document.getElementById('previewCanvas');
         const ctx = canvas.getContext('2d');
         const sizeInput = document.getElementById('size');
-        const squareCornersCheckbox = document.getElementById('squareCorners');
+        const cornerStyleRadios = document.getElementsByName('cornerStyle');
 
-        function drawLogo(size, useSquareCorners = false) {
+        function getCornerStyle() {
+            for (const radio of cornerStyleRadios) {
+                if (radio.checked) return radio.value;
+            }
+            return 'rounded';
+        }
+
+        function drawLogo(size, cornerStyle = 'rounded') {
             canvas.width = size;
             canvas.height = size;
             
@@ -165,22 +212,31 @@
             gradient.addColorStop(0, '#272d46');
             gradient.addColorStop(1, '#06B6D4');
             
-            // Draw rectangle (rounded or square)
-            const cornerRadius = useSquareCorners ? 0 : size * 0.234375; // 120/512 ratio for more pronounced corners
+            // Draw shape based on corner style
             ctx.fillStyle = gradient;
-            if (cornerRadius > 0) {
-                roundRect(ctx, 0, 0, size, size, cornerRadius);
-            } else {
+            ctx.beginPath();
+            
+            if (cornerStyle === 'circle') {
+                // Perfect circle
+                ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+                ctx.fill();
+            } else if (cornerStyle === 'square') {
+                // Square corners
                 ctx.fillRect(0, 0, size, size);
+            } else {
+                // Rounded corners (default)
+                const cornerRadius = size * 0.234375; // 120/512 ratio for more pronounced corners
+                roundRect(ctx, 0, 0, size, size, cornerRadius);
+                ctx.fill();
             }
-            ctx.fill();
             
             // Draw white 's' - larger size for more prominence (~68%)
+            // Shift up slightly for better optical centering
             ctx.fillStyle = 'white';
             ctx.font = `500 ${size * 0.68}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillText('s', size / 2, size / 2); // Perfectly centered
+            ctx.fillText('s', size / 2, size / 2 - size * 0.015); // Shifted up 1.5% for optical centering
         }
 
         function roundRect(ctx, x, y, width, height, radius) {
@@ -199,7 +255,7 @@
 
         function exportPNG() {
             const size = parseInt(sizeInput.value);
-            const useSquareCorners = squareCornersCheckbox.checked;
+            const cornerStyle = getCornerStyle();
             const exportCanvas = document.createElement('canvas');
             exportCanvas.width = size;
             exportCanvas.height = size;
@@ -210,30 +266,38 @@
             gradient.addColorStop(0, '#272d46');
             gradient.addColorStop(1, '#06B6D4');
             
-            // Draw rectangle (rounded or square)
-            const cornerRadius = useSquareCorners ? 0 : size * 0.234375; // 120/512 ratio for more pronounced corners
+            // Draw shape based on corner style
             exportCtx.fillStyle = gradient;
-            if (cornerRadius > 0) {
-                roundRect(exportCtx, 0, 0, size, size, cornerRadius);
-            } else {
+            exportCtx.beginPath();
+            
+            if (cornerStyle === 'circle') {
+                // Perfect circle
+                exportCtx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+                exportCtx.fill();
+            } else if (cornerStyle === 'square') {
+                // Square corners
                 exportCtx.fillRect(0, 0, size, size);
+            } else {
+                // Rounded corners (default)
+                const cornerRadius = size * 0.234375; // 120/512 ratio for more pronounced corners
+                roundRect(exportCtx, 0, 0, size, size, cornerRadius);
+                exportCtx.fill();
             }
-            exportCtx.fill();
             
             // Draw white 's' - larger size for more prominence (~68%)
+            // Shift up slightly for better optical centering
             exportCtx.fillStyle = 'white';
             exportCtx.font = `500 ${size * 0.68}px Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif`;
             exportCtx.textAlign = 'center';
             exportCtx.textBaseline = 'middle';
-            exportCtx.fillText('s', size / 2, size / 2); // Perfectly centered
+            exportCtx.fillText('s', size / 2, size / 2 - size * 0.015); // Shifted up 1.5% for optical centering
             
             // Download
-            const cornerType = useSquareCorners ? 'square' : 'rounded';
             exportCanvas.toBlob(function(blob) {
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = `signal-labs-logo-${size}x${size}-${cornerType}.png`;
+                a.download = `signal-labs-logo-${size}x${size}-${cornerStyle}.png`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -242,10 +306,20 @@
         }
 
         function exportSVG() {
-            const useSquareCorners = squareCornersCheckbox.checked;
-            const cornerRadius = useSquareCorners ? 0 : 120;
-            const rx = cornerRadius > 0 ? `rx="${cornerRadius}"` : '';
-            const ry = cornerRadius > 0 ? `ry="${cornerRadius}"` : '';
+            const cornerStyle = getCornerStyle();
+            let shapeElement;
+            let shapeDescription;
+            
+            if (cornerStyle === 'circle') {
+                shapeElement = `<circle cx="256" cy="256" r="256" fill="url(#logoGradient)"/>`;
+                shapeDescription = 'Circle';
+            } else if (cornerStyle === 'square') {
+                shapeElement = `<rect width="512" height="512" fill="url(#logoGradient)"/>`;
+                shapeDescription = 'Square';
+            } else {
+                shapeElement = `<rect width="512" height="512" rx="120" ry="120" fill="url(#logoGradient)"/>`;
+                shapeDescription = 'Rounded';
+            }
             
             const svgContent = `<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -255,13 +329,14 @@
     </linearGradient>
   </defs>
   
-  <!-- ${useSquareCorners ? 'Square' : 'Rounded'} background -->
-  <rect width="512" height="512" ${rx} ${ry} fill="url(#logoGradient)"/>
+  <!-- ${shapeDescription} background -->
+  ${shapeElement}
   
   <!-- White lowercase 's' - larger size (68% of 512 = ~348px) -->
+  <!-- Shifted up slightly (1.5%) for better optical centering -->
   <text 
     x="256" 
-    y="256" 
+    y="248" 
     font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" 
     font-size="348" 
     font-weight="500" 
@@ -272,12 +347,11 @@
   >s</text>
 </svg>`;
             
-            const cornerType = useSquareCorners ? 'square' : 'rounded';
             const blob = new Blob([svgContent], { type: 'image/svg+xml' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = `signal-labs-logo-${cornerType}.svg`;
+            link.download = `signal-labs-logo-${cornerStyle}.svg`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -287,15 +361,17 @@
         // Update preview when size or corner type changes
         function updatePreview() {
             const size = Math.min(parseInt(sizeInput.value) || 512, 1024);
-            const useSquareCorners = squareCornersCheckbox.checked;
-            drawLogo(size, useSquareCorners);
+            const cornerStyle = getCornerStyle();
+            drawLogo(size, cornerStyle);
         }
 
         sizeInput.addEventListener('input', updatePreview);
-        squareCornersCheckbox.addEventListener('change', updatePreview);
+        cornerStyleRadios.forEach(radio => {
+            radio.addEventListener('change', updatePreview);
+        });
 
         // Initial draw
-        drawLogo(512, false);
+        drawLogo(512, 'rounded');
     </script>
     
     <!-- LinkedIn Insight Tag -->
