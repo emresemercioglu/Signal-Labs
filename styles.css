@@ -3509,7 +3509,7 @@ input:checked + .toggle-slider:before {
 /* Blog Styles */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-8);
     margin-top: var(--space-8);
 }
