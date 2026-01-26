@@ -701,12 +701,6 @@
                     }
                 });
             }
-
-            // Open internal links in blog content in a new tab (keeps readers on the article)
-            document.querySelectorAll('.blog-post-content a[href^="/"]').forEach(a => {
-                a.setAttribute('target', '_blank');
-                a.setAttribute('rel', 'noopener noreferrer');
-            });
         });
     </script>
     
