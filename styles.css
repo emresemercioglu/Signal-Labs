@@ -3739,6 +3739,22 @@ input:checked + .toggle-slider:before {
     transition: color 0.3s ease;
 }
 
+.blog-post-content a.btn {
+    text-decoration: none !important;
+}
+
+.blog-post-content a.btn.btn-primary {
+    color: white !important;
+}
+
+.blog-post-content a.btn.btn-outline {
+    color: var(--primary) !important;
+}
+
+.blog-post-content a.btn.btn-outline:hover {
+    color: white !important;
+}
+
 .blog-post-content a:hover {
     color: var(--primary-hover);
 }
