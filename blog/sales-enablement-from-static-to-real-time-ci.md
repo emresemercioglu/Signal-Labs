@@ -2,7 +2,7 @@
 
 ## Opening: Your “Perfect” Battlecard Lasted 10 Days
 
-Monday morning: you publish a battlecard you’ve been working on for weeks.
+Monday morning: you publish a [battlecard](/use-cases/battlecard-generation) you’ve been working on for weeks.
 
 You did the research. You got the messaging right. It looks great.
 
@@ -14,9 +14,9 @@ By Tuesday, a sales manager tells you a rep lost a deal because they didn’t ha
 
 Within days, your “perfect” battlecard becomes a liability.
 
-This is the **sales enablement treadmill**: you run faster (more research, more updates, more battlecards), but competitors move faster than your update cycle.
+This is the [**sales enablement**](/use-cases/sales-enablement) treadmill: you run faster (more research, more updates, more battlecards), but competitors move faster than your update cycle.
 
-The fix isn’t “work harder.” It’s changing the model: **real-time competitive intelligence embedded into sales workflow** so reps get the latest information when and where they need them, not quarterly PDFs in yet another enablement hub.
+The fix isn’t “work harder.” It’s changing the model: [**real-time competitive intelligence embedded into sales workflow**](/solutions/sales) so reps get the latest information when and where they need them, not quarterly PDFs in yet another enablement hub.
 
 ### TL;DR (for busy enablement leaders)
 
@@ -98,13 +98,13 @@ Here’s how high-growth sales teams enable reps at market speed:
 
 **Traditional approach:** 20-40 hours of research per battlecard. Manual competitive research across websites, reviews, social media. Formatting in slides or docs. Design and branding. Review and approval. Total time: 1-3 days per competitor.
 
-**Real-time approach:** Select competitor, choose focus (Sales/Marketing/Product), AI generates comprehensive battlecard in minutes. Review and refine in 5-10 minutes. Publish instantly.
+**Real-time approach:** Select competitor, choose focus (Sales/Marketing/Product), [AI generates a comprehensive battlecard](/use-cases/battlecard-generation) in minutes. Review and refine in 5-10 minutes. Publish instantly.
 
 **2. Automatic Updates When Competitors Move**
 
 **Traditional approach:** You discover competitor changed pricing when a rep mentions it in slack. You scramble to update the battlecard. By the time it’s published, trust is already gone.
 
-**Real-time approach:** Automated monitoring detects pricing, product, or messaging changes as they happen. Battlecards stay up to date, so reps always have the latest information.
+**Real-time approach:** [Automated competitor monitoring](/use-cases/competitor-monitoring) detects pricing, product, or messaging changes as they happen. Battlecards stay up to date, so reps always have the latest information.
 
 **3. Embed Intelligence in Sales Workflow**
 
@@ -163,7 +163,7 @@ The value of competitive intelligence isn’t awareness, it’s enablement at th
 
 ---
 
-## Quick FAQ (for enablement leaders)
+## Quick FAQ
 
 **How often should we update battlecards?**  
 In fast-moving markets, “quarterly updates” usually means “often wrong.” Aim for a model where the underlying sources are monitored continuously and the battlecard is refreshed whenever meaningful changes occur (pricing, packaging, positioning, major launches).
