@@ -6,9 +6,9 @@ Monday morning: you publish a [battlecard](/use-cases/battlecard-generation) you
 
 You did the research. You got the messaging right. It looks great.
 
-By Friday, Competitor X changes pricing. Your battlecard is already outdated.
+By Friday, a competitor changes pricing - and your battlecard is already outdated.
 
-By Monday, a rep asks: “Do we have a battlecard for Competitor Y?” You don’t, you’ve been focusing on the top 3.
+Next Monday, a rep asks: “Do we have a battlecard for another competitor?” You don’t. You’ve been focused on the top few, because you can’t cover everyone at once.
 
 By Tuesday, a sales manager tells you a rep lost a deal because they didn’t have positioning for the features the competitor announced last week.
 
@@ -16,7 +16,7 @@ Within days, your “perfect” battlecard becomes a liability.
 
 This is the [**sales enablement**](/use-cases/sales-enablement) treadmill: you run faster (more research, more updates, more battlecards), but competitors move faster than your update cycle.
 
-The fix isn’t “work harder.” It’s changing the model: [**real-time competitive intelligence embedded into sales workflow**](/solutions/sales) so reps get the latest information when and where they need them, not quarterly PDFs in yet another enablement hub.
+The fix isn’t “work harder.” It’s changing the model: [**real-time competitive intelligence embedded into sales workflow**](/solutions/sales) (Salesforce, Slack, Gong) so reps get the latest information where and when they need it - not quarterly PDFs in yet another enablement hub.
 
 ### TL;DR (for busy enablement leaders)
 
