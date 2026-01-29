@@ -361,10 +361,17 @@
 
                 <!-- Related Blog Posts -->
                 <div style="margin-top: var(--space-16); margin-bottom: var(--space-8);">
+                    <style>
+                        @media (max-width: 768px) {
+                            .blog-grid-3col-responsive {
+                                grid-template-columns: 1fr !important;
+                            }
+                        }
+                    </style>
                     <h3 style="font-size: var(--font-size-2xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-8); text-align: center;">
                         More Reads on Competitive Intelligence
                     </h3>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8);">
+                    <div class="blog-grid-3col-responsive" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8);">
                         <!-- Blog Card 1 -->
                         <a href="/blog/competitive-intelligence-for-solopreneurs" style="text-decoration: none; outline: none; display: flex; flex-direction: column; height: 100%;">
                             <div style="background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 4px 20px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 3px solid #60a5fa; border-left: none; border-right: none; border-bottom: none; display: flex; flex-direction: column;">
@@ -402,6 +409,27 @@
                                 </h4>
                                 <p style="color: var(--text-secondary); font-size: var(--font-size-base); margin: 0 0 var(--space-4) 0; line-height: 1.6; flex-grow: 1;">
                                     Generate battlecards in 60 seconds instead of 2 weeks
+                                </p>
+                                <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-base); margin-top: auto;">Read more →</span>
+                            </div>
+                        </a>
+
+                        <!-- Blog Card 3 -->
+                        <a href="/blog/sales-enablement-battlecards-real-time-competitive-intelligence" style="text-decoration: none; outline: none; display: flex; flex-direction: column; height: 100%;">
+                            <div style="background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 4px 20px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 3px solid #34d399; border-left: none; border-right: none; border-bottom: none; display: flex; flex-direction: column;">
+                                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                        <path d="M18 14h-8"></path>
+                                        <path d="M15 18h-5"></path>
+                                        <path d="M10 6h8v4h-8V6Z"></path>
+                                    </svg>
+                                </div>
+                                <h4 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0 0 var(--space-3) 0; line-height: 1.4;">
+                                    Sales Enablement Battlecards
+                                </h4>
+                                <p style="color: var(--text-secondary); font-size: var(--font-size-base); margin: 0 0 var(--space-4) 0; line-height: 1.6; flex-grow: 1;">
+                                    From static docs to real-time competitive intelligence that sales teams trust
                                 </p>
                                 <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-base); margin-top: auto;">Read more →</span>
                             </div>
