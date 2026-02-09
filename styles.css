@@ -1587,9 +1587,18 @@ body.homepage .navbar.scrolled .nav-toggle span {
 }
 
 .pricing-features .feature-icon {
-    font-size: var(--font-size-lg);
-    width: 24px;
-    text-align: center;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.pricing-features .feature-icon svg {
+    width: 16px;
+    height: 16px;
 }
 
 .pricing-cta {
@@ -1946,14 +1955,13 @@ input:checked + .toggle-slider:before {
 }
 
 .highlight-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-md);
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--font-size-lg);
+    color: #6b7280;
+    flex-shrink: 0;
     flex-shrink: 0;
 }
 
@@ -2240,14 +2248,13 @@ input:checked + .toggle-slider:before {
 }
 
 .benefit-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-md);
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--font-size-lg);
+    color: #6b7280;
+    flex-shrink: 0;
     flex-shrink: 0;
 }
 
