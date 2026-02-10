@@ -1976,6 +1976,10 @@ input:checked + .toggle-slider:before {
     margin: 0 auto;
 }
 
+.battlecard-advanced-mockup {
+    overflow: visible;
+}
+
 .mockup-body {
     padding: var(--space-6);
 }
