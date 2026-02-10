@@ -153,6 +153,40 @@ body {
     display: flex;
     align-items: center;
     gap: var(--space-8);
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-shrink: 0;
+}
+
+.nav-login-mobile,
+.nav-menu .nav-cta {
+    display: none;
+}
+
+.nav-login {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-login:hover {
+    color: white;
+}
+
+.navbar.scrolled .nav-login {
+    color: var(--text-secondary);
+}
+
+.navbar.scrolled .nav-login:hover {
+    color: var(--text-primary);
 }
 
 .nav-link {
@@ -1094,15 +1128,24 @@ body.homepage .navbar.scrolled .nav-toggle span {
         border-bottom: 2px solid var(--primary);
     }
     
-    /* Mobile Start Free button - always filled */
-    .nav-menu .nav-link.nav-cta {
+    .nav-actions {
+        display: none;
+    }
+    
+    .nav-login-mobile {
+        display: flex !important;
+        color: var(--text-secondary) !important;
+    }
+    
+    .nav-menu .nav-cta {
+        display: flex !important;
         background: var(--primary);
         color: white;
         border: 2px solid var(--primary);
         border-bottom: 2px solid var(--primary);
     }
     
-    .nav-menu .nav-link.nav-cta:hover {
+    .nav-menu .nav-cta:hover {
         background: var(--primary-hover);
         color: white;
         border: 2px solid var(--primary-hover);
