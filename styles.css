@@ -2445,6 +2445,15 @@ input:checked + .toggle-slider:before {
         top: 0;
     }
     
+    /* Make competitor discovery grid single column on small screens */
+    .competitor-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .competitor-discovery-mockup > div {
+        padding: 12px 16px !important;
+    }
+    
     /* Make dashboard grid single column on very small screens */
     .dashboard-mockup [style*="grid-template-columns: repeat(4"] {
         grid-template-columns: 1fr !important;
