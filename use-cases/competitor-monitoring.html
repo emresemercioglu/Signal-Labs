@@ -747,7 +747,231 @@
                 </p>
             </div>
 
-            
+            <!-- Competitor Radar Visualization -->
+            <div style="display: flex; justify-content: center; margin-bottom: var(--space-12);">
+                <div class="radar-container" style="position: relative; width: 100%; max-width: 550px; aspect-ratio: 1;">
+                    <!-- Radar SVG -->
+                    <svg viewBox="0 0 420 420" width="100%" height="100%" style="display: block;">
+                        <defs>
+                            <!-- Sweep gradient -->
+                            <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="rgba(96,165,250,0)" />
+                                <stop offset="100%" stop-color="rgba(96,165,250,0.35)" />
+                            </linearGradient>
+                            <!-- Blip glow -->
+                            <radialGradient id="blipGlow">
+                                <stop offset="0%" stop-color="rgba(52,211,153,0.8)" />
+                                <stop offset="100%" stop-color="rgba(52,211,153,0)" />
+                            </radialGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Background circle -->
+                        <circle cx="210" cy="210" r="200" fill="#0f172a" stroke="#1e3a5f" stroke-width="1"/>
+
+                        <!-- Grid lines (subtle) -->
+                        <line x1="210" y1="10" x2="210" y2="410" stroke="#1e3a5f" stroke-width="0.5" opacity="0.5"/>
+                        <line x1="10" y1="210" x2="410" y2="210" stroke="#1e3a5f" stroke-width="0.5" opacity="0.5"/>
+                        <line x1="68" y1="68" x2="352" y2="352" stroke="#1e3a5f" stroke-width="0.5" opacity="0.3"/>
+                        <line x1="352" y1="68" x2="68" y2="352" stroke="#1e3a5f" stroke-width="0.5" opacity="0.3"/>
+
+                        <!-- Concentric rings -->
+                        <circle cx="210" cy="210" r="50" fill="none" stroke="#1e3a5f" stroke-width="0.8" opacity="0.4"/>
+                        <circle cx="210" cy="210" r="100" fill="none" stroke="#1e3a5f" stroke-width="0.8" opacity="0.4"/>
+                        <circle cx="210" cy="210" r="150" fill="none" stroke="#1e3a5f" stroke-width="0.8" opacity="0.4"/>
+                        <circle cx="210" cy="210" r="200" fill="none" stroke="#1e3a5f" stroke-width="1" opacity="0.6"/>
+
+                        <!-- Sweep arm (rotating) -->
+                        <g class="radar-sweep" style="transform-origin: 210px 210px;">
+                            <path d="M210,210 L210,10 A200,200 0 0,1 383,105 Z" fill="url(#sweepGrad)" opacity="0.6"/>
+                        </g>
+
+                        <!-- Center dot -->
+                        <circle cx="210" cy="210" r="4" fill="#60a5fa" opacity="0.9"/>
+                        <circle cx="210" cy="210" r="8" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+                    </svg>
+
+                    <!-- Signal Blips — Order: Press → Pricing → Alert → Feature -->
+
+                    <!-- 1. Press: 45° (top-right) -->
+                    <div class="radar-blip" data-angle="45" style="position: absolute; top: 23.5%; left: 74%;">
+                        <div class="blip-dot"></div>
+                        <div class="blip-label blip-label-left">
+                            <span class="blip-tag" style="background: #06b6d4;">Press</span>
+                            Globex Corp press release detected
+                        </div>
+                    </div>
+
+                    <!-- 2. Pricing: 135° (bottom-right) -->
+                    <div class="radar-blip" data-angle="135" style="position: absolute; top: 69%; left: 69%;">
+                        <div class="blip-dot"></div>
+                        <div class="blip-label blip-label-left">
+                            <span class="blip-tag" style="background: #f59e0b;">Pricing</span>
+                            Acme Corp changed pricing by -15%
+                        </div>
+                    </div>
+
+                    <!-- 3. Alert: 225° (bottom-left) -->
+                    <div class="radar-blip" data-angle="225" style="position: absolute; top: 71%; left: 27%;">
+                        <div class="blip-dot"></div>
+                        <div class="blip-label">
+                            <span class="blip-tag" style="background: #ef4444;">Alert</span>
+                            Pied Piper updated messaging
+                        </div>
+                    </div>
+
+                    <!-- 4. Feature: 315° (top-left) -->
+                    <div class="radar-blip" data-angle="315" style="position: absolute; top: 23.5%; left: 23.5%;">
+                        <div class="blip-dot"></div>
+                        <div class="blip-label">
+                            <span class="blip-tag" style="background: #8b5cf6;">Feature</span>
+                            Hooli launched AI analytics module
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                /* Radar sweep rotation */
+                .radar-sweep {
+                    animation: radarSpin 5s linear infinite;
+                }
+                @keyframes radarSpin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+
+                /* Blip styles */
+                .radar-blip {
+                    pointer-events: none;
+                    z-index: 2;
+                }
+                .blip-dot {
+                    width: 10px;
+                    height: 10px;
+                    background: #34d399;
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 rgba(52, 211, 153, 0);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+                .blip-dot.active {
+                    opacity: 1;
+                    box-shadow: 0 0 12px rgba(52, 211, 153, 0.8), 0 0 24px rgba(52, 211, 153, 0.4);
+                    animation: blipPulse 1.5s ease-out;
+                }
+                @keyframes blipPulse {
+                    0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+                    70% { box-shadow: 0 0 0 14px rgba(52, 211, 153, 0); }
+                    100% { box-shadow: 0 0 12px rgba(52, 211, 153, 0.8); }
+                }
+
+                /* Blip label */
+                .blip-label {
+                    position: absolute;
+                    top: -8px;
+                    left: 18px;
+                    background: rgba(15, 23, 42, 0.95);
+                    border: 1px solid rgba(96, 165, 250, 0.3);
+                    color: #e2e8f0;
+                    font-size: 11px;
+                    font-weight: 500;
+                    padding: 6px 10px;
+                    border-radius: 8px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    transform: translateX(4px);
+                    transition: opacity 0.4s ease, transform 0.4s ease;
+                    pointer-events: none;
+                    line-height: 1.4;
+                    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+                }
+                .blip-label.visible {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                .blip-label-left {
+                    left: auto;
+                    right: 18px;
+                    transform: translateX(-4px);
+                }
+                .blip-label-left.visible {
+                    transform: translateX(0);
+                }
+                .blip-tag {
+                    display: inline-block;
+                    font-size: 9px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    color: white;
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    margin-right: 4px;
+                    vertical-align: middle;
+                }
+
+                /* Radar container responsive */
+                @media (max-width: 500px) {
+                    .blip-label {
+                        font-size: 10px;
+                        padding: 5px 8px;
+                    }
+                    .blip-tag {
+                        font-size: 8px;
+                    }
+                }
+            </style>
+
+            <script>
+            (function() {
+                var blips = document.querySelectorAll('.radar-blip');
+                var SWEEP_DURATION = 5000; // matches CSS animation
+                var startTime = Date.now();
+
+                function tick() {
+                    var elapsed = (Date.now() - startTime) % SWEEP_DURATION;
+                    var sweepAngle = (elapsed / SWEEP_DURATION) * 360;
+
+                    blips.forEach(function(blip) {
+                        var blipAngle = parseInt(blip.getAttribute('data-angle'));
+                        var dot = blip.querySelector('.blip-dot');
+                        var label = blip.querySelector('.blip-label');
+
+                        // The sweep wedge is ~59° wide. Its trailing (bright) edge
+                        // is at sweepAngle + 59. Activate when that edge hits the blip.
+                        var trailingEdge = (sweepAngle + 59) % 360;
+                        var diff = trailingEdge - blipAngle;
+                        if (diff < 0) diff += 360;
+
+                        if (diff < 25) {
+                            // Bright edge just reached the blip: light up
+                            dot.classList.add('active');
+                            label.classList.add('visible');
+                        } else if (diff >= 25 && diff < 160) {
+                            // Sweep passed, keep dot, fade label after a while
+                            if (diff >= 100) {
+                                label.classList.remove('visible');
+                            }
+                        } else {
+                            // Hidden until next sweep
+                            dot.classList.remove('active');
+                            label.classList.remove('visible');
+                        }
+                    });
+
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            })();
+            </script>
+
             <!-- Challenge Stats Grid -->
             <div class="container" style="max-width: 1100px;">
                 <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); margin-top: var(--space-6);">
@@ -1631,14 +1855,14 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Stop Manual Checking. Start 24/7 Monitoring.</h2>
                 <p class="cta-subtitle">Never miss a competitor move again. Automated monitoring with instant alerts for every change.</p>
                 <div class="cta-buttons">
                     <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
-                    <a href="../contact" class="btn btn-outline btn-lg" style="border-color: white; color: white;">Book Demo</a>
+                    <a href="../contact" class="btn btn-outline btn-lg">Book Demo</a>
                 </div>
             </div>
         </div>
