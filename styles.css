@@ -3795,7 +3795,8 @@ input:checked + .toggle-slider:before {
     color: var(--text-primary);
 }
 
-.blog-post-content ul {
+.blog-post-content ul,
+.blog-post-content ol {
     margin: var(--space-4) 0;
     padding-left: var(--space-6);
     color: var(--text-secondary);
