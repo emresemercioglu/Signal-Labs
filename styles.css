@@ -2713,8 +2713,15 @@ input:checked + .toggle-slider:before {
 }
 
 .value-icon {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--space-4);
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto var(--space-4);
 }
 
 .value-card h3 {
@@ -2754,8 +2761,15 @@ input:checked + .toggle-slider:before {
 }
 
 .help-icon {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--space-4);
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto var(--space-4);
 }
 
 .help-card h3 {
