@@ -376,180 +376,386 @@
                         <div class="product-mockup battlecard-advanced-mockup" style="border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
                             
                             <!-- Header Section -->
-                            <div style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; border-radius: 12px 12px 0 0;">
-                                <div style="display: flex; align-items: center; gap: 14px;">
-                                    <div style="padding: 10px; background: #dbeafe; border-radius: 10px;">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                            <div style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 10px 16px; border-radius: 12px 12px 0 0;">
+                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+                                    <div style="padding: 6px; background: #dbeafe; border-radius: 7px; flex-shrink: 0;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
                                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                                             <polyline points="14,2 14,8 20,8"/>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <div style="font-weight: 700; color: #1f2937; font-size: 22px; margin-bottom: 2px;">Hooli</div>
-                                        <div style="font-size: 12px; color: #6b7280; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                                            <span>Competitive Battlecard</span>
-                                            <span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 8px; font-weight: 500; font-size: 10px; white-space: nowrap;">GTM/Sales Focus</span>
-                                            <span style="color: #9ca3af; font-size: 10px; white-space: nowrap;">Updated 2h ago</span>
-                                        </div>
-                                    </div>
+                                    <span style="font-weight: 700; color: #1f2937; font-size: 16px;">Hooli</span>
+                                    <span style="font-size: 11px; color: #6b7280;">Competitive Battlecard</span>
+                                    <span style="color: #9ca3af; font-size: 9px; white-space: nowrap;">Updated 2h ago</span>
                                 </div>
-                            </div>
-
-                            <!-- AI Prompt Interface -->
-                            <div style="background: #faf5ff; border-bottom: 1px solid #e2e8f0; padding: 12px 20px;">
-                                <div style="margin-bottom: 8px;">
-                                    <h4 style="font-size: 12px; font-weight: 600; color: #7c3aed; margin: 0; display: flex; align-items: center; gap: 6px;">
-                                        Ask AI to modify this battlecard
-                                    </h4>
-                                </div>
-                                <div style="display: flex; gap: 8px;">
-                                    <input type="text" placeholder="Describe what you'd like to change..." style="flex: 1; padding: 6px 10px; font-size: 12px; border: 1px solid #c084fc; border-radius: 6px; background: white; color: #9ca3af;" value="Add more details on enterprise features and pricing" />
-                                    <button style="padding: 6px 12px; background: #8b5cf6; color: white; border: none; border-radius: 6px; font-size: 12px;">Modify</button>
+                                <div style="display: flex; gap: 4px; position: relative; margin-left: 38px;" id="bc-focus-tabs">
+                                    <span class="bc-focus-tab active" data-tab="sales">Sales</span>
+                                    <span class="bc-focus-tab" data-tab="product">Product</span>
+                                    <span class="bc-focus-tab" data-tab="marketing">Marketing</span>
+                                    <span class="bc-focus-tab" data-tab="leadership">Leadership</span>
+                                    <span class="bc-focus-tab" data-tab="landscape">Landscape</span>
+                                    <span class="bc-focus-hint">Click to switch battlecard type</span>
+                                    <span class="bc-hint-hand" id="bc-hint-hand"><svg width="18" height="18" viewBox="0 0 32 32" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14V6a2.5 2.5 0 0 0-5 0v12l-3-3.5a2.2 2.2 0 0 0-3.2 0 2.2 2.2 0 0 0 0 3.1L12 26a6 6 0 0 0 4.5 2h2a7 7 0 0 0 7-7v-7a2.5 2.5 0 0 0-5 0"/><path d="M21 14V9.5a2.5 2.5 0 0 0-5 0V14"/><line x1="13.5" y1="2" x2="13.5" y2="0" opacity="0.5"/><line x1="10" y1="3" x2="8.5" y2="1.5" opacity="0.5"/><line x1="17" y1="3" x2="18.5" y2="1.5" opacity="0.5"/></svg></span>
                                 </div>
                             </div>
 
                             <!-- Main Content -->
                             <div style="padding: 16px 20px; background: white; border-radius: 0 0 12px 12px;">
-                                
-                                <!-- Overview -->
-                                <div style="margin-bottom: 16px;">
-                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0;">Overview</h3>
-                                    <p style="font-size: 12px; color: #374151; line-height: 1.4; margin: 0;">
-                                        Hooli dominates enterprise CI with <a href="#" style="color: #2563eb; text-decoration: underline;">[800+ customers]</a> 
-                                        and <a href="#" style="color: #2563eb; text-decoration: underline;">[$42M ARR]</a>, but requires a 
-                                        <a href="#" style="color: #2563eb; text-decoration: underline;">[3-month implementation]</a> and 2-3 dedicated analysts.
-                                        Their <a href="#" style="color: #2563eb; text-decoration: underline;">[NPS dropped from 62 to 48]</a> as customers seek AI-first alternatives.
+
+                                <!-- SALES PANEL -->
+                                <div class="bc-panel active" data-panel="sales">
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                                        <div>
+                                            <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
+                                            <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0;">
+                                                Hooli dominates enterprise CI with <a href="#" style="color: #2563eb; text-decoration: underline;">[800+ customers]</a> 
+                                                and <a href="#" style="color: #2563eb; text-decoration: underline;">[$72M ARR]</a>, but requires a 
+                                                <a href="#" style="color: #2563eb; text-decoration: underline;">[3-month implementation]</a> and 2-3 dedicated analysts.
+                                                Their platform relies on manual workflows with limited AI automation.
+                                            </p>
+                                        </div>
+                                        <div style="text-align: center; padding-top: 10px;">
+                                            <svg viewBox="0 0 200 130" width="170" height="108" style="display: block; margin: 0 auto;">
+                                                <g transform="translate(100,58)">
+                                                    <polygon points="0,-45 39,-22.5 39,22.5 0,45 -39,22.5 -39,-22.5" fill="none" stroke="#e2e8f0" stroke-width="0.6"/>
+                                                    <polygon points="0,-31.5 27.3,-15.8 27.3,15.8 0,31.5 -27.3,15.8 -27.3,-15.8" fill="none" stroke="#e2e8f0" stroke-width="0.3"/>
+                                                    <polygon points="0,-40.5 31.2,-18 31.2,18 0,31.5 -31.2,18 -35.1,-20.3" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1"/>
+                                                    <polygon points="0,-36 23.4,-13.5 31.2,18 0,40.5 -19.5,11.3 -23.4,-13.5" fill="rgba(249,115,22,0.15)" stroke="#f97316" stroke-width="1"/>
+                                                </g>
+                                                <text x="100" y="7" text-anchor="middle" font-size="6.5" fill="#6b7280">Product</text>
+                                                <text x="148" y="30" text-anchor="start" font-size="6.5" fill="#6b7280">Usability</text>
+                                                <text x="148" y="88" text-anchor="start" font-size="6.5" fill="#6b7280">Performance</text>
+                                                <text x="100" y="117" text-anchor="middle" font-size="6.5" fill="#6b7280">Brand</text>
+                                                <text x="52" y="88" text-anchor="end" font-size="6.5" fill="#6b7280">Support</text>
+                                                <text x="52" y="30" text-anchor="end" font-size="6.5" fill="#6b7280">Innovation</text>
+                                                <circle cx="70" cy="126" r="3" fill="#2563eb"/><text x="76" y="129" font-size="6.5" fill="#6b7280">CIx</text>
+                                                <circle cx="110" cy="126" r="3" fill="#f97316"/><text x="116" y="129" font-size="6.5" fill="#6b7280">Hooli</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 12px; margin-top: 20px;">
+                                        <div>
+                                            <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg> Their Strengths
+                                            </h4>
+                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
+                                                <div style="width: 4px; height: 4px; background: #10b981; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>Market Share:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">800+ customers</a>, 38% enterprise CI market share</span>
+                                            </div>
+                                            <div style="display: flex; align-items: start; gap: 6px;">
+                                                <div style="width: 4px; height: 4px; background: #10b981; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>Ecosystem:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">50+ integrations</a> including Salesforce, HubSpot, Gong</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> Our Advantages
+                                            </h4>
+                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
+                                                <div style="width: 4px; height: 4px; background: #2563eb; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>AI-First Architecture:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">Battlecards in minutes</a> vs 2-3 weeks manual effort</span>
+                                            </div>
+                                            <div style="display: flex; align-items: start; gap: 6px;">
+                                                <div style="width: 4px; height: 4px; background: #2563eb; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>Rapid Deployment:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">Same-day setup</a> vs Hooli's 3-month rollout</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 12px;">
+                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg> Key Talking Points
+                                        </h4>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
+                                            <div style="background: #eff6ff; padding: 8px; border-radius: 6px; border: 1px solid #bfdbfe;">
+                                                <p style="font-size: 10px; color: #1d4ed8; margin: 0; line-height: 1.3;"><strong>"Built for Speed"</strong><br/>CI from day one with AI automation - no 6-month rollout.</p>
+                                            </div>
+                                            <div style="background: #f0fdf4; padding: 8px; border-radius: 6px; border: 1px solid #bbf7d0;">
+                                                <p style="font-size: 10px; color: #166534; margin: 0; line-height: 1.3;"><strong>"Team-Ready"</strong><br/>Tailored battlecards for Sales, Product, Marketing & Leadership.</p>
+                                            </div>
+                                            <div style="background: #faf5ff; padding: 8px; border-radius: 6px; border: 1px solid #e9d5ff;">
+                                                <p style="font-size: 10px; color: #6b21a8; margin: 0; line-height: 1.3;"><strong>"Always Current"</strong><br/>Real-time signals keep your team ahead - no stale intel.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 12px;">
+                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg> Objection Handling
+                                        </h4>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                            <div style="background: #fff5f5; padding: 8px; border-radius: 6px; border: 1px solid #fee2e2;">
+                                                <p style="font-size: 10px; font-weight: 600; color: #991b1b; margin: 0 0 3px 0;">"Hooli integrates with our CRM already"</p>
+                                                <p style="font-size: 10px; color: #374151; margin: 0; line-height: 1.3;"><strong>How to respond:</strong> CIx connects to your stack in minutes with an open API - not a 3-month integration project.</p>
+                                            </div>
+                                            <div style="background: #fff5f5; padding: 8px; border-radius: 6px; border: 1px solid #fee2e2;">
+                                                <p style="font-size: 10px; font-weight: 600; color: #991b1b; margin: 0 0 3px 0;">"Our team is used to Hooli"</p>
+                                                <p style="font-size: 10px; color: #374151; margin: 0; line-height: 1.3;"><strong>How to respond:</strong> Used to it, or stuck with it? CIx saves your teams 20+ hours a week on manual battlecard creation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Discovery Questions
+                                        </h4>
+                                        <div style="border: 1px solid #e5e7eb; border-radius: 5px; padding: 8px; margin-bottom: 5px;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 4px 0;">"What does your current CI workflow look like?"</p>
+                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 4px 0;"><strong style="color: #374151;">Listen for:</strong> Manual processes, spreadsheet tracking, quarterly updates</p>
+                                            <p style="font-size: 9px; color: #166534; margin: 0;"><strong>How to position:</strong> "CIx automates that - same-day setup, real-time updates."</p>
+                                        </div>
+                                        <div style="border: 1px solid #e5e7eb; border-radius: 5px; padding: 8px;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 4px 0;">"How many people touch your battlecards today?"</p>
+                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 4px 0;"><strong style="color: #374151;">Listen for:</strong> Dedicated analysts, PMM bottleneck, outdated content</p>
+                                            <p style="font-size: 9px; color: #166534; margin: 0;"><strong>How to position:</strong> "CIx generates and updates battlecards automatically - zero analyst dependency."</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PRODUCT PANEL -->
+                                <div class="bc-panel" data-panel="product">
+                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
+                                    <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0 0 12px 0;">
+                                        Hooli's CI platform is built on legacy architecture requiring 3-month implementations. Their monolithic approach limits customization and slows feature velocity compared to CIx's modular, AI-first design.
                                     </p>
-                                </div>
-
-                                <!-- Two-column layout -->
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
-                                    
-                                    <!-- Their Strengths -->
-                                    <div>
-                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg> Their Strengths
-                                        </h4>
-                                        <div style="space-y: 6px;">
-                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #10b981; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;">
-                                                    <strong>Market Share:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">800+ customers</a>, 38% enterprise CI market share
-                                                </span>
-                                            </div>
-                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #10b981; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;">
-                                                    <strong>Ecosystem:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">50+ integrations</a> including Salesforce, HubSpot, Gong
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Our Advantages -->
-                                    <div>
-                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> Our Advantages
-                                        </h4>
-                                        <div style="space-y: 6px;">
-                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #2563eb; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;">
-                                                    <strong>AI-First Architecture:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">Battlecards in minutes</a> vs 2-3 weeks manual effort
-                                                </span>
-                                            </div>
-                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #2563eb; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;">
-                                                    <strong>Rapid Deployment:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">Same-day setup</a> vs Hooli's 3-month rollout
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Key Talking Points -->
-                                <div style="margin-bottom: 16px;">
-                                    <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg> Key Talking Points
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/></svg> Side-by-Side Comparison
                                     </h4>
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
-                                        <div style="background: #eff6ff; padding: 8px; border-radius: 6px; border: 1px solid #bfdbfe;">
-                                            <p style="font-size: 10px; color: #1d4ed8; margin: 0; line-height: 1.3;">
-                                                <strong>"Built for Speed"</strong><br/>
-                                                CI from day one with AI automation - no 6-month rollout.
-                                            </p>
-                                        </div>
-                                        <div style="background: #f0fdf4; padding: 8px; border-radius: 6px; border: 1px solid #bbf7d0;">
-                                            <p style="font-size: 10px; color: #166534; margin: 0; line-height: 1.3;">
-                                                <strong>"Team-Ready"</strong><br/>
-                                                Tailored battlecards for Sales, Product, Marketing & Leadership.
-                                            </p>
-                                        </div>
-                                        <div style="background: #faf5ff; padding: 8px; border-radius: 6px; border: 1px solid #e9d5ff;">
-                                            <p style="font-size: 10px; color: #6b21a8; margin: 0; line-height: 1.3;">
-                                                <strong>"Always Current"</strong><br/>
-                                                Real-time signals keep your team ahead - no stale intel.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Comparison Table Preview -->
-                                <div>
-                                    <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg> Side-by-Side Comparison
-                                    </h4>
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 6px; overflow: hidden;">
+                                    <div style="border: 1px solid #e5e7eb; border-radius: 6px; overflow: hidden; margin-bottom: 12px;">
                                         <table style="width: 100%; font-size: 10px;">
-                                            <thead style="background: #f9fafb;">
-                                                <tr>
-                                                    <th style="padding: 6px 8px; text-align: left; font-weight: 600; color: #374151;">Feature</th>
-                                                    <th style="padding: 6px 8px; text-align: center; font-weight: 600; color: #2563eb;">CIx</th>
-                                                    <th style="padding: 6px 8px; text-align: center; font-weight: 600; color: #6b7280;">Hooli</th>
-                                                </tr>
-                                            </thead>
+                                            <thead style="background: #f9fafb;"><tr><th style="padding: 5px 8px; text-align: left; font-weight: 600; color: #374151;">Feature</th><th style="padding: 5px 8px; text-align: center; font-weight: 600; color: #2563eb;">CIx</th><th style="padding: 5px 8px; text-align: center; font-weight: 600; color: #6b7280;">Hooli</th></tr></thead>
                                             <tbody>
-                                                <tr style="border-top: 1px solid #e5e7eb;">
-                                                    <td style="padding: 6px 8px; color: #374151;">Implementation</td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Same day <svg width="10" height="10" viewBox="0 0 24 24" fill="#166534" stroke="none" style="display:inline-block;vertical-align:middle;margin-left:2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                                                    </td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">3-6 months</span>
-                                                    </td>
-                                                </tr>
-                                                <tr style="background: #f9fafb; border-top: 1px solid #e5e7eb;">
-                                                    <td style="padding: 6px 8px; color: #374151;">AI Battlecards</td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Multi-focus <svg width="10" height="10" viewBox="0 0 24 24" fill="#166534" stroke="none" style="display:inline-block;vertical-align:middle;margin-left:2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                                                    </td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 4px;">Basic</span>
-                                                    </td>
-                                                </tr>
-                                                <tr style="border-top: 1px solid #e5e7eb;">
-                                                    <td style="padding: 6px 8px; color: #374151;">Integrations</td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Open API <svg width="10" height="10" viewBox="0 0 24 24" fill="#166534" stroke="none" style="display:inline-block;vertical-align:middle;margin-left:2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                                                    </td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px;">50+</span>
-                                                    </td>
-                                                </tr>
-                                                <tr style="background: #f9fafb; border-top: 1px solid #e5e7eb;">
-                                                    <td style="padding: 6px 8px; color: #374151;">Signal Tracking</td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Real-time <svg width="10" height="10" viewBox="0 0 24 24" fill="#166534" stroke="none" style="display:inline-block;vertical-align:middle;margin-left:2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
-                                                    </td>
-                                                    <td style="padding: 6px 8px; text-align: center;">
-                                                        <span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">Weekly</span>
-                                                    </td>
-                                                </tr>
+                                                <tr style="border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">Implementation</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Same day</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">3-6 months</span></td></tr>
+                                                <tr style="background: #f9fafb; border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">AI Battlecards</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Multi-focus</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 4px;">Basic</span></td></tr>
+                                                <tr style="border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">Integrations</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Open API</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px;">50+</span></td></tr>
+                                                <tr style="background: #f9fafb; border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">Signal Tracking</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Real-time</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">Weekly</span></td></tr>
                                             </tbody>
                                         </table>
                                     </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> Competitor Offerings
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
+                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">Hooli CI Platform</p>
+                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 2px 0; line-height: 1.3;">Core CI suite with battlecards, dashboards, and analytics. Manual creation workflow.</p>
+                                            <p style="font-size: 9px; color: #991b1b; margin: 0;"><strong>Limitation:</strong> No AI-native battlecard generation. Requires dedicated analysts for updates.</p>
+                                        </div>
+                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">Hooli Integrations Hub</p>
+                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 2px 0; line-height: 1.3;">50+ pre-built integrations with CRM, enablement, and collaboration tools.</p>
+                                            <p style="font-size: 9px; color: #991b1b; margin: 0;"><strong>Limitation:</strong> Closed ecosystem. Custom integrations require professional services engagement.</p>
+                                        </div>
+                                    </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Product Development Recommendations
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
+                                            <span style="background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Native CRM embedding</strong> - Build Salesforce/HubSpot widgets to counter Hooli's integration depth.</span>
+                                        </div>
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
+                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Win/loss automation</strong> - Auto-capture deal outcomes to build competitive pattern library.</span>
+                                        </div>
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
+                                            <span style="background: #7c3aed; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Role-based dashboards</strong> - Deliver tailored views for Sales, Product, and Marketing to differentiate from Hooli's one-size-fits-all UI.</span>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <!-- MARKETING PANEL -->
+                                <div class="bc-panel" data-panel="marketing">
+                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
+                                    <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0 0 12px 0;">
+                                        Hooli positions as the "enterprise standard" for CI but struggles with perception of being slow and outdated. Their NPS decline signals a messaging vulnerability around speed and innovation.
+                                    </p>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Digital Presence
+                                    </h4>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 12px;">
+                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
+                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">~120K</p>
+                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Monthly web visits</p>
+                                        </div>
+                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
+                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">15K</p>
+                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">LinkedIn followers</p>
+                                        </div>
+                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
+                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">2x/wk</p>
+                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Blog frequency</p>
+                                        </div>
+                                    </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Competitor Messaging Pillars
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
+                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">"Enterprise-grade CI platform"</p>
+                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 3px 0; line-height: 1.3;">Hooli positions scale and security as core differentiators, targeting CISOs and VP-level buyers.</p>
+                                            <p style="font-size: 9px; color: #1d4ed8; margin: 0;"><strong>Counter:</strong> Enterprise-grade doesn't mean enterprise-speed. CIx delivers the same security with same-day setup.</p>
+                                        </div>
+                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">"Proven at scale with 800+ customers"</p>
+                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 3px 0; line-height: 1.3;">Leverages customer count as social proof, often citing Fortune 500 logos.</p>
+                                            <p style="font-size: 9px; color: #1d4ed8; margin: 0;"><strong>Counter:</strong> Scale without satisfaction. Ask about their renewal rates and NPS trajectory.</p>
+                                        </div>
+                                    </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg> Marketing & Growth Recommendations
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
+                                            <span style="background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Counter "enterprise-grade" narrative</strong> - Emphasize AI-first speed and same-day value vs their 3-month rollout.</span>
+                                        </div>
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
+                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Target their NPS decline</strong> - Create comparison content highlighting customer satisfaction trends.</span>
+                                        </div>
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
+                                            <span style="background: #7c3aed; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Own "real-time CI" category</strong> - Position against their quarterly update model in content and SEO.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LEADERSHIP PANEL -->
+                                <div class="bc-panel" data-panel="leadership">
+                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
+                                    <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0 0 12px 0;">
+                                        Hooli holds 38% enterprise CI market share but faces declining satisfaction and increased churn to AI-first alternatives. Their enterprise-only focus leaves significant mid-market and SMB opportunity.
+                                    </p>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Financial & Funding Overview
+                                    </h4>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 12px;">
+                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
+                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">$72M</p>
+                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Est. ARR</p>
+                                        </div>
+                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
+                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">Series D</p>
+                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Funding stage</p>
+                                        </div>
+                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
+                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">~450</p>
+                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Employees</p>
+                                        </div>
+                                    </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> Market Trends
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
+                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 9px; color: #374151; line-height: 1.3;"><strong>AI-native CI platforms</strong> gaining enterprise traction, displacing legacy manual tools.</span></div>
+                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 9px; color: #374151; line-height: 1.3;"><strong>Buyer expectations shifting</strong> toward self-service CI with real-time updates over quarterly reports.</span></div>
+                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 9px; color: #374151; line-height: 1.3;"><strong>Consolidation accelerating</strong> as legacy CI vendors face M&A pressure from AI-native entrants.</span></div>
+                                    </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Competitor Strategic Bets
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                                        <div style="padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
+                                            <p style="font-size: 9px; font-weight: 600; color: #1d4ed8; margin: 0 0 2px 0;">Short-term (0-12 months)</p>
+                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">Retrofitting AI features onto legacy platform. Launching "AI assistant" to match market demand.</p>
+                                        </div>
+                                        <div style="padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
+                                            <p style="font-size: 9px; font-weight: 600; color: #6b21a8; margin: 0 0 2px 0;">Long-term (1-5 years)</p>
+                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">Expanding into revenue intelligence and deal analytics. Potential M&A to acquire AI capabilities.</p>
+                                        </div>
+                                    </div>
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 12px 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Strategic Leadership Recommendations
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
+                                            <span style="background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Accelerate mid-market expansion</strong> - Hooli's enterprise-only focus leaves mid-market underserved. Capture before they move downmarket.</span>
+                                        </div>
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
+                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Explore integration partnerships</strong> - Their closed ecosystem creates openings for CRM and enablement platform partnerships.</span>
+                                        </div>
+                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
+                                            <span style="background: #7c3aed; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
+                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Monitor acquisition signals</strong> - Declining NPS and market pressure may trigger strategic moves. Track leadership changes.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- LANDSCAPE PANEL -->
+                                <div class="bc-panel" data-panel="landscape">
+                                    <!-- Compact Market Positioning Map -->
+                                    <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Market Positioning Map
+                                    </h4>
+                                    <div style="margin-bottom: 12px;">
+                                        <svg viewBox="0 0 280 155" width="80%" style="display: block; margin: 0 auto;">
+                                            <line x1="140" y1="12" x2="140" y2="125" stroke="#d1d5db" stroke-width="0.8" stroke-dasharray="3,2"/>
+                                            <line x1="18" y1="68" x2="255" y2="68" stroke="#d1d5db" stroke-width="0.8" stroke-dasharray="3,2"/>
+                                            <polygon points="140,12 138,17 142,17" fill="#9ca3af"/>
+                                            <polygon points="255,68 250,66 250,70" fill="#9ca3af"/>
+                                            <text x="140" y="6" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5">Multi-team GTM</text>
+                                            <text x="140" y="133" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5">Single-team / research</text>
+                                            <text x="10" y="68" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5" transform="rotate(-90, 10, 68)">Manual</text>
+                                            <text x="264" y="68" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5" transform="rotate(-90, 264, 68)">AI-native</text>
+                                            <rect x="140" y="8" width="125" height="60" fill="#eff6ff" opacity="0.25" rx="2"/>
+                                            <circle cx="115" cy="30" r="7" fill="#f97316" opacity="0.15" stroke="#f97316" stroke-width="1.2"/><text x="115" y="30" text-anchor="middle" font-size="5.5" fill="#f97316" font-weight="700" dominant-baseline="central">H</text>
+                                            <circle cx="200" cy="50" r="6.5" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="1.2"/><text x="200" y="50" text-anchor="middle" font-size="5.5" fill="#10b981" font-weight="700" dominant-baseline="central">PP</text>
+                                            <circle cx="100" cy="90" r="6" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.2"/><text x="100" y="90" text-anchor="middle" font-size="5.5" fill="#8b5cf6" font-weight="700" dominant-baseline="central">AC</text>
+                                            <circle cx="225" cy="22" r="7" fill="#2563eb" opacity="0.2" stroke="#2563eb" stroke-width="1.5"/><text x="225" y="22" text-anchor="middle" font-size="5" fill="#2563eb" font-weight="700" dominant-baseline="central">CIx</text>
+                                            <circle cx="45" cy="148" r="2.5" fill="#f97316"/><text x="50" y="150" font-size="5.5" fill="#374151">Hooli</text>
+                                            <circle cx="95" cy="148" r="2.5" fill="#10b981"/><text x="100" y="150" font-size="5.5" fill="#374151">Pied Piper</text>
+                                            <circle cx="155" cy="148" r="2.5" fill="#8b5cf6"/><text x="160" y="150" font-size="5.5" fill="#374151">Acme Corp</text>
+                                            <circle cx="215" cy="148" r="2.5" fill="#2563eb"/><text x="220" y="150" font-size="5.5" fill="#374151" font-weight="600">CIx (Us)</text>
+                                        </svg>
+                                    </div>
+
+                                    <!-- Threat Level Assessment -->
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Threat Level Assessment
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
+                                        <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #fef2f2; border-radius: 5px; border: 1px solid #fecaca;">
+                                            <span style="font-size: 9px; color: #1f2937; flex: 1;"><strong>Hooli</strong> - Market leader, 800+ customers, 38% enterprise CI share. Legacy architecture.</span>
+                                            <span style="background: #dc2626; color: white; font-size: 8px; padding: 1px 6px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
+                                        </div>
+                                        <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #fefce8; border-radius: 5px; border: 1px solid #fef08a;">
+                                            <span style="font-size: 9px; color: #1f2937; flex: 1;"><strong>Pied Piper</strong> - Aggressive pricing, growing mid-market. AI capabilities expanding.</span>
+                                            <span style="background: #ca8a04; color: white; font-size: 8px; padding: 1px 6px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
+                                        </div>
+                                        <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
+                                            <span style="font-size: 9px; color: #1f2937; flex: 1;"><strong>Acme Corp</strong> - Website monitoring and competitive newsletters. No battlecard automation.</span>
+                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 6px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Low</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Market Gaps & Opportunities -->
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Market Gaps & Opportunities
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
+                                        <div style="padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #1d4ed8; margin: 0 0 2px 0;">Unified AI CI for all GTM teams</p>
+                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">No competitor offers team-specific tuning for Sales, Marketing, Product & Leadership.</p>
+                                        </div>
+                                        <div style="padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
+                                            <p style="font-size: 10px; font-weight: 600; color: #166534; margin: 0 0 2px 0;">Source-attributed AI battlecards</p>
+                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">Competitors treat AI as a black box. Every CIx insight links back to verified sources.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Market Trends -->
+                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> Market Trends
+                                    </h4>
+                                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 10px; color: #374151; line-height: 1.3;"><strong>Agentic AI</strong> - Vendors moving from summarization to autonomous signal-driven actions.</span></div>
+                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 10px; color: #374151; line-height: 1.3;"><strong>Consolidation pressure</strong> - Legacy CI vendors acquiring or being acquired as AI transforms CI.</span></div>
+                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 10px; color: #374151; line-height: 1.3;"><strong>Self-serve demand</strong> - Teams want CI insights to be self-service and available in real-time.</span></div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -586,7 +792,7 @@
                             <div style="padding: 16px 24px;">
                                 <div class="competitor-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                                     <!-- Company-level competitors -->
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
                                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                                             <div style="display: flex; align-items: center; gap: 8px;">
                                                 <div style="width: 28px; height: 28px; background: #dbeafe; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2563eb; font-weight: 600; font-size: 12px;">H</div>
@@ -602,7 +808,7 @@
                                         </div>
                                         <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Enterprise search and AI platform for market intelligence.</p>
                                     </div>
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
                                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                                             <div style="display: flex; align-items: center; gap: 8px;">
                                                 <div style="width: 28px; height: 28px; background: #dcfce7; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #16a34a; font-weight: 600; font-size: 12px;">P</div>
@@ -618,7 +824,7 @@
                                         </div>
                                         <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Compression-based data platform with CI features.</p>
                                     </div>
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
                                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                                             <div style="display: flex; align-items: center; gap: 8px;">
                                                 <div style="width: 28px; height: 28px; background: #f3e8ff; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #7c3aed; font-weight: 600; font-size: 12px;">A</div>
@@ -634,7 +840,7 @@
                                         </div>
                                         <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Enterprise CI platform with win-loss analysis.</p>
                                     </div>
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
                                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                                             <div style="display: flex; align-items: center; gap: 8px;">
                                                 <div style="width: 28px; height: 28px; background: #fed7aa; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #ea580c; font-weight: 600; font-size: 12px;">G</div>
@@ -651,7 +857,7 @@
                                         <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">CI and competitive monitoring platform.</p>
                                     </div>
                                     <!-- Product-level competitors -->
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
                                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                                             <div style="display: flex; align-items: center; gap: 8px;">
                                                 <div style="width: 28px; height: 28px; background: #dbeafe; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2563eb; font-weight: 600; font-size: 12px;">H</div>
@@ -667,7 +873,7 @@
                                         </div>
                                         <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Hooli's analytics module competing with CIx dashboards.</p>
                                     </div>
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
                                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
                                             <div style="display: flex; align-items: center; gap: 8px;">
                                                 <div style="width: 28px; height: 28px; background: #dcfce7; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #16a34a; font-weight: 600; font-size: 12px;">P</div>
@@ -716,11 +922,11 @@
                         </div>
                     </div>
                     <div class="showcase-visual">
-                        <div class="product-mockup dashboard-mockup">
+                        <div class="product-mockup dashboard-mockup" id="signal-feed">
                             <!-- Signal Items -->
                             <div style="padding: 12px 24px;">
                                 <!-- Signal 1 -->
-                                <div style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
                                     <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
                                     </div>
@@ -736,7 +942,7 @@
                                     </div>
                                 </div>
                                 <!-- Signal 2 -->
-                                <div style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
                                     <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
                                     </div>
@@ -752,7 +958,7 @@
                                     </div>
                                 </div>
                                 <!-- Signal 3 -->
-                                <div style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
                                     <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
                                     </div>
@@ -768,7 +974,7 @@
                                     </div>
                                 </div>
                                 <!-- Signal 4 -->
-                                <div style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
                                     <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
                                     </div>
@@ -784,7 +990,7 @@
                                     </div>
                                 </div>
                                 <!-- Signal 5 -->
-                                <div style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0;">
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0;">
                                     <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
                                     </div>
@@ -1381,6 +1587,51 @@
     
     <!-- Main JavaScript - Loaded at end for better performance -->
     <script src="script.js"></script>
+
+    <!-- Scroll Animations & Battlecard Tab Switching -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        var signalFeed = document.getElementById('signal-feed');
+        if (signalFeed) observer.observe(signalFeed);
+
+        var competitorGrid = document.querySelector('.competitor-grid');
+        if (competitorGrid) observer.observe(competitorGrid);
+
+        var tabs = document.querySelectorAll('.bc-focus-tab');
+        var panels = document.querySelectorAll('.bc-panel');
+        var hintHand = document.getElementById('bc-hint-hand');
+        var hintText = document.querySelector('.bc-focus-hint');
+        var productTab = document.querySelector('.bc-focus-tab[data-tab="product"]');
+        var tabsContainer = document.getElementById('bc-focus-tabs');
+        if (productTab && tabsContainer) {
+            var centerX = productTab.offsetLeft + productTab.offsetWidth / 2;
+            if (hintText) hintText.style.left = centerX + 'px';
+            if (hintHand) hintHand.style.left = centerX + 'px';
+        }
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var target = this.getAttribute('data-tab');
+                tabs.forEach(function(t) { t.classList.remove('active'); });
+                panels.forEach(function(p) { p.classList.remove('active'); });
+                this.classList.add('active');
+                var panel = document.querySelector('.bc-panel[data-panel="' + target + '"]');
+                if (panel) panel.classList.add('active');
+                if (hintHand) hintHand.classList.add('hidden');
+                var hintText = document.querySelector('.bc-focus-hint');
+                if (hintText) hintText.style.display = 'none';
+            });
+        });
+    });
+    </script>
     
     <!-- Mega Menu Script -->
     <script>
