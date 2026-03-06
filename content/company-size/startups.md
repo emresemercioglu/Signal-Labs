@@ -279,7 +279,7 @@ Start simple (track 3 competitors), scale as you grow (track 30+). CIx scales wi
 Pivoting? Update competitive landscape quickly. CIx adapts to strategy changes.
 
 **Affordable Growth Pricing:**
-Start with Pro ($79/month), upgrade to Ultra ($350/month) as team grows. Startup-friendly pricing that scales.
+Start with Pro ($99/month), upgrade to Ultra ($350/month) as team grows. Startup-friendly pricing that scales.
 
 **Fast Setup for Fast Companies:**
 Same-day setup matches your fast-moving startup pace. No lengthy implementations.
@@ -392,7 +392,7 @@ A: Yes. Many startups have founder, marketer, or growth lead manage CIx part-tim
 
 **Q: How does startup pricing work?**
 
-A: Free tier: 10 CIx credits/month, 1 seat. Pro: $79/month, 20 credits. Ultra: $350/month, 3 seats, 100 credits. Start free, upgrade as needed.
+A: Free tier: 2 CIx credits/month, 1 seat. Pro: $99/month, 10 credits. Ultra: $350/month, 3 seats, 50 credits. Start free, upgrade as needed.
 
 **Q: What if we're pivoting or still finding PMF?**
 

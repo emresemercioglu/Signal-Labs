@@ -1263,7 +1263,7 @@ CIx uses a credit system for AI-powered actions:
 - Find sources: **0.5 credits**
 - Add product/company: **0.5 credits**
 
-**Example:** With 20 credits/month (Pro plan), you could:
+**Example:** With 10 credits/month (Pro plan), you could:
 - Generate 10 new battlecards + refresh 10 existing ones
 - OR track 4 competitors + generate 10 battlecards
 - OR any combination based on your needs
@@ -1280,7 +1280,7 @@ Yes! We offer a free tier:
 
 **Free Plan includes:**
 - 1 seat
-- 10 CIx credits/month
+- 2 CIx credits/month
 - Access to all core features
 - No credit card required
 
@@ -1424,17 +1424,17 @@ Our consulting services are priced based on scope, complexity, and your specific
 
 **Free** - $0/month
 - 1 seat
-- 10 credits/month
+- 2 credits/month
 - All core features
 
-**Pro** - $79/month (annual) or $99/month
+**Pro** - $99/month (annual) or $119/month
 - 1 seat
-- 20 credits/month
+- 10 credits/month
 - Email support
 
 **Ultra** - $350/month
 - 3 seats
-- 100 credits/month
+- 50 credits/month
 - Email & Slack support
 - Monthly strategy call
 
