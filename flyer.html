@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signal Labs - Postcard Flyer (6" x 4")</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: #0d0e1a;
+    display:flex; justify-content:center; align-items:center;
+    min-height:100vh; gap:48px; padding:60px 40px; flex-wrap:wrap;
+    font-family:'Manrope',sans-serif;
+  }
+  .print-note { position:fixed; top:16px; left:50%; transform:translateX(-50%); background:rgba(0,200,150,0.1); border:1px solid rgba(0,200,150,0.3); color:#00c896; font-size:12px; padding:7px 16px; border-radius:6px; z-index:100; white-space:nowrap; }
+  .card-wrapper { position:relative; margin-bottom:30px; }
+  .card-label { position:absolute; bottom:-22px; left:50%; transform:translateX(-50%); font-size:10px; color:rgba(255,255,255,0.2); letter-spacing:0.1em; text-transform:uppercase; white-space:nowrap; }
+  .card { width:576px; height:384px; border-radius:10px; overflow:visible; position:relative; box-shadow:0 20px 80px rgba(0,0,0,0.55),0 0 50px rgba(0,110,230,0.1); clip-path:inset(0 round 10px); }
+
+  /* Logo pieces - front and back same size */
+  .brand-logo { display:flex; align-items:center; gap:8px; overflow:visible; }
+  .logo-icon-lg { height:34px; width:34px; border-radius:0; display:block; object-fit:contain; }
+  .logo-icon-sm { height:34px; width:34px; border-radius:0; display:block; object-fit:contain; }
+  .logo-wm-lg { font-family:'Outfit',sans-serif; font-weight:700; font-size:17px; color:white; letter-spacing:-0.01em; }
+  .logo-wm-sm { font-family:'Outfit',sans-serif; font-weight:700; font-size:17px; color:white; letter-spacing:-0.01em; }
+
+  /* FRONT */
+  .card-front { background:#060913; display:flex; }
+  .card-front::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,140,220,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,140,220,0.03) 1px,transparent 1px); background-size:28px 28px; z-index:0; }
+  .glow-f1 { position:absolute; top:-50px; right:80px; width:280px; height:200px; background:radial-gradient(ellipse,rgba(0,110,230,0.15) 0%,transparent 70%); z-index:0; }
+  .glow-f2 { position:absolute; bottom:-30px; left:60px; width:220px; height:140px; background:radial-gradient(ellipse,rgba(0,190,130,0.08) 0%,transparent 70%); z-index:0; }
+
+  .front-left { position:relative; z-index:1; flex:1; padding:28px 22px 26px 28px; display:flex; flex-direction:column; justify-content:space-between; overflow:visible; }
+  .front-right { position:relative; z-index:1; width:172px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:22px 18px; background:rgba(0,80,200,0.05); border-left:1px solid rgba(0,120,220,0.1); gap:14px; }
+
+  .front-headline { font-family:'Outfit',sans-serif; font-weight:800; font-size:46px; line-height:1.1; color:white; }
+  .front-headline span { background:linear-gradient(100deg,#1fa8ff,#00e5a8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .front-sub { font-family:'Manrope',sans-serif; font-weight:300; font-size:13px; line-height:1.55; color:rgba(255,255,255,0.48); }
+  .pill-row { display:flex; flex-wrap:wrap; gap:5px; }
+  .pill { background:rgba(0,130,220,0.1); border:1px solid rgba(0,130,220,0.22); border-radius:20px; padding:3px 9px; font-size:8.5px; color:rgba(30,170,255,0.9); letter-spacing:0.04em; }
+  .pill.green { background:rgba(0,190,130,0.1); border-color:rgba(0,190,130,0.22); color:rgba(0,210,150,0.9); }
+  .pill.purple { background:rgba(130,80,255,0.1); border-color:rgba(130,80,255,0.2); color:rgba(160,120,255,0.9); }
+
+  .qr-box { background:white; border-radius:10px; padding:8px; width:104px; height:104px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 22px rgba(0,120,220,0.18); }
+  .qr-box img { width:88px; height:88px; display:block; }
+  .qr-cta { text-align:center; }
+  .qr-cta-main { font-family:'Outfit',sans-serif; font-weight:700; font-size:20px; color:white; margin-bottom:3px; }
+  .qr-cta-sub { font-family:'Manrope',sans-serif; font-size:9px; line-height:1.45; color:rgba(255,255,255,0.38); }
+  .right-url { font-family:'Manrope',sans-serif; font-size:11px; color:rgba(30,170,255,0.65); }
+
+  /* BACK */
+  .card-back { background:#060913; display:flex; }
+  .card-back::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,140,220,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,140,220,0.03) 1px,transparent 1px); background-size:28px 28px; z-index:0; }
+  .back-accent-bar { display:none; }
+  .back-left { position:relative; z-index:1; flex:1; padding:26px 22px 26px 26px; display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid rgba(255,255,255,0.05); }
+  .back-right { position:relative; z-index:1; width:192px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(0,80,200,0.05); border-left:1px solid rgba(0,120,220,0.1); gap:14px; }
+
+  .back-headline { font-family:'Outfit',sans-serif; font-weight:700; font-size:36px; line-height:1.25; color:white; }
+  .back-headline span { background:linear-gradient(100deg,#1fa8ff,#00e5a8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .back-points { display:flex; flex-direction:column; gap:9px; }
+  .bp { display:flex; align-items:flex-start; gap:8px; }
+  .bp-dot { width:5px; height:5px; border-radius:50%; background:linear-gradient(135deg,#1fa8ff,#00e5a8); margin-top:5px; flex-shrink:0; }
+  .bp-text { font-family:'Manrope',sans-serif; font-size:12px; line-height:1.45; color:rgba(255,255,255,0.55); }
+  .bp-text strong { color:rgba(255,255,255,0.85); font-weight:500; }
+
+  .plan-box { background:rgba(0,80,200,0.09); border:1px solid rgba(0,120,220,0.18); border-radius:10px; padding:13px 14px; }
+  .plan-label { font-size:8px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(30,160,255,0.65); margin-bottom:9px; }
+  .plan-items { display:flex; flex-direction:column; gap:7px; }
+  .plan-item { display:flex; align-items:center; gap:7px; }
+  .plan-check { width:14px; height:14px; background:rgba(0,190,130,0.12); border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .plan-check svg { width:8px; height:8px; }
+  .plan-text { font-family:'Manrope',sans-serif; font-size:10px; color:rgba(255,255,255,0.68); }
+
+  .cta-btn { background:linear-gradient(135deg,#0078e0,#004db0); border-radius:8px; padding:11px 14px; text-align:center; box-shadow:0 4px 18px rgba(0,90,200,0.28); }
+  .cta-btn-main { font-family:'Outfit',sans-serif; font-weight:700; font-size:11px; color:white; margin-bottom:2px; }
+  .cta-btn-sub { font-family:'Manrope',sans-serif; font-size:9px; color:rgba(255,255,255,0.5); }
+
+  @media print {
+    body { background:white; padding:0; gap:0; }
+    .print-note { display:none; }
+    .card-wrapper { page-break-after:always; }
+    .card { width:6in; height:4in; box-shadow:none; border-radius:0; }
+  }
+</style>
+</head>
+<body>
+<div class="print-note">Postcard Flyer 6" × 4" Front &amp; Back 300 DPI for print</div>
+
+<!-- FRONT -->
+<div class="card-wrapper">
+  <div class="card card-front">
+    <div class="glow-f1"></div><div class="glow-f2"></div>
+    <div class="front-left">
+      <div class="brand-logo">
+        <img class="logo-icon-lg" src="signal-labs-logo-1024x1024-rounded-2.png" alt="Signal Labs">
+        <span class="logo-wm-lg">Signal Labs</span>
+      </div>
+      <h2 class="front-headline">Know Who<br>You're Up<br><span>Against.</span></h2>
+      <p class="front-sub">Real-time competitive intelligence that arms your entire GTM team from AI battlecards to live market signals.</p>
+      <div class="pill-row">
+        <span class="pill">Battlecards</span>
+        <span class="pill green">Live Signals</span>
+        <span class="pill purple">Competitive Enablement</span>
+      </div>
+    </div>
+    <div class="front-right">
+      <div class="qr-box"><img src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&data=https%3A%2F%2Fusesignallabs.com%2F%3Fscroll%3Dwaitlist" alt="QR Code"></div>
+      <div class="qr-cta">
+        <div class="qr-cta-main">Book Demo</div>
+      </div>
+      <div class="right-url">usesignallabs.com</div>
+    </div>
+  </div>
+  <div class="card-label">Front</div>
+</div>
+
+<!-- BACK -->
+<div class="card-wrapper">
+  <div class="card card-back">
+    <div class="glow-f1"></div><div class="glow-f2"></div>
+    <div class="back-accent-bar"></div>
+    <div class="back-left">
+      <div class="brand-logo">
+        <img class="logo-icon-sm" src="signal-labs-logo-1024x1024-rounded-2.png" alt="Signal Labs">
+        <span class="logo-wm-sm">Signal Labs</span>
+      </div>
+      <div class="back-headline">Your competitors<br>never sleep. Neither<br>should your <span>intel.</span></div>
+      <div class="back-points">
+        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Battlecards and talking points</strong> that help reps handle objections and win more deals.</span></div>
+        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Market insights</strong> that sharpen your positioning and shape your product roadmap.</span></div>
+        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Real-time competitor signals</strong> so your team responds before the market does.</span></div>
+      </div>
+    </div>
+    <div class="back-right">
+      <div class="qr-box"><img src="https://api.qrserver.com/v1/create-qr-code/?size=88x88&data=https://app.usesignallabs.com" alt="QR Code"></div>
+      <div class="qr-cta">
+        <div class="qr-cta-main">Start Free</div>
+      </div>
+      <div class="right-url">app.usesignallabs.com</div>
+    </div>
+  </div>
+  <div class="card-label">Back</div>
+</div>
+
+</body>
+</html>
