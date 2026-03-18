@@ -1,0 +1,26 @@
+# Signal Labs
+
+## Docs
+
+- [Introduction](https://usesignallabs.com/docs/api/introduction): General concepts, authentication, error handling, and rate limits for the Signal Labs API.
+- [Quickstart](https://usesignallabs.com/docs/quickstart): Track your first competitor in 3 minutes with curl, JavaScript, or Python.
+- [AI Onboarding](https://usesignallabs.com/docs/ai-onboarding): Everything an AI agent needs to know to use Signal Labs.
+- [List Companies](https://usesignallabs.com/docs/api/companies/list-companies): Retrieve all tracked companies for your organization.
+- [Create Company](https://usesignallabs.com/docs/api/companies/create-company): Track a new company by name or domain.
+- [Get Company](https://usesignallabs.com/docs/api/companies/get-company): Retrieve a single company by ID.
+- [List Products](https://usesignallabs.com/docs/api/products/list-products): List products/service verticals for a company.
+- [Create Product](https://usesignallabs.com/docs/api/products/create-product): Add a product/service vertical to a company.
+- [List Competitors](https://usesignallabs.com/docs/api/competitors/list-competitors): List competitors for a company, optionally filtered by product.
+- [Add Competitors](https://usesignallabs.com/docs/api/competitors/add-competitors): Add one or more competitors to a company (supports bulk).
+- [Discover Competitors](https://usesignallabs.com/docs/api/competitors/discover-competitors): Use AI to automatically discover competitors for a company.
+- [List Battlecards](https://usesignallabs.com/docs/api/battlecards/list-battlecards): Retrieve battlecards for a company, optionally filtered by competitor or enablement focus.
+- [Generate Battlecard](https://usesignallabs.com/docs/api/battlecards/generate-battlecard): Generate a new AI-powered competitive battlecard (costs 1 credit).
+- [List Signals](https://usesignallabs.com/docs/api/signals/list-signals): Get recent competitive intelligence signals for a company.
+- [Signal Summary](https://usesignallabs.com/docs/api/signals/signal-summary): Get an AI-generated executive digest of recent competitive signals.
+- [AI Chat](https://usesignallabs.com/docs/api/ai/chat): Ask AI questions about your competitive landscape, powered by RAG over battlecards, signals, and documents.
+- [MCP Server](https://usesignallabs.com/docs/mcp/introduction): Use Signal Labs from Claude, Cursor, Copilot, and other AI tools via the Model Context Protocol.
+- [JavaScript SDK](https://usesignallabs.com/docs/sdks/javascript): Official JavaScript/TypeScript SDK for the Signal Labs API.
+- [Python SDK](https://usesignallabs.com/docs/sdks/python): Official Python SDK for the Signal Labs API.
+- [Using the Dashboard](https://usesignallabs.com/docs/dashboard/overview): Overview of the Signal Labs web application and where to find API keys.
+- [Cursor Skill](https://usesignallabs.com/docs/skills/cursor-skill): AI prompt and instructions for using Signal Labs in Cursor.
+- [Claude Code Snippet](https://usesignallabs.com/docs/skills/claude-code-snippet): CLAUDE.md snippet for persistent AI knowledge about Signal Labs.

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2T6H68S');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Introduction — Signal Labs Docs</title>
+    <meta name="description" content="Signal Labs API documentation. Authentication, error handling, rate limits, and getting started with the competitive intelligence API.">
+    <link rel="canonical" href="https://usesignallabs.com/docs">
+    <meta property="og:title" content="API Introduction — Signal Labs Docs">
+    <meta property="og:description" content="Signal Labs API documentation. Authentication, error handling, rate limits, and getting started with the competitive intelligence API.">
+    <meta property="og:url" content="https://usesignallabs.com/docs">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Signal Labs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/docs.css">
+    <script>
+      (function(){var k='sl-docs-theme',s=localStorage.getItem(k);
+      if(!s)s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+      document.documentElement.setAttribute('data-theme',s);})();
+    </script>
+</head>
+<body class="docs-body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2T6H68S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="docs-navbar">
+        <div class="docs-nav-inner">
+            <div class="docs-nav-left">
+                <button class="docs-mobile-menu-btn" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <a href="/" class="docs-nav-logo">
+                    <div class="logo-icon"><span>s</span></div>
+                    <span>Signal Labs</span>
+                </a>
+                <div class="docs-nav-sep"></div>
+                <a href="/docs" class="docs-nav-badge">Docs</a>
+            </div>
+            <div class="docs-nav-right">
+                <a href="/" class="docs-nav-link hide-mobile">Home</a>
+                <a href="/blog" class="docs-nav-link hide-mobile">Blog</a>
+                <button class="docs-theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://app.usesignallabs.com" class="docs-nav-cta">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav class="docs-sidebar-nav">
+                <div class="docs-sidebar-section">
+                    <h4>Getting Started</h4>
+                    <a href="/docs" class="docs-sidebar-link">Introduction</a>
+                    <a href="/docs/quickstart" class="docs-sidebar-link">Quickstart</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Guides</h4>
+                    <a href="/docs/dashboard" class="docs-sidebar-link">Using the Dashboard</a>
+                    <a href="/docs/ai-onboarding" class="docs-sidebar-link">AI Onboarding</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Integrations</h4>
+                    <a href="/docs/mcp" class="docs-sidebar-link">MCP Server</a>
+                    <a href="/docs/skills/cursor" class="docs-sidebar-link">Cursor Skill</a>
+                    <a href="/docs/skills/claude-code" class="docs-sidebar-link">Claude Code</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="docs-sidebar-overlay"></div>
+
+        <main class="docs-main">
+            <article class="docs-content">
+                <h1>Introduction</h1>
+                <p class="docs-lead">Signal Labs is the competitive intelligence API for developers. Track competitors, generate AI-powered battlecards, and monitor competitive signals programmatically.</p>
+
+                <h2>Base URL</h2>
+                <p>All API requests are made to the following base URL:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Base URL</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">https://app.usesignallabs.com/api/v1</code></pre>
+                </div>
+
+                <h2>Authentication</h2>
+                <p>All API requests require a Bearer token in the <code>Authorization</code> header:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">curl https://app.usesignallabs.com/api/v1/companies \
+  -H "Authorization: Bearer sl_live_your_key_here"</code></pre>
+                </div>
+                <p>Get your API key from <a href="https://app.usesignallabs.com/settings?tab=api-keys">Settings &gt; API Keys</a>.</p>
+
+                <h2>Response Format</h2>
+                <p>All responses return JSON with a consistent structure:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-json">{
+  "data": { ... },
+  "meta": {
+    "total": 5
+  }
+}</code></pre>
+                </div>
+                <p>List endpoints return <code>data</code> as an array. Single-resource endpoints return <code>data</code> as an object.</p>
+
+                <h2>Errors</h2>
+                <p>Errors return a structured JSON object with actionable guidance:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-json">{
+  "error": {
+    "code": "insufficient_credits",
+    "message": "Battlecard generation requires 1 credit. Your organization has 0 remaining.",
+    "type": "credit_error",
+    "credits_remaining": 0,
+    "credits_required": 1,
+    "upgrade_url": "https://app.usesignallabs.com/settings/billing"
+  }
+}</code></pre>
+                </div>
+
+                <h3>Error Types</h3>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>HTTP Code</th><th>Type</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>400</td><td><code>validation_error</code></td><td>Missing or invalid parameters</td></tr>
+                            <tr><td>400</td><td><code>prerequisite_error</code></td><td>Must complete a prior step first (includes <code>required_step</code> and <code>docs_url</code>)</td></tr>
+                            <tr><td>401</td><td><code>authentication_error</code></td><td>Missing, invalid, or revoked API key</td></tr>
+                            <tr><td>403</td><td><code>credit_error</code></td><td>Insufficient credits for this operation</td></tr>
+                            <tr><td>403</td><td><code>limit_error</code></td><td>Plan limit reached (e.g., competitor count)</td></tr>
+                            <tr><td>404</td><td><code>not_found_error</code></td><td>Resource not found</td></tr>
+                            <tr><td>429</td><td><code>rate_limit_error</code></td><td>Daily rate limit exceeded (includes <code>retry_after</code>)</td></tr>
+                            <tr><td>500</td><td><code>server_error</code></td><td>Internal server error</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Rate Limits</h2>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Plan</th><th>Requests / Day</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Free</td><td>100</td></tr>
+                            <tr><td>Pro</td><td>1,000</td></tr>
+                            <tr><td>Ultra</td><td>5,000</td></tr>
+                            <tr><td>Enterprise</td><td>10,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Credits</h2>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Operation</th><th>Cost</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Generate Battlecard</td><td>1 credit</td></tr>
+                            <tr><td>AI Modify Battlecard</td><td>0.5 credits</td></tr>
+                            <tr><td>Create Company</td><td>Free</td></tr>
+                            <tr><td>Add Competitor</td><td>Free (plan limits apply)</td></tr>
+                            <tr><td>Add Product</td><td>Free</td></tr>
+                            <tr><td>List / Get (all read ops)</td><td>Free</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>SDKs</h2>
+                <ul>
+                    <li><strong>JavaScript / TypeScript:</strong> <code>npm install @signal-labs/sdk</code></li>
+                    <li><strong>Python:</strong> <code>pip install signallabs</code></li>
+                </ul>
+
+                <h2>MCP Server</h2>
+                <p>For AI agents (Claude, Cursor, Copilot):</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">npx signallabs-mcp</code></pre>
+                </div>
+                <p>See the <a href="/docs/mcp">MCP Setup Guide</a> for full configuration instructions.</p>
+
+                <h2>What's Next?</h2>
+                <div class="docs-next-grid">
+                    <a href="/docs/quickstart" class="docs-next-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        Quickstart
+                    </a>
+                    <a href="/docs/mcp" class="docs-next-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                        MCP Server
+                    </a>
+                    <a href="/docs/dashboard" class="docs-next-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        Using the Dashboard
+                    </a>
+                </div>
+            </article>
+
+            <footer class="docs-footer">
+                <div class="docs-footer-inner">
+                    <span>&copy; 2025 Signal Labs. All rights reserved.</span>
+                    <div class="docs-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="https://app.usesignallabs.com">Dashboard</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="/docs.js"></script>
+</body>
+</html>

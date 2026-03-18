@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2T6H68S');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Server — Signal Labs Docs</title>
+    <meta name="description" content="Use Signal Labs competitive intelligence from Claude, Cursor, Copilot, Gemini, and other AI tools via the Model Context Protocol.">
+    <link rel="canonical" href="https://usesignallabs.com/docs/mcp">
+    <meta property="og:title" content="MCP Server — Signal Labs Docs">
+    <meta property="og:description" content="Use Signal Labs competitive intelligence from Claude, Cursor, Copilot, Gemini, and other AI tools via the Model Context Protocol.">
+    <meta property="og:url" content="https://usesignallabs.com/docs/mcp">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Signal Labs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/docs.css">
+    <script>
+      (function(){var k='sl-docs-theme',s=localStorage.getItem(k);
+      if(!s)s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+      document.documentElement.setAttribute('data-theme',s);})();
+    </script>
+</head>
+<body class="docs-body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2T6H68S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="docs-navbar">
+        <div class="docs-nav-inner">
+            <div class="docs-nav-left">
+                <button class="docs-mobile-menu-btn" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <a href="/" class="docs-nav-logo">
+                    <div class="logo-icon"><span>s</span></div>
+                    <span>Signal Labs</span>
+                </a>
+                <div class="docs-nav-sep"></div>
+                <a href="/docs" class="docs-nav-badge">Docs</a>
+            </div>
+            <div class="docs-nav-right">
+                <a href="/" class="docs-nav-link hide-mobile">Home</a>
+                <a href="/blog" class="docs-nav-link hide-mobile">Blog</a>
+                <button class="docs-theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://app.usesignallabs.com" class="docs-nav-cta">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav class="docs-sidebar-nav">
+                <div class="docs-sidebar-section">
+                    <h4>Getting Started</h4>
+                    <a href="/docs" class="docs-sidebar-link">Introduction</a>
+                    <a href="/docs/quickstart" class="docs-sidebar-link">Quickstart</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Guides</h4>
+                    <a href="/docs/dashboard" class="docs-sidebar-link">Using the Dashboard</a>
+                    <a href="/docs/ai-onboarding" class="docs-sidebar-link">AI Onboarding</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Integrations</h4>
+                    <a href="/docs/mcp" class="docs-sidebar-link">MCP Server</a>
+                    <a href="/docs/skills/cursor" class="docs-sidebar-link">Cursor Skill</a>
+                    <a href="/docs/skills/claude-code" class="docs-sidebar-link">Claude Code</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="docs-sidebar-overlay"></div>
+
+        <main class="docs-main">
+            <article class="docs-content">
+                <h1>MCP Server</h1>
+                <p class="docs-lead">Use Signal Labs competitive intelligence directly from Claude, Cursor, Copilot, Gemini, and other AI tools via the Model Context Protocol.</p>
+
+                <p>The Signal Labs MCP server lets AI assistants track competitors, generate battlecards, and query competitive intelligence on your behalf.</p>
+
+                <h2>Installation</h2>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">npx signallabs-mcp</code></pre>
+                </div>
+                <p>Requires a Signal Labs API key from <a href="https://app.usesignallabs.com/settings?tab=api-keys">Settings &gt; API Keys</a>.</p>
+
+                <h2>Setup by Tool</h2>
+
+                <h3>Claude Desktop</h3>
+                <p>Add to <code>~/Library/Application Support/Claude/claude_desktop_config.json</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-json">{
+  "mcpServers": {
+    "signallabs": {
+      "command": "npx",
+      "args": ["-y", "signallabs-mcp"],
+      "env": {
+        "SIGNALLABS_API_KEY": "sl_live_your_key"
+      }
+    }
+  }
+}</code></pre>
+                </div>
+
+                <h3>Claude Code</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">claude mcp add signallabs -- npx -y signallabs-mcp
+export SIGNALLABS_API_KEY=sl_live_your_key</code></pre>
+                </div>
+
+                <h3>Cursor</h3>
+                <p>Add to <code>.cursor/mcp.json</code> in your project root:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-json">{
+  "mcpServers": {
+    "signallabs": {
+      "command": "npx",
+      "args": ["-y", "signallabs-mcp"],
+      "env": {
+        "SIGNALLABS_API_KEY": "sl_live_your_key"
+      }
+    }
+  }
+}</code></pre>
+                </div>
+
+                <h3>GitHub Copilot (VS Code)</h3>
+                <p>Add to VS Code <code>settings.json</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-json">{
+  "mcp": {
+    "servers": {
+      "signallabs": {
+        "command": "npx",
+        "args": ["-y", "signallabs-mcp"],
+        "env": {
+          "SIGNALLABS_API_KEY": "sl_live_your_key"
+        }
+      }
+    }
+  }
+}</code></pre>
+                </div>
+
+                <h3>Gemini CLI</h3>
+                <p>Add to <code>.gemini/settings.json</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-json">{
+  "mcpServers": {
+    "signallabs": {
+      "command": "npx",
+      "args": ["-y", "signallabs-mcp"],
+      "env": {
+        "SIGNALLABS_API_KEY": "sl_live_your_key"
+      }
+    }
+  }
+}</code></pre>
+                </div>
+
+                <h2>Available Tools</h2>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Tool</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>list_companies</code></td><td>List all tracked companies</td></tr>
+                            <tr><td><code>create_company</code></td><td>Track a new company by name or domain</td></tr>
+                            <tr><td><code>list_products</code></td><td>List products / service verticals</td></tr>
+                            <tr><td><code>create_product</code></td><td>Add a product vertical</td></tr>
+                            <tr><td><code>list_competitors</code></td><td>List competitors (optionally per product)</td></tr>
+                            <tr><td><code>add_competitor</code></td><td>Add a competitor</td></tr>
+                            <tr><td><code>discover_competitors</code></td><td>AI-powered competitor discovery</td></tr>
+                            <tr><td><code>get_battlecards</code></td><td>Retrieve battlecards</td></tr>
+                            <tr><td><code>generate_battlecard</code></td><td>Generate a new AI battlecard (1 credit)</td></tr>
+                            <tr><td><code>get_signals</code></td><td>Get recent intelligence signals</td></tr>
+                            <tr><td><code>get_signal_summary</code></td><td>AI-generated signal digest</td></tr>
+                            <tr><td><code>ask_competitive_intel</code></td><td>Ask questions about your competitive landscape</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Example Conversations</h2>
+                <p>Once configured, you can ask your AI assistant questions like:</p>
+                <ul>
+                    <li>"What companies am I tracking in Signal Labs?"</li>
+                    <li>"Discover competitors for my company"</li>
+                    <li>"Generate a sales battlecard for us vs [Competitor]"</li>
+                    <li>"What are the latest competitive signals?"</li>
+                    <li>"Summarize competitive activity from the last week"</li>
+                </ul>
+            </article>
+
+            <footer class="docs-footer">
+                <div class="docs-footer-inner">
+                    <span>&copy; 2025 Signal Labs. All rights reserved.</span>
+                    <div class="docs-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="https://app.usesignallabs.com">Dashboard</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="/docs.js"></script>
+</body>
+</html>

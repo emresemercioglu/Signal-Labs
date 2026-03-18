@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2T6H68S');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickstart — Signal Labs Docs</title>
+    <meta name="description" content="Track your first competitor in 3 minutes using the Signal Labs API with curl, JavaScript, or Python.">
+    <link rel="canonical" href="https://usesignallabs.com/docs/quickstart">
+    <meta property="og:title" content="Quickstart — Signal Labs Docs">
+    <meta property="og:description" content="Track your first competitor in 3 minutes using the Signal Labs API with curl, JavaScript, or Python.">
+    <meta property="og:url" content="https://usesignallabs.com/docs/quickstart">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Signal Labs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/docs.css">
+    <script>
+      (function(){var k='sl-docs-theme',s=localStorage.getItem(k);
+      if(!s)s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+      document.documentElement.setAttribute('data-theme',s);})();
+    </script>
+</head>
+<body class="docs-body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2T6H68S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="docs-navbar">
+        <div class="docs-nav-inner">
+            <div class="docs-nav-left">
+                <button class="docs-mobile-menu-btn" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <a href="/" class="docs-nav-logo">
+                    <div class="logo-icon"><span>s</span></div>
+                    <span>Signal Labs</span>
+                </a>
+                <div class="docs-nav-sep"></div>
+                <a href="/docs" class="docs-nav-badge">Docs</a>
+            </div>
+            <div class="docs-nav-right">
+                <a href="/" class="docs-nav-link hide-mobile">Home</a>
+                <a href="/blog" class="docs-nav-link hide-mobile">Blog</a>
+                <button class="docs-theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://app.usesignallabs.com" class="docs-nav-cta">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav class="docs-sidebar-nav">
+                <div class="docs-sidebar-section">
+                    <h4>Getting Started</h4>
+                    <a href="/docs" class="docs-sidebar-link">Introduction</a>
+                    <a href="/docs/quickstart" class="docs-sidebar-link">Quickstart</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Guides</h4>
+                    <a href="/docs/dashboard" class="docs-sidebar-link">Using the Dashboard</a>
+                    <a href="/docs/ai-onboarding" class="docs-sidebar-link">AI Onboarding</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Integrations</h4>
+                    <a href="/docs/mcp" class="docs-sidebar-link">MCP Server</a>
+                    <a href="/docs/skills/cursor" class="docs-sidebar-link">Cursor Skill</a>
+                    <a href="/docs/skills/claude-code" class="docs-sidebar-link">Claude Code</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="docs-sidebar-overlay"></div>
+
+        <main class="docs-main">
+            <article class="docs-content">
+                <h1>Quickstart</h1>
+                <p class="docs-lead">Track your first competitor in 3 minutes.</p>
+
+                <h2>Prerequisites</h2>
+                <ol>
+                    <li>Sign up at <a href="https://app.usesignallabs.com">app.usesignallabs.com</a></li>
+                    <li>Go to <strong>Settings &gt; API Keys</strong> and create an API key</li>
+                </ol>
+
+                <div class="docs-step">
+                    <span class="docs-step-badge">1</span>
+                    <h2>Create Your Company</h2>
+                </div>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="curl">cURL</button>
+                        <button class="code-tab" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="curl">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">curl -X POST https://app.usesignallabs.com/api/v1/companies \
+  -H "Authorization: Bearer sl_live_your_key" \
+  -H "Content-Type: application/json" \
+  -d '{"domain": "yourcompany.com"}'</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-javascript">import { SignalLabs } from '@signal-labs/sdk';
+
+const sl = new SignalLabs(process.env.SIGNALLABS_API_KEY);
+
+const company = await sl.companies.create({ domain: 'yourcompany.com' });
+console.log(company.id);</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-python">from signallabs import SignalLabs
+
+sl = SignalLabs(api_key="sl_live_your_key")
+
+company = sl.companies.create(domain="yourcompany.com")
+print(company["id"])</code></pre>
+                    </div>
+                </div>
+
+                <div class="docs-step">
+                    <span class="docs-step-badge">2</span>
+                    <h2>Discover Competitors</h2>
+                </div>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="curl">cURL</button>
+                        <button class="code-tab" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="curl">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/competitors/discover \
+  -H "Authorization: Bearer sl_live_your_key"</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-javascript">const suggestions = await sl.companies.competitors(company.id).discover();
+console.log(suggestions);</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-python">suggestions = sl.companies.competitors(company["id"]).discover()
+print(suggestions)</code></pre>
+                    </div>
+                </div>
+
+                <div class="docs-step">
+                    <span class="docs-step-badge">3</span>
+                    <h2>Add a Competitor</h2>
+                </div>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="curl">cURL</button>
+                        <button class="code-tab" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="curl">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/competitors \
+  -H "Authorization: Bearer sl_live_your_key" \
+  -H "Content-Type: application/json" \
+  -d '{"competitors": [{"name": "Competitor X", "website": "competitor.com"}]}'</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-javascript">const competitors = await sl.companies.competitors(company.id).add({
+  name: 'Competitor X',
+  website: 'competitor.com',
+});</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-python">competitors = sl.companies.competitors(company["id"]).add(
+    name="Competitor X",
+    website="competitor.com"
+)</code></pre>
+                    </div>
+                </div>
+
+                <div class="docs-step">
+                    <span class="docs-step-badge">4</span>
+                    <h2>Generate a Battlecard</h2>
+                </div>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="curl">cURL</button>
+                        <button class="code-tab" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="curl">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlecards/generate \
+  -H "Authorization: Bearer sl_live_your_key" \
+  -H "Content-Type: application/json" \
+  -d '{"competitor_id": "competitor-uuid", "enablement_focus": "gtm_sales"}'</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-javascript">const battlecard = await sl.companies.battlecards(company.id).generate({
+  competitor_id: competitors[0].id,
+  enablement_focus: 'gtm_sales',
+});
+
+console.log(battlecard.overview);
+console.log(battlecard.win_strategy);</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-python">battlecard = sl.companies.battlecards(company["id"]).generate(
+    competitor_id=competitors[0]["id"],
+    enablement_focus="gtm_sales"
+)
+
+print(battlecard["overview"])
+print(battlecard["win_strategy"])</code></pre>
+                    </div>
+                </div>
+
+                <h2>What's Next?</h2>
+                <div class="docs-next-grid">
+                    <a href="/docs/mcp" class="docs-next-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                        MCP Server
+                    </a>
+                    <a href="/docs/ai-onboarding" class="docs-next-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.24 6.93A4 4 0 0 1 12 2"/><circle cx="12" cy="14" r="4"/><path d="M19.07 21.12A9.97 9.97 0 0 0 12 18c-2.76 0-5.26 1.12-7.07 2.93"/></svg>
+                        AI Onboarding
+                    </a>
+                    <a href="/docs/dashboard" class="docs-next-card">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        Using the Dashboard
+                    </a>
+                </div>
+            </article>
+
+            <footer class="docs-footer">
+                <div class="docs-footer-inner">
+                    <span>&copy; 2025 Signal Labs. All rights reserved.</span>
+                    <div class="docs-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="https://app.usesignallabs.com">Dashboard</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="/docs.js"></script>
+</body>
+</html>

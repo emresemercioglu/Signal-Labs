@@ -1,0 +1,22 @@
+{
+  "name": "Signal Labs",
+  "description": "Competitive intelligence platform. Track competitors, generate AI-powered battlecards, and monitor competitive signals.",
+  "url": "https://usesignallabs.com",
+  "mcp_server": {
+    "package": "signallabs-mcp",
+    "registry": "npm",
+    "command": "npx -y signallabs-mcp",
+    "env": ["SIGNALLABS_API_KEY"],
+    "transport": "stdio"
+  },
+  "api": {
+    "base_url": "https://app.usesignallabs.com/api/v1",
+    "openapi": "https://app.usesignallabs.com/api/v1/openapi.json",
+    "auth": "bearer"
+  },
+  "docs": {
+    "url": "https://usesignallabs.com/docs",
+    "llms_txt": "https://usesignallabs.com/llms.txt",
+    "llms_full_txt": "https://usesignallabs.com/llms-full.txt"
+  }
+}

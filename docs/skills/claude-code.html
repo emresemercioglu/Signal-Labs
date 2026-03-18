@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2T6H68S');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code Snippet — Signal Labs Docs</title>
+    <meta name="description" content="CLAUDE.md snippet for persistent AI knowledge about the Signal Labs competitive intelligence API.">
+    <link rel="canonical" href="https://usesignallabs.com/docs/skills/claude-code">
+    <meta property="og:title" content="Claude Code Snippet — Signal Labs Docs">
+    <meta property="og:description" content="CLAUDE.md snippet for persistent AI knowledge about the Signal Labs competitive intelligence API.">
+    <meta property="og:url" content="https://usesignallabs.com/docs/skills/claude-code">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Signal Labs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/docs.css">
+    <script>
+      (function(){var k='sl-docs-theme',s=localStorage.getItem(k);
+      if(!s)s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+      document.documentElement.setAttribute('data-theme',s);})();
+    </script>
+</head>
+<body class="docs-body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2T6H68S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="docs-navbar">
+        <div class="docs-nav-inner">
+            <div class="docs-nav-left">
+                <button class="docs-mobile-menu-btn" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <a href="/" class="docs-nav-logo">
+                    <div class="logo-icon"><span>s</span></div>
+                    <span>Signal Labs</span>
+                </a>
+                <div class="docs-nav-sep"></div>
+                <a href="/docs" class="docs-nav-badge">Docs</a>
+            </div>
+            <div class="docs-nav-right">
+                <a href="/" class="docs-nav-link hide-mobile">Home</a>
+                <a href="/blog" class="docs-nav-link hide-mobile">Blog</a>
+                <button class="docs-theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://app.usesignallabs.com" class="docs-nav-cta">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav class="docs-sidebar-nav">
+                <div class="docs-sidebar-section">
+                    <h4>Getting Started</h4>
+                    <a href="/docs" class="docs-sidebar-link">Introduction</a>
+                    <a href="/docs/quickstart" class="docs-sidebar-link">Quickstart</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Guides</h4>
+                    <a href="/docs/dashboard" class="docs-sidebar-link">Using the Dashboard</a>
+                    <a href="/docs/ai-onboarding" class="docs-sidebar-link">AI Onboarding</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Integrations</h4>
+                    <a href="/docs/mcp" class="docs-sidebar-link">MCP Server</a>
+                    <a href="/docs/skills/cursor" class="docs-sidebar-link">Cursor Skill</a>
+                    <a href="/docs/skills/claude-code" class="docs-sidebar-link">Claude Code</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="docs-sidebar-overlay"></div>
+
+        <main class="docs-main">
+            <article class="docs-content">
+                <h1>Claude Code Snippet</h1>
+                <p class="docs-lead">Add this snippet to your project's <code>CLAUDE.md</code> file for persistent AI knowledge about Signal Labs.</p>
+
+                <h2>What is CLAUDE.md?</h2>
+                <p><code>CLAUDE.md</code> is a file in your project root that Claude Code reads automatically. Adding Signal Labs context here means Claude will always know how to use the API correctly.</p>
+
+                <h2>The Snippet</h2>
+                <p>Copy the following into your project's <code>CLAUDE.md</code>:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Markdown</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">## Signal Labs Competitive Intelligence API
+
+This project uses Signal Labs for competitive intelligence.
+API docs: https://usesignallabs.com/docs
+
+### Setup
+- SDK: @signal-labs/sdk (JS/TS) or signallabs (Python)
+- API Key: stored in SIGNALLABS_API_KEY env var
+- MCP: claude mcp add signallabs -- npx -y signallabs-mcp
+
+### Core API Pattern
+1. sl.companies.create({domain}) — track a company
+2. sl.companies.competitors(companyId).discover() — find competitors
+3. sl.companies.competitors(companyId).add({name, website}) — add competitor
+4. sl.companies.battlecards(companyId).generate({competitor_id, enablement_focus}) — generate battlecard (1 credit)
+5. sl.companies.signals(companyId).list() — get competitive signals
+6. sl.ai.chat({message, company_id}) — ask AI about competitive landscape
+
+### Enablement Focus Types
+gtm_sales (default), product, marketing_growth, leadership
+
+### Error Handling
+SDK throws SignalLabsError with code, message, type, upgradeUrl.
+On prerequisite errors, follow required_step.</code></pre>
+                </div>
+
+                <h2>Setup</h2>
+                <h3>Install the SDK</h3>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">npm install @signal-labs/sdk</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">pip install signallabs</code></pre>
+                    </div>
+                </div>
+
+                <h3>Add MCP Server</h3>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">claude mcp add signallabs -- npx -y signallabs-mcp</code></pre>
+                </div>
+
+                <h2>Core API Pattern</h2>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Step</th><th>Method</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td><code>sl.companies.create({domain})</code></td><td>Track a company</td></tr>
+                            <tr><td>2</td><td><code>sl.companies.competitors(id).discover()</code></td><td>Find competitors</td></tr>
+                            <tr><td>3</td><td><code>sl.companies.competitors(id).add({name, website})</code></td><td>Add competitor</td></tr>
+                            <tr><td>4</td><td><code>sl.companies.battlecards(id).generate({...})</code></td><td>Generate battlecard (1 credit)</td></tr>
+                            <tr><td>5</td><td><code>sl.companies.signals(id).list()</code></td><td>Get competitive signals</td></tr>
+                            <tr><td>6</td><td><code>sl.ai.chat({message, company_id})</code></td><td>Ask AI about landscape</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Error Handling</h2>
+                <p>The SDK throws <code>SignalLabsError</code> with the following properties:</p>
+                <ul>
+                    <li><code>code</code> &mdash; Machine-readable error code</li>
+                    <li><code>message</code> &mdash; Human-readable description</li>
+                    <li><code>type</code> &mdash; Error category</li>
+                    <li><code>upgradeUrl</code> &mdash; Link to upgrade (for credit/limit errors)</li>
+                </ul>
+                <div class="docs-callout">
+                    <p>On prerequisite errors, check the <code>required_step</code> field and follow the <code>docs_url</code> for guidance.</p>
+                </div>
+            </article>
+
+            <footer class="docs-footer">
+                <div class="docs-footer-inner">
+                    <span>&copy; 2025 Signal Labs. All rights reserved.</span>
+                    <div class="docs-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="https://app.usesignallabs.com">Dashboard</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="/docs.js"></script>
+</body>
+</html>

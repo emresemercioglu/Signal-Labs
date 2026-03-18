@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2T6H68S');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Onboarding — Signal Labs Docs</title>
+    <meta name="description" content="Everything an AI agent needs to know to use Signal Labs: authentication, core workflow, endpoints, and credits.">
+    <link rel="canonical" href="https://usesignallabs.com/docs/ai-onboarding">
+    <meta property="og:title" content="AI Onboarding — Signal Labs Docs">
+    <meta property="og:description" content="Everything an AI agent needs to know to use Signal Labs: authentication, core workflow, endpoints, and credits.">
+    <meta property="og:url" content="https://usesignallabs.com/docs/ai-onboarding">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Signal Labs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/docs.css">
+    <script>
+      (function(){var k='sl-docs-theme',s=localStorage.getItem(k);
+      if(!s)s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+      document.documentElement.setAttribute('data-theme',s);})();
+    </script>
+</head>
+<body class="docs-body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2T6H68S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="docs-navbar">
+        <div class="docs-nav-inner">
+            <div class="docs-nav-left">
+                <button class="docs-mobile-menu-btn" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <a href="/" class="docs-nav-logo">
+                    <div class="logo-icon"><span>s</span></div>
+                    <span>Signal Labs</span>
+                </a>
+                <div class="docs-nav-sep"></div>
+                <a href="/docs" class="docs-nav-badge">Docs</a>
+            </div>
+            <div class="docs-nav-right">
+                <a href="/" class="docs-nav-link hide-mobile">Home</a>
+                <a href="/blog" class="docs-nav-link hide-mobile">Blog</a>
+                <button class="docs-theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://app.usesignallabs.com" class="docs-nav-cta">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav class="docs-sidebar-nav">
+                <div class="docs-sidebar-section">
+                    <h4>Getting Started</h4>
+                    <a href="/docs" class="docs-sidebar-link">Introduction</a>
+                    <a href="/docs/quickstart" class="docs-sidebar-link">Quickstart</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Guides</h4>
+                    <a href="/docs/dashboard" class="docs-sidebar-link">Using the Dashboard</a>
+                    <a href="/docs/ai-onboarding" class="docs-sidebar-link">AI Onboarding</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Integrations</h4>
+                    <a href="/docs/mcp" class="docs-sidebar-link">MCP Server</a>
+                    <a href="/docs/skills/cursor" class="docs-sidebar-link">Cursor Skill</a>
+                    <a href="/docs/skills/claude-code" class="docs-sidebar-link">Claude Code</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="docs-sidebar-overlay"></div>
+
+        <main class="docs-main">
+            <article class="docs-content">
+                <h1>AI Onboarding</h1>
+                <p class="docs-lead">Everything an AI agent needs to know to use Signal Labs.</p>
+
+                <h2>What is Signal Labs?</h2>
+                <p>Signal Labs is a competitive intelligence platform. It lets you track competitors, generate AI-powered battlecards, and monitor competitive signals via API or MCP.</p>
+
+                <h2>Authentication</h2>
+                <p>API key in the <code>Authorization</code> header:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">HTTP</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">Authorization: Bearer sl_live_...</code></pre>
+                </div>
+                <p>Get a key at <a href="https://app.usesignallabs.com/settings?tab=api-keys">app.usesignallabs.com/settings</a>.</p>
+                <p>Base URL: <code>https://app.usesignallabs.com/api/v1</code></p>
+
+                <h2>Core Workflow</h2>
+                <ol>
+                    <li><strong>Create a company:</strong> <code>POST /v1/companies</code> with <code>{"domain": "example.com"}</code></li>
+                    <li><strong>Discover competitors:</strong> <code>POST /v1/companies/{id}/competitors/discover</code></li>
+                    <li><strong>Add competitors:</strong> <code>POST /v1/companies/{id}/competitors</code></li>
+                    <li><strong>Generate battlecards:</strong> <code>POST /v1/companies/{id}/battlecards/generate</code> (1 credit)</li>
+                    <li><strong>Monitor signals:</strong> <code>GET /v1/companies/{id}/signals</code></li>
+                    <li><strong>Ask AI:</strong> <code>POST /v1/ai/chat</code> with <code>{"message": "...", "company_id": "..."}</code></li>
+                </ol>
+                <div class="docs-callout">
+                    <p>Products are optional. If not specified, competitors default to company-level.</p>
+                </div>
+
+                <h2>Endpoints</h2>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Method</th><th>Path</th><th>Description</th><th>Cost</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies</code></td><td>List companies</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies</code></td><td>Create company</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}</code></td><td>Get company</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/products</code></td><td>List products</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/products</code></td><td>Create product</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/competitors</code></td><td>List competitors</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors</code></td><td>Add competitors</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors/discover</code></td><td>AI discover</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/battlecards</code></td><td>List battlecards</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/battlecards/generate</code></td><td>Generate battlecard</td><td>1 credit</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals</code></td><td>List signals</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals/summary</code></td><td>Signal digest</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/ai/chat</code></td><td>Ask AI</td><td>Free</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Enablement Focus Types</h2>
+                <p>When generating battlecards, use one of these focus types:</p>
+                <ul>
+                    <li><code>gtm_sales</code> (default)</li>
+                    <li><code>product</code></li>
+                    <li><code>marketing_growth</code></li>
+                    <li><code>leadership</code></li>
+                </ul>
+
+                <h2>MCP Server</h2>
+                <p>For AI tools, use the MCP server:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash">npx signallabs-mcp</code></pre>
+                </div>
+                <p>Requires the <code>SIGNALLABS_API_KEY</code> environment variable. See the <a href="/docs/mcp">MCP setup guide</a> for full details.</p>
+            </article>
+
+            <footer class="docs-footer">
+                <div class="docs-footer-inner">
+                    <span>&copy; 2025 Signal Labs. All rights reserved.</span>
+                    <div class="docs-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="https://app.usesignallabs.com">Dashboard</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="/docs.js"></script>
+</body>
+</html>

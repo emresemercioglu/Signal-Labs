@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2T6H68S');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using the Dashboard — Signal Labs Docs</title>
+    <meta name="description" content="Overview of the Signal Labs web application dashboard: companies, competitors, battlecards, signals, AI chat, and API key management.">
+    <link rel="canonical" href="https://usesignallabs.com/docs/dashboard">
+    <meta property="og:title" content="Using the Dashboard — Signal Labs Docs">
+    <meta property="og:description" content="Overview of the Signal Labs web application dashboard: companies, competitors, battlecards, signals, AI chat, and API key management.">
+    <meta property="og:url" content="https://usesignallabs.com/docs/dashboard">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Signal Labs">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;550;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="/docs.css">
+    <script>
+      (function(){var k='sl-docs-theme',s=localStorage.getItem(k);
+      if(!s)s=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+      document.documentElement.setAttribute('data-theme',s);})();
+    </script>
+</head>
+<body class="docs-body">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2T6H68S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="docs-navbar">
+        <div class="docs-nav-inner">
+            <div class="docs-nav-left">
+                <button class="docs-mobile-menu-btn" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+                <a href="/" class="docs-nav-logo">
+                    <div class="logo-icon"><span>s</span></div>
+                    <span>Signal Labs</span>
+                </a>
+                <div class="docs-nav-sep"></div>
+                <a href="/docs" class="docs-nav-badge">Docs</a>
+            </div>
+            <div class="docs-nav-right">
+                <a href="/" class="docs-nav-link hide-mobile">Home</a>
+                <a href="/blog" class="docs-nav-link hide-mobile">Blog</a>
+                <button class="docs-theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="https://app.usesignallabs.com" class="docs-nav-cta">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <nav class="docs-sidebar-nav">
+                <div class="docs-sidebar-section">
+                    <h4>Getting Started</h4>
+                    <a href="/docs" class="docs-sidebar-link">Introduction</a>
+                    <a href="/docs/quickstart" class="docs-sidebar-link">Quickstart</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Guides</h4>
+                    <a href="/docs/dashboard" class="docs-sidebar-link">Using the Dashboard</a>
+                    <a href="/docs/ai-onboarding" class="docs-sidebar-link">AI Onboarding</a>
+                </div>
+                <div class="docs-sidebar-section">
+                    <h4>Integrations</h4>
+                    <a href="/docs/mcp" class="docs-sidebar-link">MCP Server</a>
+                    <a href="/docs/skills/cursor" class="docs-sidebar-link">Cursor Skill</a>
+                    <a href="/docs/skills/claude-code" class="docs-sidebar-link">Claude Code</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="docs-sidebar-overlay"></div>
+
+        <main class="docs-main">
+            <article class="docs-content">
+                <h1>Using the Dashboard</h1>
+                <p class="docs-lead">Signal Labs is available as both a web application and an API. This guide covers the web app at <a href="https://app.usesignallabs.com">app.usesignallabs.com</a>.</p>
+
+                <h2>Overview</h2>
+                <p>The Signal Labs dashboard provides a full visual interface for competitive intelligence:</p>
+                <ul>
+                    <li><strong>Companies</strong> &mdash; Track your company and manage your competitive landscape</li>
+                    <li><strong>Competitors</strong> &mdash; Add competitors manually or use AI-powered discovery</li>
+                    <li><strong>Battlecards</strong> &mdash; Generate and view AI-powered competitive battlecards with 5 enablement focuses (GTM/Sales, Product, Marketing/Growth, Leadership, Landscape)</li>
+                    <li><strong>Signals</strong> &mdash; Monitor real-time competitive intelligence from competitor blogs and news</li>
+                    <li><strong>Chat CIx</strong> &mdash; Ask AI questions about your competitive landscape using your battlecards, signals, and uploaded documents</li>
+                    <li><strong>Data Library</strong> &mdash; Upload competitive documents (PDFs, DOCX, XLSX) for AI analysis</li>
+                    <li><strong>Newsletters</strong> &mdash; Configure automated competitive intelligence newsletters for your team</li>
+                </ul>
+
+                <h2>API Keys</h2>
+                <p>To use the API or MCP server, create API keys in <strong>Settings &gt; API Keys</strong>:</p>
+                <ol>
+                    <li>Navigate to <strong>Settings</strong></li>
+                    <li>Click <strong>Create API Key</strong></li>
+                    <li>Give it a descriptive name (e.g., "Production", "MCP Server")</li>
+                    <li>Copy the key immediately &mdash; it's only shown once</li>
+                    <li>Use it in the <code>Authorization: Bearer sl_live_...</code> header</li>
+                </ol>
+
+                <h2>Integrations</h2>
+                <ul>
+                    <li><strong>Slack</strong> &mdash; Ask competitive questions directly in Slack with <code>@CIX</code></li>
+                    <li><strong>API</strong> &mdash; REST API for programmatic access (<a href="/docs">View API docs</a>)</li>
+                    <li><strong>MCP</strong> &mdash; AI agent integration for Claude, Cursor, Copilot (<a href="/docs/mcp">Setup guide</a>)</li>
+                </ul>
+            </article>
+
+            <footer class="docs-footer">
+                <div class="docs-footer-inner">
+                    <span>&copy; 2025 Signal Labs. All rights reserved.</span>
+                    <div class="docs-footer-links">
+                        <a href="/">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="https://app.usesignallabs.com">Dashboard</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="/docs.js"></script>
+</body>
+</html>
