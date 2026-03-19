@@ -177,6 +177,26 @@
                     </table>
                 </div>
 
+                <h2>Enablement Focus Types</h2>
+                <p>When generating battlecards, specify one of these focus types:</p>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Focus</th><th>Description</th><th>Parameter</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>gtm_sales</code></td><td>GTM / Sales enablement (default)</td><td><code>competitor_id</code></td></tr>
+                            <tr><td><code>product</code></td><td>Product &amp; engineering</td><td><code>competitor_id</code></td></tr>
+                            <tr><td><code>marketing_growth</code></td><td>Marketing &amp; growth</td><td><code>competitor_id</code></td></tr>
+                            <tr><td><code>leadership</code></td><td>Strategy &amp; leadership</td><td><code>competitor_id</code></td></tr>
+                            <tr><td><code>landscape</code></td><td>Multi-competitor landscape analysis</td><td><code>competitor_ids</code> (array of 2+)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="docs-callout">
+                    <p><strong>Note:</strong> The <code>landscape</code> focus requires <code>competitor_ids</code> (an array of 2 or more competitor IDs) instead of <code>competitor_id</code>.</p>
+                </div>
+
                 <h2>SDKs</h2>
                 <ul>
                     <li><strong>JavaScript / TypeScript:</strong> <code>npm install @signal-labs/sdk</code></li>

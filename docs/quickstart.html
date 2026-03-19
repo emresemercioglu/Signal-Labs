@@ -223,6 +223,44 @@ print(battlecard["win_strategy"])</code></pre>
                     </div>
                 </div>
 
+                <div class="docs-step">
+                    <span class="docs-step-badge">5</span>
+                    <h2>Generate a Landscape Analysis (optional)</h2>
+                </div>
+                <p>Compare multiple competitors at once with a landscape battlecard. Requires 2 or more competitor IDs.</p>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="curl">cURL</button>
+                        <button class="code-tab" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="curl">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash">curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlecards/generate \
+  -H "Authorization: Bearer sl_live_your_key" \
+  -H "Content-Type: application/json" \
+  -d '{"competitor_ids": ["competitor-id-1", "competitor-id-2"], "enablement_focus": "landscape"}'</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-javascript">const landscape = await sl.companies.battlecards(company.id).generate({
+  competitor_ids: [competitors[0].id, competitors[1].id],
+  enablement_focus: 'landscape',
+});
+
+console.log(landscape.overview);</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-python">landscape = sl.companies.battlecards(company["id"]).generate(
+    competitor_ids=[competitors[0]["id"], competitors[1]["id"]],
+    enablement_focus="landscape"
+)
+
+print(landscape["overview"])</code></pre>
+                    </div>
+                </div>
+
                 <h2>What's Next?</h2>
                 <div class="docs-next-grid">
                     <a href="/docs/mcp" class="docs-next-card">
