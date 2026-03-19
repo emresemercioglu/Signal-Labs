@@ -773,7 +773,8 @@ body.docs-body {
   border-radius: 50%;
 }
 
-.docs-step h2 {
+.docs-step h2,
+.docs-content .docs-step h2 {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
