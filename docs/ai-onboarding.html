@@ -126,8 +126,15 @@
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals</code></td><td>List signals</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals/summary</code></td><td>Signal digest</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/ai/chat</code></td><td>Ask AI</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/documents/upload</code></td><td>Upload document (multipart, max 25MB)</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents</code></td><td>List documents</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents/{id}</code></td><td>Get document</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-delete">DELETE</span></td><td><code>/v1/documents/{id}</code></td><td>Delete document</td><td>Free</td></tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="docs-callout">
+                    <p>Documents are automatically processed for RAG (parsing, chunking, embedding). Use <code>document_ids</code> when generating battlecards to include as context (max 100k chars combined).</p>
                 </div>
 
                 <h2>Enablement Focus Types</h2>

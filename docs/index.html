@@ -140,6 +140,10 @@
                             <tr><td>403</td><td><code>limit_error</code></td><td>Plan limit reached (e.g., competitor count)</td></tr>
                             <tr><td>404</td><td><code>not_found_error</code></td><td>Resource not found</td></tr>
                             <tr><td>429</td><td><code>rate_limit_error</code></td><td>Daily rate limit exceeded (includes <code>retry_after</code>)</td></tr>
+                            <tr><td>400</td><td><code>invalid_file</code></td><td>File type not supported or exceeds 25MB</td></tr>
+                            <tr><td>400</td><td><code>document_context_too_large</code></td><td>Combined document text exceeds 100,000 character limit</td></tr>
+                            <tr><td>400</td><td><code>document_not_ready</code></td><td>Document not found or not yet processed</td></tr>
+                            <tr><td>403</td><td><code>storage_quota_exceeded</code></td><td>Organization storage quota exceeded</td></tr>
                             <tr><td>500</td><td><code>server_error</code></td><td>Internal server error</td></tr>
                         </tbody>
                     </table>
@@ -160,6 +164,21 @@
                     </table>
                 </div>
 
+                <h3>Storage Quotas</h3>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Plan</th><th>Storage Quota</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Free</td><td>1 GB</td></tr>
+                            <tr><td>Pro</td><td>5 GB</td></tr>
+                            <tr><td>Ultra</td><td>10 GB</td></tr>
+                            <tr><td>Enterprise</td><td>10 GB</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <h2>Credits</h2>
                 <div class="docs-table-wrapper">
                     <table>
@@ -176,6 +195,23 @@
                         </tbody>
                     </table>
                 </div>
+
+                <h2>Documents</h2>
+                <p>Upload competitive documents for AI analysis and RAG-powered battlecard generation.</p>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Method</th><th>Path</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/documents/upload</code></td><td>Upload a document (multipart form data, max 25MB). Supported: PDF, DOCX, XLSX, CSV, PPTX, TXT, MD, PNG, JPG, WebP.</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents?company_id={id}</code></td><td>List documents with storage usage stats</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents/{id}</code></td><td>Get document detail including extracted text</td></tr>
+                            <tr><td><span class="method-badge method-delete">DELETE</span></td><td><code>/v1/documents/{id}</code></td><td>Delete a document and its RAG chunks</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Documents are automatically parsed, chunked, and embedded for RAG. Use <code>document_ids</code> when generating battlecards to include uploaded documents as additional context.</p>
 
                 <h2>Enablement Focus Types</h2>
                 <p>When generating battlecards, specify one of these focus types:</p>

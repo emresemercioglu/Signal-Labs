@@ -230,6 +230,69 @@ print(battlecard["win_strategy"])</code></pre>
 
                 <div class="docs-step">
                     <span class="docs-step-badge">5</span>
+                    <h2>Attach Documents (optional)</h2>
+                </div>
+                <p>You can upload competitive documents and attach them as additional context when generating battlecards:</p>
+                <div class="code-group">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="curl">cURL</button>
+                        <button class="code-tab" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                    </div>
+                    <div class="code-panel active" data-lang="curl">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-bash"># Upload a document
+curl -X POST https://app.usesignallabs.com/api/v1/documents/upload \
+  -H "Authorization: Bearer sl_live_your_key" \
+  -F "file=@competitor-report.pdf" \
+  -F "company_id=your-company-id" \
+  -F "title=Q1 Competitor Report"
+
+# Then generate with document context
+curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlecards/generate \
+  -H "Authorization: Bearer sl_live_your_key" \
+  -H "Content-Type: application/json" \
+  -d '{"competitor_id": "...", "enablement_focus": "gtm_sales", "document_ids": ["document-id"]}'</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="javascript">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-javascript">// Upload a document
+const doc = await sl.documents.upload({
+  file: 'competitor-report.pdf',
+  company_id: company.id,
+  title: 'Q1 Competitor Report',
+});
+
+// Then generate with document context
+const battlecard = await sl.companies.battlecards(company.id).generate({
+  competitor_id: competitors[0].id,
+  enablement_focus: 'gtm_sales',
+  document_ids: [doc.id],
+});</code></pre>
+                    </div>
+                    <div class="code-panel" data-lang="python">
+                        <button class="copy-btn"></button>
+                        <pre><code class="language-python"># Upload a document
+doc = sl.documents.upload(
+    file="competitor-report.pdf",
+    company_id=company["id"],
+    title="Q1 Competitor Report"
+)
+
+# Then generate with document context
+battlecard = sl.companies.battlecards(company["id"]).generate(
+    competitor_id=competitors[0]["id"],
+    enablement_focus="gtm_sales",
+    document_ids=[doc["id"]]
+)</code></pre>
+                    </div>
+                </div>
+                <div class="docs-callout">
+                    <p>Combined document text must not exceed 100,000 characters. Documents are automatically parsed, chunked, and embedded for RAG.</p>
+                </div>
+
+                <div class="docs-step">
+                    <span class="docs-step-badge">6</span>
                     <h2>Generate a Landscape Analysis (optional)</h2>
                 </div>
                 <p>Compare multiple competitors at once with a landscape battlecard. Requires 2 or more competitor IDs.</p>
