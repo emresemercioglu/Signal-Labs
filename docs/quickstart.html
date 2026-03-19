@@ -199,13 +199,14 @@ print(suggestions)</code></pre>
                         <pre><code class="language-bash">curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlecards/generate \
   -H "Authorization: Bearer sl_live_your_key" \
   -H "Content-Type: application/json" \
-  -d '{"competitor_id": "competitor-uuid", "enablement_focus": "gtm_sales"}'</code></pre>
+  -d '{"competitor_id": "competitor-uuid", "enablement_focus": "gtm_sales", "special_instructions": "Focus on enterprise pricing and our SOC 2 advantage"}'</code></pre>
                     </div>
                     <div class="code-panel" data-lang="javascript">
                         <button class="copy-btn"></button>
                         <pre><code class="language-javascript">const battlecard = await sl.companies.battlecards(company.id).generate({
   competitor_id: competitors[0].id,
   enablement_focus: 'gtm_sales',
+  special_instructions: 'Focus on enterprise pricing and our SOC 2 advantage',
 });
 
 console.log(battlecard.overview);
@@ -215,12 +216,16 @@ console.log(battlecard.win_strategy);</code></pre>
                         <button class="copy-btn"></button>
                         <pre><code class="language-python">battlecard = sl.companies.battlecards(company["id"]).generate(
     competitor_id=competitors[0]["id"],
-    enablement_focus="gtm_sales"
+    enablement_focus="gtm_sales",
+    special_instructions="Focus on enterprise pricing and our SOC 2 advantage"
 )
 
 print(battlecard["overview"])
 print(battlecard["win_strategy"])</code></pre>
                     </div>
+                </div>
+                <div class="docs-callout">
+                    <p>The <code>special_instructions</code> field is optional (max 10,000 characters) — use it to guide the AI with specific context, focus areas, or instructions.</p>
                 </div>
 
                 <div class="docs-step">
