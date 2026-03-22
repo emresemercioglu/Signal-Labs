@@ -34,8 +34,8 @@
   .front-right { position:relative; z-index:1; width:172px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:22px 18px; background:rgba(0,80,200,0.05); border-left:1px solid rgba(0,120,220,0.1); gap:14px; }
 
   .front-headline { font-family:'Outfit',sans-serif; font-weight:800; font-size:46px; line-height:1.1; color:white; }
-  .front-headline span { background:linear-gradient(100deg,#1fa8ff,#00e5a8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-  .front-sub { font-family:'Manrope',sans-serif; font-weight:300; font-size:13px; line-height:1.55; color:rgba(255,255,255,0.48); }
+  .front-headline .gradient-svg { display:inline-block; height:1em; width:auto; vertical-align:bottom; }
+  .front-sub { font-family:'Manrope',sans-serif; font-weight:300; font-size:16px; line-height:1.55; color:rgba(255,255,255,0.48); }
   .pill-row { display:flex; flex-wrap:wrap; gap:5px; }
   .pill { background:rgba(0,130,220,0.1); border:1px solid rgba(0,130,220,0.22); border-radius:20px; padding:3px 9px; font-size:8.5px; color:rgba(30,170,255,0.9); letter-spacing:0.04em; }
   .pill.green { background:rgba(0,190,130,0.1); border-color:rgba(0,190,130,0.22); color:rgba(0,210,150,0.9); }
@@ -56,11 +56,11 @@
   .back-right { position:relative; z-index:1; width:192px; padding:22px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(0,80,200,0.05); border-left:1px solid rgba(0,120,220,0.1); gap:14px; }
 
   .back-headline { font-family:'Outfit',sans-serif; font-weight:700; font-size:36px; line-height:1.25; color:white; }
-  .back-headline span { background:linear-gradient(100deg,#1fa8ff,#00e5a8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .back-headline .gradient-svg { display:inline-block; height:1em; width:auto; vertical-align:bottom; }
   .back-points { display:flex; flex-direction:column; gap:9px; }
   .bp { display:flex; align-items:flex-start; gap:8px; }
   .bp-dot { width:5px; height:5px; border-radius:50%; background:linear-gradient(135deg,#1fa8ff,#00e5a8); margin-top:5px; flex-shrink:0; }
-  .bp-text { font-family:'Manrope',sans-serif; font-size:12px; line-height:1.45; color:rgba(255,255,255,0.55); }
+  .bp-text { font-family:'Manrope',sans-serif; font-size:14px; line-height:1.45; color:rgba(255,255,255,0.55); }
   .bp-text strong { color:rgba(255,255,255,0.85); font-weight:500; }
 
   .plan-box { background:rgba(0,80,200,0.09); border:1px solid rgba(0,120,220,0.18); border-radius:10px; padding:13px 14px; }
@@ -75,32 +75,45 @@
   .cta-btn-main { font-family:'Outfit',sans-serif; font-weight:700; font-size:11px; color:white; margin-bottom:2px; }
   .cta-btn-sub { font-family:'Manrope',sans-serif; font-size:9px; color:rgba(255,255,255,0.5); }
 
+  .download-bar { width:100%; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; flex-shrink:0; }
+  .dl-btn { background:linear-gradient(135deg,#0078e0,#004db0); color:white; border:none; padding:10px 20px; border-radius:8px; font-family:'Manrope',sans-serif; font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 4px 14px rgba(0,90,200,0.3); transition:transform 0.2s, box-shadow 0.2s; }
+  .dl-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,90,200,0.4); }
+  .dl-btn:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+  .dl-btn.pdf { background:linear-gradient(135deg,#059669,#047857); box-shadow:0 4px 14px rgba(5,150,105,0.3); }
+
   @media print {
-    body { background:white; padding:0; gap:0; }
-    .print-note { display:none; }
-    .card-wrapper { page-break-after:always; }
-    .card { width:6in; height:4in; box-shadow:none; border-radius:0; }
+    @page { size: 6in 4in; margin: 0; }
+    body { background:#060913 !important; padding:0 !important; margin:0 !important; gap:0 !important; min-height:auto !important; }
+    .print-note, .download-bar { display:none !important; }
+    .card-wrapper { page-break-after:always; page-break-inside:avoid; margin:0 !important; padding:0 !important; width:6in !important; height:4in !important; }
+    .card-wrapper:last-child { page-break-after:auto; }
+    .card { width:6in !important; height:4in !important; min-width:6in !important; min-height:4in !important; box-shadow:none !important; border-radius:0 !important; }
   }
 </style>
 </head>
 <body>
-<div class="print-note">Postcard Flyer 6" × 4" Front &amp; Back 300 DPI for print</div>
+<div class="print-note">Postcard 6" × 4" — Use Custom paper 6" × 4" or 4" × 6" photo paper (landscape). Enable "Print backgrounds".</div>
+<div class="download-bar">
+  <button class="dl-btn" id="dl-front" type="button">Download Front (PNG)</button>
+  <button class="dl-btn" id="dl-back" type="button">Download Back (PNG)</button>
+  <button class="dl-btn pdf" id="dl-pdf" type="button">Download PDF (Both)</button>
+</div>
 
 <!-- FRONT -->
 <div class="card-wrapper">
-  <div class="card card-front">
+  <div class="card card-front" id="flyer-front">
     <div class="glow-f1"></div><div class="glow-f2"></div>
     <div class="front-left">
       <div class="brand-logo">
         <img class="logo-icon-lg" src="signal-labs-logo-1024x1024-rounded-2.png" alt="Signal Labs">
         <span class="logo-wm-lg">Signal Labs</span>
       </div>
-      <h2 class="front-headline">Know Who<br>You're Up<br><span>Against.</span></h2>
-      <p class="front-sub">Real-time competitive intelligence that arms your entire GTM team from AI battlecards to live market signals.</p>
+      <h2 class="front-headline">Know Who<br>You're Up<br><svg class="gradient-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 46"><defs><linearGradient id="gradAgainst" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1fa8ff"/><stop offset="100%" stop-color="#00e5a8"/></linearGradient></defs><text x="0" y="36" font-family="Outfit,sans-serif" font-size="46" font-weight="800" fill="url(#gradAgainst)">Against.</text></svg></h2>
+      <p class="front-sub">Stay ahead of the competition.<br>Battlecards and signals in real time.</p>
       <div class="pill-row">
         <span class="pill">Battlecards</span>
         <span class="pill green">Live Signals</span>
-        <span class="pill purple">Competitive Enablement</span>
+        <span class="pill purple">Team Enablement</span>
       </div>
     </div>
     <div class="front-right">
@@ -116,7 +129,7 @@
 
 <!-- BACK -->
 <div class="card-wrapper">
-  <div class="card card-back">
+  <div class="card card-back" id="flyer-back">
     <div class="glow-f1"></div><div class="glow-f2"></div>
     <div class="back-accent-bar"></div>
     <div class="back-left">
@@ -124,11 +137,11 @@
         <img class="logo-icon-sm" src="signal-labs-logo-1024x1024-rounded-2.png" alt="Signal Labs">
         <span class="logo-wm-sm">Signal Labs</span>
       </div>
-      <div class="back-headline">Your competitors<br>never sleep. Neither<br>should your <span>intel.</span></div>
+      <div class="back-headline">Your competitors<br>never sleep. Neither<br>should your <svg class="gradient-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36"><defs><linearGradient id="gradIntel" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1fa8ff"/><stop offset="100%" stop-color="#00e5a8"/></linearGradient></defs><text x="0" y="28" font-family="Outfit,sans-serif" font-size="36" font-weight="700" fill="url(#gradIntel)">intel.</text></svg></div>
       <div class="back-points">
-        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Battlecards and talking points</strong> that help reps handle objections and win more deals.</span></div>
-        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Market insights</strong> that sharpen your positioning and shape your product roadmap.</span></div>
-        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Real-time competitor signals</strong> so your team responds before the market does.</span></div>
+        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Battlecards</strong> without the manual work.</span></div>
+        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Market insights</strong> without the noise.</span></div>
+        <div class="bp"><div class="bp-dot"></div><span class="bp-text"><strong>Competitor alerts</strong> without the delay.</span></div>
       </div>
     </div>
     <div class="back-right">
@@ -142,5 +155,99 @@
   <div class="card-label">Back</div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+(function() {
+  var scale = 3;
+  var qrBlobUrls = [];
+  function loadQrAsBlob(url) {
+    return fetch(url).then(function(r) { return r.blob(); })
+      .then(function(blob) { return URL.createObjectURL(blob); });
+  }
+  function prepareQrImages() {
+    var imgs = document.querySelectorAll('.qr-box img');
+    var urls = Array.from(imgs).map(function(img) { return img.src; });
+    return Promise.all(urls.map(loadQrAsBlob)).then(function(urls) {
+      urls.forEach(function(url) { qrBlobUrls.push(url); });
+      imgs.forEach(function(img, i) {
+        img.dataset.origSrc = img.src;
+        img.src = urls[i];
+      });
+    });
+  }
+  function restoreQrImages() {
+    document.querySelectorAll('.qr-box img').forEach(function(img, i) {
+      if (img.dataset.origSrc) {
+        img.src = img.dataset.origSrc;
+        delete img.dataset.origSrc;
+      }
+    });
+    qrBlobUrls.forEach(function(url) { URL.revokeObjectURL(url); });
+    qrBlobUrls = [];
+  }
+  function captureCard(id) {
+    var el = document.getElementById(id);
+    if (!el || typeof html2canvas === 'undefined') return Promise.reject();
+    return html2canvas(el, {
+      scale: scale,
+      backgroundColor: '#060913',
+      logging: false
+    });
+  }
+  function downloadPNG(canvas, filename) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }
+  function doCapture(id, filename, btn, btnText) {
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
+    prepareQrImages()
+      .then(function() { return captureCard(id); })
+      .then(function(canvas) {
+        downloadPNG(canvas, filename);
+      })
+      .catch(function() { alert('Download failed. Try again.'); })
+      .finally(function() {
+        restoreQrImages();
+        btn.disabled = false;
+        btn.textContent = btnText;
+      });
+  }
+  document.getElementById('dl-front').onclick = function() {
+    doCapture('flyer-front', 'signal-labs-flyer-front.png', this, 'Download Front (PNG)');
+  };
+  document.getElementById('dl-back').onclick = function() {
+    doCapture('flyer-back', 'signal-labs-flyer-back.png', this, 'Download Back (PNG)');
+  };
+  document.getElementById('dl-pdf').onclick = function() {
+    var btn = this;
+    btn.disabled = true;
+    btn.textContent = 'Generating PDF...';
+    prepareQrImages()
+      .then(function() {
+        return Promise.all([captureCard('flyer-front'), captureCard('flyer-back')]);
+      })
+      .then(function(canvases) {
+        var jsPDF = window.jspdf.jsPDF;
+        var pdf = new jsPDF({ orientation: 'landscape', unit: 'in', format: [6, 4] });
+        canvases.forEach(function(canvas, i) {
+          if (i > 0) pdf.addPage([6, 4], 'l');
+          var imgData = canvas.toDataURL('image/png');
+          pdf.addImage(imgData, 'PNG', 0, 0, 6, 4, undefined, 'FAST');
+        });
+        pdf.save('signal-labs-flyer.pdf');
+      })
+      .catch(function() { alert('PDF download failed. Try again.'); })
+      .finally(function() {
+        restoreQrImages();
+        btn.disabled = false;
+        btn.textContent = 'Download PDF (Both)';
+      });
+  };
+})();
+</script>
 </body>
 </html>
