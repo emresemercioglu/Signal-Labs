@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17805025780"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17805025780');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing the Signal Labs API and MCP Server: Give Your AI Agents Real-Time Competitive Intelligence - Signal Labs Blog</title>
+    <meta name="description" content="Launch of the Signal Labs public API, native SDKs for JavaScript and Python, and an MCP server for Claude, Cursor, Copilot, and Gemini. Everything you can do in the dashboard, now programmable.">
+    
+    <link rel="canonical" href="https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server">
+    <meta property="og:title" content="Introducing the Signal Labs API and MCP Server">
+    <meta property="og:description" content="The Signal Labs public API, SDKs, and MCP server are here. Give your AI agents real-time competitive intelligence.">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Signal Labs">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2026-03-19T00:00:00Z">
+    <meta property="article:author" content="Emre Semercioglu">
+    <meta property="article:section" content="Product">
+    <meta property="article:tag" content="API">
+    <meta property="article:tag" content="MCP">
+    <meta property="article:tag" content="Developer Tools">
+    <meta property="article:tag" content="AI Agents">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server">
+    <meta name="twitter:title" content="Introducing the Signal Labs API and MCP Server">
+    <meta name="twitter:description" content="The Signal Labs public API, SDKs, and MCP server are here. Give your AI agents real-time competitive intelligence.">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    
+    <style>
+        .navbar{border-bottom:none !important;box-shadow:none !important;transition:all 0.3s ease}.navbar.scrolled{border-bottom:1px solid var(--border-light) !important;box-shadow:0 2px 8px rgba(0,0,0,0.04) !important}.nav-logo a{display:flex;align-items:center;text-decoration:none;color:#0F172A !important;font-weight:600;font-size:var(--font-size-lg)}.logo-text{color:#0F172A !important}.nav-link{text-decoration:none;color:#64748B !important;font-weight:500;transition:color 0.3s ease;position:relative;padding-bottom:4px;border-bottom:2px solid transparent}.nav-link:hover,.nav-link.active{color:#0F172A !important;border-bottom-color:#272d46 !important}.nav-link.nav-cta{background:#272d46 !important;color:white !important;padding:0.5rem 1rem !important;border-radius:0.5rem !important;border:none !important;padding-bottom:0.5rem !important}.nav-link.nav-cta:hover{background:#1f2338 !important;border-bottom:none !important}.nav-toggle span{width:24px;height:2px;background:#0F172A !important;transition:all 0.3s ease}
+    </style>
+    
+    <style>
+        .solutions-nav-wrapper{position:relative}.solutions-nav-link{display:flex;align-items:center;gap:6px}.solutions-nav-link svg{transition:transform 0.2s ease}.solutions-nav-wrapper:hover .solutions-nav-link svg{transform:rotate(180deg)}.mega-menu{visibility:hidden;opacity:0;display:none;position:fixed;top:70px;left:50%;transform:translateX(-50%);background:white;border:1px solid #E2E8F0;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);width:950px;z-index:1001;transition:opacity 0.2s ease,visibility 0.2s ease}.mega-menu-content{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:32px 36px}.mega-menu-section{display:flex;flex-direction:column;gap:2px}.mega-menu-title{font-size:11px;font-weight:700;background:linear-gradient(135deg,#60a5fa 0%,#34d399 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;gap:6px}.mega-menu-link{text-decoration:none;color:#0F172A;font-size:14px;font-weight:500;padding:8px 12px;border-radius:6px;transition:all 0.15s ease;display:block;margin-left:-12px;margin-right:-12px}.mega-menu-link:hover{background:linear-gradient(135deg,#60a5fa 0%,#34d399 100%);color:#ffffff}.mega-menu-header{display:none}@media (max-width:1024px){.mega-menu-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;position:fixed;top:0;left:0;right:0;background:white;border-bottom:1px solid #E2E8F0;z-index:10002}.mega-menu-back,.mega-menu-close{background:none;border:none;font-size:16px;cursor:pointer;color:var(--text-primary);padding:8px;display:flex;align-items:center;gap:8px;font-weight:500;pointer-events:auto}.mega-menu-close{font-size:32px;line-height:1;padding:0;width:32px;height:32px}.mega-menu{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;transform:none;border:none;border-radius:0;padding:100px 0 24px;overflow-y:auto;z-index:10000}.mega-menu-content{display:flex;flex-direction:column;gap:32px;padding:0;max-width:100%}.mega-menu-section{gap:4px;padding:0 24px}.mega-menu-title{font-size:12px;margin-bottom:12px;padding-bottom:8px}.mega-menu-link{font-size:15px;padding:12px 24px;margin:0 -24px;border-radius:0}}
+    </style>
+
+    <style>
+        @media (max-width: 1175px) {
+            .footer .footer-links > .footer-column.footer-hide-mobile { display: none !important; }
+            .footer .footer-links .footer-column-group .footer-column.footer-hide-mobile { display: none !important; }
+        }
+        .blog-code-block{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:20px 24px;overflow-x:auto;font-family:'SF Mono','Fira Code','Fira Mono','Cascadia Code',monospace;font-size:14px;line-height:1.65;margin:1.5rem 0;border:1px solid #1e293b}
+        .blog-code-block code{color:#e2e8f0;background:none;padding:0;font-size:inherit}
+        .blog-code-label{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94a3b8;font-family:'SF Mono','Fira Code',monospace;margin-bottom:6px}
+        .blog-inline-code{background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0;padding:2px 6px;border-radius:4px;font-size:0.85em;font-family:'SF Mono','Fira Code','Fira Mono',monospace}
+    </style>
+
+    <link rel="stylesheet" href="/styles.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" sizes="64x64" />
+    <link rel="icon" href="/icon.png?v=4" type="image/png" sizes="64x64" />
+    <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.ico?v=4" />
+    <link rel="apple-touch-icon" href="/apple-icon.png?v=4" sizes="180x180" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="nav-logo">
+                <a href="/">
+                    <div class="logo-icon"><span class="logo-letter">s</span></div>
+                    <span class="logo-text">Signal Labs</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="/" class="nav-link">CIx Platform</a>
+                
+                <div class="solutions-nav-wrapper">
+                    <a href="/solutions/" class="nav-link solutions-nav-link">
+                        Solutions
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                        </svg>
+                    </a>
+                    
+                    <div class="mega-menu">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <svg width="0" height="0" style="position: absolute;">
+                            <defs>
+                                <linearGradient id="menuIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    BY TEAM
+                                </h3>
+                                <a href="/solutions/sales" class="mega-menu-link">Sales &amp; Revenue</a>
+                                <a href="/solutions/marketing" class="mega-menu-link">Marketing &amp; Growth</a>
+                                <a href="/solutions/product" class="mega-menu-link">Product &amp; Engineering</a>
+                                <a href="/solutions/leadership" class="mega-menu-link">Strategy &amp; Leadership</a>
+                                <a href="/solutions/competitive-intelligence" class="mega-menu-link">CI &amp; Research</a>
+                                <a href="/solutions/investors" class="mega-menu-link">Investors &amp; VCs</a>
+                                <a href="/solutions/ai-agents" class="mega-menu-link">AI Agents</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                    BY USE CASE
+                                </h3>
+                                <a href="/use-cases/sales-enablement" class="mega-menu-link">Sales Enablement</a>
+                                <a href="/use-cases/win-loss-analysis" class="mega-menu-link">Win/Loss Analysis</a>
+                                <a href="/use-cases/product-positioning" class="mega-menu-link">Product Positioning</a>
+                                <a href="/use-cases/market-intelligence" class="mega-menu-link">Market Intelligence</a>
+                                <a href="/use-cases/competitor-monitoring" class="mega-menu-link">Competitor Monitoring</a>
+                                <a href="/use-cases/battlecard-generation" class="mega-menu-link">Battlecard Generation</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                                    BY INDUSTRY
+                                </h3>
+                                <a href="/industries/saas" class="mega-menu-link">SaaS</a>
+                                <a href="/industries/legal" class="mega-menu-link">Legal</a>
+                                <a href="/industries/financial-services" class="mega-menu-link">Financial Services</a>
+                                <a href="/industries/healthcare" class="mega-menu-link">Healthcare</a>
+                                <a href="/industries/ecommerce" class="mega-menu-link">E-commerce &amp; Retail</a>
+                                <a href="/industries/deep-tech" class="mega-menu-link">Deep Tech</a>
+                                <a href="/industries/gaming" class="mega-menu-link">Gaming</a>
+                                <a href="/industries/defense" class="mega-menu-link">Defense</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20V14"></path></svg>
+                                    BY SIZE
+                                </h3>
+                                <a href="/startups" class="mega-menu-link">Startups</a>
+                                <a href="/enterprise" class="mega-menu-link">Enterprise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="/services" class="nav-link">CI Services</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/docs" class="nav-link">Docs</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="content-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                <a href="/" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <span style="margin: 0 0.5rem;">/</span>
+                <a href="/blog" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+                <span style="margin: 0 0.5rem;">/</span>
+                <span style="color: var(--text-primary);">Introducing the Signal Labs API and MCP Server</span>
+            </div>
+            
+            <div class="blog-post-header">
+                <a href="/blog" class="blog-back-link">&larr; Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-date">March 19, 2026</span>
+                    <span class="blog-category">Product</span>
+                </div>
+                <h1 class="blog-post-title">Introducing the Signal Labs API and MCP Server: Give Your AI Agents Real-Time Competitive Intelligence</h1>
+            </div>
+        </div>
+    </section>
+
+    <article class="content-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="blog-post-content">
+                <div class="blog-author-info" style="margin-bottom: 1rem; margin-top: 0;">
+                    <div class="blog-author-avatar">
+                        <div style="width: 48px; height: 48px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: var(--font-size-lg);">ES</div>
+                    </div>
+                    <div class="blog-author-details">
+                        <div class="blog-author-name">Emre Semercioglu</div>
+                        <div class="blog-author-title">Founder</div>
+                    </div>
+                </div>
+                
+                <p class="blog-intro">Competitive intelligence shouldn't live behind a dashboard. It should be everywhere your team works: in your code, your AI tools, your agents, and your workflows.</p>
+
+                <p>Today, we're launching the Signal Labs public API, native SDKs for JavaScript and Python, and an MCP server that connects directly to Claude, Cursor, GitHub Copilot, and Gemini. Everything you can do in the Signal Labs dashboard, you can now do programmatically.</p>
+
+                <h2>Why We Built This</h2>
+
+                <p>When we started Signal Labs, we set out to solve a simple problem: competitive intelligence is too slow, too manual, and too siloed. We built a platform that tracks competitors in real time, generates AI-powered battlecards, and monitors market signals so GTM teams can act before their competitors' moves hit the field.</p>
+
+                <p>But the way people consume information is changing fast. Sales reps are using AI copilots in their workflows. Engineers are building custom tools with Claude Code and Cursor. Product teams are spinning up internal dashboards that pull data from APIs. And a growing number of companies are building AI agents that need access to real-time competitive data.</p>
+
+                <p>We realized that if competitive intelligence can't be accessed programmatically, it can't keep up with how modern teams actually work.</p>
+
+                <p>So we opened it up.</p>
+
+                <h2>What You Can Do With the API</h2>
+
+                <p>The Signal Labs REST API gives you full access to the platform's core capabilities:</p>
+
+                <p><strong>Create your company profile.</strong> Just enter your URL and we fill out the details for you &mdash; description, industry, size, revenue range, and location &mdash; all pulled in automatically.</p>
+
+                <p><strong>Discover and monitor competitors.</strong> We'll find relevant competitors for you to track &mdash; AI-suggested with reasoning for each, split by direct and indirect relationships. Choose company-level or narrow it to a specific product or service vertical. No manual research required.</p>
+
+                <p><strong>Generate AI-powered battlecards.</strong> We automatically scrape the web for the latest and freshest information &mdash; your and your competitors' websites, technical documentation, blogs, news, articles, user reviews from G2 and TrustRadius, social media like Reddit and LinkedIn, analyst reports from Forrester and Gartner, and whatever else we can find publicly available. Create battlecards across five enablement focuses: GTM/Sales, Product, Marketing/Growth, Leadership, and Landscape (multi-competitor analysis). Attach your own documents for additional context, and add custom instructions to guide the AI.</p>
+
+                <p><strong>Monitor competitive signals.</strong> Pull real-time intelligence signals from competitor blogs and news, with AI-generated summaries, importance scores, and team-specific recommendations for Sales, Product, Marketing, and Leadership.</p>
+
+                <p><strong>Ask AI about your competitive landscape.</strong> A RAG-powered chat endpoint that draws from your battlecards, signals, and uploaded documents to answer competitive questions on the fly.</p>
+
+                <p><strong>Upload and manage documents.</strong> Add PDFs, DOCX files, spreadsheets, and more to your data library via API. Documents are automatically parsed, chunked, and embedded for RAG, so your AI chat and battlecards get smarter with your own data.</p>
+
+                <p>All endpoints are authenticated with API keys, rate-limited by plan, and scoped to your organization. Credits work the same way as the dashboard: battlecard generation costs 1 credit, and read operations are free.</p>
+
+                <h2>MCP: One Line to Connect Your AI Tools</h2>
+
+                <p>If you use Claude, Cursor, GitHub Copilot, or Gemini, you can connect Signal Labs as an MCP server with a single line of configuration:</p>
+
+                <pre class="blog-code-block"><code>npx signallabs-mcp</code></pre>
+
+                <p>Once connected, your AI assistant can track competitors, generate battlecards, query signals, and answer competitive questions natively. No copy-pasting, no switching tabs. Just ask.</p>
+
+                <p>Here are some things you can say to your AI after connecting:</p>
+
+                <ul>
+                    <li>"What companies am I tracking in Signal Labs?"</li>
+                    <li>"Discover competitors for Acme Corp"</li>
+                    <li>"Generate a sales battlecard for us vs Competitor X"</li>
+                    <li>"What are the latest competitive signals this week?"</li>
+                    <li>"What are our competitors' main weaknesses?"</li>
+                </ul>
+
+                <p>The MCP server supports 14 tools covering the full API surface. It's published on npm and registered on the official MCP Registry.</p>
+
+                <h2>Who This Is For</h2>
+
+                <p>We see three main groups who will get the most out of this:</p>
+
+                <p><strong>CI and PMM teams who live in AI tools.</strong> If you're already using Claude Code, Cursor, or Copilot in your daily workflow, you can now pull competitive intelligence without leaving your environment. Generate a battlecard before a sales call. Check what a competitor announced this week. Ask a strategic question about your market positioning. All from your terminal or IDE.</p>
+
+                <p><strong>Teams building AI agents and AI-powered products.</strong> If you're building an AI SDR, a sales roleplay training platform, a deal coaching tool, or any product where users might bring up competitors, you can plug into Signal Labs for real-time battlecards and competitive context. Your agent gets access to the same intelligence that powers enterprise CI programs.</p>
+
+                <p><strong>Companies building internal CI workflows.</strong> If you have an internal competitive intelligence program and want to integrate it into Slack bots, CRM enrichment, automated reporting, or custom dashboards, the API gives you everything you need. Pull battlecards into your existing tools, trigger alerts when new signals arrive, or build a competitive feed that updates automatically.</p>
+
+                <h2>Built-In Limits and Error Handling</h2>
+
+                <p>The API is designed to be developer-friendly from the start. Every error returns a structured JSON response with a machine-readable code, a human-readable message, and actionable guidance. If you're missing a prerequisite step (like trying to generate a battlecard before adding a competitor), the error tells you exactly which endpoint to call next.</p>
+
+                <p>Rate limits scale by plan:</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border);">
+                            <th style="text-align: left; padding: 10px 16px; color: var(--text-secondary); font-weight: 600;">Plan</th>
+                            <th style="text-align: left; padding: 10px 16px; color: var(--text-secondary); font-weight: 600;">Requests per Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-light);"><td style="padding: 10px 16px;">Free</td><td style="padding: 10px 16px;">100</td></tr>
+                        <tr style="border-bottom: 1px solid var(--border-light);"><td style="padding: 10px 16px;">Pro</td><td style="padding: 10px 16px;">1,000</td></tr>
+                        <tr style="border-bottom: 1px solid var(--border-light);"><td style="padding: 10px 16px;">Ultra</td><td style="padding: 10px 16px;">5,000</td></tr>
+                        <tr><td style="padding: 10px 16px;">Enterprise</td><td style="padding: 10px 16px;">10,000</td></tr>
+                    </tbody>
+                </table>
+
+                <p>Credit costs match the dashboard: battlecard generation costs 1 credit, AI modifications cost 0.5 credits, and all read operations (listing companies, fetching signals, retrieving battlecards) are free within your rate limits.</p>
+
+                <p>If you hit a limit, the API tells you exactly what happened and links you to the upgrade page. AI agents using the MCP server get the same structured errors, so they can explain the situation to the user or automatically retry.</p>
+
+                <h2>SDKs for JavaScript and Python</h2>
+
+                <p>We also shipped native SDKs so you can integrate in a few lines of code:</p>
+
+                <p><strong>JavaScript / TypeScript:</strong></p>
+                <pre class="blog-code-block"><code>import { SignalLabs } from '@signal-labs/sdk';
+
+const sl = new SignalLabs(process.env.SIGNALLABS_API_KEY);
+
+const company = await sl.companies.create({ domain: 'competitor.com' });
+const suggestions = await sl.companies.competitors(company.id).discover();
+const battlecard = await sl.companies.battlecards(company.id).generate({
+  competitor_id: suggestions[0].id,
+  enablement_focus: 'gtm_sales',
+});</code></pre>
+
+                <p><strong>Python:</strong></p>
+                <pre class="blog-code-block"><code>from signallabs import SignalLabs
+
+sl = SignalLabs(api_key="sl_live_your_key")
+
+company = sl.companies.create(domain="competitor.com")
+suggestions = sl.companies.competitors(company["id"]).discover()
+battlecard = sl.companies.battlecards(company["id"]).generate(
+    competitor_id=suggestions[0]["id"],
+    enablement_focus="gtm_sales"
+)</code></pre>
+
+                <p>From zero to a full competitive battlecard in four lines of code.</p>
+
+                <h2>Free to Use</h2>
+
+                <p>The API, MCP server, and SDKs are included with every Signal Labs plan at no extra cost. If you're on the Free plan, you get 100 API requests per day and 2 credits per month. Pro, Ultra, and Enterprise plans scale from there.</p>
+
+                <p>If you don't have an account yet, sign up at <a href="https://app.usesignallabs.com">app.usesignallabs.com</a> and create your first API key in Settings.</p>
+
+                <h2>Get Started</h2>
+
+                <p>Here's everything you need:</p>
+
+                <ul>
+                    <li><strong>Documentation:</strong> <a href="https://usesignallabs.com/docs">usesignallabs.com/docs</a></li>
+                    <li><strong>Quickstart (3 minutes):</strong> <a href="https://usesignallabs.com/docs/quickstart">usesignallabs.com/docs/quickstart</a></li>
+                    <li><strong>MCP Setup Guide:</strong> <a href="https://usesignallabs.com/docs/mcp">usesignallabs.com/docs/mcp</a></li>
+                    <li><strong>JavaScript SDK:</strong> <span class="blog-inline-code">npm install @signal-labs/sdk</span></li>
+                    <li><strong>Python SDK:</strong> <span class="blog-inline-code">pip install signallabs</span></li>
+                    <li><strong>MCP Server:</strong> <span class="blog-inline-code">npx signallabs-mcp</span></li>
+                    <li><strong>OpenAPI Spec:</strong> <a href="https://app.usesignallabs.com/api/v1/openapi.json">app.usesignallabs.com/api/v1/openapi.json</a></li>
+                </ul>
+
+                <p>We built Signal Labs to make competitive intelligence fast, real-time, and actionable. Now it's also programmable.</p>
+
+                <p>We'd love to see what you build with it.</p>
+
+                <p><em>Emre Semercioglu, Founder of Signal Labs</em></p>
+
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><span class="logo-letter">s</span></div>
+                        <span class="logo-text">Signal Labs</span>
+                    </div>
+                    <p>Competitive Intelligence & Enablement Platform</p>
+                    <a href="https://www.linkedin.com/company/signal-labs-cix/" target="_blank" rel="noopener noreferrer" class="footer-linkedin-link" aria-label="Visit Signal Labs on LinkedIn" style="margin-bottom: 20px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    
+                    <div class="footer-column footer-brand-extra">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../docs">Docs</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>By Size</h3>
+                        <a href="../startups">Startups</a>
+                        <a href="../enterprise">Enterprise</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column-group footer-column-group-by-team" style="margin-top: 132px;">
+                        <div class="footer-column">
+                            <h3>By Team</h3>
+                            <a href="../solutions/sales">Sales &amp; Revenue</a>
+                            <a href="../solutions/marketing">Marketing &amp; Growth</a>
+                            <a href="../solutions/product">Product &amp; Engineering</a>
+                            <a href="../solutions/leadership">Strategy &amp; Leadership</a>
+                            <a href="../solutions/competitive-intelligence">CI &amp; Research</a>
+                            <a href="../solutions/investors">Investors &amp; VCs</a>
+                            <a href="../solutions/ai-agents">AI Agents</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>By Use Case</h3>
+                            <a href="../use-cases/sales-enablement">Sales Enablement</a>
+                            <a href="../use-cases/win-loss-analysis">Win/Loss Analysis</a>
+                            <a href="../use-cases/product-positioning">Product Positioning</a>
+                            <a href="../use-cases/market-intelligence">Market Intelligence</a>
+                            <a href="../use-cases/competitor-monitoring">Competitor Monitoring</a>
+                            <a href="../use-cases/battlecard-generation">Battlecard Generation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column-group">
+                        <div class="footer-column">
+                            <h3>By Industry</h3>
+                            <a href="../industries/saas">SaaS</a>
+                            <a href="../industries/legal">Legal</a>
+                            <a href="../industries/financial-services">Financial Services</a>
+                            <a href="../industries/healthcare">Healthcare</a>
+                            <a href="../industries/ecommerce">E-commerce &amp; Retail</a>
+                            <a href="../industries/deep-tech">Deep Tech</a>
+                            <a href="../industries/gaming">Gaming</a>
+                            <a href="../industries/defense">Defense</a>
+                        </div>
+                        <div class="footer-column footer-hide-mobile">
+                            <h3>By Size</h3>
+                            <a href="../startups">Startups</a>
+                            <a href="../enterprise">Enterprise</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../docs">Docs</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsLink = document.querySelector('.solutions-nav-link');
+            const megaMenu = document.querySelector('.mega-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            const closeButton = megaMenu ? megaMenu.querySelector('.mega-menu-close') : null;
+            const backButton = megaMenu ? megaMenu.querySelector('.mega-menu-back') : null;
+            
+            if (solutionsWrapper && megaMenu && solutionsLink && navMenu) {
+                let timeout;
+                const isMobile = () => window.innerWidth <= 1024;
+                
+                megaMenu.style.visibility = 'hidden';
+                megaMenu.style.opacity = '0';
+                megaMenu.style.display = 'none';
+                
+                function closeMegaMenu() {
+                    megaMenu.style.visibility = 'hidden';
+                    megaMenu.style.opacity = '0';
+                    setTimeout(() => { megaMenu.style.display = 'none'; }, 300);
+                }
+                
+                function openMegaMenu() {
+                    megaMenu.style.display = 'block';
+                    megaMenu.offsetHeight;
+                    megaMenu.style.visibility = 'visible';
+                    megaMenu.style.opacity = '1';
+                }
+                
+                function closeAllNavs() {
+                    closeMegaMenu();
+                    navMenu.classList.remove('active');
+                }
+                
+                if (!isMobile()) {
+                    solutionsWrapper.addEventListener('mouseenter', function() { clearTimeout(timeout); openMegaMenu(); });
+                    solutionsWrapper.addEventListener('mouseleave', function() { timeout = setTimeout(function() { if (!megaMenu.matches(':hover')) closeMegaMenu(); }, 100); });
+                    megaMenu.addEventListener('mouseenter', function() { clearTimeout(timeout); openMegaMenu(); });
+                    megaMenu.addEventListener('mouseleave', function() { closeMegaMenu(); });
+                }
+                
+                solutionsLink.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault(); e.stopPropagation();
+                        if (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block') closeMegaMenu();
+                        else openMegaMenu();
+                    }
+                }, true);
+                
+                if (closeButton) { closeButton.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); closeAllNavs(); }); }
+                if (backButton) { backButton.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); closeMegaMenu(); }); }
+                
+                megaMenu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() { if (isMobile()) closeAllNavs(); });
+                });
+                
+                window.addEventListener('resize', function() {
+                    if (!isMobile() && (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block')) closeMegaMenu();
+                });
+            }
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 10) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://usesignallabs.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://usesignallabs.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "Introducing the Signal Labs API and MCP Server", "item": "https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server" }
+      ]
+    }
+    </script>
+</body>
+</html>
