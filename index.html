@@ -74,8 +74,8 @@
     </style>
     
     <!-- Load full CSS asynchronously (non-render-blocking) -->
-    <link rel="preload" href="styles.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css?v=7"></noscript>
+    <link rel="preload" href="styles.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css?v=8"></noscript>
     
     <!-- Load fonts asynchronously with font-display swap (non-blocking) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -226,11 +226,11 @@
                 <a href="docs" class="nav-link">Docs</a>
                 <a href="contact" class="nav-link">Contact</a>
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
             </div>
             <div class="nav-actions">
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -261,7 +261,7 @@
                     AI-powered competitive enablement with instant battlecards, competitor tracking, and real-time market signals. Everything your team needs to stay ahead.
                 </p>
                 <div class="hero-cta">
-                    <a href="https://app.usesignallabs.com" class="btn btn-hero-primary">Start Free →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-hero-primary">Start Free Trial →</a>
                     <a href="#waitlist" class="btn btn-hero-secondary">Book Demo</a>
                 </div>
 
@@ -1162,15 +1162,15 @@
             </div>
             
             <div class="pricing-grid">
-                <!-- Free Plan -->
+                <!-- Starter Plan -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Free</h3>
+                        <h3 class="pricing-title">Starter</h3>
                         <div class="pricing-price">
-                            <span class="price-amount">$0</span>
+                            <span class="price-amount" data-annual="39" data-monthly="49">$39</span>
                             <span class="price-period">/month</span>
                         </div>
-                        <p class="pricing-description">Get started with AI-driven CI</p>
+                        <p class="pricing-description">For individual CI exploration</p>
                     </div>
                     <div class="pricing-features">
                         <div class="feature-item">
@@ -1179,11 +1179,15 @@
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>2 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
+                            <span>5 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-                            <span>Up to 2 competitors</span>
+                            <span>Up to 3 competitors</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
+                            <span>100 Chat CIx queries/month</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
@@ -1191,16 +1195,17 @@
                         </div>
                     </div>
                     <div class="pricing-cta">
-                    <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free</a>
+                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial</a>
                     </div>
                 </div>
 
                 <!-- Pro Plan -->
-                <div class="pricing-card">
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
                     <div class="pricing-header">
                         <h3 class="pricing-title">Pro</h3>
                         <div class="pricing-price">
-                            <span class="price-amount" data-annual="99" data-monthly="119">$99</span>
+                            <span class="price-amount" data-annual="99" data-monthly="129">$99</span>
                             <span class="price-period">/month</span>
                         </div>
                         <p class="pricing-description">For individual CI operators</p>
@@ -1212,7 +1217,7 @@
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>10 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
+                            <span>15 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
@@ -1220,15 +1225,15 @@
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Competitor signals every 4h</span>
+                            <span>1,000 Chat CIx queries/month</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-                            <span>Email support</span>
+                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
+                            <span>Competitor signals every 4h</span>
                         </div>
                     </div>
                     <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free</a>
+                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial</a>
                     </div>
                 </div>
 
@@ -1237,7 +1242,7 @@
                     <div class="pricing-header">
                         <h3 class="pricing-title">Ultra</h3>
                         <div class="pricing-price">
-                            <span class="price-amount" data-annual="350" data-monthly="500">$350</span>
+                            <span class="price-amount" data-annual="350" data-monthly="449">$350</span>
                             <span class="price-period">/month</span>
                         </div>
                         <p class="pricing-description">Team-ready for small GTM pod</p>
@@ -1257,11 +1262,11 @@
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Competitor signals every 1h</span>
+                            <span>5,000 Chat CIx queries/month</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-                            <span>Email & Slack support</span>
+                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
+                            <span>Competitor signals every 1h</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg></span>
@@ -1269,7 +1274,7 @@
                         </div>
                     </div>
                     <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free</a>
+                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial</a>
                     </div>
                 </div>
 
@@ -1297,11 +1302,11 @@
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Real-time competitor signals</span>
+                            <span>Unlimited Chat CIx queries</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
-                            <span>24h SLA support</span>
+                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
+                            <span>Real-time competitor signals</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg></span>
@@ -1309,7 +1314,7 @@
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
-                            <span>Team enablement workshop</span>
+                            <span>Team Enablement Workshop</span>
                         </div>
                         <div class="feature-item">
                             <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
@@ -1355,9 +1360,9 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Automate Your Competitive Intelligence?</h2>
-                <p>Get started with CIx free or schedule a consultation to learn more</p>
+                <p>Start your free trial or schedule a consultation to learn more</p>
                 <div class="cta-buttons">
-                    <a href="https://app.usesignallabs.com" class="btn btn-primary">Start Free</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary">Start Free Trial</a>
                     <a href="contact" class="btn btn-outline">Schedule Consultation</a>
                 </div>
             </div>
@@ -1536,12 +1541,13 @@
       "applicationSubCategory": "Competitive Intelligence and Enablement Platform",
       "operatingSystem": "Web",
       "offers": {
-        "@type": "Offer",
-        "price": "0",
+        "@type": "AggregateOffer",
+        "lowPrice": "39",
+        "highPrice": "350",
         "priceCurrency": "USD",
-        "priceValidUntil": "2025-12-31",
+        "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
-        "description": "Free plan available with 2 CIx credits/month"
+        "description": "Plans starting at $39/month with free trial available"
       },
       "featureList": [
         "Instant battlecards with AI-powered modifications",
@@ -1589,7 +1595,7 @@
     </noscript>
     
     <!-- Main JavaScript - Loaded at end for better performance -->
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=8"></script>
 
     <!-- Scroll Animations & Battlecard Tab Switching -->
     <script>
