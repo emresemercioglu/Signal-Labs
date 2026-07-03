@@ -1143,189 +1143,146 @@
 
     <!-- Pricing Section -->
     <section class="content-section">
-        <div class="container" style="max-width: 1440px;">
+        <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Choose Your Plan</h2>
                 <p class="section-subtitle">Scale your competitive advantage</p>
-                
-                <!-- Billing Toggle -->
-                <div class="billing-toggle">
-                    <span class="toggle-label" id="monthly-label">Monthly</span>
-                    <div class="toggle-switch">
-                        <input type="checkbox" id="billing-toggle" checked aria-labelledby="billing-toggle-label" aria-describedby="monthly-label annual-label">
-                        <label for="billing-toggle" class="toggle-slider" id="billing-toggle-label">
-                            <span class="sr-only">Toggle between monthly and annual billing</span>
-                        </label>
-                    </div>
-                    <span class="toggle-label" id="annual-label">Annual <span class="savings-text">(Save up to 30%)</span></span>
-                </div>
             </div>
-            
-            <div class="pricing-grid">
-                <!-- Starter Plan -->
-                <div class="pricing-card">
+
+            <div class="pricing-grid pricing-grid-v2">
+                <!-- Free Plan -->
+                <div class="plan-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Starter</h3>
+                        <h3 class="pricing-title">Free</h3>
                         <div class="pricing-price">
-                            <span class="price-amount" data-annual="39" data-monthly="49">$39</span>
-                            <span class="price-period">/month</span>
+                            <span class="price-amount">$0</span>
                         </div>
-                        <p class="pricing-description">Your first competitive edge</p>
+                        <p class="pricing-description">See Signal Labs work on your top competitor.</p>
                     </div>
                     <div class="pricing-features">
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-                            <span>1 creator + 5 viewer seats</span>
+                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>1 competitor — a living page that updates itself</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>5 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
+                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Real-time signals + suggested-actions inbox</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-                            <span>Up to 3 competitors</span>
+                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>1 battlecard / month</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>100 Chat CIx queries/month</span>
+                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>3 seats — 1 creator + 2 viewers</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Competitor signals every 24h</span>
+                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                            <span>Manual refresh</span>
                         </div>
                     </div>
                     <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial</a>
+                        <a href="https://app.usesignallabs.com/login" class="btn btn-outline">Start Free</a>
                     </div>
                 </div>
 
-                <!-- Pro Plan -->
-                <div class="pricing-card popular">
-                    <div class="pricing-badge">MOST POPULAR</div>
+                <!-- Team Plan -->
+                <div class="plan-card plan-card-popular">
+                    <div class="popular-badge">MOST POPULAR</div>
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Pro</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount" data-annual="99" data-monthly="119">$99</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <p class="pricing-description">For individual CI operators</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-                            <span>1 creator + 10 viewer seats</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>15 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-                            <span>Up to 5 competitors</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>1,000 Chat CIx queries/month</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Competitor signals every 4h</span>
-                        </div>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial</a>
-                    </div>
-                </div>
-
-                <!-- Ultra Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Ultra</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount" data-annual="350" data-monthly="500">$350</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <p class="pricing-description">Team-ready for small GTM pod</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-                            <span>3 creator + 25 viewer seats</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>50 CIx credits/month <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-                            <span>Up to 10 competitors</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>5,000 Chat CIx queries/month</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Competitor signals every 1h</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg></span>
-                            <span>Monthly CI Strategy Call</span>
-                        </div>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial</a>
-                    </div>
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Enterprise</h3>
+                        <h3 class="pricing-title">Team</h3>
                         <div class="pricing-price">
                             <span class="price-amount">Custom</span>
                         </div>
-                        <p class="pricing-description">Org-wide CI enablement</p>
+                        <p class="pricing-description">Real-time competitive &amp; market intelligence for your whole go-to-market team — Sales, Product, Marketing, and Leadership.</p>
                     </div>
                     <div class="pricing-features">
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-                            <span>Unlimited seats</span>
+                            <span class="feature-icon feature-icon-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="cix-check-gradient-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Everything in Free, plus:</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>Unlimited CIx credits <span class="credit-info-icon" data-tooltip="1 credit = 1 battlecard">ⓘ</span></span>
+                            <span class="feature-icon feature-icon-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="cix-check-gradient-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Track your full competitive set</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-                            <span>Unlimited competitors</span>
+                            <span class="feature-icon feature-icon-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="cix-check-gradient-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Unlimited battlecards &amp; deliverables</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Unlimited Chat CIx queries</span>
+                            <span class="feature-icon feature-icon-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="cix-check-gradient-4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Multiple team seats</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg></span>
-                            <span>Real-time competitor signals</span>
+                            <span class="feature-icon feature-icon-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="cix-check-gradient-5" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Real-time competitor signals &amp; auto-refresh</span>
                         </div>
                         <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg></span>
-                            <span>Bi-weekly CI Strategy Call</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
-                            <span>Team Enablement Workshop</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-                            <span>On-premise & SSO/SAML</span>
+                            <span class="feature-icon feature-icon-gradient">
+                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="cix-check-gradient-6" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-6)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Priority support &amp; monthly CI strategy calls</span>
                         </div>
                     </div>
                     <div class="pricing-cta">
-                        <a href="contact" class="btn btn-outline">Contact Us</a>
+                        <a href="https://usesignallabs.com/contact" class="ai-gradient-btn">✦ Request 14-day trial</a>
                     </div>
                 </div>
             </div>
+
+            <p class="pricing-email-note">All plans require a company email. Personal addresses (Gmail, Outlook, etc.) are not supported.</p>
         </div>
     </section>
 
