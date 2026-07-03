@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signal Labs - Roll-Up Banner (33" x 80")</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: #0a0a0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+    font-family: 'Manrope', sans-serif;
+  }
+  .print-note {
+    position: fixed; top: 16px; right: 20px;
+    background: rgba(0,200,150,0.15);
+    border: 1px solid rgba(0,200,150,0.4);
+    color: #00c896;
+    font-size: 12px; padding: 8px 14px;
+    border-radius: 6px; z-index: 100;
+  }
+  .banner {
+    width: 400px; height: 970px;
+    background: #060913;
+    border-radius: 4px; overflow: hidden;
+    position: relative;
+    display: flex; flex-direction: column;
+    box-shadow: 0 0 80px rgba(0,180,255,0.12), 0 0 160px rgba(0,100,200,0.06);
+  }
+  .banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,160,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,160,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px; z-index: 0;
+  }
+  .glow-top { position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:500px; height:280px; background:radial-gradient(ellipse,rgba(0,130,220,0.16) 0%,transparent 70%); z-index:0; }
+  .glow-mid { position:absolute; top:40%; left:-100px; width:380px; height:280px; background:radial-gradient(ellipse,rgba(0,180,130,0.09) 0%,transparent 70%); z-index:0; }
+  .glow-bot { position:absolute; bottom:-60px; right:-80px; width:320px; height:240px; background:radial-gradient(ellipse,rgba(10,60,200,0.12) 0%,transparent 70%); z-index:0; }
+
+  /* Logo */
+  .top-section { position:relative; z-index:2; padding:42px 36px 0; overflow:visible; }
+  .brand-logo { display:flex; align-items:center; gap:14px; overflow:visible; }
+  .logo-icon { height:54px; width:54px; border-radius:0; display:block; flex-shrink:0; object-fit:contain; }
+  .logo-wordmark {
+    font-family:'Outfit',sans-serif; font-weight:700;
+    font-size:26px; color:white; letter-spacing:-0.01em;
+  }
+
+  .divider-line { position:relative; z-index:2; margin:34px 36px; height:1px; background:linear-gradient(90deg,rgba(0,160,220,0.5) 0%,rgba(0,180,140,0.25) 60%,transparent 100%); }
+
+  .hero-section { position:relative; z-index:2; padding:0 36px; display:flex; flex-direction:column; }
+  .headline { font-family:'Outfit',sans-serif; font-weight:800; font-size:50px; line-height:1.15; color:white; margin-bottom:24px; }
+  .gradient-svg { display:inline-block; height:1em; width:auto; vertical-align:bottom; }
+  .sub-headline { font-family:'Manrope',sans-serif; font-weight:300; font-size:20px; line-height:1.65; color:rgba(255,255,255,0.5); margin-bottom:40px; }
+
+  .features { display:flex; flex-direction:column; gap:24px; }
+  .feature-item { display:flex; align-items:flex-start; gap:16px; }
+  .feature-icon { width:42px; height:42px; border-radius:8px; background:rgba(0,130,220,0.1); border:1px solid rgba(0,130,220,0.22); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+  .feature-icon svg { width:21px; height:21px; }
+  .feature-title { font-family:'Outfit',sans-serif; font-weight:600; font-size:19px; color:rgba(255,255,255,0.92); margin-bottom:5px; }
+  .feature-desc { font-family:'Manrope',sans-serif; font-weight:300; font-size:14px; color:rgba(255,255,255,0.42); line-height:1.5; }
+
+  .section-sep { position:relative; z-index:2; margin:24px 36px 12px; height:1px; background:rgba(255,255,255,0.06); }
+
+  .cta-section { position:relative; z-index:2; padding:16px 36px 48px; display:flex; flex-direction:column; align-items:center; background:linear-gradient(0deg,rgba(0,80,180,0.07) 0%,transparent 100%); }
+  .cta-label { font-family:'Manrope',sans-serif; font-size:9px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:12px; }
+  .qr-wrapper { background:white; border-radius:14px; padding:14px; width:150px; height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; box-shadow:0 0 28px rgba(0,130,220,0.2); }
+  .qr-wrapper img { width:122px; height:122px; display:block; }
+  .cta-text { font-family:'Outfit',sans-serif; font-weight:700; font-size:20px; color:white; margin-bottom:8px; text-align:center; }
+  .cta-sub { font-family:'Manrope',sans-serif; font-size:11px; color:rgba(255,255,255,0.38); text-align:center; }
+  .url-text { font-family:'Manrope',sans-serif; font-size:14px; color:rgba(30,170,255,0.8); margin-top:6px; display:block; text-align:center; }
+
+  .download-bar {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 12px; z-index: 200;
+  }
+  .dl-btn {
+    background: rgba(0,180,120,0.15); border: 1px solid rgba(0,180,120,0.4);
+    color: #00c896; font-family: 'Manrope', sans-serif; font-size: 13px;
+    font-weight: 600; padding: 10px 20px; border-radius: 8px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .dl-btn:hover { background: rgba(0,180,120,0.25); }
+
+  @media print {
+    body { background:white; padding:0; }
+    .print-note, .download-bar { display:none; }
+    .banner { width:3.3in; height:8in; box-shadow:none; border-radius:0; }
+  }
+</style>
+</head>
+<body>
+<div class="print-note">Roll-Up Banner 33" × 80" Send to printer at 300 DPI</div>
+<div class="banner">
+  <div class="glow-top"></div><div class="glow-mid"></div><div class="glow-bot"></div>
+  <div class="top-section">
+    <div class="brand-logo">
+      <img class="logo-icon" src="signal-labs-logo-1024x1024-rounded-2.png" alt="Signal Labs">
+      <span class="logo-wordmark">Signal Labs</span>
+    </div>
+  </div>
+  <div class="divider-line"></div>
+  <div class="hero-section">
+    <h1 class="headline">Stop Researching.<br><svg class="gradient-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 50"><defs><linearGradient id="gradWin" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1fa8ff"/><stop offset="100%" stop-color="#00e5a8"/></linearGradient></defs><text x="0" y="39" font-family="Outfit,sans-serif" font-size="50" font-weight="800" fill="url(#gradWin)">Start Winning.</text></svg></h1>
+    <p class="sub-headline">Spend less time gathering intel.<br>More time acting on it.</p>
+    <div class="features">
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8h3l2-5 2 10 2-5h3" stroke="#1fa8ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div><div class="feature-title">Instant Battlecards</div><div class="feature-desc">Without the manual work.</div></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="#00e5a8" stroke-width="1.5"/><path d="M8 5.5v2.5l1.5 1.5" stroke="#00e5a8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="feature-title">Competitor Signals</div><div class="feature-desc">Before your team asks.</div></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2.5" width="12" height="11" rx="2" stroke="#a78bfa" stroke-width="1.5"/><path d="M5 7.5h6M5 10.5h4" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="feature-title">Team Intelligence</div><div class="feature-desc">Tailored insights and recommendations.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="section-sep"></div>
+  <div class="cta-section">
+    <div class="qr-wrapper"><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=255-255-255&bgcolor=6-9-19&data=https%3A%2F%2Fusesignallabs.com%2F%3Fscroll%3Dwaitlist" alt="QR Code"></div>
+    <div class="cta-text">Book Demo</div>
+    <span class="url-text">usesignallabs.com</span>
+  </div>
+</div>
+
+<div class="download-bar">
+  <button class="dl-btn" onclick="doCapture('png')">Download PNG</button>
+  <button class="dl-btn" onclick="doCapture('pdf')">Download PDF</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+async function doCapture(format) {
+  const banner = document.querySelector('.banner');
+  const qrImgs = banner.querySelectorAll('img[src^="https://"]');
+  const origSrcs = [];
+
+  for (const img of qrImgs) {
+    origSrcs.push(img.src);
+    try {
+      const resp = await fetch(img.src);
+      const blob = await resp.blob();
+      img.src = URL.createObjectURL(blob);
+    } catch(e) { /* keep original */ }
+  }
+
+  await new Promise(r => setTimeout(r, 300));
+
+  try {
+    const canvas = await html2canvas(banner, {
+      scale: 3,
+      useCORS: true,
+      backgroundColor: '#060913',
+      logging: false
+    });
+
+    if (format === 'png') {
+      const link = document.createElement('a');
+      link.download = 'signal-labs-banner.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    } else {
+      const { jsPDF } = window.jspdf;
+      const imgData = canvas.toDataURL('image/png');
+      const bannerW = banner.offsetWidth;
+      const bannerH = banner.offsetHeight;
+      const pdf = new jsPDF({ orientation: 'portrait', unit: 'px', format: [bannerW, bannerH] });
+      pdf.addImage(imgData, 'PNG', 0, 0, bannerW, bannerH);
+      pdf.save('signal-labs-banner.pdf');
+    }
+  } finally {
+    qrImgs.forEach((img, i) => {
+      if (origSrcs[i]) {
+        URL.revokeObjectURL(img.src);
+        img.src = origSrcs[i];
+      }
+    });
+  }
+}
+</script>
+</body>
+</html>
