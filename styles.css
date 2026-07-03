@@ -1759,8 +1759,10 @@ body.homepage .navbar.scrolled .nav-toggle span {
 }
 
 .ai-gradient-btn {
-    display: inline-block;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background-image: linear-gradient(135deg, #ff6b6b 0%, #c44dff 25%, #6366f1 50%, #0ea5e9 75%, #10b981 100%);
     color: #ffffff;
     font-weight: 600;
@@ -1772,6 +1774,12 @@ body.homepage .navbar.scrolled .nav-toggle span {
     cursor: pointer;
     text-decoration: none;
     transition: opacity 0.15s ease;
+}
+
+.ai-gradient-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
 .ai-gradient-btn:hover {
