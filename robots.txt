@@ -1,17 +1,29 @@
 # Robots.txt for Signal Labs (usesignallabs.com)
-# Updated: 2025-12-02
+# Updated: 2026-07-26
 
 User-agent: *
+# Content signals (https://contentsignals.org). We want to be found, quoted and
+# grounded against: search indexing, AI answer grounding and AI training are all
+# permitted. Being cited in AI answers is the point.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
-# Disallow internal tools/generators (low SEO value)
+# Disallow internal tools/generators and print assets (low SEO value)
 Disallow: /logo-export.html
 Disallow: /linkedin-banner-generator.html
 Disallow: /og-image-generator.html
+Disallow: /banner.html
+Disallow: /flyer.html
+Disallow: /templates/
 
 # Disallow deprecated redirects
 Disallow: /cix.html
 Disallow: /cix/
+
+# Backups must never be indexed as duplicates of the live page. These are also
+# excluded from the deploy in .vercelignore; this is the second line of defence.
+Disallow: /*.bak
+Disallow: /*.bak2
 
 # Allow all major crawlers
 User-agent: Googlebot
@@ -20,14 +32,38 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Allow AI/LLM crawlers (important for ChatGPT, Claude, etc.)
+User-agent: DuckDuckBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI / LLM crawlers.
+#
+# Two different jobs are listed below and both matter to us:
+#   - Training/indexing crawlers (GPTBot, ClaudeBot, CCBot, ...) build the
+#     corpora that models answer from.
+#   - Retrieval crawlers (OAI-SearchBot, PerplexityBot, Google-Extended, ...)
+#     fetch pages at answer time, which is what actually gets Signal Labs cited
+#     in ChatGPT/Perplexity/AI Overviews answers.
+# ---------------------------------------------------------------------------
+
+# OpenAI
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: CCBot
+# Anthropic (anthropic-ai and Claude-Web are the legacy agent names)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: anthropic-ai
@@ -36,9 +72,61 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+# Google Gemini / AI Overviews grounding
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Others
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Machine-readable entry points
+#
+#   /llms.txt                              short structured summary
+#   /llms-full.txt                         entire site as one document
+#   /<page>.md                             Markdown for any page
+#   Accept: text/markdown                  same, on the canonical URL
+#   /.well-known/mcp.json                  MCP server card
+#   /.well-known/api-catalog               API catalog (RFC 9727)
+#   /.well-known/agent-skills/index.json   published Agent Skills
+# ---------------------------------------------------------------------------
+
 # Sitemap location
 Sitemap: https://usesignallabs.com/sitemap.xml
-
-
-
-

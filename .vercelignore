@@ -1,0 +1,22 @@
+# Files that live in the repo but must never be served.
+# Backups are the important case: solutions/leadership.html.bak is a stale copy
+# of a live page, and Vercel would happily serve it at a public URL.
+*.bak
+*.bak2
+*.orig
+*~
+
+# Working notes and strategy docs, not site content.
+*-STRATEGY.md
+*-PLAN.md
+*-GUIDE.md
+SEO-IMPLEMENTATION-PLAN.md
+VERCEL-MIGRATION-GUIDE.md
+README.md
+
+# Source drafts. These are the working copy behind the built pages, they are
+# linked from nowhere, and two of them are unpublished posts that were being
+# served publicly. Leading slash anchors these to the repo root so the
+# generated twins under /md/ are unaffected.
+/content/
+/blog/*.md

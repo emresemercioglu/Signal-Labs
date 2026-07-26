@@ -32,7 +32,7 @@
     <meta property="og:url" content="https://usesignallabs.com/solutions">
     <meta property="og:title" content="Competitive Intelligence Solutions for Every Team | CIx">
     <meta property="og:description" content="Real-time competitive intelligence solutions by team, use case, and industry. From sales and marketing to product and leadership - find your CI solution.">
-    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home-v2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Signal Labs">
@@ -43,7 +43,7 @@
     <meta property="twitter:url" content="https://usesignallabs.com/solutions">
     <meta name="twitter:title" content="Competitive Intelligence Solutions for Every Team | CIx">
     <meta name="twitter:description" content="Real-time competitive intelligence solutions by team, use case, and industry. From sales and marketing to product and leadership - find your CI solution.">
-    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home-v2.png">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,6 +164,7 @@
         .mega-menu-header {
             display: none;
         }
+        .mega-menu-compact{width:240px;left:auto;right:auto;transform:none;position:absolute;top:calc(100% + 10px)}.mega-menu-compact .mega-menu-content{grid-template-columns:1fr;gap:0;padding:20px 24px}@media (max-width:1024px){.mega-menu-compact{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;padding:100px 0 24px}.mega-menu-compact .mega-menu-content{padding:0}}
         
         .mega-menu-back {
             display: none;
@@ -285,8 +286,8 @@
     </style>
     
     <!-- Load full CSS asynchronously -->
-    <link rel="preload" href="../styles.css?v=11" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../styles.css?v=11"></noscript>
+    <link rel="preload" href="../styles.css?v=12" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../styles.css?v=12"></noscript>
     
     <!-- Load fonts asynchronously -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -423,17 +424,44 @@
                         </div>
                     </div>
                 </div>
-                <a href="../services" class="nav-link">CI Services</a>
-                <a href="../about" class="nav-link">About</a>
-                <a href="../blog" class="nav-link">Blog</a>
+                <a href="../pricing" class="nav-link">Pricing</a>
                 <a href="../docs" class="nav-link">Docs</a>
-                <a href="../contact" class="nav-link">Contact</a>
+                <a href="../blog" class="nav-link">Blog</a>
+                <div class="solutions-nav-wrapper">
+                    <a href="../about" class="nav-link solutions-nav-link">
+                        Company
+                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="mega-menu mega-menu-compact">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">COMPANY</h3>
+                                <a href="../about" class="mega-menu-link">About</a>
+                                <a href="../services" class="mega-menu-link">CI Services</a>
+                                <a href="../faq" class="mega-menu-link">FAQ</a>
+                                <a href="../contact" class="mega-menu-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             <div class="nav-actions">
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -455,7 +483,7 @@
                 </p>
                 <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
                     <a href="#by-team" class="btn btn-primary">Explore Solutions</a>
-                    <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-outline">Start Free →</a>
                 </div>
             </div>
         </div>
@@ -491,7 +519,7 @@
                 <p class="section-subtitle">Every team has unique competitive intelligence needs. Explore solutions built specifically for your role and responsibilities.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: var(--space-6);">
                 <style>
                     /* Center the last card (AI Agents) when it's alone in the row */
                     #by-team .container > div > .core-feature-card:last-child {
@@ -803,7 +831,7 @@
                 <p class="section-subtitle">Industry-specific competitive intelligence that understands your market, regulations, and competitive dynamics.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: var(--space-6);">
                 <!-- B2B SaaS -->
                 <div class="core-feature-card" style="display: flex; flex-direction: column;">
                     <div class="core-feature-icon">
@@ -981,7 +1009,7 @@
                 <p class="section-subtitle">From solo founders to enterprise organizations - competitive intelligence solutions that fit your stage and scale.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: var(--space-8); max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr)); gap: var(--space-8); max-width: 1100px; margin: 0 auto;">
                 <!-- Startups -->
                 <div style="background: white; border: 3px solid #3b82f6; border-radius: var(--radius-xl); padding: var(--space-8); position: relative; display: flex; flex-direction: column;">
                     <div style="position: absolute; top: -16px; left: 30px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; padding: 8px 20px; border-radius: 30px; font-size: 14px; font-weight: 700; box-shadow: var(--shadow-md);">STARTUPS</div>
@@ -1023,7 +1051,7 @@
                         </div>
                     </div>
                     
-                    <a href="startups" class="btn btn-primary" style="width: 100%; margin-top: auto;">Learn More →</a>
+                    <a href="/startups" class="btn btn-primary" style="width: 100%; margin-top: auto;">Learn More →</a>
                 </div>
 
                 <!-- Enterprise -->
@@ -1052,7 +1080,7 @@
                     </div>
                     
                     <p style="font-size: var(--font-size-base); color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-6);">
-                        Enterprise-grade competitive intelligence with security, scale, and customization. Integrate your internal data sources (playbooks, call transcripts, sales data, docs), embed CI into existing workflows (Salesforce, Slack, Gong), and scale intelligence across hundreds of users. Custom integrations, SSO/SAML, on-premise options, and dedicated support.
+                        Enterprise-grade competitive intelligence with scale, governance and customization. Integrate your internal data sources (playbooks, call transcripts, sales data, docs), push intelligence into the tools your teams already use, and roll it out across hundreds of users. Custom integrations via our API and MCP server, dedicated support, and security requirements scoped with your team.
                     </p>
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-bottom: var(--space-6); flex-grow: 1;">
@@ -1071,13 +1099,13 @@
                                 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #10b981; font-weight: 700;">✓</span><span style="font-size: var(--font-size-sm); color: var(--text-secondary);">Internal data integration</span></div>
                                 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #10b981; font-weight: 700;">✓</span><span style="font-size: var(--font-size-sm); color: var(--text-secondary);">Workflow embedding (Salesforce, Slack, etc.)</span></div>
                                 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #10b981; font-weight: 700;">✓</span><span style="font-size: var(--font-size-sm); color: var(--text-secondary);">Custom integrations and API access</span></div>
-                                <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #10b981; font-weight: 700;">✓</span><span style="font-size: var(--font-size-sm); color: var(--text-secondary);">Enterprise security (SSO, SAML, on-premise)</span></div>
+                                <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #10b981; font-weight: 700;">✓</span><span style="font-size: var(--font-size-sm); color: var(--text-secondary);">Governance and access control, security scoped with your team</span></div>
                                 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #10b981; font-weight: 700;">✓</span><span style="font-size: var(--font-size-sm); color: var(--text-secondary);">Dedicated customer success manager</span></div>
                             </div>
                         </div>
                     </div>
                     
-                    <a href="enterprise" class="btn btn-primary" style="width: 100%; margin-top: auto;">Learn More →</a>
+                    <a href="/enterprise" class="btn btn-primary" style="width: 100%; margin-top: auto;">Learn More →</a>
                 </div>
             </div>
         </div>
@@ -1095,7 +1123,7 @@
                 <p style="font-size: var(--font-size-xl); color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-8);">
                     We built the competitive intelligence platform we wished existed: real-time, AI-powered, and accessible to every team.
                 </p>
-                <a href="about" class="btn btn-outline" style="padding: 16px 32px; font-size: var(--font-size-lg);">Learn More About Our Mission →</a>
+                <a href="/about" class="btn btn-outline" style="padding: 16px 32px; font-size: var(--font-size-lg);">Learn More About Our Mission →</a>
             </div>
         </div>
     </section>
@@ -1110,7 +1138,7 @@
             
             <div style="max-width: 1000px; margin: 0 auto; display: grid; gap: var(--space-6);">
                 <!-- Comparison 1 -->
-                <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
+                <div class="flow-3col" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
                     <div style="text-align: right;">
                         <div style="display: inline-block; background: var(--bg-secondary); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: var(--space-2);">Traditional Approach</div>
                         <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2);">Quarterly Battlecard Updates</h3>
@@ -1125,7 +1153,7 @@
                 </div>
 
                 <!-- Comparison 2 -->
-                <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
+                <div class="flow-3col" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
                     <div style="text-align: right;">
                         <div style="display: inline-block; background: var(--bg-secondary); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: var(--space-2);">Traditional Approach</div>
                         <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2);">Manual Research</h3>
@@ -1140,7 +1168,7 @@
                 </div>
 
                 <!-- Comparison 3 -->
-                <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
+                <div class="flow-3col" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
                     <div style="text-align: right;">
                         <div style="display: inline-block; background: var(--bg-secondary); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: var(--space-2);">Traditional Approach</div>
                         <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2);">Static PDF Decks</h3>
@@ -1155,7 +1183,7 @@
                 </div>
 
                 <!-- Comparison 4 -->
-                <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
+                <div class="flow-3col" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: var(--space-6); align-items: center; padding: var(--space-8); background: white; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); border: 1px solid var(--border);">
                     <div style="text-align: right;">
                         <div style="display: inline-block; background: var(--bg-secondary); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: var(--space-2);">Traditional Approach</div>
                         <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-2);">Isolated Tool</h3>
@@ -1265,11 +1293,11 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Find Your Competitive Intelligence Solution</h2>
+                <h2>Give your teams a competitive advantage</h2>
                 <p>Whether you're a sales team closing deals, a marketing team positioning your brand, or a startup competing against giants - there's a CIx solution built for you.</p>
                 <div class="cta-buttons">
-                    <a href="https://app.usesignallabs.com" class="btn btn-primary">Start Free Trial →</a>
-                    <a href="contact" class="btn btn-outline">Book a Demo</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary">Start Free →</a>
+                    <a href="/contact" class="btn btn-outline">Book a Demo</a>
                 </div>
             </div>
         </div>
@@ -1312,6 +1340,12 @@
                         <h3>By Size</h3>
                         <a href="../startups">Startups</a>
                         <a href="../enterprise">Enterprise</a>
+                    </div>
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Compare</h3>
+                        <a href="../vs/klue">CIx vs Klue</a>
+                        <a href="../vs/crayon">CIx vs Crayon</a>
+                        <a href="../vs/alphasense">CIx vs AlphaSense</a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1361,6 +1395,12 @@
                             <a href="../startups">Startups</a>
                             <a href="../enterprise">Enterprise</a>
                         </div>
+                        <div class="footer-column footer-hide-mobile" style="margin-top: 40px;">
+                            <h3>Compare</h3>
+                            <a href="../vs/klue">CIx vs Klue</a>
+                            <a href="../vs/crayon">CIx vs Crayon</a>
+                            <a href="../vs/alphasense">CIx vs AlphaSense</a>
+                        </div>
                     </div>
                     
                     <div class="footer-column footer-hide-mobile">
@@ -1374,7 +1414,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+                <p>&copy; 2026 Signal Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1397,27 +1437,59 @@
     <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How is CIx different from traditional CI tools?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CIx is built for real-time competitive intelligence, not quarterly updates. We automate routine monitoring, generate AI-powered battlecards in seconds, and embed CI directly into your workflows (Salesforce, Slack, Gong). Traditional CI tools require manual updates and exist as separate platforms - CIx meets your teams where they work."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need a dedicated CI team to use CIx?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. CIx is designed for both dedicated CI teams and companies without CI resources. Solo founders, lean startups, and individual contributors can use CIx effectively. For enterprises with CI teams, CIx amplifies their impact by automating routine work."
-          }
-        }
-      ]
-    }
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "How is CIx different from traditional CI tools?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "CIx is built for real-time competitive intelligence, not quarterly updates. We automate routine monitoring, generate AI-powered battlecards in seconds, and embed CI directly into your workflows (Salesforce, Slack, Gong). Traditional CI tools require manual updates and exist as separate platforms - CIx meets your teams where they work."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Do I need a dedicated CI team to use CIx?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "No. CIx is designed for both dedicated CI teams and companies without CI resources. Solo founders, lean startups, and individual contributors can use CIx effectively. For enterprises with CI teams, CIx amplifies their impact by automating routine work."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Which solution is right for me?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Start with your role or team. If you're in sales, explore /solutions/sales. If you're solving a specific problem (like sales enablement), explore /use-cases/sales-enablement. If your industry has unique needs (like legal or healthcare), explore industry-specific solutions. All solutions are powered by the same CIx platform."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Can I customize CIx for my company?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. CIx is fully customizable. You can add your own playbooks, integrate internal data sources (call transcripts, sales notes, docs), tailor battlecard templates, and configure intelligence for your brand's tone and perspective."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "How long does implementation take?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Most teams are up and running the same day. Add competitors, generate battlecards, and start enabling teams within hours. Enterprise implementations with custom integrations typically take 1-2 weeks."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "What integrations does CIx support?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "CIx integrates with Salesforce, HubSpot, Slack, Microsoft Teams, Gong, Chorus, Highspot, Seismic, Guru, and more. Enterprise customers can build custom integrations via API."
+                        }
+                }
+        ]
+}
     </script>
     
     <!-- LinkedIn Insight Tag -->
@@ -1537,7 +1609,7 @@
     <!-- Mega Menu Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsWrapper = null; // superseded by the multi-dropdown nav script below
             const solutionsLink = document.querySelector('.solutions-nav-link');
             const megaMenu = document.querySelector('.mega-menu');
             const closeButton = document.querySelector('.mega-menu-close');
@@ -1692,6 +1764,117 @@
         }
       ]
     }
+    </script>
+    <!-- Nav Dropdowns (multi-instance: Solutions + Company) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navMenu = document.getElementById('nav-menu');
+            const wrappers = document.querySelectorAll('.solutions-nav-wrapper');
+            if (!navMenu || !wrappers.length) return;
+
+            const isMobile = () => window.innerWidth <= 1024;
+            const panels = [];
+
+            wrappers.forEach(function(wrapper) {
+                const trigger = wrapper.querySelector('.solutions-nav-link');
+                const menu = wrapper.querySelector('.mega-menu');
+                if (!trigger || !menu) return;
+
+                let timeout;
+                menu.style.visibility = 'hidden';
+                menu.style.opacity = '0';
+                menu.style.display = 'none';
+
+                function close() {
+                    menu.style.visibility = 'hidden';
+                    menu.style.opacity = '0';
+                    setTimeout(function() { menu.style.display = 'none'; }, 300);
+                }
+
+                function open() {
+                    // Only one dropdown may be open at a time.
+                    panels.forEach(function(p) { if (p.menu !== menu) p.close(); });
+                    menu.style.display = 'block';
+                    menu.offsetHeight;
+                    menu.style.visibility = 'visible';
+                    menu.style.opacity = '1';
+                }
+
+                function isOpen() {
+                    return menu.style.visibility === 'visible' || menu.style.display === 'block';
+                }
+
+                panels.push({ menu: menu, close: close, isOpen: isOpen });
+
+                if (!isMobile()) {
+                    wrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        open();
+                    });
+                    wrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!menu.matches(':hover')) close();
+                        }, 100);
+                    });
+                    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+                    menu.addEventListener('mouseleave', close);
+                }
+
+                trigger.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        isOpen() ? close() : open();
+                    }
+                }, true);
+
+                const closeButton = menu.querySelector('.mega-menu-close');
+                const backButton = menu.querySelector('.mega-menu-back');
+
+                if (closeButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        closeButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                            navMenu.classList.remove('active');
+                        });
+                    });
+                }
+
+                if (backButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        backButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                        });
+                    });
+                }
+
+                menu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobile()) {
+                            close();
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const navToggle = document.getElementById('nav-toggle');
+                if (navToggle && navToggle.contains(e.target) && isMobile()) {
+                    panels.forEach(function(p) { p.close(); });
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (!isMobile()) {
+                    panels.forEach(function(p) { if (p.isOpen()) p.close(); });
+                }
+            });
+        });
     </script>
 </body>
 </html>

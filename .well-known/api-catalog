@@ -1,0 +1,55 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://app.usesignallabs.com/api/v1",
+      "service-desc": [
+        {
+          "href": "https://app.usesignallabs.com/api/v1/openapi.json",
+          "type": "application/json",
+          "title": "Signal Labs CIx REST API - OpenAPI description"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://usesignallabs.com/docs",
+          "type": "text/html",
+          "title": "Signal Labs API documentation"
+        },
+        {
+          "href": "https://usesignallabs.com/docs.md",
+          "type": "text/markdown",
+          "title": "Signal Labs API documentation (Markdown)"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://usesignallabs.com/.well-known/mcp.json",
+          "type": "application/json",
+          "title": "MCP server card"
+        },
+        {
+          "href": "https://usesignallabs.com/llms.txt",
+          "type": "text/plain",
+          "title": "LLM-friendly site and product summary"
+        }
+      ]
+    },
+    {
+      "anchor": "https://usesignallabs.com/.well-known/mcp.json",
+      "service-doc": [
+        {
+          "href": "https://usesignallabs.com/docs/mcp",
+          "type": "text/html",
+          "title": "Signal Labs MCP server - setup and tools"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://usesignallabs.com/.well-known/agent-skills/index.json",
+          "type": "application/json",
+          "title": "Agent Skills published by Signal Labs"
+        }
+      ]
+    }
+  ]
+}

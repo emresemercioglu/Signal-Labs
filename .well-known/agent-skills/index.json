@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "signal-labs",
+      "type": "skill-md",
+      "description": "Query and manage competitive intelligence through Signal Labs CIx \u2014 track competitors, read scored competitive signals, generate battlecards and landscape analyses, and ask questions about a competitive landscape. Use when the user asks about tracking or researching competitors, wants a battlecard or competitor comparison, mentions Signal Labs or CIx, needs recent competitor news or product/pricing changes, or is preparing sales enablement material for a competitive deal. Also covers reading usesignallabs.com content as Markdown without authentication.",
+      "url": "https://usesignallabs.com/.well-known/agent-skills/signal-labs/SKILL.md",
+      "digest": "sha256:71a46ba40065e2f074ea3e56d6531f22eb67887ed5267dae898012fb99e89821"
+    }
+  ]
+}

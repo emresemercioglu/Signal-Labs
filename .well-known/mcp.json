@@ -17,6 +17,11 @@
   "docs": {
     "url": "https://usesignallabs.com/docs",
     "llms_txt": "https://usesignallabs.com/llms.txt",
-    "llms_full_txt": "https://usesignallabs.com/llms-full.txt"
+    "llms_full_txt": "https://usesignallabs.com/llms-full.txt",
+    "markdown": "Append .md to any page URL, or send Accept: text/markdown"
+  },
+  "discovery": {
+    "api_catalog": "https://usesignallabs.com/.well-known/api-catalog",
+    "agent_skills": "https://usesignallabs.com/.well-known/agent-skills/index.json"
   }
 }

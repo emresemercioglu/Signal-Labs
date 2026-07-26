@@ -32,7 +32,7 @@
     <meta property="og:url" content="https://usesignallabs.com/use-cases/competitor-monitoring">
     <meta property="og:title" content="Real-Time Competitor Monitoring | 24/7 Competitive Tracking">
     <meta property="og:description" content="Never miss a competitor move. 24/7 real-time monitoring of websites, pricing, products, press, and social media. Instant alerts when competitors change.">
-    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home-v2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Signal Labs">
@@ -43,7 +43,7 @@
     <meta property="twitter:url" content="https://usesignallabs.com/use-cases/competitor-monitoring">
     <meta name="twitter:title" content="Real-Time Competitor Monitoring | 24/7 Competitive Tracking">
     <meta name="twitter:description" content="Never miss a competitor move. 24/7 real-time monitoring of websites, pricing, products, press, and social media.">
-    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home-v2.png">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,8 +289,12 @@
                 grid-template-columns: 1fr !important;
             }
             
+            /* minmax(0, 1fr) rather than 1fr: the stat labels have a wide
+               min-content width and were inflating the tracks past the viewport
+               instead of wrapping inside them, which gave the whole page a
+               ~90px horizontal scroll on phones. */
             .roi-stats-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
                 gap: var(--space-4) !important;
             }
             
@@ -308,6 +312,14 @@
             
             .related-solutions-grid {
                 grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Three stats side by side leaves ~100px per column on a phone, which
+           breaks the labels onto four lines each. Stack them instead. */
+        @media (max-width: 560px) {
+            .roi-stats-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
             }
         }
         
@@ -419,6 +431,7 @@
         .mega-menu-header {
             display: none;
         }
+        .mega-menu-compact{width:240px;left:auto;right:auto;transform:none;position:absolute;top:calc(100% + 10px)}.mega-menu-compact .mega-menu-content{grid-template-columns:1fr;gap:0;padding:20px 24px}@media (max-width:1024px){.mega-menu-compact{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;padding:100px 0 24px}.mega-menu-compact .mega-menu-content{padding:0}}
         
         @media (max-width: 1024px) {
             .mega-menu-header {
@@ -524,65 +537,65 @@
     </style>
     
     <!-- External Resources -->
-    <link rel="stylesheet" href="../styles.css?v=11">
+    <link rel="stylesheet" href="../styles.css?v=12">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does CIx connect competitive moves to market trends?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CIx aggregates industry news, analyst reports, regulatory changes, and market signals alongside competitive intelligence. AI-powered correlation analysis links competitor actions (pricing changes, feature launches, market entries) to broader market forces, helping you understand the 'why' behind competitive behavior."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What sources does CIx monitor for market intelligence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CIx monitors industry news sites, analyst reports (Gartner, Forrester), financial data (funding, earnings), regulatory sources, social media sentiment, and competitive intelligence sources. All intelligence is aggregated in one platform, eliminating manual research across disconnected tools."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is market intelligence different from competitive intelligence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Competitive Intelligence tells you WHAT competitors do. Market Intelligence tells you WHY they're doing it. CIx provides both in one platform—track competitor actions while understanding the market forces, industry trends, and strategic context driving those actions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who should own market intelligence in our organization?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Typically Strategy, Competitive Intelligence, or Product Marketing teams. Market intelligence benefits Leadership (strategic planning), Product (market-driven roadmaps), Marketing (positioning and messaging), and Sales (market context for deals)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How often is market intelligence updated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CIx monitors market intelligence sources continuously in real-time. Industry news, analyst reports, regulatory changes, and competitive moves are tracked as they happen—no more waiting for quarterly market research reports or manually aggregating intelligence across dozens of sources."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can we predict competitive moves with market intelligence?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. By analyzing market trends alongside competitive behavior patterns, CIx identifies signals that precede competitor moves. See which market forces correlate with pricing changes, feature launches, or market entries—allowing you to anticipate rather than react."
-          }
-        }
-      ]
-    }
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+                {
+                        "@type": "Question",
+                        "name": "What competitor changes does CIx monitor?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "CIx watches each competitor's website and product pages, pricing, feature and product launches, funding and acquisitions, hiring activity, press and public content. Every change it finds becomes a signal, scored 1-10 for importance and linked back to the exact page or article it came from."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "How quickly do we hear about a competitor move?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Continuously. CIx re-checks each competitor on its own schedule rather than waiting for someone to run a report, so new signals appear in the feed as they are detected and the affected sections of that competitor's page rewrite themselves. Nobody on your team has to refresh anything."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "How do we know which changes actually matter?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Every signal carries an importance score, so a repositioned homepage headline doesn't read the same as a new pricing tier. The moves that matter also arrive with a recommended action - update this battlecard, revise this comparison page, send this competitive email - waiting in your actions inbox, so monitoring turns into work that ships."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Can we trust what CIx tells us about a competitor?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, and you can check it. Every claim on a competitor page and every signal in the feed links to the source it was taken from, so a rep can verify a pricing or feature claim before repeating it to a customer instead of trusting an unattributed summary."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "How do we know which competitors we should be monitoring?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "CIx suggests them. It analyses your website and category and proposes competitors at both the company and the product level, with its reasoning for each one, so you catch the product-level rivals that don't show up in a company-level list. Add the ones that matter and CIx builds a living page for each."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "How many competitors can we monitor?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The free plan tracks one competitor with real-time signals and a monthly battlecard, with no credit card and no expiry. Team plans are scoped to the number of competitors you track and the number of people who need seats - talk to us and we'll quote it on the call."
+                        }
+                }
+        ]
+}
     </script>
 </head>
 <body>
@@ -699,17 +712,44 @@
                     </div>
                 </div>
                 
-                <a href="../services" class="nav-link">CI Services</a>
-                <a href="../about" class="nav-link">About</a>
-                <a href="../blog" class="nav-link">Blog</a>
+                <a href="../pricing" class="nav-link">Pricing</a>
                 <a href="../docs" class="nav-link">Docs</a>
-                <a href="../contact" class="nav-link">Contact</a>
+                <a href="../blog" class="nav-link">Blog</a>
+                <div class="solutions-nav-wrapper">
+                    <a href="../about" class="nav-link solutions-nav-link">
+                        Company
+                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="mega-menu mega-menu-compact">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">COMPANY</h3>
+                                <a href="../about" class="mega-menu-link">About</a>
+                                <a href="../services" class="mega-menu-link">CI Services</a>
+                                <a href="../faq" class="mega-menu-link">FAQ</a>
+                                <a href="../contact" class="mega-menu-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             <div class="nav-actions">
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -732,7 +772,7 @@
                 </p>
                 <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
                     <a href="../contact" class="btn btn-primary btn-lg">Book Demo</a>
-                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free →</a>
                 </div>
             </div>
         </div>
@@ -926,6 +966,15 @@
                     }
                     .blip-tag {
                         font-size: 8px;
+                    }
+                }
+
+                /* A single-line label is ~200px wide, so once the radar itself
+                   is under ~300px the labels ran off the side of the page. */
+                @media (max-width: 380px) {
+                    .blip-label {
+                        white-space: normal;
+                        max-width: 140px;
                     }
                 }
             </style>
@@ -1336,7 +1385,7 @@
                 </p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8);">
                 <!-- Competitor News Integration -->
                 <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
@@ -1654,7 +1703,7 @@
 
             <div class="roi-stats-box" style="background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%); border-radius: var(--radius-xl); padding: var(--space-10); color: white; text-align: center;">
                 <h3 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-6); color: white;">Competitor Monitoring Impact</h3>
-                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6);">
+                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: var(--space-6);">
                     <div>
                         <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: 4px;">Manual Tracking Eliminated</p>
                         <p style="font-size: 2.5rem; font-weight: 700;">Automate it</p>
@@ -1676,6 +1725,145 @@
     </section>
 
 
+<section class="content-section" style="border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Know who you should be watching</h2>
+                <p class="section-subtitle">CIx suggests the competitors you should be tracking, then builds a living page for each one you add.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="features-showcase reverse">
+                <div class="showcase-content">
+                    <div class="showcase-text">
+                        <h3>Automated Competitor Discovery</h3>
+                        <p>Automatically identify and analyze competitors with AI-powered suggestions. Get comprehensive competitor profiles at both company and product levels with detailed reasoning.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg></div>
+                                <span>AI-powered competitor identification</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                                <span>Company & product-level analysis</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+                                <span>Comprehensive competitor profiling</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="product-mockup competitor-discovery-mockup">
+                            <div style="padding: 16px 24px;">
+                                <div class="competitor-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                    <!-- Company-level competitors -->
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 28px; height: 28px; background: #dbeafe; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2563eb; font-weight: 600; font-size: 12px;">H</div>
+                                                <div>
+                                                    <div style="font-weight: 600; color: #1f2937; font-size: 12px;">Hooli</div>
+                                                    <div style="font-size: 9px; color: #6b7280;">hooli.com</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end;">
+                                                <span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Direct</span>
+                                                <span style="background: #f3f4f6; color: #6b7280; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Company</span>
+                                            </div>
+                                        </div>
+                                        <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Enterprise search and AI platform for market intelligence.</p>
+                                    </div>
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 28px; height: 28px; background: #dcfce7; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #16a34a; font-weight: 600; font-size: 12px;">P</div>
+                                                <div>
+                                                    <div style="font-weight: 600; color: #1f2937; font-size: 12px;">Pied Piper</div>
+                                                    <div style="font-size: 9px; color: #6b7280;">piedpiper.com</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end;">
+                                                <span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Direct</span>
+                                                <span style="background: #f3f4f6; color: #6b7280; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Company</span>
+                                            </div>
+                                        </div>
+                                        <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Compression-based data platform with CI features.</p>
+                                    </div>
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 28px; height: 28px; background: #f3e8ff; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #7c3aed; font-weight: 600; font-size: 12px;">A</div>
+                                                <div>
+                                                    <div style="font-weight: 600; color: #1f2937; font-size: 12px;">Acme Corp</div>
+                                                    <div style="font-size: 9px; color: #6b7280;">acmecorp.com</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end;">
+                                                <span style="background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Indirect</span>
+                                                <span style="background: #f3f4f6; color: #6b7280; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Company</span>
+                                            </div>
+                                        </div>
+                                        <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Enterprise CI platform with win-loss analysis.</p>
+                                    </div>
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 28px; height: 28px; background: #fed7aa; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #ea580c; font-weight: 600; font-size: 12px;">G</div>
+                                                <div>
+                                                    <div style="font-weight: 600; color: #1f2937; font-size: 12px;">Globex Corp</div>
+                                                    <div style="font-size: 9px; color: #6b7280;">globexcorp.com</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end;">
+                                                <span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Direct</span>
+                                                <span style="background: #f3f4f6; color: #6b7280; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Company</span>
+                                            </div>
+                                        </div>
+                                        <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">CI and competitive monitoring platform.</p>
+                                    </div>
+                                    <!-- Product-level competitors -->
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 28px; height: 28px; background: #dbeafe; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2563eb; font-weight: 600; font-size: 12px;">H</div>
+                                                <div>
+                                                    <div style="font-weight: 600; color: #1f2937; font-size: 12px;">Hooli Analytics</div>
+                                                    <div style="font-size: 9px; color: #6b7280;">hooli.com/analytics</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end;">
+                                                <span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Direct</span>
+                                                <span style="background: #f3f4f6; color: #6b7280; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Product</span>
+                                            </div>
+                                        </div>
+                                        <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Hooli's analytics module competing with CIx dashboards.</p>
+                                    </div>
+                                    <div class="competitor-card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <div style="width: 28px; height: 28px; background: #dcfce7; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #16a34a; font-weight: 600; font-size: 12px;">P</div>
+                                                <div>
+                                                    <div style="font-weight: 600; color: #1f2937; font-size: 12px;">Pied Piper CI</div>
+                                                    <div style="font-size: 9px; color: #6b7280;">piedpiper.com/ci</div>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: 3px; align-items: flex-end;">
+                                                <span style="background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Indirect</span>
+                                                <span style="background: #f3f4f6; color: #6b7280; padding: 2px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Product</span>
+                                            </div>
+                                        </div>
+                                        <p style="color: #6b7280; font-size: 10px; line-height: 1.3; margin-bottom: 0;">Pied Piper's CI module for sales enablement teams.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="content-section" style="background: var(--bg-secondary);">
         <div class="container" style="max-width: 900px;">
@@ -1693,67 +1881,67 @@
                     </button>
                     <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
                         <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
-                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx aggregates industry news, analyst reports, regulatory changes, and market signals alongside competitive intelligence. AI-powered correlation analysis links competitor actions (pricing changes, feature launches, market entries) to broader market forces, helping you understand the "why" behind competitive behavior.</p>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx watches each competitor's website and product pages, pricing, feature and product launches, funding and acquisitions, hiring activity, press and public content. Every change it finds becomes a signal, scored 1-10 for importance and linked back to the exact page or article it came from.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
                     <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">What sources does CIx monitor for market intelligence?</h3>
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How quickly do we hear about a competitor move?</h3>
                         <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
                     </button>
                     <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
                         <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
-                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx monitors industry news sites, analyst reports (Gartner, Forrester), financial data (funding, earnings), regulatory sources, social media sentiment, and competitive intelligence sources. All intelligence is aggregated in one platform, eliminating manual research across disconnected tools.</p>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Continuously. CIx re-checks each competitor on its own schedule rather than waiting for someone to run a report, so new signals appear in the feed as they are detected and the affected sections of that competitor's page rewrite themselves. Nobody on your team has to refresh anything.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
                     <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How is market intelligence different from competitive intelligence?</h3>
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How do we know which changes actually matter?</h3>
                         <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
                     </button>
                     <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
                         <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
-                            <p style="color: var(--text-secondary); line-height: 1.7;">Competitive Intelligence tells you WHAT competitors do. Market Intelligence tells you WHY they're doing it. CIx provides both in one platform—track competitor actions while understanding the market forces, industry trends, and strategic context driving those actions.</p>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Every signal carries an importance score, so a repositioned homepage headline doesn't read the same as a new pricing tier. The moves that matter also arrive with a recommended action - update this battlecard, revise this comparison page, send this competitive email - waiting in your actions inbox, so monitoring turns into work that ships.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
                     <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Who should own market intelligence in our organization?</h3>
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Can we trust what CIx tells us about a competitor?</h3>
                         <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
                     </button>
                     <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
                         <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
-                            <p style="color: var(--text-secondary); line-height: 1.7;">Typically Strategy, Competitive Intelligence, or Product Marketing teams. Market intelligence benefits Leadership (strategic planning), Product (market-driven roadmaps), Marketing (positioning and messaging), and Sales (market context for deals).</p>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">Yes, and you can check it. Every claim on a competitor page and every signal in the feed links to the source it was taken from, so a rep can verify a pricing or feature claim before repeating it to a customer instead of trusting an unattributed summary.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
                     <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How often is market intelligence updated?</h3>
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How do we know which competitors we should be monitoring?</h3>
                         <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
                     </button>
                     <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
                         <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
-                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx monitors market intelligence sources continuously in real-time. Industry news, analyst reports, regulatory changes, and competitive moves are tracked as they happen—no more waiting for quarterly market research reports or manually aggregating intelligence across dozens of sources.</p>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">CIx suggests them. It analyses your website and category and proposes competitors at both the company and the product level, with its reasoning for each one, so you catch the product-level rivals that don't show up in a company-level list. Add the ones that matter and CIx builds a living page for each.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-item-collapsible" style="background: white; border-radius: var(--radius-lg); margin-bottom: var(--space-4); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
                     <button class="faq-toggle" style="width: 100%; padding: var(--space-6); text-align: left; background: transparent; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">Can we predict competitive moves with market intelligence?</h3>
+                        <h3 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0;">How many competitors can we monitor?</h3>
                         <span class="faq-icon" style="font-size: var(--font-size-2xl); color: var(--text-primary); transition: transform 0.3s ease;">+</span>
                     </button>
                     <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
                         <div style="padding: 0 var(--space-6) var(--space-6) var(--space-6);">
-                            <p style="color: var(--text-secondary); line-height: 1.7;">Yes. By analyzing market trends alongside competitive behavior patterns, CIx identifies signals that precede competitor moves. See which market forces correlate with pricing changes, feature launches, or market entries—allowing you to anticipate rather than react.</p>
+                            <p style="color: var(--text-secondary); line-height: 1.7;">The free plan tracks one competitor with real-time signals and a monthly battlecard, with no credit card and no expiry. Team plans are scoped to the number of competitors you track and the number of people who need seats - talk to us and we'll quote it on the call.</p>
                         </div>
                     </div>
                 </div>
@@ -1769,7 +1957,7 @@
                     Competitive Intelligence Across Functions
                 </h2>
                 <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
-                    Sales enablement works best when aligned with other functions
+                    Competitive intelligence works best when every team is reading the same page
                 </p>
             </div>
 
@@ -1862,7 +2050,7 @@
                 <h2 class="cta-title">Stop Manual Checking. Start 24/7 Monitoring.</h2>
                 <p class="cta-subtitle">Never miss a competitor move again. Automated monitoring with instant alerts for every change.</p>
                 <div class="cta-buttons">
-                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
                     <a href="../contact" class="btn btn-outline btn-lg">Book Demo</a>
                 </div>
             </div>
@@ -1906,6 +2094,12 @@
                         <h3>By Size</h3>
                         <a href="../startups">Startups</a>
                         <a href="../enterprise">Enterprise</a>
+                    </div>
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Compare</h3>
+                        <a href="../vs/klue">CIx vs Klue</a>
+                        <a href="../vs/crayon">CIx vs Crayon</a>
+                        <a href="../vs/alphasense">CIx vs AlphaSense</a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1955,6 +2149,12 @@
                             <a href="../startups">Startups</a>
                             <a href="../enterprise">Enterprise</a>
                         </div>
+                        <div class="footer-column footer-hide-mobile" style="margin-top: 40px;">
+                            <h3>Compare</h3>
+                            <a href="../vs/klue">CIx vs Klue</a>
+                            <a href="../vs/crayon">CIx vs Crayon</a>
+                            <a href="../vs/alphasense">CIx vs AlphaSense</a>
+                        </div>
                     </div>
                     
                     <div class="footer-column footer-hide-mobile">
@@ -1968,7 +2168,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+                <p>&copy; 2026 Signal Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1979,7 +2179,7 @@
     <!-- Mega Menu Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsWrapper = null; // superseded by the multi-dropdown nav script below
             const solutionsLink = document.querySelector('.solutions-nav-link');
             const megaMenu = document.querySelector('.mega-menu');
             const navMenu = document.getElementById('nav-menu');
@@ -2231,6 +2431,146 @@
         }
       ]
     }
+    </script>
+    <!-- Nav Dropdowns (multi-instance: Solutions + Company) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navMenu = document.getElementById('nav-menu');
+            const wrappers = document.querySelectorAll('.solutions-nav-wrapper');
+            if (!navMenu || !wrappers.length) return;
+
+            const isMobile = () => window.innerWidth <= 1024;
+            const panels = [];
+
+            wrappers.forEach(function(wrapper) {
+                const trigger = wrapper.querySelector('.solutions-nav-link');
+                const menu = wrapper.querySelector('.mega-menu');
+                if (!trigger || !menu) return;
+
+                let timeout;
+                menu.style.visibility = 'hidden';
+                menu.style.opacity = '0';
+                menu.style.display = 'none';
+
+                function close() {
+                    menu.style.visibility = 'hidden';
+                    menu.style.opacity = '0';
+                    setTimeout(function() { menu.style.display = 'none'; }, 300);
+                }
+
+                function open() {
+                    // Only one dropdown may be open at a time.
+                    panels.forEach(function(p) { if (p.menu !== menu) p.close(); });
+                    menu.style.display = 'block';
+                    menu.offsetHeight;
+                    menu.style.visibility = 'visible';
+                    menu.style.opacity = '1';
+                }
+
+                function isOpen() {
+                    return menu.style.visibility === 'visible' || menu.style.display === 'block';
+                }
+
+                panels.push({ menu: menu, close: close, isOpen: isOpen });
+
+                if (!isMobile()) {
+                    wrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        open();
+                    });
+                    wrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!menu.matches(':hover')) close();
+                        }, 100);
+                    });
+                    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+                    menu.addEventListener('mouseleave', close);
+                }
+
+                trigger.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        isOpen() ? close() : open();
+                    }
+                }, true);
+
+                const closeButton = menu.querySelector('.mega-menu-close');
+                const backButton = menu.querySelector('.mega-menu-back');
+
+                if (closeButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        closeButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                            navMenu.classList.remove('active');
+                        });
+                    });
+                }
+
+                if (backButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        backButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                        });
+                    });
+                }
+
+                menu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobile()) {
+                            close();
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const navToggle = document.getElementById('nav-toggle');
+                if (navToggle && navToggle.contains(e.target) && isMobile()) {
+                    panels.forEach(function(p) { p.close(); });
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (!isMobile()) {
+                    panels.forEach(function(p) { if (p.isOpen()) p.close(); });
+                }
+            });
+        });
+    </script>
+    <!-- Reveal-on-scroll for the relocated showcase mockup. Its cards/rows start
+         at opacity 0 in styles.css and only animate in once the container gets
+         .animate-in, which used to be applied by a script on the homepage. -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var targets = [];
+            var feed = document.getElementById('signal-feed');
+            if (feed) targets.push(feed);
+            var grid = document.querySelector('.competitor-grid');
+            if (grid) targets.push(grid);
+            if (!targets.length) return;
+
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach(function(t) { t.classList.add('animate-in'); });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            targets.forEach(function(t) { observer.observe(t); });
+        });
     </script>
 </body>
 </html>

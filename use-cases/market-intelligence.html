@@ -32,7 +32,7 @@
     <meta property="og:url" content="https://usesignallabs.com/use-cases/market-intelligence">
     <meta property="og:title" content="Market Intelligence Platform | Competitive & Market Intelligence">
     <meta property="og:description" content="Track market trends, industry dynamics, and competitive movements. Understand how competitive moves connect to broader market forces.">
-    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home-v2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Signal Labs">
@@ -43,7 +43,7 @@
     <meta property="twitter:url" content="https://usesignallabs.com/use-cases/market-intelligence">
     <meta name="twitter:title" content="Market Intelligence Platform | Competitive & Market Intelligence">
     <meta name="twitter:description" content="Track market trends, industry dynamics, and competitive movements. Connect competitive intelligence to broader market forces.">
-    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home-v2.png">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,8 +289,12 @@
                 grid-template-columns: 1fr !important;
             }
             
+            /* minmax(0, 1fr) rather than 1fr: the stat labels have a wide
+               min-content width and were inflating the tracks past the viewport
+               instead of wrapping inside them, which gave the whole page a
+               ~90px horizontal scroll on phones. */
             .roi-stats-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
                 gap: var(--space-4) !important;
             }
             
@@ -308,6 +312,14 @@
             
             .related-solutions-grid {
                 grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Three stats side by side leaves ~100px per column on a phone, which
+           breaks the labels onto four lines each. Stack them instead. */
+        @media (max-width: 560px) {
+            .roi-stats-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
             }
         }
         
@@ -419,6 +431,7 @@
         .mega-menu-header {
             display: none;
         }
+        .mega-menu-compact{width:240px;left:auto;right:auto;transform:none;position:absolute;top:calc(100% + 10px)}.mega-menu-compact .mega-menu-content{grid-template-columns:1fr;gap:0;padding:20px 24px}@media (max-width:1024px){.mega-menu-compact{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;padding:100px 0 24px}.mega-menu-compact .mega-menu-content{padding:0}}
         
         @media (max-width: 1024px) {
             .mega-menu-header {
@@ -524,7 +537,7 @@
     </style>
     
     <!-- External Resources -->
-    <link rel="stylesheet" href="../styles.css?v=11">
+    <link rel="stylesheet" href="../styles.css?v=12">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     
     <!-- Schema.org Structured Data -->
@@ -699,17 +712,44 @@
                     </div>
                 </div>
                 
-                <a href="../services" class="nav-link">CI Services</a>
-                <a href="../about" class="nav-link">About</a>
-                <a href="../blog" class="nav-link">Blog</a>
+                <a href="../pricing" class="nav-link">Pricing</a>
                 <a href="../docs" class="nav-link">Docs</a>
-                <a href="../contact" class="nav-link">Contact</a>
+                <a href="../blog" class="nav-link">Blog</a>
+                <div class="solutions-nav-wrapper">
+                    <a href="../about" class="nav-link solutions-nav-link">
+                        Company
+                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="mega-menu mega-menu-compact">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">COMPANY</h3>
+                                <a href="../about" class="mega-menu-link">About</a>
+                                <a href="../services" class="mega-menu-link">CI Services</a>
+                                <a href="../faq" class="mega-menu-link">FAQ</a>
+                                <a href="../contact" class="mega-menu-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             <div class="nav-actions">
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -732,7 +772,7 @@
                 </p>
                 <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
                     <a href="../contact" class="btn btn-primary btn-lg">Book Demo</a>
-                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free →</a>
                 </div>
             </div>
         </div>
@@ -1378,7 +1418,7 @@
                 </p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8);">
                 <!-- Industry News Integration -->
                 <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
@@ -1694,7 +1734,7 @@
 
             <div class="roi-stats-box" style="background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%); border-radius: var(--radius-xl); padding: var(--space-10); color: white; text-align: center;">
                 <h3 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-6); color: white;">Market Intelligence ROI</h3>
-                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6);">
+                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: var(--space-6);">
                     <div>
                         <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: 4px;">Research Time Savings</p>
                         <p style="font-size: 2.5rem; font-weight: 700;">Reclaim it</p>
@@ -1715,6 +1755,126 @@
         </div>
     </section>
 
+
+<section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A real-time feed of every competitor move</h2>
+                <p class="section-subtitle">Websites, launches, pricing, funding, hiring and news - scored for importance so you read what matters.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="features-showcase">
+                <div class="showcase-content">
+                    <div class="showcase-text">
+                        <h3>Real-Time Signal Feed</h3>
+                        <p>Real-time competitive intelligence with 24/7 competitor monitoring. Track competitor websites, pricing changes, product updates, and market movements automatically.</p>
+                        <div class="feature-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+                                <span>Website & product monitoring</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                                <span>Pricing change alerts</span>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></div>
+                                <span>Press and social media tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="product-mockup dashboard-mockup" id="signal-feed">
+                            <!-- Signal Items -->
+                            <div style="padding: 12px 24px;">
+                                <!-- Signal 1 -->
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                    <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                                    </div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; color: #1f2937; font-size: 13px; margin-bottom: 4px;">Hooli Launches Analytics Dashboard</div>
+                                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 4px;">
+                                            <span style="font-size: 10px; color: #6b7280;">Hooli</span>
+                                            <span style="background: #dbeafe; color: #1e40af; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Product Launch</span>
+                                            <span style="background: #fed7aa; color: #9a3412; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 600;">8/10</span>
+                                            <span style="font-size: 10px; color: #9ca3af;">2 hours ago</span>
+                                        </div>
+                                        <div style="font-size: 11px; color: #6b7280; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">New AI analytics dashboard targeting enterprise customers with predictive insights.</div>
+                                    </div>
+                                </div>
+                                <!-- Signal 2 -->
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                    <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                                    </div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; color: #1f2937; font-size: 13px; margin-bottom: 4px;">Pied Piper Drops Enterprise Pricing 20%</div>
+                                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 4px;">
+                                            <span style="font-size: 10px; color: #6b7280;">Pied Piper</span>
+                                            <span style="background: #fee2e2; color: #991b1b; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Pricing Change</span>
+                                            <span style="background: #fed7aa; color: #9a3412; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 600;">9/10</span>
+                                            <span style="font-size: 10px; color: #9ca3af;">5 hours ago</span>
+                                        </div>
+                                        <div style="font-size: 11px; color: #6b7280; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">20% reduction in enterprise tier, positioning aggressively against mid-market competitors with volume discounts.</div>
+                                    </div>
+                                </div>
+                                <!-- Signal 3 -->
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                    <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                                    </div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; color: #1f2937; font-size: 13px; margin-bottom: 4px;">Acme Corp Partners with Salesforce</div>
+                                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 4px;">
+                                            <span style="font-size: 10px; color: #6b7280;">Acme Corp</span>
+                                            <span style="background: #f3e8ff; color: #6b21a8; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Partnership</span>
+                                            <span style="background: #fef3c7; color: #92400e; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 600;">7/10</span>
+                                            <span style="font-size: 10px; color: #9ca3af;">1 day ago</span>
+                                        </div>
+                                        <div style="font-size: 11px; color: #6b7280; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Strategic partnership for native CRM integration, expanding enterprise GTM reach and sales enablement capabilities.</div>
+                                    </div>
+                                </div>
+                                <!-- Signal 4 -->
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f3f4f6;">
+                                    <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                                    </div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; color: #1f2937; font-size: 13px; margin-bottom: 4px;">Globex Publishes CI Platform Guide</div>
+                                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 4px;">
+                                            <span style="font-size: 10px; color: #6b7280;">Globex Corp</span>
+                                            <span style="background: #fef3c7; color: #92400e; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Thought Leadership</span>
+                                            <span style="background: #fef3c7; color: #92400e; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 600;">6/10</span>
+                                            <span style="font-size: 10px; color: #9ca3af;">2 days ago</span>
+                                        </div>
+                                        <div style="font-size: 11px; color: #6b7280; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Positioning as a modern, sales-first CI solution vs legacy enterprise suites with a focus on ease of use.</div>
+                                    </div>
+                                </div>
+                                <!-- Signal 5 -->
+                                <div class="signal-item" style="display: flex; align-items: flex-start; gap: 12px; padding: 14px 0;">
+                                    <div style="padding: 8px; background: #f1f5f9; border-radius: 8px; flex-shrink: 0;">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                                    </div>
+                                    <div style="flex: 1; min-width: 0;">
+                                        <div style="font-weight: 600; color: #1f2937; font-size: 13px; margin-bottom: 4px;">Acme Corp New Mid-Market Campaign</div>
+                                        <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 4px;">
+                                            <span style="font-size: 10px; color: #6b7280;">Acme Corp</span>
+                                            <span style="background: #dcfce7; color: #166534; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 500;">Campaign</span>
+                                            <span style="background: #dcfce7; color: #166534; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 600;">5/10</span>
+                                            <span style="font-size: 10px; color: #9ca3af;">3 days ago</span>
+                                        </div>
+                                        <div style="font-size: 11px; color: #6b7280; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">ABM campaign targeting mid-market SaaS, signaling GTM strategy shift toward smaller deal sizes and self-serve.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="content-section" style="background: var(--bg-secondary);">
@@ -1809,7 +1969,7 @@
                     Competitive Intelligence Across Functions
                 </h2>
                 <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
-                    Sales enablement works best when aligned with other functions
+                    Competitive intelligence works best when every team is reading the same page
                 </p>
             </div>
 
@@ -1871,7 +2031,7 @@
                 <h2 class="cta-title">Stop Tracking Moves. Start Understanding Why.</h2>
                 <p class="cta-subtitle">Transform competitive data into strategic market intelligence with context-driven insights.</p>
                 <div class="cta-buttons">
-                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
                     <a href="../contact" class="btn btn-outline btn-lg">Book Demo</a>
                 </div>
             </div>
@@ -1915,6 +2075,12 @@
                         <h3>By Size</h3>
                         <a href="../startups">Startups</a>
                         <a href="../enterprise">Enterprise</a>
+                    </div>
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Compare</h3>
+                        <a href="../vs/klue">CIx vs Klue</a>
+                        <a href="../vs/crayon">CIx vs Crayon</a>
+                        <a href="../vs/alphasense">CIx vs AlphaSense</a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1964,6 +2130,12 @@
                             <a href="../startups">Startups</a>
                             <a href="../enterprise">Enterprise</a>
                         </div>
+                        <div class="footer-column footer-hide-mobile" style="margin-top: 40px;">
+                            <h3>Compare</h3>
+                            <a href="../vs/klue">CIx vs Klue</a>
+                            <a href="../vs/crayon">CIx vs Crayon</a>
+                            <a href="../vs/alphasense">CIx vs AlphaSense</a>
+                        </div>
                     </div>
                     
                     <div class="footer-column footer-hide-mobile">
@@ -1977,7 +2149,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+                <p>&copy; 2026 Signal Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1988,7 +2160,7 @@
     <!-- Mega Menu Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsWrapper = null; // superseded by the multi-dropdown nav script below
             const solutionsLink = document.querySelector('.solutions-nav-link');
             const megaMenu = document.querySelector('.mega-menu');
             const navMenu = document.getElementById('nav-menu');
@@ -2240,6 +2412,146 @@
         }
       ]
     }
+    </script>
+    <!-- Nav Dropdowns (multi-instance: Solutions + Company) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navMenu = document.getElementById('nav-menu');
+            const wrappers = document.querySelectorAll('.solutions-nav-wrapper');
+            if (!navMenu || !wrappers.length) return;
+
+            const isMobile = () => window.innerWidth <= 1024;
+            const panels = [];
+
+            wrappers.forEach(function(wrapper) {
+                const trigger = wrapper.querySelector('.solutions-nav-link');
+                const menu = wrapper.querySelector('.mega-menu');
+                if (!trigger || !menu) return;
+
+                let timeout;
+                menu.style.visibility = 'hidden';
+                menu.style.opacity = '0';
+                menu.style.display = 'none';
+
+                function close() {
+                    menu.style.visibility = 'hidden';
+                    menu.style.opacity = '0';
+                    setTimeout(function() { menu.style.display = 'none'; }, 300);
+                }
+
+                function open() {
+                    // Only one dropdown may be open at a time.
+                    panels.forEach(function(p) { if (p.menu !== menu) p.close(); });
+                    menu.style.display = 'block';
+                    menu.offsetHeight;
+                    menu.style.visibility = 'visible';
+                    menu.style.opacity = '1';
+                }
+
+                function isOpen() {
+                    return menu.style.visibility === 'visible' || menu.style.display === 'block';
+                }
+
+                panels.push({ menu: menu, close: close, isOpen: isOpen });
+
+                if (!isMobile()) {
+                    wrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        open();
+                    });
+                    wrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!menu.matches(':hover')) close();
+                        }, 100);
+                    });
+                    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+                    menu.addEventListener('mouseleave', close);
+                }
+
+                trigger.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        isOpen() ? close() : open();
+                    }
+                }, true);
+
+                const closeButton = menu.querySelector('.mega-menu-close');
+                const backButton = menu.querySelector('.mega-menu-back');
+
+                if (closeButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        closeButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                            navMenu.classList.remove('active');
+                        });
+                    });
+                }
+
+                if (backButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        backButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                        });
+                    });
+                }
+
+                menu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobile()) {
+                            close();
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const navToggle = document.getElementById('nav-toggle');
+                if (navToggle && navToggle.contains(e.target) && isMobile()) {
+                    panels.forEach(function(p) { p.close(); });
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (!isMobile()) {
+                    panels.forEach(function(p) { if (p.isOpen()) p.close(); });
+                }
+            });
+        });
+    </script>
+    <!-- Reveal-on-scroll for the relocated showcase mockup. Its cards/rows start
+         at opacity 0 in styles.css and only animate in once the container gets
+         .animate-in, which used to be applied by a script on the homepage. -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var targets = [];
+            var feed = document.getElementById('signal-feed');
+            if (feed) targets.push(feed);
+            var grid = document.querySelector('.competitor-grid');
+            if (grid) targets.push(grid);
+            if (!targets.length) return;
+
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach(function(t) { t.classList.add('animate-in'); });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            targets.forEach(function(t) { observer.observe(t); });
+        });
     </script>
 </body>
 </html>

@@ -32,7 +32,7 @@
     <meta property="og:url" content="https://usesignallabs.com/use-cases/product-positioning">
     <meta property="og:title" content="Product Positioning with Real-Time Intelligence | CIx">
     <meta property="og:description" content="Position for differentiation, not parity. Find white space in competitive landscapes and craft unique value propositions.">
-    <meta property="og:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-home-v2.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Signal Labs">
@@ -43,7 +43,7 @@
     <meta property="twitter:url" content="https://usesignallabs.com/use-cases/product-positioning">
     <meta name="twitter:title" content="Product Positioning with Real-Time Intelligence | CIx">
     <meta name="twitter:description" content="Position your product for differentiation with competitive intelligence. Find positioning white space and craft unique value props.">
-    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home.png">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-home-v2.png">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -289,8 +289,12 @@
                 grid-template-columns: 1fr !important;
             }
             
+            /* minmax(0, 1fr) rather than 1fr: the stat labels have a wide
+               min-content width and were inflating the tracks past the viewport
+               instead of wrapping inside them, which gave the whole page a
+               ~90px horizontal scroll on phones. */
             .roi-stats-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
                 gap: var(--space-4) !important;
             }
             
@@ -308,6 +312,14 @@
             
             .related-solutions-grid {
                 grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Three stats side by side leaves ~100px per column on a phone, which
+           breaks the labels onto four lines each. Stack them instead. */
+        @media (max-width: 560px) {
+            .roi-stats-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
             }
         }
         
@@ -419,6 +431,7 @@
         .mega-menu-header {
             display: none;
         }
+        .mega-menu-compact{width:240px;left:auto;right:auto;transform:none;position:absolute;top:calc(100% + 10px)}.mega-menu-compact .mega-menu-content{grid-template-columns:1fr;gap:0;padding:20px 24px}@media (max-width:1024px){.mega-menu-compact{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;padding:100px 0 24px}.mega-menu-compact .mega-menu-content{padding:0}}
         
         @media (max-width: 1024px) {
             .mega-menu-header {
@@ -524,7 +537,7 @@
     </style>
     
     <!-- External Resources -->
-    <link rel="stylesheet" href="../styles.css?v=11">
+    <link rel="stylesheet" href="../styles.css?v=12">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     
     <!-- Schema.org Structured Data -->
@@ -699,17 +712,44 @@
                     </div>
                 </div>
                 
-                <a href="../services" class="nav-link">CI Services</a>
-                <a href="../about" class="nav-link">About</a>
-                <a href="../blog" class="nav-link">Blog</a>
+                <a href="../pricing" class="nav-link">Pricing</a>
                 <a href="../docs" class="nav-link">Docs</a>
-                <a href="../contact" class="nav-link">Contact</a>
+                <a href="../blog" class="nav-link">Blog</a>
+                <div class="solutions-nav-wrapper">
+                    <a href="../about" class="nav-link solutions-nav-link">
+                        Company
+                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="mega-menu mega-menu-compact">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">COMPANY</h3>
+                                <a href="../about" class="mega-menu-link">About</a>
+                                <a href="../services" class="mega-menu-link">CI Services</a>
+                                <a href="../faq" class="mega-menu-link">FAQ</a>
+                                <a href="../contact" class="mega-menu-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             <div class="nav-actions">
                 <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
-                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free Trial</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
             </div>
             
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -732,7 +772,7 @@
                 </p>
                 <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
                     <a href="../contact" class="btn btn-primary btn-lg">Book Demo</a>
-                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-outline btn-lg">Start Free →</a>
                 </div>
             </div>
         </div>
@@ -1298,7 +1338,7 @@
                 </p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: var(--space-8);">
                 <!-- G2 Integration -->
                 <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <div style="display: flex; align-items: center; margin-bottom: var(--space-4);">
@@ -1614,7 +1654,7 @@
 
             <div class="roi-stats-box" style="background: linear-gradient(135deg, #272d46 0%, #06B6D4 100%); border-radius: var(--radius-xl); padding: var(--space-10); color: white; text-align: center;">
                 <h3 style="font-size: var(--font-size-2xl); font-weight: 700; margin-bottom: var(--space-6); color: white;">Positioning Intelligence ROI</h3>
-                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6);">
+                <div class="roi-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: var(--space-6);">
                     <div>
                         <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: 4px;">Research Time Savings</p>
                         <p style="font-size: 2.5rem; font-weight: 700;">Reclaim it</p>
@@ -1729,7 +1769,7 @@
                     Competitive Intelligence Across Functions
                 </h2>
                 <p style="font-size: var(--font-size-xl); color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
-                    Sales enablement works best when aligned with other functions
+                    Competitive intelligence works best when every team is reading the same page
                 </p>
             </div>
 
@@ -1791,7 +1831,7 @@
                 <h2 class="cta-title">Stop Claiming the Same Things as Competitors. Start Differentiating.</h2>
                 <p class="cta-subtitle">Transform generic positioning into unique market differentiation with data-driven competitive intelligence.</p>
                 <div class="cta-buttons">
-                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free Trial →</a>
+                    <a href="https://app.usesignallabs.com" class="btn btn-primary btn-lg">Start Free →</a>
                     <a href="../contact" class="btn btn-outline btn-lg">Book Demo</a>
                 </div>
             </div>
@@ -1835,6 +1875,12 @@
                         <h3>By Size</h3>
                         <a href="../startups">Startups</a>
                         <a href="../enterprise">Enterprise</a>
+                    </div>
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Compare</h3>
+                        <a href="../vs/klue">CIx vs Klue</a>
+                        <a href="../vs/crayon">CIx vs Crayon</a>
+                        <a href="../vs/alphasense">CIx vs AlphaSense</a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -1884,6 +1930,12 @@
                             <a href="../startups">Startups</a>
                             <a href="../enterprise">Enterprise</a>
                         </div>
+                        <div class="footer-column footer-hide-mobile" style="margin-top: 40px;">
+                            <h3>Compare</h3>
+                            <a href="../vs/klue">CIx vs Klue</a>
+                            <a href="../vs/crayon">CIx vs Crayon</a>
+                            <a href="../vs/alphasense">CIx vs AlphaSense</a>
+                        </div>
                     </div>
                     
                     <div class="footer-column footer-hide-mobile">
@@ -1897,7 +1949,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Signal Labs. All rights reserved.</p>
+                <p>&copy; 2026 Signal Labs. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1908,7 +1960,7 @@
     <!-- Mega Menu Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const solutionsWrapper = document.querySelector('.solutions-nav-wrapper');
+            const solutionsWrapper = null; // superseded by the multi-dropdown nav script below
             const solutionsLink = document.querySelector('.solutions-nav-link');
             const megaMenu = document.querySelector('.mega-menu');
             const navMenu = document.getElementById('nav-menu');
@@ -2160,6 +2212,117 @@
         }
       ]
     }
+    </script>
+    <!-- Nav Dropdowns (multi-instance: Solutions + Company) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navMenu = document.getElementById('nav-menu');
+            const wrappers = document.querySelectorAll('.solutions-nav-wrapper');
+            if (!navMenu || !wrappers.length) return;
+
+            const isMobile = () => window.innerWidth <= 1024;
+            const panels = [];
+
+            wrappers.forEach(function(wrapper) {
+                const trigger = wrapper.querySelector('.solutions-nav-link');
+                const menu = wrapper.querySelector('.mega-menu');
+                if (!trigger || !menu) return;
+
+                let timeout;
+                menu.style.visibility = 'hidden';
+                menu.style.opacity = '0';
+                menu.style.display = 'none';
+
+                function close() {
+                    menu.style.visibility = 'hidden';
+                    menu.style.opacity = '0';
+                    setTimeout(function() { menu.style.display = 'none'; }, 300);
+                }
+
+                function open() {
+                    // Only one dropdown may be open at a time.
+                    panels.forEach(function(p) { if (p.menu !== menu) p.close(); });
+                    menu.style.display = 'block';
+                    menu.offsetHeight;
+                    menu.style.visibility = 'visible';
+                    menu.style.opacity = '1';
+                }
+
+                function isOpen() {
+                    return menu.style.visibility === 'visible' || menu.style.display === 'block';
+                }
+
+                panels.push({ menu: menu, close: close, isOpen: isOpen });
+
+                if (!isMobile()) {
+                    wrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        open();
+                    });
+                    wrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!menu.matches(':hover')) close();
+                        }, 100);
+                    });
+                    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+                    menu.addEventListener('mouseleave', close);
+                }
+
+                trigger.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        isOpen() ? close() : open();
+                    }
+                }, true);
+
+                const closeButton = menu.querySelector('.mega-menu-close');
+                const backButton = menu.querySelector('.mega-menu-back');
+
+                if (closeButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        closeButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                            navMenu.classList.remove('active');
+                        });
+                    });
+                }
+
+                if (backButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        backButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                        });
+                    });
+                }
+
+                menu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobile()) {
+                            close();
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const navToggle = document.getElementById('nav-toggle');
+                if (navToggle && navToggle.contains(e.target) && isMobile()) {
+                    panels.forEach(function(p) { p.close(); });
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (!isMobile()) {
+                    panels.forEach(function(p) { if (p.isOpen()) p.close(); });
+                }
+            });
+        });
     </script>
 </body>
 </html>

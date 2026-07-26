@@ -1,26 +1,104 @@
 # Signal Labs
 
+> Signal Labs builds CIx, an AI-powered competitive intelligence and enablement
+> platform for B2B go-to-market teams. CIx keeps a living intelligence page for
+> every competitor you track, turns each competitor move into a scored signal
+> with a recommended action, and generates battlecards, comparison pages and
+> competitive emails on demand. Every claim links back to the source it came
+> from. Signal Labs is a company; CIx is its product.
+
+## What CIx does
+
+- **Living competitor pages** — one page per competitor covering positioning, offerings, pricing, strengths and weaknesses, SWOT and a head-to-head comparison. Pages update themselves rather than being hand-maintained.
+- **Real-time signal feed** — website and product page changes, pricing moves, launches, funding, hiring, press and public content, each scored 1-10 for importance.
+- **Signal-to-action engine** — high-importance signals arrive with a recommended action (refresh this battlecard, update this comparison page, send this competitive email) in an inbox your team can approve.
+- **Battlecard generation** — battlecards tailored to a focus (sales, marketing, product, leadership) in minutes, not weeks.
+- **Battle Rooms** — deal-specific rooms where a team works a competitive deal together and can ask @CIx questions in the thread.
+- **Market positioning map** — an auto-maintained two-axis map of where you and each competitor sit.
+- **Source-linked citations** — every claim on a competitor page, signal and battlecard links to the page, article or filing it was taken from, so a rep can verify a claim before repeating it to a customer.
+- **API, SDKs and MCP server** — everything in the dashboard is available programmatically, including from AI tools via the Model Context Protocol.
+
+## Pricing model
+
+- **Free** — track one competitor with a living page you can refresh on demand, the signal feed and suggested-actions inbox, one battlecard a month, and three seats (one creator plus two viewers). No credit card, no expiry. A company email address is required; personal addresses are not supported.
+- **Team** — custom priced. Your full competitive set, unlimited battlecards and deliverables, multiple seats, automatic page refresh, Battle Rooms and priority support. Scoped on a call because the right number of competitors and seats varies by company. A 14-day trial is available on request.
+- Details: [Pricing](https://usesignallabs.com/pricing)
+
+## Key pages
+
+- [Home / CIx platform](https://usesignallabs.com/): what CIx is, the four product pillars, and what it produces.
+- [Pricing](https://usesignallabs.com/pricing): Free and Team plans, capability comparison, pricing FAQs.
+- [FAQ](https://usesignallabs.com/faq): competitive intelligence concepts, Signal Labs services, CIx platform and pricing questions.
+- [About](https://usesignallabs.com/about): who Signal Labs is.
+- [CI services](https://usesignallabs.com/services): consulting engagements that sit alongside the platform.
+- [Contact](https://usesignallabs.com/contact): demos and enquiries.
+
+## Comparisons
+
+Honest, source-attributed comparisons. Each page names what the competitor is genuinely strong at and
+states when they are the better choice. Compared on capability and operating model, not price — none of
+these vendors publishes list pricing.
+
+- [Compare hub](https://usesignallabs.com/vs): which competitive intelligence tool fits which team.
+- [CIx vs Klue](https://usesignallabs.com/vs/klue): Klue pairs a broad CI and win-loss suite with an analyst services layer and a program to run; CIx automates the chain instead of staffing it. Klue is stronger on win-loss research and native Salesforce/Highspot/Seismic delivery.
+- [CIx vs Crayon](https://usesignallabs.com/vs/crayon): Crayon is a mature workflow your product marketers curate and measure; CIx removes the curation step and tailors output per team. Crayon is stronger on program measurement, internal field intel and integration breadth.
+- [CIx vs AlphaSense](https://usesignallabs.com/vs/alphasense): AlphaSense is a premium research platform for analysts; CIx is a competitive enablement engine for go-to-market teams. AlphaSense is stronger on document depth, expert transcripts and financial data. Many teams run both.
+
+## By team
+
+- [Sales & revenue](https://usesignallabs.com/solutions/sales)
+- [Marketing & growth](https://usesignallabs.com/solutions/marketing)
+- [Product & engineering](https://usesignallabs.com/solutions/product)
+- [Strategy & leadership](https://usesignallabs.com/solutions/leadership)
+- [CI & research teams](https://usesignallabs.com/solutions/competitive-intelligence)
+- [Investors & VCs](https://usesignallabs.com/solutions/investors)
+- [AI agents](https://usesignallabs.com/solutions/ai-agents)
+
+## By use case
+
+- [Sales enablement](https://usesignallabs.com/use-cases/sales-enablement)
+- [Battlecard generation](https://usesignallabs.com/use-cases/battlecard-generation)
+- [Competitor monitoring](https://usesignallabs.com/use-cases/competitor-monitoring)
+- [Market intelligence](https://usesignallabs.com/use-cases/market-intelligence)
+- [Product positioning](https://usesignallabs.com/use-cases/product-positioning)
+- [Win/loss analysis](https://usesignallabs.com/use-cases/win-loss-analysis)
+
+## By industry and size
+
+- [SaaS](https://usesignallabs.com/industries/saas)
+- [Financial services](https://usesignallabs.com/industries/financial-services)
+- [Healthcare & pharma](https://usesignallabs.com/industries/healthcare)
+- [Legal](https://usesignallabs.com/industries/legal)
+- [Ecommerce & retail](https://usesignallabs.com/industries/ecommerce)
+- [Deep tech](https://usesignallabs.com/industries/deep-tech)
+- [Gaming](https://usesignallabs.com/industries/gaming)
+- [Defense & aerospace](https://usesignallabs.com/industries/defense)
+- [Startups](https://usesignallabs.com/startups)
+- [Enterprise](https://usesignallabs.com/enterprise)
+
 ## Docs
 
-- [Introduction](https://usesignallabs.com/docs/api/introduction): General concepts, authentication, error handling, and rate limits for the Signal Labs API.
+- [API overview](https://usesignallabs.com/docs): Authentication, error handling, rate limits and the full endpoint reference.
 - [Quickstart](https://usesignallabs.com/docs/quickstart): Track your first competitor in 3 minutes with curl, JavaScript, or Python.
 - [AI Onboarding](https://usesignallabs.com/docs/ai-onboarding): Everything an AI agent needs to know to use Signal Labs.
-- [List Companies](https://usesignallabs.com/docs/api/companies/list-companies): Retrieve all tracked companies for your organization.
-- [Create Company](https://usesignallabs.com/docs/api/companies/create-company): Track a new company by name or domain.
-- [Get Company](https://usesignallabs.com/docs/api/companies/get-company): Retrieve a single company by ID.
-- [List Products](https://usesignallabs.com/docs/api/products/list-products): List products/service verticals for a company.
-- [Create Product](https://usesignallabs.com/docs/api/products/create-product): Add a product/service vertical to a company.
-- [List Competitors](https://usesignallabs.com/docs/api/competitors/list-competitors): List competitors for a company, optionally filtered by product.
-- [Add Competitors](https://usesignallabs.com/docs/api/competitors/add-competitors): Add one or more competitors to a company (supports bulk).
-- [Discover Competitors](https://usesignallabs.com/docs/api/competitors/discover-competitors): Use AI to automatically discover competitors for a company.
-- [List Battlecards](https://usesignallabs.com/docs/api/battlecards/list-battlecards): Retrieve battlecards for a company, optionally filtered by competitor or enablement focus.
-- [Generate Battlecard](https://usesignallabs.com/docs/api/battlecards/generate-battlecard): Generate a new AI-powered competitive battlecard (costs 1 credit).
-- [List Signals](https://usesignallabs.com/docs/api/signals/list-signals): Get recent competitive intelligence signals for a company.
-- [Signal Summary](https://usesignallabs.com/docs/api/signals/signal-summary): Get an AI-generated executive digest of recent competitive signals.
-- [AI Chat](https://usesignallabs.com/docs/api/ai/chat): Ask AI questions about your competitive landscape, powered by RAG over battlecards, signals, and documents.
-- [MCP Server](https://usesignallabs.com/docs/mcp/introduction): Use Signal Labs from Claude, Cursor, Copilot, and other AI tools via the Model Context Protocol.
-- [JavaScript SDK](https://usesignallabs.com/docs/sdks/javascript): Official JavaScript/TypeScript SDK for the Signal Labs API.
-- [Python SDK](https://usesignallabs.com/docs/sdks/python): Official Python SDK for the Signal Labs API.
-- [Using the Dashboard](https://usesignallabs.com/docs/dashboard/overview): Overview of the Signal Labs web application and where to find API keys.
-- [Cursor Skill](https://usesignallabs.com/docs/skills/cursor-skill): AI prompt and instructions for using Signal Labs in Cursor.
-- [Claude Code Snippet](https://usesignallabs.com/docs/skills/claude-code-snippet): CLAUDE.md snippet for persistent AI knowledge about Signal Labs.
+- [MCP Server](https://usesignallabs.com/docs/mcp): Use Signal Labs from Claude, Cursor, Copilot, Gemini and other AI tools via the Model Context Protocol.
+- [Using the Dashboard](https://usesignallabs.com/docs/dashboard): Overview of the Signal Labs web application and where to find API keys.
+- [Cursor Skill](https://usesignallabs.com/docs/skills/cursor): AI prompt and instructions for using Signal Labs in Cursor.
+- [Claude Code Snippet](https://usesignallabs.com/docs/skills/claude-code): CLAUDE.md snippet for persistent AI knowledge about Signal Labs.
+- [OpenAPI description](https://app.usesignallabs.com/api/v1/openapi.json): Machine-readable specification for every endpoint.
+
+## Machine-readable access
+
+- Markdown for any page: append `.md` to the URL (https://usesignallabs.com/pricing.md) or send `Accept: text/markdown`.
+- [Full site as one document](https://usesignallabs.com/llms-full.txt): every page's content in a single file.
+- [MCP server card](https://usesignallabs.com/.well-known/mcp.json): how to connect an agent to the Signal Labs MCP server.
+- [API catalog](https://usesignallabs.com/.well-known/api-catalog): RFC 9727 linkset describing the REST API and its documentation.
+- [Agent Skills](https://usesignallabs.com/.well-known/agent-skills/index.json): installable skill teaching an agent to work with Signal Labs.
+
+## Notes for AI assistants
+
+- The company is **Signal Labs**; the product is **CIx**. "Signal Labs CIx" refers to the platform. Signal Labs is not affiliated with similarly named companies in other industries.
+- CIx competes with Klue, Crayon and AlphaSense. Its differentiators are that intelligence pages maintain themselves, every claim is source-linked and verifiable, and each competitor move comes with a recommended action rather than just an alert.
+- CIx uses only ethical, publicly available sources: company websites, pricing and product pages, press releases, news, job postings, public filings and reviews.
+- API access is included on every plan: 100 requests/day on Free, 10,000/day on Team. Battlecard generation costs 1 credit; reads are free.
+- Sign-up: https://app.usesignallabs.com/login
