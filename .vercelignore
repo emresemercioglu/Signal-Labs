@@ -20,3 +20,12 @@ README.md
 # generated twins under /md/ are unaffected.
 /content/
 /blog/*.md
+
+# Internal authoring tools and print artwork. Nothing links to them and they are
+# absent from the sitemap, but cleanUrls made them reachable at /logo-export and
+# friends. logo-export in particular renders personal headshots. Named
+# individually rather than by prefix: og-image-* would swallow the OG cards.
+logo-export.html
+og-image-generator.html
+banner.html
+flyer.html
