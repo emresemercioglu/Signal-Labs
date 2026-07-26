@@ -3,7 +3,6 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "//": "Serves /pricing.md from the twin at /md/pricing.md. Rewrites only run after the filesystem check, which is fine here because no file exists at /pricing.md. Accept: text/markdown negotiation cannot work this way for the same reason - /pricing would always hit pricing.html first - so that is handled in middleware.js, which runs before the filesystem.",
       "source": "/:path([^.]+).md",
       "destination": "/md/:path.md"
     }
@@ -107,7 +106,6 @@
       ]
     },
     {
-      "//": "Discovery and negotiation headers belong on pages, not assets. Vary: Accept on an immutable image would fragment the CDN cache across every browser's Accept string. [^.]* matches extensionless page paths only.",
       "source": "/:path([^.]*)",
       "headers": [
         {
@@ -115,7 +113,6 @@
           "value": "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM-friendly site summary\", </.well-known/mcp.json>; rel=\"describedby\"; type=\"application/json\"; title=\"MCP server card\", </.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\", </.well-known/agent-skills/index.json>; rel=\"agent-skills\"; type=\"application/json\""
         },
         {
-          "//": "HTML and Markdown are served from the same URL, so caches must key on Accept.",
           "key": "Vary",
           "value": "Accept"
         },
@@ -132,7 +129,6 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         { "key": "Cache-Control", "value": "public, max-age=3600" },
         {
-          "//": "Keeps the .md twins out of search results as duplicates. Only matches an explicit .md request path, so content-negotiated responses on the canonical URL stay indexable.",
           "key": "X-Robots-Tag",
           "value": "noindex"
         }
