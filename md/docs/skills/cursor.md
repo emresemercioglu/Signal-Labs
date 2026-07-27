@@ -82,7 +82,7 @@ All battlecard generation calls accept an optional `special_instructions` string
 
 -   Hardcode API keys
 -   Call `generate` without a competitor
--   Use `competitor_id` (singular) with `landscape` focus — it requires `competitor_ids` (array of 2+)
+-   Use `competitor_id` (singular) with `landscape` focus — it requires `competitor_ids` (array of 2–8), via `generateLandscape()` in the SDK
 
 ## AI Verification Steps
 
@@ -91,4 +91,4 @@ All battlecard generation calls accept an optional `special_instructions` string
 3.  Are all calls awaited?
 4.  Does company exist before adding competitors?
 5.  Does competitor exist before generating battlecard?
-6.  Is `enablement_focus` one of: `gtm_sales`, `product`, `marketing_growth`, `leadership`, `landscape`?
+6.  Is `enablement_focus` one of: `gtm_sales`, `product`, `marketing_growth`, `leadership`, `custom`, `landscape`?

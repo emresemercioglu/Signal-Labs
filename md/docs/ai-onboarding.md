@@ -37,6 +37,8 @@ Base URL: `https://app.usesignallabs.com/api/v1`
 
 Products are optional. If not specified, competitors default to company-level.
 
+**Steps 1 and 3 are asynchronous.** They return as soon as the row is written, then research the website in the background for 30–90 seconds. Poll `GET /v1/companies/{id}/profile` until `profile_status` is `ready`, and `GET /v1/competitors/{id}/page` until `generation_status` is `ready`, before relying on that data. Battlecards generated earlier still succeed and still cost a credit, but they are grounded in less material.
+
 ## Endpoints
 
 | Method | Path | Description | Cost |
@@ -44,11 +46,14 @@ Products are optional. If not specified, competitors default to company-level.
 | GET | /v1/companies | List companies | Free |
 | POST | /v1/companies | Create company | Free |
 | GET | /v1/companies/{id} | Get company | Free |
+| GET | /v1/companies/{id}/profile | Offerings, value propositions, profile_status | Free |
+| POST | /v1/companies/{id}/profile/refresh | Re-extract profile from the website | Free |
 | GET | /v1/companies/{id}/products | List products | Free |
 | POST | /v1/companies/{id}/products | Create product | Free |
 | GET | /v1/companies/{id}/competitors | List competitors | Free |
 | POST | /v1/companies/{id}/competitors | Add competitors | Free |
-| POST | /v1/companies/{id}/competitors/discover | AI discover | Free |
+| POST | /v1/companies/{id}/competitors/discover | AI discover. Returns suggestions only, creates nothing | Free |
+| GET | /v1/competitors/{id}/page | Researched competitor page, generation_status | Free |
 | GET | /v1/companies/{id}/battlecards | List battlecards | Free |
 | POST | /v1/companies/{id}/battlecards/generate | Generate battlecard. Optional: include special_instructions (max 10,000 chars) to provide custom context or focus areas. | 1 credit |
 | GET | /v1/companies/{id}/signals | List signals | Free |
@@ -69,9 +74,12 @@ When generating battlecards, use one of these focus types:
 -   `product`
 -   `marketing_growth`
 -   `leadership`
+-   `custom` (requires `special_instructions`)
 -   `landscape`
 
-**Note:** `landscape` requires `competitor_ids` (an array of 2+ IDs) instead of `competitor_id`.
+**Note:** `landscape` requires `competitor_ids` (an array of 2–8 IDs) instead of `competitor_id`. IDs beyond the eighth are ignored.
+
+Documents uploaded via the API are auto-tagged in the background against your tracked competitors; read `auto_tags` from either document `GET` endpoint.
 
 ## MCP Server
 

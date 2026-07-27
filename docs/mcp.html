@@ -177,20 +177,24 @@ export SIGNALLABS_API_KEY=sl_live_your_key</code></pre>
                         </thead>
                         <tbody>
                             <tr><td><code>list_companies</code></td><td>List all tracked companies</td></tr>
-                            <tr><td><code>create_company</code></td><td>Track a new company by name or domain</td></tr>
+                            <tr><td><code>create_company</code></td><td>Track a new company and extract its profile from its website</td></tr>
+                            <tr><td><code>get_company_profile</code></td><td>Company metadata, offerings and value propositions</td></tr>
+                            <tr><td><code>refresh_company_profile</code></td><td>Re-extract offerings and value propositions</td></tr>
                             <tr><td><code>list_products</code></td><td>List products / service verticals</td></tr>
                             <tr><td><code>create_product</code></td><td>Add a product vertical</td></tr>
                             <tr><td><code>list_competitors</code></td><td>List competitors (optionally per product)</td></tr>
-                            <tr><td><code>add_competitor</code></td><td>Add a competitor</td></tr>
+                            <tr><td><code>add_competitor</code></td><td>Add a competitor and research their website</td></tr>
+                            <tr><td><code>get_competitor_page</code></td><td>Read a competitor's researched analysis</td></tr>
                             <tr><td><code>discover_competitors</code></td><td>AI-powered competitor discovery</td></tr>
                             <tr><td><code>get_battlecards</code></td><td>Retrieve battlecards</td></tr>
-                            <tr><td><code>generate_battlecard</code></td><td>Generate a new AI battlecard (1 credit)</td></tr>
-                            <tr><td><code>generate_landscape_battlecard</code></td><td>Multi-competitor landscape analysis (1 credit, requires 2+ competitors)</td></tr>
+                            <tr><td><code>generate_battlecard</code></td><td>Generate a battlecard for one competitor (1 credit)</td></tr>
+                            <tr><td><code>generate_landscape_battlecard</code></td><td>Compare 2&ndash;8 competitors in one report (1 credit)</td></tr>
                             <tr><td><code>get_signals</code></td><td>Get recent intelligence signals</td></tr>
                             <tr><td><code>get_signal_summary</code></td><td>AI-generated signal digest</td></tr>
-                            <tr><td><code>ask_competitive_intel</code></td><td>Ask questions about your competitive landscape</td></tr>
+                            <tr><td><code>upload_document</code></td><td>Upload a local file to a company's data library, parsed and embedded for RAG then auto-tagged</td></tr>
                             <tr><td><code>list_documents</code></td><td>List uploaded documents for a company</td></tr>
-                            <tr><td><code>get_document</code></td><td>Get document details and extracted text</td></tr>
+                            <tr><td><code>get_document</code></td><td>Get document details, extracted text and auto-tags</td></tr>
+                            <tr><td><code>ask_competitive_intel</code></td><td>Ask questions about your competitive landscape</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -203,6 +207,7 @@ export SIGNALLABS_API_KEY=sl_live_your_key</code></pre>
                     <li>"Generate a sales battlecard for us vs [Competitor]"</li>
                     <li>"What are the latest competitive signals?"</li>
                     <li>"Summarize competitive activity from the last week"</li>
+                    <li>"Upload ~/Downloads/competitor-pricing.pdf to my data library"</li>
                 </ul>
             </article>
 

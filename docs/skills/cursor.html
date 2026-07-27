@@ -152,7 +152,7 @@ const answer = await sl.ai.chat({
                 <ul>
                     <li>Hardcode API keys</li>
                     <li>Call <code>generate</code> without a competitor</li>
-                    <li>Use <code>competitor_id</code> (singular) with <code>landscape</code> focus &mdash; it requires <code>competitor_ids</code> (array of 2+)</li>
+                    <li>Use <code>competitor_id</code> (singular) with <code>landscape</code> focus &mdash; it requires <code>competitor_ids</code> (array of 2&ndash;8), via <code>generateLandscape()</code> in the SDK</li>
                 </ul>
 
                 <h2>AI Verification Steps</h2>
@@ -162,7 +162,7 @@ const answer = await sl.ai.chat({
                     <li>Are all calls awaited?</li>
                     <li>Does company exist before adding competitors?</li>
                     <li>Does competitor exist before generating battlecard?</li>
-                    <li>Is <code>enablement_focus</code> one of: <code>gtm_sales</code>, <code>product</code>, <code>marketing_growth</code>, <code>leadership</code>, <code>landscape</code>?</li>
+                    <li>Is <code>enablement_focus</code> one of: <code>gtm_sales</code>, <code>product</code>, <code>marketing_growth</code>, <code>leadership</code>, <code>custom</code>, <code>landscape</code>?</li>
                 </ol>
             </article>
 

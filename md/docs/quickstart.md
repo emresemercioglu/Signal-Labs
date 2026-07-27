@@ -44,6 +44,8 @@ company = sl.companies.create(domain="yourcompany.com")
 print(company["id"])
 ```
 
+This returns right away, then analyses your website in the background for 30–90 seconds to extract your offerings and value propositions. Everything below works immediately, but discovery and battlecards are sharper once that finishes — poll `GET /v1/companies/{id}/profile` until `profile_status` reads `ready`. See [Asynchronous Operations](https://usesignallabs.com/docs#asynchronous-operations).
+
 2
 
 ## Discover Competitors
@@ -153,12 +155,19 @@ curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlec
 ```
 
 ```javascript
-// Upload a document
-const doc = await sl.documents.upload({
-  file: 'competitor-report.pdf',
-  company_id: company.id,
-  title: 'Q1 Competitor Report',
+// Uploading is multipart, so it is not part of the SDK yet — post the
+// file directly, then pass the returned id to the SDK.
+const form = new FormData();
+form.append('file', new Blob([await readFile('competitor-report.pdf')]), 'competitor-report.pdf');
+form.append('company_id', company.id);
+form.append('title', 'Q1 Competitor Report');
+
+const res = await fetch('https://app.usesignallabs.com/api/v1/documents/upload', {
+  method: 'POST',
+  headers: { Authorization: `Bearer ${process.env.SIGNALLABS_API_KEY}` },
+  body: form,
 });
+const { data: doc } = await res.json();
 
 // Then generate with document context
 const battlecard = await sl.companies.battlecards(company.id).generate({
@@ -169,12 +178,18 @@ const battlecard = await sl.companies.battlecards(company.id).generate({
 ```
 
 ```python
-# Upload a document
-doc = sl.documents.upload(
-    file="competitor-report.pdf",
-    company_id=company["id"],
-    title="Q1 Competitor Report"
-)
+# Uploading is multipart, so it is not part of the SDK yet — post the
+# file directly, then pass the returned id to the SDK.
+import os, requests
+
+with open("competitor-report.pdf", "rb") as fh:
+    res = requests.post(
+        "https://app.usesignallabs.com/api/v1/documents/upload",
+        headers={"Authorization": f"Bearer {os.environ['SIGNALLABS_API_KEY']}"},
+        files={"file": fh},
+        data={"company_id": company["id"], "title": "Q1 Competitor Report"},
+    )
+doc = res.json()["data"]
 
 # Then generate with document context
 battlecard = sl.companies.battlecards(company["id"]).generate(
@@ -190,7 +205,7 @@ Combined document text must not exceed 100,000 characters. Documents are automat
 
 ## Generate a Landscape Analysis (optional)
 
-Compare multiple competitors at once with a landscape battlecard. Requires 2 or more competitor IDs.
+Compare multiple competitors at once with a landscape battlecard. Takes between 2 and 8 competitor IDs.
 
 cURL JavaScript Python
 
@@ -202,18 +217,16 @@ curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlec
 ```
 
 ```javascript
-const landscape = await sl.companies.battlecards(company.id).generate({
+const landscape = await sl.companies.battlecards(company.id).generateLandscape({
   competitor_ids: [competitors[0].id, competitors[1].id],
-  enablement_focus: 'landscape',
 });
 
 console.log(landscape.overview);
 ```
 
 ```python
-landscape = sl.companies.battlecards(company["id"]).generate(
-    competitor_ids=[competitors[0]["id"], competitors[1]["id"]],
-    enablement_focus="landscape"
+landscape = sl.companies.battlecards(company["id"]).generate_landscape(
+    competitor_ids=[competitors[0]["id"], competitors[1]["id"]]
 )
 
 print(landscape["overview"])

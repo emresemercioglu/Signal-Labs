@@ -118,20 +118,24 @@ JSON
 | Tool | Description |
 | --- | --- |
 | list_companies | List all tracked companies |
-| create_company | Track a new company by name or domain |
+| create_company | Track a new company and extract its profile from its website |
+| get_company_profile | Company metadata, offerings and value propositions |
+| refresh_company_profile | Re-extract offerings and value propositions |
 | list_products | List products / service verticals |
 | create_product | Add a product vertical |
 | list_competitors | List competitors (optionally per product) |
-| add_competitor | Add a competitor |
+| add_competitor | Add a competitor and research their website |
+| get_competitor_page | Read a competitor's researched analysis |
 | discover_competitors | AI-powered competitor discovery |
 | get_battlecards | Retrieve battlecards |
-| generate_battlecard | Generate a new AI battlecard (1 credit) |
-| generate_landscape_battlecard | Multi-competitor landscape analysis (1 credit, requires 2+ competitors) |
+| generate_battlecard | Generate a battlecard for one competitor (1 credit) |
+| generate_landscape_battlecard | Compare 2–8 competitors in one report (1 credit) |
 | get_signals | Get recent intelligence signals |
 | get_signal_summary | AI-generated signal digest |
-| ask_competitive_intel | Ask questions about your competitive landscape |
+| upload_document | Upload a local file to a company's data library, parsed and embedded for RAG then auto-tagged |
 | list_documents | List uploaded documents for a company |
-| get_document | Get document details and extracted text |
+| get_document | Get document details, extracted text and auto-tags |
+| ask_competitive_intel | Ask questions about your competitive landscape |
 
 ## Example Conversations
 
@@ -142,3 +146,4 @@ Once configured, you can ask your AI assistant questions like:
 -   "Generate a sales battlecard for us vs \[Competitor\]"
 -   "What are the latest competitive signals?"
 -   "Summarize competitive activity from the last week"
+-   "Upload ~/Downloads/competitor-pricing.pdf to my data library"

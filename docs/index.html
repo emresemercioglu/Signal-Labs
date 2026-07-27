@@ -88,7 +88,7 @@
                     <pre><code class="language-bash">https://app.usesignallabs.com/api/v1</code></pre>
                 </div>
 
-                <h2>Authentication</h2>
+                <h2 id="authentication">Authentication</h2>
                 <p>All API requests require a Bearer token in the <code>Authorization</code> header:</p>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
@@ -110,7 +110,49 @@
                 </div>
                 <p>List endpoints return <code>data</code> as an array. Single-resource endpoints return <code>data</code> as an object.</p>
 
-                <h2>Errors</h2>
+                <h2 id="endpoints">Endpoints</h2>
+                <p>Document endpoints are listed separately under <a href="#documents">Documents</a>. A machine-readable OpenAPI description of everything below is available at <code>/v1/openapi.json</code>.</p>
+                <div class="docs-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr><th>Method</th><th>Path</th><th>Description</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies</code></td><td>List the companies your organization tracks</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies</code></td><td>Track a company. Returns immediately; profile analysis continues in the background</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}</code></td><td>Get a single company</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/profile</code></td><td>Offerings and value propositions extracted from the website, plus <code>profile_status</code></td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/profile/refresh</code></td><td>Re-extract the profile from the website</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/products</code></td><td>List product / service verticals</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/products</code></td><td>Add a product vertical</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/competitors</code></td><td>List tracked competitors</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors</code></td><td>Add competitors. Returns immediately; research continues in the background</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors/discover</code></td><td>AI competitor suggestions. Creates nothing and consumes no allowance</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/competitors/{id}/page</code></td><td>The researched competitor page, plus <code>generation_status</code></td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/battlecards</code></td><td>List battlecards</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/battlecards/generate</code></td><td>Generate a battlecard (1 credit)</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals</code></td><td>Recent competitive and market signals</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals/summary</code></td><td>AI-generated digest of recent signals</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/ai/chat</code></td><td>Ask a question about your competitive landscape</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="asynchronous-operations">Asynchronous Operations</h2>
+                <p>Creating a company and adding a competitor both return before their work is finished. Researching a website takes 30&ndash;90 seconds, so the API records the row, responds, and continues in the background rather than holding the connection open.</p>
+                <p>This means a company you just created has no offerings yet, and a competitor you just added has no researched page yet. Poll until the status field reports completion:</p>
+                <div class="code-block">
+                    <div class="code-header"><span class="code-lang">Bash</span><button class="copy-btn"></button></div>
+                    <pre><code class="language-bash"># profile_status is "pending" while the website is being analysed,
+# then "ready". generation_status behaves the same way for competitors.
+curl https://app.usesignallabs.com/api/v1/companies/{company_id}/profile \
+  -H "Authorization: Bearer sl_live_your_key_here"</code></pre>
+                </div>
+                <div class="docs-callout">
+                    <p><strong>Why this matters:</strong> battlecards are grounded in the competitor's researched page and your own company profile. Generating one the instant after adding a competitor still works and still costs a credit, but the result is thinner. Wait for <code>generation_status</code> to read <code>ready</code> first.</p>
+                </div>
+
+                <h2 id="errors">Errors</h2>
                 <p>Errors return a structured JSON object with actionable guidance:</p>
                 <div class="code-block">
                     <div class="code-header"><span class="code-lang">JSON</span><button class="copy-btn"></button></div>
@@ -192,7 +234,7 @@
                     </table>
                 </div>
 
-                <h2>Documents</h2>
+                <h2 id="documents">Documents</h2>
                 <p>Upload competitive documents for AI analysis and RAG-powered battlecard generation.</p>
                 <div class="docs-table-wrapper">
                     <table>
@@ -201,13 +243,14 @@
                         </thead>
                         <tbody>
                             <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/documents/upload</code></td><td>Upload a document (multipart form data, max 25MB). Supported: PDF, DOCX, XLSX, CSV, PPTX, TXT, MD, PNG, JPG, WebP.</td></tr>
-                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents?company_id={id}</code></td><td>List documents with storage usage stats</td></tr>
-                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents/{id}</code></td><td>Get document detail including extracted text</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents?company_id={id}</code></td><td>List documents with storage usage stats and auto-tags</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/documents/{id}</code></td><td>Get document detail including extracted text and auto-tags</td></tr>
                             <tr><td><span class="method-badge method-delete">DELETE</span></td><td><code>/v1/documents/{id}</code></td><td>Delete a document and its RAG chunks</td></tr>
                         </tbody>
                     </table>
                 </div>
                 <p>Documents are automatically parsed, chunked, and embedded for RAG. Use <code>document_ids</code> when generating battlecards to include uploaded documents as additional context.</p>
+                <p>After processing, each document is also auto-tagged in the background: an AI pass identifies which of your tracked competitors it discusses, so the document surfaces on those competitors and in chat retrieval without you filing it manually. The upload response returns <code>auto_tagging: "pending"</code>; read the resulting <code>auto_tags</code> from either <code>GET</code> endpoint a few seconds later.</p>
 
                 <h2>Enablement Focus Types</h2>
                 <p>When generating battlecards, specify one of these focus types:</p>
@@ -221,12 +264,13 @@
                             <tr><td><code>product</code></td><td>Product &amp; engineering</td><td><code>competitor_id</code></td></tr>
                             <tr><td><code>marketing_growth</code></td><td>Marketing &amp; growth</td><td><code>competitor_id</code></td></tr>
                             <tr><td><code>leadership</code></td><td>Strategy &amp; leadership</td><td><code>competitor_id</code></td></tr>
-                            <tr><td><code>landscape</code></td><td>Multi-competitor landscape analysis</td><td><code>competitor_ids</code> (array of 2+)</td></tr>
+                            <tr><td><code>custom</code></td><td>Written entirely from your own brief. Requires <code>special_instructions</code></td><td><code>competitor_id</code></td></tr>
+                            <tr><td><code>landscape</code></td><td>Multi-competitor landscape analysis</td><td><code>competitor_ids</code> (array of 2&ndash;8)</td></tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="docs-callout">
-                    <p><strong>Note:</strong> The <code>landscape</code> focus requires <code>competitor_ids</code> (an array of 2 or more competitor IDs) instead of <code>competitor_id</code>.</p>
+                    <p><strong>Note:</strong> The <code>landscape</code> focus requires <code>competitor_ids</code> instead of <code>competitor_id</code>, with between 2 and 8 competitor IDs. Anything beyond the eighth is ignored, so split larger comparisons into multiple reports.</p>
                 </div>
 
                 <h2>SDKs</h2>

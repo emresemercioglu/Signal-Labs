@@ -89,7 +89,7 @@
 
                 <div class="docs-step">
                     <span class="docs-step-badge">1</span>
-                    <h2>Create Your Company</h2>
+                    <h2 id="create-your-company">Create Your Company</h2>
                 </div>
                 <div class="code-group">
                     <div class="code-tabs">
@@ -123,10 +123,13 @@ company = sl.companies.create(domain="yourcompany.com")
 print(company["id"])</code></pre>
                     </div>
                 </div>
+                <div class="docs-callout">
+                    <p>This returns right away, then analyses your website in the background for 30&ndash;90 seconds to extract your offerings and value propositions. Everything below works immediately, but discovery and battlecards are sharper once that finishes &mdash; poll <code>GET /v1/companies/{id}/profile</code> until <code>profile_status</code> reads <code>ready</code>. See <a href="/docs#asynchronous-operations">Asynchronous Operations</a>.</p>
+                </div>
 
                 <div class="docs-step">
                     <span class="docs-step-badge">2</span>
-                    <h2>Discover Competitors</h2>
+                    <h2 id="discover-competitors">Discover Competitors</h2>
                 </div>
                 <div class="code-group">
                     <div class="code-tabs">
@@ -153,7 +156,7 @@ print(suggestions)</code></pre>
 
                 <div class="docs-step">
                     <span class="docs-step-badge">3</span>
-                    <h2>Add a Competitor</h2>
+                    <h2 id="add-a-competitor">Add a Competitor</h2>
                 </div>
                 <div class="code-group">
                     <div class="code-tabs">
@@ -256,12 +259,19 @@ curl -X POST https://app.usesignallabs.com/api/v1/companies/{company_id}/battlec
                     </div>
                     <div class="code-panel" data-lang="javascript">
                         <button class="copy-btn"></button>
-                        <pre><code class="language-javascript">// Upload a document
-const doc = await sl.documents.upload({
-  file: 'competitor-report.pdf',
-  company_id: company.id,
-  title: 'Q1 Competitor Report',
+                        <pre><code class="language-javascript">// Uploading is multipart, so it is not part of the SDK yet — post the
+// file directly, then pass the returned id to the SDK.
+const form = new FormData();
+form.append('file', new Blob([await readFile('competitor-report.pdf')]), 'competitor-report.pdf');
+form.append('company_id', company.id);
+form.append('title', 'Q1 Competitor Report');
+
+const res = await fetch('https://app.usesignallabs.com/api/v1/documents/upload', {
+  method: 'POST',
+  headers: { Authorization: `Bearer ${process.env.SIGNALLABS_API_KEY}` },
+  body: form,
 });
+const { data: doc } = await res.json();
 
 // Then generate with document context
 const battlecard = await sl.companies.battlecards(company.id).generate({
@@ -272,12 +282,18 @@ const battlecard = await sl.companies.battlecards(company.id).generate({
                     </div>
                     <div class="code-panel" data-lang="python">
                         <button class="copy-btn"></button>
-                        <pre><code class="language-python"># Upload a document
-doc = sl.documents.upload(
-    file="competitor-report.pdf",
-    company_id=company["id"],
-    title="Q1 Competitor Report"
-)
+                        <pre><code class="language-python"># Uploading is multipart, so it is not part of the SDK yet — post the
+# file directly, then pass the returned id to the SDK.
+import os, requests
+
+with open("competitor-report.pdf", "rb") as fh:
+    res = requests.post(
+        "https://app.usesignallabs.com/api/v1/documents/upload",
+        headers={"Authorization": f"Bearer {os.environ['SIGNALLABS_API_KEY']}"},
+        files={"file": fh},
+        data={"company_id": company["id"], "title": "Q1 Competitor Report"},
+    )
+doc = res.json()["data"]
 
 # Then generate with document context
 battlecard = sl.companies.battlecards(company["id"]).generate(
@@ -295,7 +311,7 @@ battlecard = sl.companies.battlecards(company["id"]).generate(
                     <span class="docs-step-badge">6</span>
                     <h2>Generate a Landscape Analysis (optional)</h2>
                 </div>
-                <p>Compare multiple competitors at once with a landscape battlecard. Requires 2 or more competitor IDs.</p>
+                <p>Compare multiple competitors at once with a landscape battlecard. Takes between 2 and 8 competitor IDs.</p>
                 <div class="code-group">
                     <div class="code-tabs">
                         <button class="code-tab active" data-lang="curl">cURL</button>
@@ -311,18 +327,16 @@ battlecard = sl.companies.battlecards(company["id"]).generate(
                     </div>
                     <div class="code-panel" data-lang="javascript">
                         <button class="copy-btn"></button>
-                        <pre><code class="language-javascript">const landscape = await sl.companies.battlecards(company.id).generate({
+                        <pre><code class="language-javascript">const landscape = await sl.companies.battlecards(company.id).generateLandscape({
   competitor_ids: [competitors[0].id, competitors[1].id],
-  enablement_focus: 'landscape',
 });
 
 console.log(landscape.overview);</code></pre>
                     </div>
                     <div class="code-panel" data-lang="python">
                         <button class="copy-btn"></button>
-                        <pre><code class="language-python">landscape = sl.companies.battlecards(company["id"]).generate(
-    competitor_ids=[competitors[0]["id"], competitors[1]["id"]],
-    enablement_focus="landscape"
+                        <pre><code class="language-python">landscape = sl.companies.battlecards(company["id"]).generate_landscape(
+    competitor_ids=[competitors[0]["id"], competitors[1]["id"]]
 )
 
 print(landscape["overview"])</code></pre>

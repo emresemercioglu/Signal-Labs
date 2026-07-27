@@ -48,6 +48,46 @@ JSON
 
 List endpoints return `data` as an array. Single-resource endpoints return `data` as an object.
 
+## Endpoints
+
+Document endpoints are listed separately under [Documents](https://usesignallabs.com/docs#documents). A machine-readable OpenAPI description of everything below is available at `/v1/openapi.json`.
+
+| Method | Path | Description |
+| --- | --- | --- |
+| GET | /v1/companies | List the companies your organization tracks |
+| POST | /v1/companies | Track a company. Returns immediately; profile analysis continues in the background |
+| GET | /v1/companies/{id} | Get a single company |
+| GET | /v1/companies/{id}/profile | Offerings and value propositions extracted from the website, plus profile_status |
+| POST | /v1/companies/{id}/profile/refresh | Re-extract the profile from the website |
+| GET | /v1/companies/{id}/products | List product / service verticals |
+| POST | /v1/companies/{id}/products | Add a product vertical |
+| GET | /v1/companies/{id}/competitors | List tracked competitors |
+| POST | /v1/companies/{id}/competitors | Add competitors. Returns immediately; research continues in the background |
+| POST | /v1/companies/{id}/competitors/discover | AI competitor suggestions. Creates nothing and consumes no allowance |
+| GET | /v1/competitors/{id}/page | The researched competitor page, plus generation_status |
+| GET | /v1/companies/{id}/battlecards | List battlecards |
+| POST | /v1/companies/{id}/battlecards/generate | Generate a battlecard (1 credit) |
+| GET | /v1/companies/{id}/signals | Recent competitive and market signals |
+| GET | /v1/companies/{id}/signals/summary | AI-generated digest of recent signals |
+| POST | /v1/ai/chat | Ask a question about your competitive landscape |
+
+## Asynchronous Operations
+
+Creating a company and adding a competitor both return before their work is finished. Researching a website takes 30–90 seconds, so the API records the row, responds, and continues in the background rather than holding the connection open.
+
+This means a company you just created has no offerings yet, and a competitor you just added has no researched page yet. Poll until the status field reports completion:
+
+Bash
+
+```bash
+# profile_status is "pending" while the website is being analysed,
+# then "ready". generation_status behaves the same way for competitors.
+curl https://app.usesignallabs.com/api/v1/companies/{company_id}/profile \
+  -H "Authorization: Bearer sl_live_your_key_here"
+```
+
+**Why this matters:** battlecards are grounded in the competitor's researched page and your own company profile. Generating one the instant after adding a competitor still works and still costs a credit, but the result is thinner. Wait for `generation_status` to read `ready` first.
+
 ## Errors
 
 Errors return a structured JSON object with actionable guidance:
@@ -116,11 +156,13 @@ Upload competitive documents for AI analysis and RAG-powered battlecard generati
 | Method | Path | Description |
 | --- | --- | --- |
 | POST | /v1/documents/upload | Upload a document (multipart form data, max 25MB). Supported: PDF, DOCX, XLSX, CSV, PPTX, TXT, MD, PNG, JPG, WebP. |
-| GET | /v1/documents?company_id={id} | List documents with storage usage stats |
-| GET | /v1/documents/{id} | Get document detail including extracted text |
+| GET | /v1/documents?company_id={id} | List documents with storage usage stats and auto-tags |
+| GET | /v1/documents/{id} | Get document detail including extracted text and auto-tags |
 | DELETE | /v1/documents/{id} | Delete a document and its RAG chunks |
 
 Documents are automatically parsed, chunked, and embedded for RAG. Use `document_ids` when generating battlecards to include uploaded documents as additional context.
+
+After processing, each document is also auto-tagged in the background: an AI pass identifies which of your tracked competitors it discusses, so the document surfaces on those competitors and in chat retrieval without you filing it manually. The upload response returns `auto_tagging: "pending"`; read the resulting `auto_tags` from either `GET` endpoint a few seconds later.
 
 ## Enablement Focus Types
 
@@ -132,9 +174,10 @@ When generating battlecards, specify one of these focus types:
 | product | Product & engineering | competitor_id |
 | marketing_growth | Marketing & growth | competitor_id |
 | leadership | Strategy & leadership | competitor_id |
-| landscape | Multi-competitor landscape analysis | competitor_ids (array of 2+) |
+| custom | Written entirely from your own brief. Requires special_instructions | competitor_id |
+| landscape | Multi-competitor landscape analysis | competitor_ids (array of 2–8) |
 
-**Note:** The `landscape` focus requires `competitor_ids` (an array of 2 or more competitor IDs) instead of `competitor_id`.
+**Note:** The `landscape` focus requires `competitor_ids` instead of `competitor_id`, with between 2 and 8 competitor IDs. Anything beyond the eighth is ignored, so split larger comparisons into multiple reports.
 
 ## SDKs
 

@@ -104,6 +104,9 @@
                 </ol>
                 <div class="docs-callout">
                     <p>Products are optional. If not specified, competitors default to company-level.</p>
+                <div class="docs-callout">
+                    <p><strong>Steps 1 and 3 are asynchronous.</strong> They return as soon as the row is written, then research the website in the background for 30&ndash;90 seconds. Poll <code>GET /v1/companies/{id}/profile</code> until <code>profile_status</code> is <code>ready</code>, and <code>GET /v1/competitors/{id}/page</code> until <code>generation_status</code> is <code>ready</code>, before relying on that data. Battlecards generated earlier still succeed and still cost a credit, but they are grounded in less material.</p>
+                </div>
                 </div>
 
                 <h2>Endpoints</h2>
@@ -116,11 +119,14 @@
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies</code></td><td>List companies</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies</code></td><td>Create company</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}</code></td><td>Get company</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/profile</code></td><td>Offerings, value propositions, <code>profile_status</code></td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/profile/refresh</code></td><td>Re-extract profile from the website</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/products</code></td><td>List products</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/products</code></td><td>Create product</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/competitors</code></td><td>List competitors</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors</code></td><td>Add competitors</td><td>Free</td></tr>
-                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors/discover</code></td><td>AI discover</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/competitors/discover</code></td><td>AI discover. Returns suggestions only, creates nothing</td><td>Free</td></tr>
+                            <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/competitors/{id}/page</code></td><td>Researched competitor page, <code>generation_status</code></td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/battlecards</code></td><td>List battlecards</td><td>Free</td></tr>
                             <tr><td><span class="method-badge method-post">POST</span></td><td><code>/v1/companies/{id}/battlecards/generate</code></td><td>Generate battlecard. Optional: include <code>special_instructions</code> (max 10,000 chars) to provide custom context or focus areas.</td><td>1 credit</td></tr>
                             <tr><td><span class="method-badge method-get">GET</span></td><td><code>/v1/companies/{id}/signals</code></td><td>List signals</td><td>Free</td></tr>
@@ -144,11 +150,13 @@
                     <li><code>product</code></li>
                     <li><code>marketing_growth</code></li>
                     <li><code>leadership</code></li>
+                    <li><code>custom</code> (requires <code>special_instructions</code>)</li>
                     <li><code>landscape</code></li>
                 </ul>
                 <div class="docs-callout">
-                    <p><strong>Note:</strong> <code>landscape</code> requires <code>competitor_ids</code> (an array of 2+ IDs) instead of <code>competitor_id</code>.</p>
+                    <p><strong>Note:</strong> <code>landscape</code> requires <code>competitor_ids</code> (an array of 2&ndash;8 IDs) instead of <code>competitor_id</code>. IDs beyond the eighth are ignored.</p>
                 </div>
+                <p>Documents uploaded via the API are auto-tagged in the background against your tracked competitors; read <code>auto_tags</code> from either document <code>GET</code> endpoint.</p>
 
                 <h2>MCP Server</h2>
                 <p>For AI tools, use the MCP server:</p>
