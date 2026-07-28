@@ -9,7 +9,7 @@ url: https://usesignallabs.com/blog
 
 Learn how to beat your competitors in deals — competitive intelligence tactics, market analysis and CI strategy from the team building CIx.
 
-July 27, 2026 Product Update
+July 28, 2026 Product Update
 
 ## [Signal to Action: Competitive Intelligence That Finishes the Work](https://usesignallabs.com/blog/signal-to-action)
 

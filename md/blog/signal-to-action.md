@@ -9,7 +9,7 @@ url: https://usesignallabs.com/blog/signal-to-action
 
 [← Back to Blog](https://usesignallabs.com/blog)
 
-July 27, 2026 Product Update
+July 28, 2026 Product Update
 
 # Signal to Action: Competitive Intelligence That Finishes the Work
 

@@ -8,7 +8,7 @@
 > Per-page Markdown: append .md to any URL, or send Accept: text/markdown
 > MCP server card: https://usesignallabs.com/.well-known/mcp.json
 >
-> Generated: 2026-07-27 | 50 pages
+> Generated: 2026-07-28 | 50 pages
 
 
 ---
@@ -8193,7 +8193,7 @@ Source: https://usesignallabs.com/blog
 
 Learn how to beat your competitors in deals — competitive intelligence tactics, market analysis and CI strategy from the team building CIx.
 
-July 27, 2026 Product Update
+July 28, 2026 Product Update
 
 ## [Signal to Action: Competitive Intelligence That Finishes the Work](https://usesignallabs.com/blog/signal-to-action)
 
@@ -9634,7 +9634,7 @@ Source: https://usesignallabs.com/blog/signal-to-action
 
 [← Back to Blog](https://usesignallabs.com/blog)
 
-July 27, 2026 Product Update
+July 28, 2026 Product Update
 
 # Signal to Action: Competitive Intelligence That Finishes the Work
 
