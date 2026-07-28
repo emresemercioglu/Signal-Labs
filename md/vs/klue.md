@@ -45,7 +45,7 @@ Compared on how the work actually gets done. Rows where Klue is stronger are mar
 | From signal to updated asset | ✓ The action names the section, drafts the change and applies it on approval | Insights are routed to your team to action |
 | Best fit | Teams automating from tracking through enablement | Enterprise compete programs with a dedicated owner |
 
-Klue capabilities summarized from their public product and documentation pages, reviewed July 2026. Neither company publishes list pricing, so this comparison is on capability and operating model rather than cost. If we have described something inaccurately, [tell us](https://usesignallabs.com/contact) and we will correct it.
+Klue capabilities summarized from their public product and documentation pages, reviewed July 2026. If we have described something inaccurately, [tell us](https://usesignallabs.com/contact) and we will correct it.
 
 ## Knowing is not the job. Acting is.
 

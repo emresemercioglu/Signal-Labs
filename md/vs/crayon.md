@@ -45,7 +45,7 @@ Compared on how the work actually gets done. Rows where Crayon is stronger are m
 | From signal to updated asset | ✓ The action names the section, drafts the change and applies it on approval | Alerts are prioritized for your team to action |
 | Operating model | ✓ Automated — no compete program required | Assumes a compete program and adoption of its workflow |
 
-Crayon capabilities summarized from their public product and documentation pages, reviewed July 2026. Neither company publishes list pricing, so this comparison is on capability and operating model rather than cost. If we have described something inaccurately, [tell us](https://usesignallabs.com/contact) and we will correct it.
+Crayon capabilities summarized from their public product and documentation pages, reviewed July 2026. If we have described something inaccurately, [tell us](https://usesignallabs.com/contact) and we will correct it.
 
 ## Knowing is not the job. Acting is.
 

@@ -44,7 +44,7 @@ Compared on how the work actually gets done. Rows where AlphaSense is stronger a
 | Time to a usable answer | ✓ Same day, self-serve on your first competitor | Depends on research scope |
 | Best fit | Teams who need to act on competitors weekly | Research-heavy organizations that need depth and provenance |
 
-AlphaSense capabilities summarized from their public product and documentation pages, reviewed July 2026. Neither company publishes list pricing, so this comparison is on capability and operating model rather than cost. If we have described something inaccurately, [tell us](https://usesignallabs.com/contact) and we will correct it.
+AlphaSense capabilities summarized from their public product and documentation pages, reviewed July 2026. If we have described something inaccurately, [tell us](https://usesignallabs.com/contact) and we will correct it.
 
 ## Knowing is not the job. Acting is.
 
