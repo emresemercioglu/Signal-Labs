@@ -32,6 +32,10 @@ We spent the last year watching how teams actually used CIx, and the same patter
 -   Full version history, so you can always see what changed, when, and roll it back
 -   Analytics showing what your organisation actually uses
 
+![Signal Labs CIx competitors page showing living competitor cards for Klue, Crayon and AlphaSense with a market positioning map](https://usesignallabs.com/assets/product/competitors-grid.png)
+
+Living competitor pages for every rival you track, with a positioning map that stays current.
+
 ## What a year of watching teams use CIx taught us
 
 Three things came up in nearly every conversation.
