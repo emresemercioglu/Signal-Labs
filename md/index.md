@@ -100,7 +100,7 @@ CIx watches competitor sites, launches, pricing changes, hiring, funding and new
 
 app.usesignallabs.com/actions
 
- ![The Signal Labs actions inbox showing AI-proposed work generated from competitor signals, including a comparison landing page, a counter-positioning website snippet, a comparison table and a battlecard update, each linked to its source article](https://usesignallabs.com/assets/product/actions-crop.png)
+ ![The Signal Labs actions inbox showing AI-proposed work generated from competitor signals, including a comparison landing page, a counter-positioning website snippet, a comparison table and a battlecard update, each linked to its source article](https://usesignallabs.com/assets/product/actions-crop-v2.png)
 
 Instant battlecard generation
 

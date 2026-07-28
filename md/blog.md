@@ -9,6 +9,16 @@ url: https://usesignallabs.com/blog
 
 Learn how to beat your competitors in deals — competitive intelligence tactics, market analysis and CI strategy from the team building CIx.
 
+July 27, 2026 Product Update
+
+## [Signal to Action: Competitive Intelligence That Finishes the Work](https://usesignallabs.com/blog/signal-to-action)
+
+Collecting intelligence was never the bottleneck. Here's everything we shipped to close the gap between knowing what a competitor did and doing something about it: living competitor pages, an actions inbox, Battle Rooms, custom battlecards and analytics.
+
+By **Emre Semercioglu**, Founder
+
+[Read More →](https://usesignallabs.com/blog/signal-to-action)
+
 March 19, 2026 Product Update
 
 ## [Introducing the Signal Labs API and MCP Server: Give Your AI Agents Real-Time Competitive Intelligence](https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server)

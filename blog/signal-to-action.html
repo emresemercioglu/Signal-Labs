@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17805025780"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17805025780');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal to Action: Competitive Intelligence That Finishes the Work - Signal Labs Blog</title>
+    <meta name="description" content="What's new in CIx: living competitor pages, an actions inbox that turns every competitor move into drafted work, Battle Rooms, custom battlecards and org-wide analytics.">
+    
+    <link rel="canonical" href="https://usesignallabs.com/blog/signal-to-action">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://usesignallabs.com/blog/signal-to-action">
+    <meta property="og:title" content="Signal to Action: Competitive Intelligence That Finishes the Work">
+    <meta property="og:description" content="Collecting intelligence was never the bottleneck. Here's what we shipped to close the gap between knowing what a competitor did and doing something about it.">
+    <meta property="og:image" content="https://usesignallabs.com/og-image-blog-signal-to-action.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Signal Labs">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:published_time" content="2026-07-27T00:00:00Z">
+    <meta property="article:author" content="Emre Semercioglu">
+    <meta property="article:section" content="Product Update">
+    <meta property="article:tag" content="Competitive Intelligence">
+    <meta property="article:tag" content="Competitive Enablement">
+    <meta property="article:tag" content="Battlecards">
+    <meta property="article:tag" content="Sales Enablement">
+    <meta property="article:tag" content="Product Marketing">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://usesignallabs.com/blog/signal-to-action">
+    <meta name="twitter:title" content="Signal to Action: Competitive Intelligence That Finishes the Work">
+    <meta name="twitter:description" content="Collecting intelligence was never the bottleneck. Here's what we shipped to close the gap between knowing what a competitor did and doing something about it.">
+    <meta name="twitter:image" content="https://usesignallabs.com/og-image-blog-signal-to-action.png">
+    
+    <style>
+        .navbar{border-bottom:none !important;box-shadow:none !important;transition:all 0.3s ease}.navbar.scrolled{border-bottom:1px solid var(--border-light) !important;box-shadow:0 2px 8px rgba(0,0,0,0.04) !important}.nav-logo a{display:flex;align-items:center;text-decoration:none;color:#0F172A !important;font-weight:600;font-size:var(--font-size-lg)}.logo-text{color:#0F172A !important}.nav-link{text-decoration:none;color:#64748B !important;font-weight:500;transition:color 0.3s ease;position:relative;padding-bottom:4px;border-bottom:2px solid transparent}.nav-link:hover,.nav-link.active{color:#0F172A !important;border-bottom-color:#272d46 !important}.nav-link.nav-cta{background:#272d46 !important;color:white !important;padding:0.5rem 1rem !important;border-radius:0.5rem !important;border:none !important;padding-bottom:0.5rem !important}.nav-link.nav-cta:hover{background:#1f2338 !important;border-bottom:none !important}.nav-toggle span{width:24px;height:2px;background:#0F172A !important;transition:all 0.3s ease}
+    </style>
+    
+    <style>
+        .solutions-nav-wrapper{position:relative}.solutions-nav-link{display:flex;align-items:center;gap:6px}.solutions-nav-link svg{transition:transform 0.2s ease}.solutions-nav-wrapper:hover .solutions-nav-link svg{transform:rotate(180deg)}.mega-menu{visibility:hidden;opacity:0;display:none;position:fixed;top:70px;left:50%;transform:translateX(-50%);background:white;border:1px solid #E2E8F0;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);width:950px;z-index:1001;transition:opacity 0.2s ease,visibility 0.2s ease}.mega-menu-content{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:32px 36px}.mega-menu-section{display:flex;flex-direction:column;gap:2px}.mega-menu-title{font-size:11px;font-weight:700;background:linear-gradient(135deg,#60a5fa 0%,#34d399 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;gap:6px}.mega-menu-link{text-decoration:none;color:#0F172A;font-size:14px;font-weight:500;padding:8px 12px;border-radius:6px;transition:all 0.15s ease;display:block;margin-left:-12px;margin-right:-12px}.mega-menu-link:hover{background:linear-gradient(135deg,#60a5fa 0%,#34d399 100%);color:#ffffff}.mega-menu-header{display:none}
+        .mega-menu-compact{width:240px;left:auto;right:auto;transform:none;position:absolute;top:calc(100% + 10px)}.mega-menu-compact .mega-menu-content{grid-template-columns:1fr;gap:0;padding:20px 24px}@media (max-width:1024px){.mega-menu-compact{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;padding:100px 0 24px}.mega-menu-compact .mega-menu-content{padding:0}}@media (max-width:1024px){.mega-menu-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;position:fixed;top:0;left:0;right:0;background:white;border-bottom:1px solid #E2E8F0;z-index:10002}.mega-menu-back,.mega-menu-close{background:none;border:none;font-size:16px;cursor:pointer;color:var(--text-primary);padding:8px;display:flex;align-items:center;gap:8px;font-weight:500;pointer-events:auto}.mega-menu-close{font-size:32px;line-height:1;padding:0;width:32px;height:32px}.mega-menu{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;transform:none;border:none;border-radius:0;padding:100px 0 24px;overflow-y:auto;z-index:10000}.mega-menu-content{display:flex;flex-direction:column;gap:32px;padding:0;max-width:100%}.mega-menu-section{gap:4px;padding:0 24px}.mega-menu-title{font-size:12px;margin-bottom:12px;padding-bottom:8px}.mega-menu-link{font-size:15px;padding:12px 24px;margin:0 -24px;border-radius:0}}
+    </style>
+
+    <style>
+        @media (max-width: 1175px) {
+            .footer .footer-links > .footer-column.footer-hide-mobile { display: none !important; }
+            .footer .footer-links .footer-column-group .footer-column.footer-hide-mobile { display: none !important; }
+        }
+        .blog-code-block{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:20px 24px;overflow-x:auto;font-family:'SF Mono','Fira Code','Fira Mono','Cascadia Code',monospace;font-size:14px;line-height:1.65;margin:1.5rem 0;border:1px solid #1e293b}
+        .blog-code-block code{color:#e2e8f0;background:none;padding:0;font-size:inherit}
+        .blog-code-label{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#94a3b8;font-family:'SF Mono','Fira Code',monospace;margin-bottom:6px}
+        .blog-inline-code{background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0;padding:2px 6px;border-radius:4px;font-size:0.85em;font-family:'SF Mono','Fira Code','Fira Mono',monospace}
+        .blog-figure{margin:2rem 0 2.5rem;padding:0}
+        .blog-figure img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid #e2e8f0;box-shadow:0 4px 24px rgba(15,23,42,0.08)}
+        .blog-figure figcaption{margin-top:.75rem;font-size:.875rem;line-height:1.5;color:var(--text-secondary);text-align:center}
+        .blog-takeaways{border:2px solid transparent;border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0;background:linear-gradient(#ffffff,#ffffff) padding-box,linear-gradient(135deg,#ff6b6b 0%,#c44dff 25%,#6366f1 50%,#0ea5e9 75%,#10b981 100%) border-box;box-shadow:0 2px 12px rgba(15,23,42,.06)}
+        .blog-takeaways ul{margin:0;padding-left:1.15rem}
+        .blog-takeaways li{margin:.4rem 0}
+    </style>
+
+    <link rel="stylesheet" href="/styles.css?v=12">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" sizes="64x64" />
+    <link rel="icon" href="/icon.png?v=4" type="image/png" sizes="64x64" />
+    <link rel="icon" href="/icon.svg?v=4" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.ico?v=4" />
+    <link rel="apple-touch-icon" href="/apple-icon.png?v=4" sizes="180x180" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="nav-logo">
+                <a href="/">
+                    <div class="logo-icon"><span class="logo-letter">s</span></div>
+                    <span class="logo-text">Signal Labs</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="/" class="nav-link">CIx Platform</a>
+                
+                <div class="solutions-nav-wrapper">
+                    <a href="/solutions/" class="nav-link solutions-nav-link">
+                        Solutions
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                        </svg>
+                    </a>
+                    
+                    <div class="mega-menu">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <svg width="0" height="0" style="position: absolute;">
+                            <defs>
+                                <linearGradient id="menuIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    BY TEAM
+                                </h3>
+                                <a href="/solutions/sales" class="mega-menu-link">Sales &amp; Revenue</a>
+                                <a href="/solutions/marketing" class="mega-menu-link">Marketing &amp; Growth</a>
+                                <a href="/solutions/product" class="mega-menu-link">Product &amp; Engineering</a>
+                                <a href="/solutions/leadership" class="mega-menu-link">Strategy &amp; Leadership</a>
+                                <a href="/solutions/competitive-intelligence" class="mega-menu-link">CI &amp; Research</a>
+                                <a href="/solutions/investors" class="mega-menu-link">Investors &amp; VCs</a>
+                                <a href="/solutions/ai-agents" class="mega-menu-link">AI Agents</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                    BY USE CASE
+                                </h3>
+                                <a href="/use-cases/sales-enablement" class="mega-menu-link">Sales Enablement</a>
+                                <a href="/use-cases/win-loss-analysis" class="mega-menu-link">Win/Loss Analysis</a>
+                                <a href="/use-cases/product-positioning" class="mega-menu-link">Product Positioning</a>
+                                <a href="/use-cases/market-intelligence" class="mega-menu-link">Market Intelligence</a>
+                                <a href="/use-cases/competitor-monitoring" class="mega-menu-link">Competitor Monitoring</a>
+                                <a href="/use-cases/battlecard-generation" class="mega-menu-link">Battlecard Generation</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                                    BY INDUSTRY
+                                </h3>
+                                <a href="/industries/saas" class="mega-menu-link">SaaS</a>
+                                <a href="/industries/legal" class="mega-menu-link">Legal</a>
+                                <a href="/industries/financial-services" class="mega-menu-link">Financial Services</a>
+                                <a href="/industries/healthcare" class="mega-menu-link">Healthcare</a>
+                                <a href="/industries/ecommerce" class="mega-menu-link">E-commerce &amp; Retail</a>
+                                <a href="/industries/deep-tech" class="mega-menu-link">Deep Tech</a>
+                                <a href="/industries/gaming" class="mega-menu-link">Gaming</a>
+                                <a href="/industries/defense" class="mega-menu-link">Defense</a>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h3 class="mega-menu-title">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#menuIconGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20V14"></path></svg>
+                                    BY SIZE
+                                </h3>
+                                <a href="/startups" class="mega-menu-link">Startups</a>
+                                <a href="/enterprise" class="mega-menu-link">Enterprise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="/pricing" class="nav-link">Pricing</a>
+                <a href="/docs" class="nav-link">Docs</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <div class="solutions-nav-wrapper">
+                    <a href="/about" class="nav-link solutions-nav-link">
+                        Company
+                        <svg width="10" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="mega-menu mega-menu-compact">
+                        <div class="mega-menu-header">
+                            <button class="mega-menu-back" aria-label="Go back">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                Back
+                            </button>
+                            <button class="mega-menu-close" aria-label="Close menu">&times;</button>
+                        </div>
+                        <div class="mega-menu-content">
+                            <div class="mega-menu-section">
+                                <h3 class="mega-menu-title">COMPANY</h3>
+                                <a href="/about" class="mega-menu-link">About</a>
+                                <a href="/services" class="mega-menu-link">CI Services</a>
+                                <a href="/faq" class="mega-menu-link">FAQ</a>
+                                <a href="/contact" class="mega-menu-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://app.usesignallabs.com/login" class="nav-link nav-login-mobile">Log in</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://app.usesignallabs.com/login" class="nav-link nav-login">Log in</a>
+                <a href="https://app.usesignallabs.com" class="nav-link nav-cta">Start Free</a>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="content-section" style="padding-top: 120px;">
+        <div class="container">
+            <div class="breadcrumbs" style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                <a href="/" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+                <span style="margin: 0 0.5rem;">/</span>
+                <a href="/blog" style="color: var(--text-secondary); text-decoration: none;">Blog</a>
+                <span style="margin: 0 0.5rem;">/</span>
+                <span style="color: var(--text-primary);">Signal to Action</span>
+            </div>
+            
+            <div class="blog-post-header">
+                <a href="/blog" class="blog-back-link">&larr; Back to Blog</a>
+                <div class="blog-post-meta">
+                    <span class="blog-date">July 27, 2026</span>
+                    <span class="blog-category">Product Update</span>
+                </div>
+                <h1 class="blog-post-title">Signal to Action: Competitive Intelligence That Finishes the Work</h1>
+            </div>
+        </div>
+    </section>
+
+    <article class="content-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="blog-post-content">
+                <div class="blog-author-info" style="margin-bottom: 1rem; margin-top: 0;">
+                    <div class="blog-author-avatar">
+                        <div style="width: 48px; height: 48px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: var(--font-size-lg);">ES</div>
+                    </div>
+                    <div class="blog-author-details">
+                        <div class="blog-author-name">Emre Semercioglu</div>
+                        <div class="blog-author-title">Founder</div>
+                    </div>
+                </div>
+                
+                <p class="blog-intro">Finding out what a competitor did was never the hard part. Doing something about it, before the call, before the deal closes, before the intel goes stale, is where competitive intelligence quietly falls apart.</p>
+
+                <p>We spent the last year watching how teams actually used CIx, and the same pattern kept showing up. So we rebuilt around it. CIx still tracks competitors and writes battlecards. What's new is everything that happens after: each meaningful competitor move now arrives as finished work your sales, product and marketing teams can review, approve and send.</p>
+
+                <div class="blog-takeaways">
+                    <strong>What shipped, in one list:</strong>
+                    <ul>
+                        <li>Living competitor pages that update themselves</li>
+                        <li>An Actions inbox that turns competitor moves into comparison pages, sales emails, website copy and battlecard updates</li>
+                        <li>Custom battlecards and reports tailored to what each team needs</li>
+                        <li>Battle Rooms, where product and marketing come together to help sales close a specific deal</li>
+                        <li>Full version history, so you can always see what changed, when, and roll it back</li>
+                        <li>Analytics showing what your organisation actually uses</li>
+                    </ul>
+                </div>
+
+                <h2>What a year of watching teams use CIx taught us</h2>
+
+                <p>Three things came up in nearly every conversation.</p>
+
+                <p><strong>The research was rarely the bottleneck.</strong> Most teams could already tell us what their competitors had shipped. What they could not find was the two hours to update the battlecard, rewrite the comparison page and brief the field before the next call. And they often could not say what the move actually meant for an open deal: which objection it would create, which claim to counter, what a rep should do differently on Thursday's call. The intelligence existed. The output did not.</p>
+
+                <p><strong>Competitive intelligence is not one team's job.</strong> A competitor's pricing change means something different to an AE in a live deal, a product marketer rewriting a landing page, a PM planning next quarter and a founder reading the market. Everyone was handed the same undifferentiated feed and asked to interpret it themselves.</p>
+
+                <p><strong>Nobody repeats a claim they cannot check.</strong> Reps quietly ignored intel they could not verify, and they were right to ignore it. An AI-written competitive claim with no source behind it is a liability on a sales call, not an asset.</p>
+
+                <h2>From competitive intelligence to competitive enablement</h2>
+
+                <p>Competitive enablement is the step most CI tools leave to a human: taking what you learn about a competitor and turning it into the specific artifacts each team needs, from a battlecard edit and an objection-handling talk track to a comparison table, an email to the field or a landing page.</p>
+
+                <p>Collection is step one, and it is the step that has become close to free. Anyone can point an AI at a competitor's website. The scarce work is everything after it: deciding what a rival's launch means for your roadmap, which claim to counter on your pricing page, which campaign to run against their new positioning, and what a rep says when their name comes up mid-deal. That is the part CIx now does, and the part your team reviews instead of produces.</p>
+
+                <p>It is the same job we started on, carried one step further than a feed.</p>
+
+                <h2>Living competitor pages that update themselves</h2>
+
+                <p>Every competitor you track gets one page instead of eleven browser tabs: overview and SWOT, offerings, marketing motion, strategy, signals, recommendations, battlecards, battle rooms, generated content, your uploaded documents, and the raw source data sitting behind all of it.</p>
+
+                <figure class="blog-figure">
+                    <picture>
+                        <source srcset="/assets/product/competitor-page.webp" type="image/webp" width="1600" height="1005">
+                        <img src="/assets/product/competitor-page.png" width="1600" height="1005" loading="lazy" decoding="async"
+                             alt="A living competitor page for Klue in Signal Labs CIx, with tabs for offerings, marketing, strategy, signals, recommendations and battlecards, a head-to-head comparison radar and a last-refreshed timestamp">
+                    </picture>
+                    <figcaption>One page per competitor, rebuilt from live sources rather than stored as a document.</figcaption>
+                </figure>
+
+                <p>The page rebuilds itself as the competitor ships, repositions or changes pricing. There is no quarterly refresh project and no document that quietly goes stale. A head-to-head radar scores you against them on product, usability, performance, brand, support and momentum, so you can see where you lead and where you genuinely trail. Every claim links to the page it came from, and full version history shows what changed and when.</p>
+
+                <h2>From signal to action, automatically</h2>
+
+                <p>CIx <a href="/use-cases/competitor-monitoring" style="color: var(--primary);">watches competitor sites</a>, launches, pricing moves, funding, hiring and news, then scores each move 1&ndash;10 for importance so a homepage tweak never reads like a new pricing tier.</p>
+
+                <p>What is new is what happens next. Each meaningful signal produces proposed work in the Actions inbox, in two forms.</p>
+
+                <p><strong>Updates to your intelligence.</strong> A diff against your competitor page or a battlecard: a new weakness, a changed price, a rewritten strength, a new offering. You read the before-and-after, approve it, and the page updates.</p>
+
+                <p><strong>Drafts you take and use.</strong> Comparison tables, competitive emails, ready-to-paste website snippets, comparison landing pages, blog posts and social posts. Each one is proposed with a reason, then written on demand when you ask for it.</p>
+
+                <figure class="blog-figure">
+                    <picture>
+                        <source srcset="/assets/product/actions-inbox.webp" type="image/webp" width="1600" height="1005">
+                        <img src="/assets/product/actions-inbox.png" width="1600" height="1005" loading="lazy" decoding="async"
+                             alt="The Signal Labs CIx actions inbox showing AI-proposed work generated from competitor signals: a comparison landing page, a counter-positioning website snippet, an email draft, a comparison table and a battlecard update, each linked to the source article that triggered it">
+                    </picture>
+                    <figcaption>Every card names the signal that triggered it and links to the source article.</figcaption>
+                </figure>
+
+                <p>Approve, discard, or stop being asked: auto-approval rules can be set per competitor and per action type, so routine page updates apply themselves while anything consequential still waits for a person.</p>
+
+                <h2>Battlecards and reports shaped for each team</h2>
+
+                <p>Same underlying intelligence, six different enablement artifacts tailored to what each team actually needs: <strong>GTM/Sales</strong>, <strong>Marketing/Growth</strong>, <strong>Product</strong>, <strong>Leadership</strong>, <strong>Landscape Analysis</strong> (up to eight competitors compared in one view) and a <strong>Custom Report</strong> where you write the brief yourself. Each one is a <a href="/use-cases/battlecard-generation" style="color: var(--primary);">battlecard</a> built from the same live intelligence, written for a different reader.</p>
+
+                <figure class="blog-figure">
+                    <picture>
+                        <source srcset="/assets/product/battlecard.webp" type="image/webp" width="1600" height="1005">
+                        <img src="/assets/product/battlecard.png" width="1600" height="1005" loading="lazy" decoding="async"
+                             alt="A GTM/Sales battlecard in Signal Labs CIx comparing Signal Labs with AlphaSense, showing a capability radar, a sourced competitor summary, and a banner offering two suggested updates drawn from new competitor signals">
+                    </picture>
+                    <figcaption>Cards do not sit still either. New signals arrive as suggested updates on the card itself.</figcaption>
+                </figure>
+
+                <p>Ground a card in your own documents, steer it with instructions in plain language, and regenerate any single section without touching the rest. Add a competitor weakness or a talking point by hand where you know something the web does not.</p>
+
+                <h2>Battle Rooms: work one deal, together</h2>
+
+                <p>A Battle Room is a thread for a single deal, and the point of it is collaboration. Name the client, pull in the competitors involved, and bring product, marketing and CI into the same conversation as the rep who has to win it. Everyone works from the same context instead of forwarding each other links.</p>
+
+                <figure class="blog-figure">
+                    <picture>
+                        <source srcset="/assets/product/battle-room.webp" type="image/webp" width="1600" height="1005">
+                        <img src="/assets/product/battle-room.png" width="1600" height="1005" loading="lazy" decoding="async"
+                             alt="A Signal Labs CIx Battle Room for a live deal, where a rep asks @CIX how to counter AlphaSense on research depth and CIx replies with a counter-position, specific talk tracks and what to know before the call">
+                    </picture>
+                    <figcaption>Ask @CIX in the thread and it answers from your own competitive intelligence.</figcaption>
+                </figure>
+
+                <p>Tag <span class="blog-inline-code">@CIX</span> and it answers in the thread with your competitive intelligence behind it: a counter-position, the exact words to use, what is confirmed and what is inference. Ask it for a battlecard, a comparison or an email and the deliverable collects in the room. Tag a teammate with <span class="blog-inline-code">@name</span> and they get notified. Close the room as won or lost with a note, and the reasoning stays attached to the deal.</p>
+
+                <h2>Also new</h2>
+
+                <p><strong>Market positioning map.</strong> A two-axis map of where you and every competitor sit, maintained automatically as the intelligence changes rather than redrawn by hand in a slide.</p>
+
+                <p><strong>Data library.</strong> Upload PDFs, decks, spreadsheets, call transcripts, deal notes and internal docs. They are parsed, chunked, embedded and auto-tagged to the competitors they mention, so your own knowledge shows up in battlecards, answers and drafts alongside public sources.</p>
+
+                <p><strong>Notifications and digests.</strong> Signals, proposed actions and team activity in one feed, plus scheduled newsletters that can land in email or Slack for the people who will never open the dashboard.</p>
+
+                <p><strong>Analytics.</strong> Battlecards created, competitors tracked, content views, Chat CIx queries, actions approved and page edits, plus which battlecards, signals and competitor pages actually get read, and who is doing the work. CI programs usually die from being invisible; this is the evidence that yours is not.</p>
+
+                <figure class="blog-figure">
+                    <picture>
+                        <source srcset="/assets/product/analytics.webp" type="image/webp" width="1600" height="830">
+                        <img src="/assets/product/analytics.png" width="1600" height="830" loading="lazy" decoding="async"
+                             alt="The Signal Labs CIx analytics page showing battlecards created, competitors tracked, content views, Chat CIx queries, actions approved and competitor page edits, above a views-over-time chart">
+                    </picture>
+                    <figcaption>Proof the program is being used, not just funded.</figcaption>
+                </figure>
+
+                <p><strong>API, MCP and SDKs.</strong> Everything above is available programmatically and from AI tools like Claude and Cursor. We wrote about that separately in <a href="/blog/introducing-signal-labs-api-mcp-server" style="color: var(--primary);">Introducing the Signal Labs API and MCP Server</a>.</p>
+
+                <h2>Whether you have a CI team or you are the CI team</h2>
+
+                <p><strong>No dedicated CI or product marketing hire.</strong> If competitive work currently happens when a founder or the first marketer finds a spare evening, CIx gives you the output a CI function would produce without the headcount. Add a competitor, get a maintained page, and let the actions inbox tell you which two things are worth doing this week.</p>
+
+                <p><strong>One product marketer supporting a whole go-to-market org.</strong> This is the group we hear from most: <a href="/solutions/marketing" style="color: var(--primary);">product marketing teams</a> where the bottleneck is never ideas, it is throughput. Drafts arriving pre-written turns a week of production into an afternoon of editing, and Battle Rooms let <a href="/solutions/sales" style="color: var(--primary);">sales</a> get an answer without it routing through you first.</p>
+
+                <p><strong>An established CI team.</strong> Nothing here replaces judgement, and it is not meant to. It removes the production layer, the rewriting and reformatting and chasing of what changed, so <a href="/solutions/competitive-intelligence" style="color: var(--primary);">the CI function</a> spends its time on the calls that need a human: which recommendation to take, which positioning bet to make, which deal to work personally.</p>
+
+                <h2>Three things we did not change</h2>
+
+                <p><strong>Every claim is still source-linked.</strong> A rep who cannot verify a number will not use it, so each statement carries a link to the page it came from.</p>
+
+                <p><strong>The sources stay public and ethical.</strong> Company websites, pricing and product pages, press releases, news, job postings, public filings, reviews and plenty more, all of it openly available.</p>
+
+                <p><strong>Nothing publishes itself.</strong> Every proposed update and draft waits for a person, unless you explicitly decide to automate that one type of change.</p>
+
+                <h2>Try it on your top competitor</h2>
+
+                <p>The <a href="/pricing" style="color: var(--primary);">free plan</a> covers one competitor with a living page, the real-time signal feed, the suggested-actions inbox and a battlecard a month, on three seats. No credit card, no expiry, and about a minute to set up. Team plans open up your full competitive set, automatic refresh, Battle Rooms and unlimited deliverables.</p>
+
+                <p><a href="https://app.usesignallabs.com/login" style="color: var(--primary);"><strong>Start free</strong></a>, or <a href="/contact" style="color: var(--primary);">book a walkthrough</a> if you would rather see it run against your own market first.</p>
+
+                <h2>Questions we get about this</h2>
+
+                <h3>How does CIx work under the hood?</h3>
+                <p>Less like a dashboard, more like an operating system for your competitive intelligence. CIx runs the loop a good CI analyst runs, continuously and on its own: it scrapes and re-scrapes your competitors, scores what changed, works out what that change means for sales, product, marketing and leadership, updates the competitor pages and battlecards it already built, and drafts the deliverables each team needs next. CIx has always tracked competitors and generated battlecards; what changed is that the intelligence now arrives as work with a recommended next step instead of a feed somebody has to read and interpret.</p>
+
+                <h3>What is the difference between competitive intelligence and competitive enablement?</h3>
+                <p>Competitive intelligence is gathering and analysing information about the companies you compete with. Competitive enablement is turning that into the decisions and deliverables each team needs. For sales, that is battlecards, talk tracks and objection handling. For marketing, it is comparison pages, blog content, counter-messaging and which campaign to run against a rival's new positioning. For product, it is what to build next, which gap to close and what to prioritise on the roadmap. For leadership, it is where a competitor is genuinely ahead and where to invest because of it. Most tools stop at the intelligence. CIx does both.</p>
+
+                <h3>Does the AI publish or change anything on its own?</h3>
+                <p>Only if you tell it to. Every proposed update and draft sits in the actions inbox until a person approves it. Auto-approval is opt-in and can be scoped to a specific competitor and a specific type of change.</p>
+
+                <h3>Do I need a competitive intelligence team to get value from it?</h3>
+                <p>No. The platform is designed to work both for a company with no dedicated CI or product marketing hire and for an established CI team that wants its production work automated. The difference is how much you customise, not how much you get.</p>
+
+                <h3>How do I know a claim is accurate?</h3>
+                <p>Every statement on a competitor page, signal and battlecard carries a link to the page it was drawn from, so anyone can check the original before repeating it to a buyer. Where CIx has no confirmation, it says so instead of filling the gap.</p>
+
+                <p><em>Emre Semercioglu, Founder of Signal Labs</em></p>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- More Reads Section -->
+    <section class="content-section" style="background: var(--bg-secondary); padding: var(--space-16) 0;">
+        <div class="container">
+            <style>
+                @media (max-width: 768px) {
+                    .blog-grid-3col-responsive { grid-template-columns: 1fr !important; }
+                }
+            </style>
+            <h3 style="font-size: var(--font-size-2xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-8); text-align: center;">
+                More Reads on Competitive Intelligence
+            </h3>
+            <div class="blog-grid-3col-responsive" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8);">
+                <a href="/blog/real-time-ci-playbook-for-product-marketing" style="text-decoration: none; outline: none; display: flex; flex-direction: column; height: 100%;">
+                    <div style="background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 4px 20px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 3px solid #34d399; border-left: none; border-right: none; border-bottom: none; display: flex; flex-direction: column;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                        </div>
+                        <h4 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0 0 var(--space-3) 0; line-height: 1.4;">
+                            The Real-Time CI Playbook for Product Marketing
+                        </h4>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-base); margin: 0 0 var(--space-4) 0; line-height: 1.6; flex-grow: 1;">
+                            Build real-time competitive intelligence into your positioning, messaging, and launches
+                        </p>
+                        <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-base); margin-top: auto;">Read more &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="/blog/sales-enablement-battlecards-real-time-competitive-intelligence" style="text-decoration: none; outline: none; display: flex; flex-direction: column; height: 100%;">
+                    <div style="background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 4px 20px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 3px solid #4ABCCA; border-left: none; border-right: none; border-bottom: none; display: flex; flex-direction: column;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                        </div>
+                        <h4 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0 0 var(--space-3) 0; line-height: 1.4;">
+                            Sales Enablement Battlecards
+                        </h4>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-base); margin: 0 0 var(--space-4) 0; line-height: 1.6; flex-grow: 1;">
+                            From static docs to real-time competitive intelligence for sales teams
+                        </p>
+                        <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-base); margin-top: auto;">Read more &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="/blog/competitive-landscape-analysis" style="text-decoration: none; outline: none; display: flex; flex-direction: column; height: 100%;">
+                    <div style="background: white; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: 0 4px 20px rgba(0,0,0,0.08); height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 3px solid #60a5fa; border-left: none; border-right: none; border-bottom: none; display: flex; flex-direction: column;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #60a5fa, #34d399); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                        </div>
+                        <h4 style="font-size: var(--font-size-lg); font-weight: 600; color: var(--text-primary); margin: 0 0 var(--space-3) 0; line-height: 1.4;">
+                            Competitive Landscape Analysis
+                        </h4>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-base); margin: 0 0 var(--space-4) 0; line-height: 1.6; flex-grow: 1;">
+                            Compare 10+ competitors in one view with positioning, gaps, and market insights
+                        </p>
+                        <span style="color: #60a5fa; font-weight: 600; font-size: var(--font-size-base); margin-top: auto;">Read more &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><span class="logo-letter">s</span></div>
+                        <span class="logo-text">Signal Labs</span>
+                    </div>
+                    <p>Competitive Intelligence & Enablement Platform</p>
+                    <a href="https://www.linkedin.com/company/signal-labs-cix/" target="_blank" rel="noopener noreferrer" class="footer-linkedin-link" aria-label="Visit Signal Labs on LinkedIn" style="margin-bottom: 20px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    
+                    <div class="footer-column footer-brand-extra">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../docs">Docs</a>
+                        <a href="../contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>By Size</h3>
+                        <a href="../startups">Startups</a>
+                        <a href="../enterprise">Enterprise</a>
+                    </div>
+                    <div class="footer-column footer-brand-extra" style="margin-top: 50px;">
+                        <h3>Compare</h3>
+                        <a href="../vs/klue">CIx vs Klue</a>
+                        <a href="../vs/crayon">CIx vs Crayon</a>
+                        <a href="../vs/alphasense">CIx vs AlphaSense</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Platform</h3>
+                        <a href="../">CIx Platform</a>
+                        <a href="../services">CI Services</a>
+                    </div>
+                    
+                    <div class="footer-column-group footer-column-group-by-team" style="margin-top: 132px;">
+                        <div class="footer-column">
+                            <h3>By Team</h3>
+                            <a href="../solutions/sales">Sales &amp; Revenue</a>
+                            <a href="../solutions/marketing">Marketing &amp; Growth</a>
+                            <a href="../solutions/product">Product &amp; Engineering</a>
+                            <a href="../solutions/leadership">Strategy &amp; Leadership</a>
+                            <a href="../solutions/competitive-intelligence">CI &amp; Research</a>
+                            <a href="../solutions/investors">Investors &amp; VCs</a>
+                            <a href="../solutions/ai-agents">AI Agents</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>By Use Case</h3>
+                            <a href="../use-cases/sales-enablement">Sales Enablement</a>
+                            <a href="../use-cases/win-loss-analysis">Win/Loss Analysis</a>
+                            <a href="../use-cases/product-positioning">Product Positioning</a>
+                            <a href="../use-cases/market-intelligence">Market Intelligence</a>
+                            <a href="../use-cases/competitor-monitoring">Competitor Monitoring</a>
+                            <a href="../use-cases/battlecard-generation">Battlecard Generation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column-group">
+                        <div class="footer-column">
+                            <h3>By Industry</h3>
+                            <a href="../industries/saas">SaaS</a>
+                            <a href="../industries/legal">Legal</a>
+                            <a href="../industries/financial-services">Financial Services</a>
+                            <a href="../industries/healthcare">Healthcare</a>
+                            <a href="../industries/ecommerce">E-commerce &amp; Retail</a>
+                            <a href="../industries/deep-tech">Deep Tech</a>
+                            <a href="../industries/gaming">Gaming</a>
+                            <a href="../industries/defense">Defense</a>
+                        </div>
+                        <div class="footer-column footer-hide-mobile">
+                            <h3>By Size</h3>
+                            <a href="../startups">Startups</a>
+                            <a href="../enterprise">Enterprise</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column footer-hide-mobile">
+                        <h3>Company</h3>
+                        <a href="../about">About</a>
+                        <a href="../blog">Blog</a>
+                        <a href="../faq">FAQ</a>
+                        <a href="../docs">Docs</a>
+                        <a href="../contact">Contact</a>
+                        <h3 style="margin-top: calc(var(--space-10) + var(--space-3));">Compare</h3>
+                        <a href="../vs/klue">CIx vs Klue</a>
+                        <a href="../vs/crayon">CIx vs Crayon</a>
+                        <a href="../vs/alphasense">CIx vs AlphaSense</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Signal Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const solutionsWrapper = null; // superseded by the multi-dropdown nav script below
+            const solutionsLink = document.querySelector('.solutions-nav-link');
+            const megaMenu = document.querySelector('.mega-menu');
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            const closeButton = megaMenu ? megaMenu.querySelector('.mega-menu-close') : null;
+            const backButton = megaMenu ? megaMenu.querySelector('.mega-menu-back') : null;
+            
+            if (solutionsWrapper && megaMenu && solutionsLink && navMenu) {
+                let timeout;
+                const isMobile = () => window.innerWidth <= 1024;
+                
+                megaMenu.style.visibility = 'hidden';
+                megaMenu.style.opacity = '0';
+                megaMenu.style.display = 'none';
+                
+                function closeMegaMenu() {
+                    megaMenu.style.visibility = 'hidden';
+                    megaMenu.style.opacity = '0';
+                    setTimeout(() => { megaMenu.style.display = 'none'; }, 300);
+                }
+                
+                function openMegaMenu() {
+                    megaMenu.style.display = 'block';
+                    megaMenu.offsetHeight;
+                    megaMenu.style.visibility = 'visible';
+                    megaMenu.style.opacity = '1';
+                }
+                
+                function closeAllNavs() {
+                    closeMegaMenu();
+                    navMenu.classList.remove('active');
+                }
+                
+                if (!isMobile()) {
+                    solutionsWrapper.addEventListener('mouseenter', function() { clearTimeout(timeout); openMegaMenu(); });
+                    solutionsWrapper.addEventListener('mouseleave', function() { timeout = setTimeout(function() { if (!megaMenu.matches(':hover')) closeMegaMenu(); }, 100); });
+                    megaMenu.addEventListener('mouseenter', function() { clearTimeout(timeout); openMegaMenu(); });
+                    megaMenu.addEventListener('mouseleave', function() { closeMegaMenu(); });
+                }
+                
+                solutionsLink.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault(); e.stopPropagation();
+                        if (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block') closeMegaMenu();
+                        else openMegaMenu();
+                    }
+                }, true);
+                
+                if (closeButton) { closeButton.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); closeAllNavs(); }); }
+                if (backButton) { backButton.addEventListener('click', function(e) { e.preventDefault(); e.stopPropagation(); closeMegaMenu(); }); }
+                
+                megaMenu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() { if (isMobile()) closeAllNavs(); });
+                });
+                
+                window.addEventListener('resize', function() {
+                    if (!isMobile() && (megaMenu.style.visibility === 'visible' || megaMenu.style.display === 'block')) closeMegaMenu();
+                });
+            }
+            
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 10) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Signal to Action: Competitive Intelligence That Finishes the Work",
+      "description": "What's new in CIx: living competitor pages, an actions inbox that turns every competitor move into drafted work, Battle Rooms, custom battlecards and org-wide analytics.",
+      "author": {
+        "@type": "Person",
+        "name": "Emre Semercioglu",
+        "jobTitle": "Founder",
+        "url": "https://usesignallabs.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Signal Labs",
+        "url": "https://usesignallabs.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://usesignallabs.com/icon.png"
+        }
+      },
+      "datePublished": "2026-07-27",
+      "dateModified": "2026-07-27",
+      "mainEntityOfPage": "https://usesignallabs.com/blog/signal-to-action",
+      "image": "https://usesignallabs.com/og-image-blog-signal-to-action.png",
+      "articleSection": "Product Update",
+      "keywords": ["competitive intelligence", "competitive enablement", "battlecards", "competitor monitoring", "sales enablement", "product marketing", "signal to action", "AI competitive intelligence"],
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "CIx",
+        "applicationCategory": "BusinessApplication",
+        "url": "https://usesignallabs.com"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does CIx work under the hood?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less like a dashboard, more like an operating system for your competitive intelligence. CIx runs the loop a good CI analyst runs, continuously and on its own: it scrapes and re-scrapes your competitors, scores what changed, works out what that change means for sales, product, marketing and leadership, updates the competitor pages and battlecards it already built, and drafts the deliverables each team needs next. CIx has always tracked competitors and generated battlecards; what changed is that the intelligence now arrives as work with a recommended next step instead of a feed somebody has to read and interpret."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between competitive intelligence and competitive enablement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Competitive intelligence is gathering and analysing information about the companies you compete with. Competitive enablement is turning that into the decisions and deliverables each team needs. For sales, that is battlecards, talk tracks and objection handling. For marketing, it is comparison pages, blog content, counter-messaging and which campaign to run against a rival's new positioning. For product, it is what to build next, which gap to close and what to prioritise on the roadmap. For leadership, it is where a competitor is genuinely ahead and where to invest because of it. Most tools stop at the intelligence. CIx does both."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the AI publish or change anything on its own?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if you tell it to. Every proposed update and draft sits in the actions inbox until a person approves it. Auto-approval is opt-in and can be scoped to a specific competitor and a specific type of change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a competitive intelligence team to get value from it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The platform is designed to work both for a company with no dedicated CI or product marketing hire and for an established CI team that wants its production work automated. The difference is how much you customise, not how much you get."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know a claim is accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every statement on a competitor page, signal and battlecard carries a link to the page it was drawn from, so anyone can check the original before repeating it to a buyer. Where CIx has no confirmation, it says so instead of filling the gap."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://usesignallabs.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://usesignallabs.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "Signal to Action", "item": "https://usesignallabs.com/blog/signal-to-action" }
+      ]
+    }
+    </script>
+    <!-- Nav Dropdowns (multi-instance: Solutions + Company) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navMenu = document.getElementById('nav-menu');
+            const wrappers = document.querySelectorAll('.solutions-nav-wrapper');
+            if (!navMenu || !wrappers.length) return;
+
+            const isMobile = () => window.innerWidth <= 1024;
+            const panels = [];
+
+            wrappers.forEach(function(wrapper) {
+                const trigger = wrapper.querySelector('.solutions-nav-link');
+                const menu = wrapper.querySelector('.mega-menu');
+                if (!trigger || !menu) return;
+
+                let timeout;
+                menu.style.visibility = 'hidden';
+                menu.style.opacity = '0';
+                menu.style.display = 'none';
+
+                function close() {
+                    menu.style.visibility = 'hidden';
+                    menu.style.opacity = '0';
+                    setTimeout(function() { menu.style.display = 'none'; }, 300);
+                }
+
+                function open() {
+                    // Only one dropdown may be open at a time.
+                    panels.forEach(function(p) { if (p.menu !== menu) p.close(); });
+                    menu.style.display = 'block';
+                    menu.offsetHeight;
+                    menu.style.visibility = 'visible';
+                    menu.style.opacity = '1';
+                }
+
+                function isOpen() {
+                    return menu.style.visibility === 'visible' || menu.style.display === 'block';
+                }
+
+                panels.push({ menu: menu, close: close, isOpen: isOpen });
+
+                if (!isMobile()) {
+                    wrapper.addEventListener('mouseenter', function() {
+                        clearTimeout(timeout);
+                        open();
+                    });
+                    wrapper.addEventListener('mouseleave', function() {
+                        timeout = setTimeout(function() {
+                            if (!menu.matches(':hover')) close();
+                        }, 100);
+                    });
+                    menu.addEventListener('mouseenter', function() { clearTimeout(timeout); });
+                    menu.addEventListener('mouseleave', close);
+                }
+
+                trigger.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        isOpen() ? close() : open();
+                    }
+                }, true);
+
+                const closeButton = menu.querySelector('.mega-menu-close');
+                const backButton = menu.querySelector('.mega-menu-back');
+
+                if (closeButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        closeButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                            navMenu.classList.remove('active');
+                        });
+                    });
+                }
+
+                if (backButton) {
+                    ['click', 'touchend'].forEach(function(evt) {
+                        backButton.addEventListener(evt, function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            close();
+                        });
+                    });
+                }
+
+                menu.querySelectorAll('.mega-menu-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (isMobile()) {
+                            close();
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                const navToggle = document.getElementById('nav-toggle');
+                if (navToggle && navToggle.contains(e.target) && isMobile()) {
+                    panels.forEach(function(p) { p.close(); });
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (!isMobile()) {
+                    panels.forEach(function(p) { if (p.isOpen()) p.close(); });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
