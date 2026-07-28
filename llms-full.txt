@@ -9644,9 +9644,9 @@ Emre Semercioglu
 
 Founder
 
-Finding out what a competitor did was never the hard part. Doing something about it, before the call, before the deal closes, before the intel goes stale, is where competitive intelligence quietly falls apart.
+Finding out what a competitor did was never the hard part. Doing something about it, before the call, before the deal closes, before the intel goes stale, is where competitive intelligence falls apart.
 
-We spent the last year watching how teams actually used CIx, and the same pattern kept showing up. So we rebuilt around it. CIx still tracks competitors and writes battlecards. What's new is everything that happens after: each meaningful competitor move now arrives as finished work your sales, product and marketing teams can review, approve and send.
+We spent the last year watching how teams actually used CIx, and the same pattern kept showing up. So we rebuilt around it. CIx still tracks competitors and writes battlecards. What's new is everything that happens after: each meaningful competitor move now arrives as finished work your sales, product and marketing teams can review, approve and act on it.
 
 **What shipped, in one list:**
 
