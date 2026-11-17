@@ -128,7 +128,7 @@ JSON
 | get_competitor_page | Read a competitor's researched analysis |
 | discover_competitors | AI-powered competitor discovery |
 | get_battlecards | Retrieve battlecards |
-| generate_battlecard | Generate a battlecard for one competitor (1 credit) |
+| generate_battlecard | Generate a battlecard for one competitor (uses 1 battlecard from your monthly allowance) |
 | generate_landscape_battlecard | Compare 2–8 competitors in one report (1 credit) |
 | get_signals | Get recent intelligence signals |
 | get_signal_summary | AI-generated signal digest |

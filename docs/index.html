@@ -163,7 +163,7 @@ curl https://app.usesignallabs.com/api/v1/companies/{company_id}/profile \
     "type": "credit_error",
     "credits_remaining": 0,
     "credits_required": 1,
-    "upgrade_url": "https://app.usesignallabs.com/settings/billing"
+    "upgrade_url": "https://app.usesignallabs.com/settings?tab=plan"
   }
 }</code></pre>
                 </div>
@@ -180,6 +180,7 @@ curl https://app.usesignallabs.com/api/v1/companies/{company_id}/profile \
                             <tr><td>401</td><td><code>authentication_error</code></td><td>Missing, invalid, or revoked API key</td></tr>
                             <tr><td>403</td><td><code>credit_error</code></td><td>Insufficient credits for this operation</td></tr>
                             <tr><td>403</td><td><code>limit_error</code></td><td>Plan limit reached (e.g., competitor count)</td></tr>
+                            <tr><td>403</td><td><code>authorization_error</code> (<code>plan_required</code>)</td><td>Your plan doesn't include API &amp; MCP access (Free). Includes <code>upgrade_url</code></td></tr>
                             <tr><td>404</td><td><code>not_found_error</code></td><td>Resource not found</td></tr>
                             <tr><td>429</td><td><code>rate_limit_error</code></td><td>Daily rate limit exceeded (includes <code>retry_after</code>)</td></tr>
                             <tr><td>400</td><td><code>invalid_file</code></td><td>File type not supported or exceeds 25MB</td></tr>
@@ -198,8 +199,10 @@ curl https://app.usesignallabs.com/api/v1/companies/{company_id}/profile \
                             <tr><th>Plan</th><th>Requests / Day</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Free</td><td>100</td></tr>
-                            <tr><td>Team</td><td>10,000</td></tr>
+                            <tr><td>Free</td><td>No API access</td></tr>
+                            <tr><td>Pro</td><td>1,000</td></tr>
+                            <tr><td>Ultra</td><td>10,000</td></tr>
+                            <tr><td>Enterprise</td><td>Custom</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -212,22 +215,24 @@ curl https://app.usesignallabs.com/api/v1/companies/{company_id}/profile \
                         </thead>
                         <tbody>
                             <tr><td>Free</td><td>100 MB</td></tr>
-                            <tr><td>Team</td><td>10 GB</td></tr>
+                            <tr><td>Pro</td><td>5 GB</td></tr>
+                            <tr><td>Ultra</td><td>10 GB</td></tr>
+                            <tr><td>Enterprise</td><td>10 GB or custom</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <h2>Credits</h2>
+                <p>Generating a battlecard uses one battlecard from your plan's monthly allowance (Free 1, Pro 10, Ultra 50, Enterprise custom). Allowances reset monthly and don't roll over. Everything else is free.</p>
                 <div class="docs-table-wrapper">
                     <table>
                         <thead>
                             <tr><th>Operation</th><th>Cost</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Generate Battlecard</td><td>1 credit</td></tr>
-                            <tr><td>AI Modify Battlecard</td><td>0.5 credits</td></tr>
+                            <tr><td>Generate Battlecard (single or landscape)</td><td>1 battlecard (1 credit)</td></tr>
                             <tr><td>Create Company</td><td>Free</td></tr>
-                            <tr><td>Add Competitor</td><td>Free (plan limits apply)</td></tr>
+                            <tr><td>Add Competitor</td><td>Free (plan limits apply: 2 / 5 / 15 / custom)</td></tr>
                             <tr><td>Add Product</td><td>Free</td></tr>
                             <tr><td>List / Get (all read ops)</td><td>Free</td></tr>
                         </tbody>

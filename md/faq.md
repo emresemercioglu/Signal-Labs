@@ -460,20 +460,20 @@ Credits meter the AI work that produces new material. Everything that keeps your
 
 **By plan:**
 
--   **Free:** One competitor and one battlecard per month, so you can see the whole loop on a competitor that matters to you
--   **Team:** Scoped to your competitive set, with battlecards and deliverables generated as often as your team needs them
+-   **Free:** Two competitors, one battlecard and ten chat questions a month, so you can see the whole loop on competitors that matter to you
+-   **Pro and Ultra:** 5 or 15 competitors, 10 or 50 battlecards and 100 or 500 chat questions a month; Enterprise is custom
 
-Plan credits reset monthly. See [pricing](https://usesignallabs.com/pricing) for the full comparison.
+Monthly allowances reset every month; unused ones don't roll over. See [pricing](https://usesignallabs.com/pricing) for the full comparison.
 
 ### 24\. Can I try CIx for free?
 
-Yes, in two ways - and neither needs a credit card.
+Yes. The free plan is free forever and needs no credit card.
 
-**The free plan doesn't expire.** Track one competitor as a living intelligence page, with real-time signals on that competitor, the suggested-actions inbox, one battlecard per month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain.
+**The free plan doesn't expire.** Track two competitors as living intelligence pages, with real-time signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain.
 
-**A 14-day Team trial unlocks the rest.** If one competitor isn't enough, request a trial and you get your full competitive set, unlimited battlecards and deliverables, multiple seats, automatic refresh and Battle Rooms for two weeks. When it ends you drop back to the free plan - nothing is deleted, and your first competitor keeps updating as normal.
+**Upgrade whenever you need more.** Pro ($29/month) tracks 5 competitors with automatic refresh, Battle Rooms and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted.
 
-**To start:** [create an account](https://app.usesignallabs.com/auth), add your first competitor, and you'll have a living page within minutes.
+**To start:** [create an account](https://app.usesignallabs.com/auth), add your top competitors, and you'll have living pages within minutes.
 
 ### 25\. How accurate is the AI-generated intelligence?
 
@@ -566,7 +566,7 @@ No credit card, and the free plan doesn't expire.
 1.  [Book a demo](https://usesignallabs.com/contact)
 2.  We'll walk through CIx using your actual competitive set
 3.  You'll leave the call with a battlecard built for your market
-4.  If it fits, we scope a Team plan on the same call
+4.  If it fits, start free and upgrade in the app whenever you're ready
 
 **Option 3: Talk strategy first**  
 If you're not sure whether you need the platform, consulting, or both, [book a consultation](https://usesignallabs.com/contact) and we'll work through your competitive intelligence strategy before you commit to anything.
@@ -601,33 +601,39 @@ Our consulting services are priced based on scope, complexity, and your specific
 
 ### 30\. How much does CIx platform cost?
 
-Two plans: one free forever, one scoped to your team.
+Four plans: Free, Pro, Ultra and Enterprise.
 
 **Free** - $0, no credit card, no expiry
 
--   1 living competitor page
+-   2 competitors, each a living page
 -   Real-time signals and the suggested-actions inbox
--   1 battlecard per month
+-   1 battlecard and 10 chat questions a month
 -   3 seats (1 creator + 2 viewers)
--   Manual refresh, whenever you want it
+-   Email support
 
-**Team** - custom, quoted on a call
+**Pro** - $29/month, or $24/month billed yearly
 
--   Your full competitive set, tracked continuously
--   Unlimited battlecards, comparisons, emails and reports
--   Multiple seats for sales, product marketing, product and leadership
--   Automatic refresh - pages update themselves as competitors move
--   Battle Rooms for working competitive deals as a team
--   Priority support and a monthly CI strategy call
+-   5 competitors, with pages that refresh automatically every month
+-   10 battlecards and 100 chat questions a month
+-   2 creators + 8 viewers
+-   Battle Rooms and API & MCP access
 
-**Why Team isn't a number on this page:** the right scope depends on how many competitors you track and how many people need seats, and those vary a lot between a 12-person startup and a 400-person sales org. Rather than publish a price that's wrong for most teams, we scope it in a 30-minute call. You'll know the price before you start a trial, not after.
+**Ultra** - $99/month, or $79/month billed yearly
 
-Every plan includes API, SDK and MCP access at no extra cost. See the [full comparison](https://usesignallabs.com/pricing).
+-   15 competitors, 50 battlecards and 500 chat questions a month
+-   5 creators + 25 viewers
+-   Priority support
+
+**Enterprise** - custom limits, onboarding and monthly CI strategy calls. [Talk to us](https://calendly.com/emre-usesignallabs/30min).
+
+Upgrade, switch or cancel any time from the Plan page in the app.
+
+API, SDK and MCP access are included on Pro, Ultra and Enterprise. See the [full comparison](https://usesignallabs.com/pricing).
 
 ### 31\. Do you offer discounts for startups or nonprofits?
 
 **Startups:**  
-Yes. Team pricing is scoped per team, so an early-stage company tracking four competitors pays a lot less than a scale-up tracking thirty - the discount is built into how we quote rather than bolted on. On top of that we can work with you on:
+Yes. Pro starts at $24/month billed yearly, so an early-stage company tracking its core competitors pays very little. On top of that we can work with you on:
 
 -   Extended payment terms for consulting
 -   Annual commitments in exchange for a lower rate
@@ -643,8 +649,8 @@ We support selected nonprofit organisations with discounted consulting and free 
 **CIx platform:**
 
 -   **Free plan:** No credit card, no commitment, no expiry - nothing to cancel
--   **Team trial:** 14 days, and if you don't continue you simply drop back to the free plan. Nothing is deleted and your first competitor keeps updating
--   **Team plans:** Cancel anytime; your plan runs to the end of the period you've paid for
+-   **Pro and Ultra:** Cancel or downgrade any time from the app; changes take effect at the end of your billing period and nothing is deleted
+-   **Upgrades:** Apply immediately, prorated for the rest of your billing period
 -   **Monthly billing:** No refunds on a month already started - cancel before the next cycle
 -   **Annual billing:** Prorated refunds within the first 30 days
 
@@ -667,7 +673,7 @@ Yes. CIx is fully programmable. Everything you can do in the dashboard, you can 
 
 **Use cases:** Build AI agents with competitive context, automate CI workflows, integrate with CRMs, create custom dashboards, power internal Slack bots, or use competitive intelligence directly from your IDE.
 
-API access is included with every plan at no extra cost. [View the full documentation](https://usesignallabs.com/docs) or read the [launch announcement](https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server).
+API access is included on Pro, Ultra and Enterprise at no extra cost. [View the full documentation](https://usesignallabs.com/docs) or read the [launch announcement](https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server).
 
 ```json
 {
@@ -855,7 +861,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "What does \"CIx credits\" mean?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Credits meter the AI work that produces new material. Everything that keeps your existing intelligence current is included and costs nothing. What costs credits: Generate a battlecard, comparison or report: 1 credit. Ask CIx to modify or rewrite a section: 0.5 credits. What's free on every plan: Adding competitors, companies and products - limited by plan, never by credits. Building and refreshing living competitor pages. The signal feed, importance scoring and recommended actions. Source linking - it runs automatically after generation. By plan: Free: One competitor and one battlecard per month, so you can see the whole loop on a competitor that matters to you. Team: Scoped to your competitive set, with battlecards and deliverables generated as often as your team needs them. Plan credits reset monthly. See pricing for the full comparison."
+            "text": "Credits meter the AI work that produces new material. Everything that keeps your existing intelligence current is included and costs nothing. What costs credits: Generate a battlecard, comparison or report: 1 credit. Ask CIx to modify or rewrite a section: 0.5 credits. What's free on every plan: Adding competitors, companies and products - limited by plan, never by credits. Building and refreshing living competitor pages. The signal feed, importance scoring and recommended actions. Source linking - it runs automatically after generation. By plan: Free: Two competitors, one battlecard and ten chat questions a month, so you can see the whole loop on competitors that matter to you. Pro and Ultra: 5 or 15 competitors, 10 or 50 battlecards and 100 or 500 chat questions a month; Enterprise is custom. Monthly allowances reset every month; unused ones don't roll over. See pricing for the full comparison."
           }
         },
         {
@@ -863,7 +869,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "Can I try CIx for free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, in two ways - and neither needs a credit card. The free plan doesn't expire. Track one competitor as a living intelligence page, with real-time signals on that competitor, the suggested-actions inbox, one battlecard per month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain. A 14-day Team trial unlocks the rest. If one competitor isn't enough, request a trial and you get your full competitive set, unlimited battlecards and deliverables, multiple seats, automatic refresh and Battle Rooms for two weeks. When it ends you drop back to the free plan - nothing is deleted, and your first competitor keeps updating as normal. To start: create an account, add your first competitor, and you'll have a living page within minutes."
+            "text": "Yes. The free plan is free forever and needs no credit card. The free plan doesn't expire. Track two competitors as living intelligence pages, with real-time signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain. Upgrade whenever you need more. Pro ($29/month) tracks 5 competitors with automatic refresh, Battle Rooms and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted. To start: create an account, add your top competitors, and you'll have living pages within minutes."
           }
         },
         {
@@ -895,7 +901,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "How do I get started with CIx?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Option 1: Start free. Go to app.usesignallabs.com and sign up with your work email. Confirm the competitors CIx suggests for your company, or add your own. Watch the first living competitor page build - it takes minutes. Generate your first battlecard. No credit card, and the free plan doesn't expire. Option 2: See it on your competitors first. Book a demo. We'll walk through CIx using your actual competitive set. You'll leave the call with a battlecard built for your market. If it fits, we scope a Team plan on the same call. Option 3: Talk strategy first If you're not sure whether you need the platform, consulting, or both, book a consultation and we'll work through your competitive intelligence strategy before you commit to anything."
+            "text": "Option 1: Start free. Go to app.usesignallabs.com and sign up with your work email. Confirm the competitors CIx suggests for your company, or add your own. Watch the first living competitor page build - it takes minutes. Generate your first battlecard. No credit card, and the free plan doesn't expire. Option 2: See it on your competitors first. Book a demo. We'll walk through CIx using your actual competitive set. You'll leave the call with a battlecard built for your market. If it fits, start free and upgrade in the app whenever you're ready. Option 3: Talk strategy first If you're not sure whether you need the platform, consulting, or both, book a consultation and we'll work through your competitive intelligence strategy before you commit to anything."
           }
         },
         {
@@ -911,7 +917,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "How much does CIx platform cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Two plans: one free forever, one scoped to your team. Free - $0, no credit card, no expiry. 1 living competitor page. Real-time signals and the suggested-actions inbox. 1 battlecard per month. 3 seats (1 creator + 2 viewers). Manual refresh, whenever you want it. Team - custom, quoted on a call. Your full competitive set, tracked continuously. Unlimited battlecards, comparisons, emails and reports. Multiple seats for sales, product marketing, product and leadership. Automatic refresh - pages update themselves as competitors move. Battle Rooms for working competitive deals as a team. Priority support and a monthly CI strategy call. Why Team isn't a number on this page: the right scope depends on how many competitors you track and how many people need seats, and those vary a lot between a 12-person startup and a 400-person sales org. Rather than publish a price that's wrong for most teams, we scope it in a 30-minute call. You'll know the price before you start a trial, not after. Every plan includes API, SDK and MCP access at no extra cost. See the full comparison."
+            "text": "Four plans: Free, Pro, Ultra and Enterprise. Free - $0, no credit card, no expiry. 2 competitors, each a living page. Real-time signals and the suggested-actions inbox. 1 battlecard and 10 chat questions a month. 3 seats (1 creator + 2 viewers). Email support. Pro - $29/month, or $24/month billed yearly: 5 competitors with automatic monthly refresh, 10 battlecards and 100 chat questions a month, 2 creators + 8 viewers, Battle Rooms and API & MCP access. Ultra - $99/month, or $79/month billed yearly: 15 competitors, 50 battlecards and 500 chat questions a month, 5 creators + 25 viewers, priority support. Enterprise - custom limits, onboarding and monthly CI strategy calls. Upgrade, switch or cancel any time from the Plan page in the app. API, SDK and MCP access are included on Pro, Ultra and Enterprise. See the full comparison."
           }
         },
         {
@@ -919,7 +925,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "Do you offer discounts for startups or nonprofits?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Startups: Yes. Team pricing is scoped per team, so an early-stage company tracking four competitors pays a lot less than a scale-up tracking thirty - the discount is built into how we quote rather than bolted on. On top of that we can work with you on: Extended payment terms for consulting. Annual commitments in exchange for a lower rate. Reduced-scope assessments. If you're seed or Series A, reach out - we'd rather help you build the competitive habit early. See our startups page for how this usually works. Nonprofits: We support selected nonprofit organisations with discounted consulting and free or discounted CIx access. Contact us to talk about your mission and what you need."
+            "text": "Startups: Yes. Pro starts at $24/month billed yearly, so an early-stage company tracking its core competitors pays very little. On top of that we can work with you on: Extended payment terms for consulting. Annual commitments in exchange for a lower rate. Reduced-scope assessments. If you're seed or Series A, reach out - we'd rather help you build the competitive habit early. See our startups page for how this usually works. Nonprofits: We support selected nonprofit organisations with discounted consulting and free or discounted CIx access. Contact us to talk about your mission and what you need."
           }
         },
         {
@@ -927,7 +933,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "What's your refund/cancellation policy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CIx platform: Free plan: No credit card, no commitment, no expiry - nothing to cancel. Team trial: 14 days, and if you don't continue you simply drop back to the free plan. Nothing is deleted and your first competitor keeps updating. Team plans: Cancel anytime; your plan runs to the end of the period you've paid for. Monthly billing: No refunds on a month already started - cancel before the next cycle. Annual billing: Prorated refunds within the first 30 days. Consulting: Deposits: 50% to start, non-refundable once work begins. Cancellation: Two weeks' notice. Satisfaction: If a Strategic Assessment misses the mark, we'll work with you to put it right. We're confident you'll be happy, but if something goes wrong, let's talk about it."
+            "text": "CIx platform: Free plan: No credit card, no commitment, no expiry - nothing to cancel. Pro and Ultra: Cancel or downgrade any time from the app; changes take effect at the end of your billing period and nothing is deleted. Upgrades: Apply immediately, prorated for the rest of your billing period. Monthly billing: No refunds on a month already started - cancel before the next cycle. Annual billing: Prorated refunds within the first 30 days. Consulting: Deposits: 50% to start, non-refundable once work begins. Cancellation: Two weeks' notice. Satisfaction: If a Strategic Assessment misses the mark, we'll work with you to put it right. We're confident you'll be happy, but if something goes wrong, let's talk about it."
           }
         },
         {
@@ -935,7 +941,7 @@ API access is included with every plan at no extra cost. [View the full document
           "name": "Does CIx have an API, SDKs, or MCP server?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. CIx is fully programmable. Everything you can do in the dashboard, you can do via: REST API: Full access to companies, competitors, battlecards, signals, documents, and AI chat. Authenticated with API keys and rate-limited by plan. JavaScript/TypeScript SDK: npm install @signal-labs/sdk. Python SDK: pip install signallabs. MCP Server: Connect CIx directly to Claude, Cursor, GitHub Copilot, Gemini, and other AI tools with npx signallabs-mcp. Use cases: Build AI agents with competitive context, automate CI workflows, integrate with CRMs, create custom dashboards, power internal Slack bots, or use competitive intelligence directly from your IDE. API access is included with every plan at no extra cost. View the full documentation or read the launch announcement."
+            "text": "Yes. CIx is fully programmable. Everything you can do in the dashboard, you can do via: REST API: Full access to companies, competitors, battlecards, signals, documents, and AI chat. Authenticated with API keys and rate-limited by plan. JavaScript/TypeScript SDK: npm install @signal-labs/sdk. Python SDK: pip install signallabs. MCP Server: Connect CIx directly to Claude, Cursor, GitHub Copilot, Gemini, and other AI tools with npx signallabs-mcp. Use cases: Build AI agents with competitive context, automate CI workflows, integrate with CRMs, create custom dashboards, power internal Slack bots, or use competitive intelligence directly from your IDE. API access is included on Pro, Ultra and Enterprise at no extra cost. View the full documentation or read the launch announcement."
           }
         }
       ]

@@ -87,9 +87,9 @@ description at `https://app.usesignallabs.com/api/v1/openapi.json`.
 
 ## Things worth knowing before you act
 
-Generation costs credits. `generate_battlecard` and
-`generate_landscape_battlecard` each consume one, and the free plan includes one
-battlecard per month. Confirm with the user before generating in a loop or
+Generation uses the plan's monthly battlecard allowance. `generate_battlecard`
+and `generate_landscape_battlecard` each use one (Free includes 1 a month, Pro
+10, Ultra 50). API and MCP access need a Pro, Ultra or Enterprise plan. Confirm with the user before generating in a loop or
 regenerating something that already exists — call `get_battlecards` first and
 reuse what is there.
 

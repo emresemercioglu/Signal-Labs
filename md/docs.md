@@ -102,7 +102,7 @@ JSON
     "type": "credit_error",
     "credits_remaining": 0,
     "credits_required": 1,
-    "upgrade_url": "https://app.usesignallabs.com/settings/billing"
+    "upgrade_url": "https://app.usesignallabs.com/settings?tab=plan"
   }
 }
 ```
@@ -128,24 +128,27 @@ JSON
 
 | Plan | Requests / Day |
 | --- | --- |
-| Free | 100 |
-| Team | 10,000 |
+| Free | No API access |
+| Pro | 1,000 |
+| Ultra | 10,000 |
+| Enterprise | Custom |
 
 ### Storage Quotas
 
 | Plan | Storage Quota |
 | --- | --- |
 | Free | 100 MB |
-| Team | 10 GB |
+| Pro | 5 GB |
+| Ultra | 10 GB |
+| Enterprise | 10 GB or custom |
 
 ## Credits
 
 | Operation | Cost |
 | --- | --- |
-| Generate Battlecard | 1 credit |
-| AI Modify Battlecard | 0.5 credits |
+| Generate Battlecard (single or landscape) | 1 battlecard (1 credit) |
 | Create Company | Free |
-| Add Competitor | Free (plan limits apply) |
+| Add Competitor | Free (plan limits apply: 2 / 5 / 15 / custom) |
 | Add Product | Free |
 | List / Get (all read ops) | Free |
 

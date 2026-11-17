@@ -91,7 +91,7 @@ That's exactly what the free consultation is for. We'll help you understand your
 
 ### Is there a minimum engagement?
 
-Our Strategic Assessment package is a 2-week engagement. For ongoing consulting, we work on quarterly contracts. The CIx platform has no minimum — the free plan tracks your first competitor with no credit card and no expiry, and Team plans are scoped on a call.
+Our Strategic Assessment package is a 2-week engagement. For ongoing consulting, we work on quarterly contracts. The CIx platform has no minimum — the free plan tracks your top two competitors with no credit card and no expiry, and Pro ($29/month) and Ultra ($99/month) are self-serve.
 
 ### Do you offer training?
 
@@ -139,7 +139,7 @@ Yes, we provide training and workshops on competitive intelligence best practice
           "name": "Is there a minimum engagement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our Strategic Assessment package is a 2-week engagement, which is our minimum for consulting services. For ongoing consulting, we work on quarterly contracts. The CIx platform has no minimum: the free plan tracks your first competitor with no credit card and no expiry, and Team plans are scoped with you on a call, so you can start with no commitment and scale as needed."
+            "text": "Our Strategic Assessment package is a 2-week engagement, which is our minimum for consulting services. For ongoing consulting, we work on quarterly contracts. The CIx platform has no minimum: the free plan tracks your top two competitors with no credit card and no expiry, and Pro ($29/month) and Ultra ($99/month) are self-serve, so you can start with no commitment and scale as needed."
           }
         },
         {

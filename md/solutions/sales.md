@@ -289,7 +289,7 @@ CIx monitors public sources (competitor websites, product updates, pricing pages
 
 +
 
-CIx offers flexible pricing based on team size and features. Most sales teams start with our Team plan, which includes automated battlecards, real-time monitoring, and core integrations. Enterprise plans include custom integrations, advanced analytics, and dedicated support. [Contact us](https://usesignallabs.com/solutions/../contact) for detailed pricing.
+CIx has public, self-serve pricing: Free for 2 competitors, Pro at $29/month for 5 competitors, and Ultra at $99/month for 15 competitors and larger teams. Most sales teams start on Pro or Ultra. Enterprise adds custom limits, onboarding and CI strategy calls. [See pricing](https://usesignallabs.com/pricing) for details.
 
 ### Do we need a dedicated CI team to use CIx?
 
@@ -399,7 +399,7 @@ Start giving your sales team real-time competitive intelligence today.
                         "name": "How much does CIx cost for sales teams?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "CIx offers flexible pricing based on team size and features. Most sales teams start with our Team plan, which includes automated battlecards, real-time monitoring, and core integrations. Enterprise plans include custom integrations, advanced analytics, and dedicated support. Contact us for detailed pricing."
+                                "text": "CIx has public, self-serve pricing: Free for 2 competitors, Pro at $29/month for 5 competitors, and Ultra at $99/month for 15 competitors and larger teams. Most sales teams start on Pro or Ultra. Enterprise adds custom limits, onboarding and CI strategy calls. See the pricing page for details."
                         }
                 },
                 {

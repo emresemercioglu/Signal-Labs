@@ -268,7 +268,7 @@ No. CIx provides structured, documented APIs. AI agents integrate via standard A
 
 +
 
-API access is included in standard CIx plans. High-volume AI agent usage may require enterprise plans. Contact us for custom API rate limits and pricing.
+API and MCP access is included on Pro (1,000 requests/day) and Ultra (10,000 requests/day). High-volume AI agent usage may need Enterprise; contact us for custom API rate limits.
 
 ### Can AI agents generate battlecards via API?
 
@@ -360,7 +360,7 @@ Give your AI agents the clean, structured, real-time competitive intelligence th
           "name": "What's the cost for AI agent API access?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "API access is included in standard CIx plans. High-volume AI agent usage may require enterprise plans. Contact us for custom API rate limits and pricing."
+            "text": "API and MCP access is included on Pro (1,000 requests/day) and Ultra (10,000 requests/day). High-volume AI agent usage may need Enterprise; contact us for custom API rate limits."
           }
         },
         {

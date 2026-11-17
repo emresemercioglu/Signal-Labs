@@ -112,6 +112,18 @@
         .typewriter-cursor{display:inline-block;width:3px;height:0.82em;background:linear-gradient(135deg,#60a5fa 0%,#34d399 100%);margin-left:2px;vertical-align:baseline;animation:cursorBlink 0.75s steps(1) infinite;border-radius:1px;position:relative;top:0.05em}
         @keyframes cursorBlink{0%,50%{opacity:1}51%,100%{opacity:0}}
     </style>
+    <style>
+        /* Self-serve plans: 4 columns (Free / Pro / Ultra / Enterprise) */
+        .pricing-grid-v3 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-6); max-width: 1200px; margin: var(--space-8) auto 0; align-items: stretch; }
+        .pricing-grid-v3 .plan-card { display: flex; flex-direction: column; }
+        .pricing-grid-v3 .pricing-features { flex: 1; }
+        .pricing-grid-v3 .pricing-price { display: flex; flex-direction: column; gap: 2px; }
+        .pricing-grid-v3 .price-period { font-size: 13px; color: var(--text-muted, #6b7280); margin: 0; }
+        .pricing-grid-v3 .pricing-cta a { display: block; width: 100%; text-align: center; }
+        @media (max-width: 1100px) { .pricing-grid-v3 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; } }
+        @media (max-width: 640px) { .pricing-grid-v3 { grid-template-columns: 1fr; max-width: 440px; } }
+        .compare-table.compare-4 th[scope="col"], .compare-table.compare-4 td { text-align: left; }
+    </style>
 </head>
 <body class="homepage">
     <!-- Google Tag Manager (noscript) -->
@@ -1070,151 +1082,104 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Simple pricing</h2>
-                <p class="section-subtitle">Start free on your top competitor. Move to Team when one is no longer enough.</p>
+                <p class="section-subtitle">Start free on your top two competitors. Upgrade in the app when you need more.</p>
             </div>
 
-            <div class="pricing-grid pricing-grid-v2">
-                <!-- Free Plan -->
+            <div class="billing-toggle">
+                <span class="toggle-label" id="monthly-label">Monthly</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="billing-toggle" checked aria-labelledby="billing-toggle-label" aria-describedby="monthly-label annual-label">
+                    <label for="billing-toggle" class="toggle-slider" id="billing-toggle-label"><span class="sr-only">Switch between monthly and yearly billing</span></label>
+                </div>
+                <span class="toggle-label" id="annual-label">Yearly <span class="savings-text">(save about 20%)</span></span>
+            </div>
+            <div class="pricing-grid pricing-grid-v3">
+                <!-- Free -->
                 <div class="plan-card">
                     <div class="pricing-header">
                         <h3 class="pricing-title">Free</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount">$0</span>
-                        </div>
-                        <p class="pricing-description">See Signal Labs work on your top competitor.</p>
+                        <div class="pricing-price"><span class="price-amount">$0</span><span class="price-period">Free forever</span></div>
+                        <p class="pricing-description">See Signal Labs work on your top competitors.</p>
                     </div>
                     <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>1 living competitor page</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>Real-time signals + suggested-actions inbox</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>1 battlecard / month</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>3 seats — 1 creator + 2 viewers</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-                            <span>Manual refresh</span>
-                        </div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>2 competitors tracked, each a living page</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Real-time signals + suggested-actions inbox</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>1 battlecard a month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>10 chat questions a month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>1 creator + 2 viewers</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Email support</span></div>
                     </div>
                     <div class="pricing-cta">
                         <a href="https://app.usesignallabs.com/login" class="btn btn-outline">Start Free</a>
                     </div>
                 </div>
 
-                <!-- Team Plan -->
+                <!-- Pro -->
                 <div class="plan-card plan-card-popular">
                     <div class="popular-badge">MOST POPULAR</div>
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Team</h3>
-                        <div class="pricing-price">
-                            <span class="price-amount">Custom</span>
-                        </div>
-                        <p class="pricing-description">Real-time competitive &amp; market intelligence for your whole go-to-market team — Sales, Product, Marketing, and Leadership.</p>
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price"><span class="price-amount" data-monthly="$29" data-annual="$24">$24</span><span class="price-period" data-monthly="per month" data-annual="per month, billed $288 yearly">per month, billed $288 yearly</span></div>
+                        <p class="pricing-description">Track your core competitive set and arm your team.</p>
                     </div>
                     <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-gradient">
-                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="cix-check-gradient-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            <span>Everything in Free, plus:</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-gradient">
-                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="cix-check-gradient-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            <span>Track your full competitive set</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-gradient">
-                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="cix-check-gradient-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            <span>Unlimited battlecards &amp; deliverables</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-gradient">
-                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="cix-check-gradient-4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            <span>Multiple team seats</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-gradient">
-                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="cix-check-gradient-5" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            <span>Real-time competitor signals &amp; auto-refresh</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon feature-icon-gradient">
-                                <svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="cix-check-gradient-6" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M20 6 9 17l-5-5" stroke="url(#cix-check-gradient-6)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            <span>Priority support &amp; monthly CI strategy calls</span>
-                        </div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-0" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-0)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span style="font-weight:600">Everything in Free, plus:</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>5 competitors tracked</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>Pages refresh automatically every month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>10 battlecards a month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>100 chat questions a month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-5" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>2 creators + 8 viewers</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-6" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-6)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>Battle Rooms</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-7" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>API &amp; MCP access</span></div>
                     </div>
                     <div class="pricing-cta">
-                        <a href="https://usesignallabs.com/contact" class="ai-gradient-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
-                                <path d="M20 2v4"/>
-                                <path d="M22 4h-4"/>
-                                <circle cx="4" cy="20" r="2"/>
-                            </svg>
-                            Request 14-day trial
-                        </a>
+                        <a href="https://app.usesignallabs.com/login?plan=pro&amp;cycle=yearly" data-href-monthly="https://app.usesignallabs.com/login?plan=pro&amp;cycle=monthly" data-href-annual="https://app.usesignallabs.com/login?plan=pro&amp;cycle=yearly" class="ai-gradient-btn">Get Pro</a>
+                    </div>
+                </div>
+
+                <!-- Ultra -->
+                <div class="plan-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Ultra</h3>
+                        <div class="pricing-price"><span class="price-amount" data-monthly="$99" data-annual="$79">$79</span><span class="price-period" data-monthly="per month" data-annual="per month, billed $948 yearly">per month, billed $948 yearly</span></div>
+                        <p class="pricing-description">Your whole market, for your whole go-to-market team.</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-weight:600">Everything in Pro, plus:</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>15 competitors tracked</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>50 battlecards a month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>500 chat questions a month</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>5 creators + 25 viewers</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Higher API &amp; MCP limits</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Priority support</span></div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=yearly" data-href-monthly="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=monthly" data-href-annual="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=yearly" class="btn btn-primary">Get Ultra</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="plan-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price"><span class="price-amount">Custom</span><span class="price-period">Tailored to your team</span></div>
+                        <p class="pricing-description">Custom limits, onboarding and CI strategy calls.</p>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-weight:600">Everything in Ultra, plus:</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom number of competitors</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom battlecard, chat and API limits</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom seats</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Onboarding for your team</span></div>
+                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Monthly CI strategy calls</span></div>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="https://calendly.com/emre-usesignallabs/30min" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Talk to us</a>
                     </div>
                 </div>
             </div>
 
-            <p class="pricing-email-note">All plans require a company email. Personal addresses (Gmail, Outlook, etc.) are not supported. <a href="pricing" style="color: var(--primary); font-weight: 600;">Compare plans in detail →</a></p>
+            <p class="pricing-email-note">Prices in USD. All plans require a company email; personal addresses (Gmail, Outlook, etc.) are not supported. <a href="pricing" style="color: var(--primary); font-weight: 600;">Compare plans in detail →</a></p>
         </div>
     </section>
 
@@ -1251,7 +1216,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Stop researching competitors. Start beating them.</h2>
-                <p>Track your first competitor free — a living page, real-time signals and your first battlecard. No credit card, no expiry.</p>
+                <p>Track your top two competitors free: living pages, real-time signals and a battlecard every month. No credit card, no expiry.</p>
                 <div class="cta-buttons">
                     <a href="https://app.usesignallabs.com/login" class="btn btn-primary">Start Free</a>
                     <a href="contact" class="btn btn-outline">Book Demo</a>
@@ -1457,19 +1422,37 @@
         {
           "@type": "Offer",
           "name": "Free",
-          "price": "0",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
+          "price": "0",
           "url": "https://usesignallabs.com/pricing",
-          "description": "One living competitor page you can refresh on demand, real-time signals, suggested-actions inbox, one battlecard per month, and 3 seats (1 creator + 2 viewers). No credit card required."
+          "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Real-time signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Email support."
         },
         {
           "@type": "Offer",
-          "name": "Team",
+          "name": "Pro",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://usesignallabs.com/contact",
-          "description": "Custom-priced plan for go-to-market teams: your full competitive set, unlimited battlecards and deliverables, multiple seats, automatic refresh, Battle Rooms, API and MCP access, and priority support."
+          "price": "29",
+          "url": "https://usesignallabs.com/pricing",
+          "description": "Track your core competitive set and arm your team. 5 competitors tracked; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; Battle Rooms; API & MCP access."
+        },
+        {
+          "@type": "Offer",
+          "name": "Ultra",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "price": "99",
+          "url": "https://usesignallabs.com/pricing",
+          "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
+        },
+        {
+          "@type": "Offer",
+          "name": "Enterprise",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://usesignallabs.com/pricing",
+          "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
         }
       ],
       "featureList": [
@@ -1565,6 +1548,24 @@
     
     <!-- Main JavaScript - Loaded at end for better performance -->
     <script src="script.js?v=11"></script>
+    <script>
+    // Monthly / yearly toggle for the plan cards (prices + checkout links).
+    (function () {
+        var t = document.getElementById('billing-toggle');
+        if (!t) return;
+        function update() {
+            var annual = t.checked;
+            document.querySelectorAll('[data-monthly][data-annual]').forEach(function (el) {
+                el.textContent = annual ? el.getAttribute('data-annual') : el.getAttribute('data-monthly');
+            });
+            document.querySelectorAll('[data-href-monthly]').forEach(function (el) {
+                el.setAttribute('href', annual ? el.getAttribute('data-href-annual') : el.getAttribute('data-href-monthly'));
+            });
+        }
+        t.addEventListener('change', update);
+        update();
+    })();
+    </script>
 
     <!-- Scroll Animations & Battlecard Tab Switching -->
     <script>

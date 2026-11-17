@@ -406,49 +406,103 @@ Yes. Signal Labs exposes a REST API and a hosted MCP server, so you can pull com
 
 ## Simple pricing
 
-Start free on your top competitor. Move to Team when one is no longer enough.
+Start free on your top two competitors. Upgrade in the app when you need more.
+
+Monthly Yearly (save about 20%)
 
 ### Free
 
 $0
 
-See Signal Labs work on your top competitor.
+Free forever
 
-1 living competitor page
+See Signal Labs work on your top competitors.
+
+2 competitors tracked, each a living page
 
 Real-time signals + suggested-actions inbox
 
-1 battlecard / month
+1 battlecard a month
 
-3 seats — 1 creator + 2 viewers
+10 chat questions a month
 
-Manual refresh
+1 creator + 2 viewers
+
+Email support
 
 [Start Free](https://app.usesignallabs.com/login)
 
 MOST POPULAR
 
-### Team
+### Pro
 
-Custom
+$29/month, or $24/month billed yearly ($288/year)
 
-Real-time competitive & market intelligence for your whole go-to-market team — Sales, Product, Marketing, and Leadership.
+Track your core competitive set and arm your team.
 
 Everything in Free, plus:
 
-Track your full competitive set
+5 competitors tracked
 
-Unlimited battlecards & deliverables
+Pages refresh automatically every month
 
-Multiple team seats
+10 battlecards a month
 
-Real-time competitor signals & auto-refresh
+100 chat questions a month
 
-Priority support & monthly CI strategy calls
+2 creators + 8 viewers
 
-[Request 14-day trial](https://usesignallabs.com/contact)
+Battle Rooms
 
-All plans require a company email. Personal addresses (Gmail, Outlook, etc.) are not supported. [Compare plans in detail →](https://usesignallabs.com/pricing)
+API & MCP access
+
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+
+### Ultra
+
+$99/month, or $79/month billed yearly ($948/year)
+
+Your whole market, for your whole go-to-market team.
+
+Everything in Pro, plus:
+
+15 competitors tracked
+
+50 battlecards a month
+
+500 chat questions a month
+
+5 creators + 25 viewers
+
+Higher API & MCP limits
+
+Priority support
+
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=yearly)
+
+### Enterprise
+
+Custom
+
+Tailored to your team
+
+Custom limits, onboarding and CI strategy calls.
+
+Everything in Ultra, plus:
+
+Custom number of competitors
+
+Custom battlecard, chat and API limits
+
+Custom seats
+
+Onboarding for your team
+
+Monthly CI strategy calls
+
+[Talk to us](https://calendly.com/emre-usesignallabs/30min)
+
+Prices in USD. All plans require a company email; personal addresses (Gmail, Outlook, etc.) are not supported. [Compare plans in detail →](https://usesignallabs.com/pricing)
 
 ## Schedule a Demo
 
@@ -460,100 +514,56 @@ A sample battlecard built for your market
 
 ## Stop researching competitors. Start beating them.
 
-Track your first competitor free — a living page, real-time signals and your first battlecard. No credit card, no expiry.
+Track your top two competitors free: living pages, real-time signals and a battlecard every month. No credit card, no expiry.
 
 [Start Free](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
 ```json
 {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Signal Labs",
-      "alternateName": ["Signal Labs CIx", "CIx by Signal Labs"],
-      "disambiguatingDescription": "Signal Labs is a competitive intelligence software company and the maker of the CIx platform (usesignallabs.com). It is unrelated to other companies and studios operating under the Signal Labs name in audio, venture capital or hardware.",
-      "legalName": "Signal Labs Inc.",
-      "url": "https://usesignallabs.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://usesignallabs.com/signal-labs-logo-1024x1024-circle.png",
-        "width": 1024,
-        "height": 1024
-      },
-      "foundingDate": "2024",
-      "founder": {
-        "@type": "Person",
-        "name": "Emre Semercioglu",
-        "jobTitle": "Founder & CEO",
-        "url": "https://usesignallabs.com/about",
-        "sameAs": [
-          "https://www.linkedin.com/in/emresemercioglu"
-        ]
-      },
-      "description": "Signal Labs builds CIx, an AI-powered competitive intelligence and enablement platform. CIx keeps a living intelligence page for every competitor you track, turns each competitor move into a scored signal with a recommended action, and generates battlecards, comparison pages and competitive emails on demand — with every claim linked to its source. Signal Labs also offers expert CI consulting.",
-      "slogan": "Competitive intelligence that updates itself.",
-      "knowsAbout": [
-        "Competitive intelligence",
-        "Competitive enablement",
-        "Battlecards",
-        "Competitor monitoring",
-        "Market intelligence",
-        "Win/loss analysis",
-        "Product positioning",
-        "Sales enablement"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Sales",
-        "email": "emre@usesignallabs.com",
-        "url": "https://usesignallabs.com/contact"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/signal-labs-cix/"
-      ]
-    }
-{
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Signal Labs",
-      "alternateName": "Signal Labs CIx",
-      "url": "https://usesignallabs.com",
-      "description": "Signal Labs builds CIx, an AI-powered competitive intelligence and enablement platform: living competitor pages, scored real-time signals, and battlecards generated on demand with every claim linked to its source.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Signal Labs"
-      }
-    }
-{
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "CIx",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Competitive Intelligence and Enablement Platform",
-      "operatingSystem": "Web",
-      "offers": [
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CIx",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Competitive Intelligence and Enablement Platform",
+    "operatingSystem": "Web",
+    "offers": [
         {
-          "@type": "Offer",
-          "name": "Free",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://usesignallabs.com/pricing",
-          "description": "One living competitor page you can refresh on demand, real-time signals, suggested-actions inbox, one battlecard per month, and 3 seats (1 creator + 2 viewers). No credit card required."
+            "@type": "Offer",
+            "name": "Free",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "price": "0",
+            "url": "https://usesignallabs.com/pricing",
+            "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Real-time signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Email support."
         },
         {
-          "@type": "Offer",
-          "name": "Team",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://usesignallabs.com/contact",
-          "description": "Custom-priced plan for go-to-market teams: your full competitive set, unlimited battlecards and deliverables, multiple seats, automatic refresh, Battle Rooms, API and MCP access, and priority support."
+            "@type": "Offer",
+            "name": "Pro",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "price": "29",
+            "url": "https://usesignallabs.com/pricing",
+            "description": "Track your core competitive set and arm your team. 5 competitors tracked; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; Battle Rooms; API & MCP access."
+        },
+        {
+            "@type": "Offer",
+            "name": "Ultra",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "price": "99",
+            "url": "https://usesignallabs.com/pricing",
+            "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
+        },
+        {
+            "@type": "Offer",
+            "name": "Enterprise",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://usesignallabs.com/pricing",
+            "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
         }
-      ],
-      "featureList": [
+    ],
+    "featureList": [
         "Living competitor pages that update themselves",
         "Real-time signal feed with 1-10 importance scoring",
         "Recommended actions generated from each competitor move",
@@ -563,59 +573,23 @@ Track your first competitor free — a living page, real-time signals and your f
         "Auto-maintained market positioning map",
         "AI-driven competitor discovery at company and product level",
         "REST API, JavaScript and Python SDKs, and an MCP server"
-      ],
-      "screenshot": "https://usesignallabs.com/og-image-home-v2.png",
-      "sameAs": [
+    ],
+    "screenshot": "https://usesignallabs.com/og-image-home-v2.png",
+    "sameAs": [
         "https://www.npmjs.com/package/@signal-labs/sdk",
         "https://pypi.org/project/signallabs/"
-      ],
-      "installUrl": "https://app.usesignallabs.com",
-      "author": {
+    ],
+    "installUrl": "https://app.usesignallabs.com",
+    "author": {
         "@type": "Organization",
         "name": "Signal Labs"
-      },
-      "provider": {
+    },
+    "provider": {
         "@type": "Organization",
         "name": "Signal Labs",
         "url": "https://usesignallabs.com"
-      },
-      "url": "https://usesignallabs.com",
-      "description": "AI-powered competitive intelligence and enablement platform. CIx keeps a living intelligence page for every competitor you track, scores each competitor move as a signal, attaches a recommended action to the ones that matter, and generates battlecards, comparison pages and competitive emails on demand — with every claim linked to its source."
-    }
-{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What is a competitive intelligence platform?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A competitive intelligence platform collects, analyses and distributes information about the companies you compete with, so sales, product and marketing teams can position against them. Most platforms stop at collection and leave a human analyst to write and share the output. Signal Labs CIx also produces the output: competitor pages that maintain themselves, recommended actions from each competitor move, and battlecards generated on demand." }
-        },
-        {
-            "@type": "Question",
-            "name": "How does Signal Labs keep competitor information current?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Each competitor page is rebuilt from live sources rather than stored as a static document. CIx re-scrapes the competitor's own site and monitors launches, pricing changes, funding, hiring and news. When something material changes, the page updates and the change is turned into a recommended action for your team. You never schedule a refresh." }
-        },
-        {
-            "@type": "Question",
-            "name": "How is this different from Klue and Crayon?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Klue and Crayon are collection and curation tools: they gather intel and leave a human to sort it, write it up and distribute it. Signal Labs automates the whole chain from tracking through to enablement. Every competitor gets a page that maintains itself, every meaningful competitor move produces a specific recommended action, and every claim carries a link to the source it came from — so your team reviews and edits the work instead of producing it from scratch." }
-        },
-        {
-            "@type": "Question",
-            "name": "Can I trust what the AI produces?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Every claim is source-linked. Each statement in a competitor page or battlecard carries a link to the page it was drawn from, so a rep can check the original before repeating it to a buyer. Where CIx does not have confirmation, it says so rather than filling the gap \u2014 you can see that in practice in the Battle Room, where it separates confirmed evidence from inference." }
-        },
-        {
-            "@type": "Question",
-            "name": "How long does it take to get value?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Adding a competitor takes about a minute, and the first living page is generated for you within a few minutes. Battlecards are generated on demand in about the same time it takes to read one. There is no implementation project and no data import." }
-        },
-        {
-            "@type": "Question",
-            "name": "Do you have an API or MCP server?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Signal Labs exposes a REST API and a hosted MCP server, so you can pull competitor intelligence into your own tools or query it directly from MCP clients such as Claude and Cursor. Official Python and JavaScript SDKs are available." }
-        }
-        ]
-    }
+    },
+    "url": "https://usesignallabs.com",
+    "description": "AI-powered competitive intelligence and enablement platform. CIx keeps a living intelligence page for every competitor you track, scores each competitor move as a signal, attaches a recommended action to the ones that matter, and generates battlecards, comparison pages and competitive emails on demand \u2014 with every claim linked to its source."
+}
 ```

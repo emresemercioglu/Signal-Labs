@@ -134,7 +134,7 @@ From zero to a full competitive battlecard in four lines of code.
 
 ## Free to Use
 
-The API, MCP server, and SDKs are included with every Signal Labs plan at no extra cost. The free plan includes 100 API requests per day; Team plans scale to 10,000. See [pricing](https://usesignallabs.com/pricing) for the current comparison.
+The API, MCP server, and SDKs are included on Pro and Ultra at no extra cost: 1,000 API requests per day on Pro and 10,000 on Ultra, with custom limits on Enterprise. See [pricing](https://usesignallabs.com/pricing) for the current comparison.
 
 If you don't have an account yet, sign up at [app.usesignallabs.com](https://app.usesignallabs.com) and create your first API key in Settings.
 

@@ -48,7 +48,7 @@ Add competitors, generate battlecards, and start enabling your team within hours
 
 ### Startup-Friendly Pricing
 
-Free trial to get started. Affordable plans ($39-350/month) for growing startups. No enterprise minimums.
+Free forever for your top two competitors. Pro at $29/month and Ultra at $99/month as you grow. No enterprise minimums.
 
 ### Compete on Intelligence, Not Budget
 
@@ -56,7 +56,7 @@ Access same competitive intelligence as enterprises: real-time monitoring, AI ba
 
 ### Scale as You Grow
 
-Start free on your first competitor, move to a Team plan when one stops being enough, add seats as the team grows. CIx scales with your startup.
+Start free on your top two competitors, move to Pro or Ultra when you need more, add seats as the team grows. CIx scales with your startup.
 
 ### Built for Lean Teams
 
@@ -108,7 +108,7 @@ CIx is flexible for pivots. Change competitors, update positioning, adjust focus
 
 ### Can CIx scale as we grow to enterprise?
 
-Yes. Start free with one competitor, then move to a Team plan scoped to the competitors you track and the seats you need. It's the same platform either way — nothing to migrate, and the competitor pages you already built keep updating.
+Yes. Start free with two competitors, then upgrade to Pro ($29/month, 5 competitors) or Ultra ($99/month, 15 competitors) when you need more. It's the same platform either way — nothing to migrate, and the competitor pages you already built keep updating.
 
 ## Competitive Intelligence for Every Startup Role
 
@@ -192,7 +192,7 @@ Fast setup, affordable pricing, no CI team required. Start free and scale as you
                         "name": "Can CIx scale as we grow to enterprise?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Yes. Start free with one competitor, then move to a Team plan scoped to the competitors you track and the seats you need. It's the same platform either way — nothing to migrate, and the competitor pages you already built keep updating."
+                                "text": "Yes. Start free with two competitors, then upgrade to Pro ($29/month, 5 competitors) or Ultra ($99/month, 15 competitors) when you need more. It's the same platform either way — nothing to migrate, and the competitor pages you already built keep updating."
                         }
                 }
         ]

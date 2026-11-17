@@ -1,6 +1,6 @@
 ---
 title: "Pricing - Signal Labs CIx"
-description: "Signal Labs CIx pricing. Start free with one always-updating competitor page, real-time signals, and a monthly battlecard - no credit card. Team plans are custom-scoped on a 30-minute call, with a 14-day trial on your real competitors."
+description: "Signal Labs CIx pricing. Free forever for 2 competitors, Pro at $29/month, Ultra at $99/month, and Enterprise for custom limits. Upgrade in the app, cancel any time."
 image: https://usesignallabs.com/og-image-pricing-v2.png
 url: https://usesignallabs.com/pricing
 ---
@@ -8,107 +8,179 @@ url: https://usesignallabs.com/pricing
 Pricing
 
 # Start free.  
-Scale when your team does.
+Upgrade when you need more.
 
-Track your first competitor free, forever — a living intelligence page you can refresh whenever you want, real-time signals, and a battlecard every month. When you need your full competitive set and your whole go-to-market team in the loop, we scope a Team plan with you on a quick call.
+Track your top two competitors free, forever: living intelligence pages, real-time signals, and a battlecard every month. When you need more competitors, battlecards and seats, upgrade to Pro or Ultra in a couple of clicks. No sales call needed.
 
-No credit card Work email required Set up in minutes Cancel anytime
+Free plan, no credit card Work email required Upgrade or downgrade any time Cancel anytime
+
+Monthly Yearly (save about 20%)
 
 ### Free
 
 $0
 
-See Signal Labs work on your top competitor.
+Free forever
 
-1 living competitor page
+See Signal Labs work on your top competitors.
+
+2 competitors tracked, each a living page
 
 Real-time signals + suggested-actions inbox
 
-1 battlecard / month
+1 battlecard a month
 
-3 seats — 1 creator + 2 viewers
+10 chat questions a month
 
-Manual refresh
+1 creator + 2 viewers
+
+Email support
 
 [Start Free](https://app.usesignallabs.com/login)
 
 MOST POPULAR
 
-### Team
+### Pro
 
-Custom
+$29/month, or $24/month billed yearly ($288/year)
 
-Real-time competitive & market intelligence for your whole go-to-market team — Sales, Product, Marketing, and Leadership.
+Track your core competitive set and arm your team.
 
 Everything in Free, plus:
 
-Track your full competitive set
+5 competitors tracked
 
-Unlimited battlecards & deliverables
+Pages refresh automatically every month
 
-Multiple team seats
+10 battlecards a month
 
-Real-time competitor signals & auto-refresh
+100 chat questions a month
 
-Priority support & monthly CI strategy calls
+2 creators + 8 viewers
 
-[Request 14-day trial](https://usesignallabs.com/contact)
+Battle Rooms
 
-All plans require a company email. Personal addresses (Gmail, Outlook, etc.) are not supported.
+API & MCP access
+
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+
+### Ultra
+
+$99/month, or $79/month billed yearly ($948/year)
+
+Your whole market, for your whole go-to-market team.
+
+Everything in Pro, plus:
+
+15 competitors tracked
+
+50 battlecards a month
+
+500 chat questions a month
+
+5 creators + 25 viewers
+
+Higher API & MCP limits
+
+Priority support
+
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=yearly)
+
+### Enterprise
+
+Custom
+
+Tailored to your team
+
+Custom limits, onboarding and CI strategy calls.
+
+Everything in Ultra, plus:
+
+Custom number of competitors
+
+Custom battlecard, chat and API limits
+
+Custom seats
+
+Onboarding for your team
+
+Monthly CI strategy calls
+
+[Talk to us](https://calendly.com/emre-usesignallabs/30min)
+
+Prices in USD. All plans require a company email; personal addresses (Gmail, Outlook, etc.) are not supported.
 
 ## What's included in each plan
 
-Free is a real working product, not a demo. Team is what you move to when one competitor stops being enough.
+Free is a real working product, not a demo. Move up when you need more competitors, battlecards or seats.
 
-| Capability | Free | Team |
-| --- | --- | --- |
-| Competitors tracked | 1 living competitor page | Your full competitive set, scoped to your market |
-| Page refresh | Manual refresh, on demand | Automatic refresh — pages update themselves |
-| Real-time signals | Included | Included, across every competitor you track |
-| Suggested actions inbox | Included | Included, with team assignment |
-| Battlecards & deliverables | 1 battlecard / month | Unlimited battlecards, comparisons, emails and reports |
-| Source-linked citations | Every claim, every plan | Every claim, every plan |
-| Seats | 3 total — 1 creator + 2 viewers | Multiple creator and viewer seats |
-| Battle Rooms | Not included | Included — deal-specific rooms with @CIx |
-| Ask CIx (chat) | Included | Included |
-| API & MCP access | Not included | Included |
-| Support | Email support | Priority support + monthly CI strategy calls |
+| Capability | Free | Pro | Ultra | Enterprise |
+| --- | --- | --- | --- | --- |
+| Price | $0 | $29/mo or $24/mo yearly | $99/mo or $79/mo yearly | Custom |
+| Competitors tracked | 2 | 5 | 15 | Custom |
+| Living competitor pages | Included | Included | Included | Included |
+| Automatic monthly refresh | Not included | Included | Included | Included |
+| Real-time signals | Included | Included | Included | Included |
+| Suggested actions inbox | Included | Included | Included | Included |
+| Battlecards (incl. landscape) | 1 a month | 10 a month | 50 a month | Custom |
+| Ask CIx chat | 10 questions a month | 100 a month | 500 a month | Custom |
+| Source-linked citations | Every claim | Every claim | Every claim | Every claim |
+| Seats | 1 creator + 2 viewers | 2 creators + 8 viewers | 5 creators + 25 viewers | Custom |
+| Battle Rooms | Not included | Included | Included | Included |
+| API & MCP access | Not included | 1,000 requests/day | 10,000 requests/day | Custom |
+| Support | Email | Email | Priority | CI strategy calls + onboarding |
 
-## How the 14-day Team trial works
+## Start free, upgrade any time
 
-You will know the price before the trial starts — not after it ends.
+No sales call needed. Pick a plan when you are ready, and change it whenever you want.
 
 1
 
-### Request a trial
+### Start on Free
 
-Tell us who you compete with and who needs access. It takes about a minute, and there is no card involved at any point.
+Sign up with your work email and add your top two competitors. Their living pages build in a couple of minutes, with signals arriving from day one.
 
 2
 
-### A 30-minute call
+### Upgrade in the app
 
-We scope your competitive set, show you CIx running on your actual competitors, and quote your price on the call so there are no surprises later.
+When you need more competitors, battlecards or seats, choose Pro or Ultra on the Plan page and pay by card. The new limits apply right away.
 
 3
 
-### 14 days on your real market
+### Change or cancel any time
 
-Your team works the product on live competitors, not sample data. If you don't move forward, you drop back to Free — nothing is deleted and you are never locked out.
+Switch plans or billing cycle whenever you like. If you downgrade, nothing is deleted: extra competitors are locked until you upgrade again.
 
 ## Pricing questions, answered
 
 ### Is the Free plan really free, or is it a trial that expires?
 
-It is genuinely free and it does not expire. You get one competitor tracked as a living page you can rebuild on demand, real-time signals on that competitor, the suggested-actions inbox, and one battlecard per month. There is no credit card at signup and no countdown clock. The only requirement is a work email address.
+It is genuinely free and it does not expire. You get two competitors tracked as living pages, real-time signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address.
 
-### Why isn't Team pricing listed on this page?
+### How does upgrading work?
 
-Because the right number depends on how many competitors you track and how many people need seats, and those vary a lot between a 12-person startup and a 400-person sales org. Rather than publish a price that is wrong for most teams, we scope it on a 30-minute call and quote you directly on that call. You will know the price before you start a trial, not after.
+Upgrade from the Plan page inside the app and pay by card through Stripe. The new limits apply right away. If you switch plans mid-cycle, Stripe prorates the difference, so you only pay for what you use.
 
-### What happens when the 14-day Team trial ends?
+### Can I switch plans or cancel any time?
 
-You drop back to the Free plan. You are not locked out and nothing is deleted. Your first competitor keeps updating as normal, and the additional competitors you added during the trial are locked rather than removed, so everything is still there if you decide to upgrade later.
+Yes. Upgrades apply immediately. Downgrades and cancellations take effect at the end of your billing period, so you keep what you paid for until then. You can switch between monthly and yearly billing from the same place.
+
+### What happens to my data if I downgrade or cancel?
+
+Nothing is deleted. If you have more competitors than your new plan includes, the extra ones are locked: their pages and history stay, but new signals pause until you upgrade again. Extra creators become viewers, so nobody loses access.
+
+### What counts as a battlecard and a chat question?
+
+Each battlecard you generate uses one from your monthly allowance, including landscape battlecards that compare several competitors. Each message you send to Ask CIx (in the app, in a Battle Room with @CIx, or from Slack) counts as one chat question. Both reset every month; unused ones do not roll over.
+
+### Is there a free trial of Pro or Ultra?
+
+The Free plan is the trial: it is a real working product on your own competitors, with no time limit. When you are ready for more competitors, battlecards or seats, upgrade and the new limits apply right away.
+
+### When do I need Enterprise?
+
+When you track more than 15 competitors, need more seats or higher API limits, or want onboarding and monthly CI strategy calls for your team. Book a call and we will set up a plan around your market.
 
 ### Why do you require a work email?
 
@@ -120,75 +192,173 @@ Traditional competitive intelligence platforms are collection tools: they gather
 
 ## Your competitive advantage starts here.
 
-Track your first competitor free today. No credit card, no sales call, no expiry.
+Track your top two competitors free today. No credit card, no sales call, no expiry.
 
-[Start Free](https://app.usesignallabs.com/login) [Request 14-day trial](https://usesignallabs.com/contact)
+[Start Free](https://app.usesignallabs.com/login) [Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
 
 ```json
 {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://usesignallabs.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://usesignallabs.com/pricing" }
-        ]
-    }
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://usesignallabs.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://usesignallabs.com/pricing"
+        }
+    ]
+}
+```
+
+```json
 {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Signal Labs CIx",
-        "description": "AI-powered competitive intelligence platform. Living competitor pages that update themselves, real-time signals with recommended actions, and source-linked battlecards for go-to-market teams.",
-        "brand": { "@type": "Brand", "name": "Signal Labs" },
-        "url": "https://usesignallabs.com/pricing",
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "Free",
-                "price": "0",
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Signal Labs CIx",
+    "description": "AI-powered competitive intelligence platform. Living competitor pages that update themselves, real-time signals with recommended actions, and source-linked battlecards for go-to-market teams.",
+    "brand": {
+        "@type": "Brand",
+        "name": "Signal Labs"
+    },
+    "url": "https://usesignallabs.com/pricing",
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "Free",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "price": "0",
+            "url": "https://usesignallabs.com/pricing",
+            "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Real-time signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Email support."
+        },
+        {
+            "@type": "Offer",
+            "name": "Pro",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "price": "29",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "29",
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://usesignallabs.com/pricing",
-                "description": "One living competitor page you can refresh on demand, real-time signals, suggested-actions inbox, one battlecard per month, and 3 seats (1 creator + 2 viewers). No credit card required."
+                "billingDuration": "P1M",
+                "unitText": "MONTH"
             },
-            {
-                "@type": "Offer",
-                "name": "Team",
+            "url": "https://usesignallabs.com/pricing",
+            "description": "Track your core competitive set and arm your team. 5 competitors tracked; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; Battle Rooms; API & MCP access."
+        },
+        {
+            "@type": "Offer",
+            "name": "Ultra",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "price": "99",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "99",
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://usesignallabs.com/contact",
-                "description": "Custom-priced plan for go-to-market teams. Track your full competitive set, unlimited battlecards and deliverables, multiple seats, automatic refresh, Battle Rooms, API and MCP access, and priority support. Includes a 14-day trial scoped on a call."
-            }
-        ]
-    }
+                "billingDuration": "P1M",
+                "unitText": "MONTH"
+            },
+            "url": "https://usesignallabs.com/pricing",
+            "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
+        },
+        {
+            "@type": "Offer",
+            "name": "Enterprise",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://calendly.com/emre-usesignallabs/30min",
+            "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
+        }
+    ]
+}
+```
+
+```json
 {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
         {
             "@type": "Question",
             "name": "Is the Free plan really free, or is it a trial that expires?",
-            "acceptedAnswer": { "@type": "Answer", "text": "It is genuinely free and it does not expire. You get one competitor tracked as a living page you can rebuild on demand, real-time signals on that competitor, the suggested-actions inbox, and one battlecard per month. There is no credit card at signup and no countdown clock. The only requirement is a work email address." }
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It is genuinely free and it does not expire. You get two competitors tracked as living pages, real-time signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address."
+            }
         },
         {
             "@type": "Question",
-            "name": "Why isn't Team pricing listed on this page?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Because the right number depends on how many competitors you track and how many people need seats, and those vary a lot between a 12-person startup and a 400-person sales org. Rather than publish a price that is wrong for most teams, we scope it on a 30-minute call and quote you directly on that call. You will know the price before you start a trial, not after." }
+            "name": "How does upgrading work?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Upgrade from the Plan page inside the app and pay by card through Stripe. The new limits apply right away. If you switch plans mid-cycle, Stripe prorates the difference, so you only pay for what you use."
+            }
         },
         {
             "@type": "Question",
-            "name": "What happens when the 14-day Team trial ends?",
-            "acceptedAnswer": { "@type": "Answer", "text": "You drop back to the Free plan. You are not locked out and nothing is deleted. Your first competitor keeps updating as normal, and the additional competitors you added during the trial are locked rather than removed, so everything is still there if you decide to upgrade later." }
+            "name": "Can I switch plans or cancel any time?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Upgrades apply immediately. Downgrades and cancellations take effect at the end of your billing period, so you keep what you paid for until then. You can switch between monthly and yearly billing from the same place."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens to my data if I downgrade or cancel?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nothing is deleted. If you have more competitors than your new plan includes, the extra ones are locked: their pages and history stay, but new signals pause until you upgrade again. Extra creators become viewers, so nobody loses access."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What counts as a battlecard and a chat question?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each battlecard you generate uses one from your monthly allowance, including landscape battlecards that compare several competitors. Each message you send to Ask CIx (in the app, in a Battle Room with @CIx, or from Slack) counts as one chat question. Both reset every month; unused ones do not roll over."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is there a free trial of Pro or Ultra?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Free plan is the trial: it is a real working product on your own competitors, with no time limit. When you are ready for more competitors, battlecards or seats, upgrade and the new limits apply right away."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "When do I need Enterprise?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "When you track more than 15 competitors, need more seats or higher API limits, or want onboarding and monthly CI strategy calls for your team. Book a call and we will set up a plan around your market."
+            }
         },
         {
             "@type": "Question",
             "name": "Why do you require a work email?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Signal Labs builds intelligence around your company, so we match your account to your company domain to set up your competitive set and keep your team's workspace together. Personal addresses such as Gmail or Outlook are not supported at signup." }
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Signal Labs builds intelligence around your company, so we match your account to your company domain to set up your competitive set and keep your team's workspace together. Personal addresses such as Gmail or Outlook are not supported at signup."
+            }
         },
         {
             "@type": "Question",
             "name": "How is Signal Labs different from Klue or Crayon?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Traditional competitive intelligence platforms are collection tools: they gather intel and leave a human analyst to sort, write, and distribute it. Signal Labs is built the other way round. Every competitor gets a page that maintains itself, every meaningful competitor move produces a specific recommended action, and every claim carries a link to the source it came from. You are reviewing and approving work rather than producing it from scratch." }
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Traditional competitive intelligence platforms are collection tools: they gather intel and leave a human analyst to sort, write, and distribute it. Signal Labs is built the other way round. Every competitor gets a page that maintains itself, every meaningful competitor move produces a specific recommended action, and every claim carries a link to the source it came from. You are reviewing and approving work rather than producing it from scratch."
+            }
         }
-        ]
-    }
+    ]
+}
 ```

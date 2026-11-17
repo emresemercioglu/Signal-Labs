@@ -6,7 +6,7 @@
       "type": "skill-md",
       "description": "Query and manage competitive intelligence through Signal Labs CIx \u2014 track competitors, read scored competitive signals, generate battlecards and landscape analyses, and ask questions about a competitive landscape. Use when the user asks about tracking or researching competitors, wants a battlecard or competitor comparison, mentions Signal Labs or CIx, needs recent competitor news or product/pricing changes, or is preparing sales enablement material for a competitive deal. Also covers reading usesignallabs.com content as Markdown without authentication.",
       "url": "https://usesignallabs.com/.well-known/agent-skills/signal-labs/SKILL.md",
-      "digest": "sha256:71a46ba40065e2f074ea3e56d6531f22eb67887ed5267dae898012fb99e89821"
+      "digest": "sha256:4752becfc24ca51c62d0988218180d03b8d86179fd6ded75d00a138fe124eefb"
     }
   ]
 }
