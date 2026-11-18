@@ -538,6 +538,7 @@
     
     <!-- External Resources -->
     <link rel="stylesheet" href="../styles.css?v=14">
+    <link rel="stylesheet" href="../modern.css?v=1">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     
     <!-- Schema.org Structured Data -->
@@ -615,7 +616,7 @@
             </div>
             
             <div class="nav-menu" id="nav-menu">
-                <a href="../" class="nav-link">CIx Platform</a>
+                <a href="../platform" class="nav-link">CIx Platform</a>
                 
                 <div class="solutions-nav-wrapper">
                     <a href="../solutions/" class="nav-link solutions-nav-link">
@@ -788,270 +789,68 @@
                 </p>
             </div>
             
-            <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-10); margin-bottom: var(--space-8); box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
-                <!-- Win/Loss Intelligence Gap Chart -->
-                <div style="margin-bottom: var(--space-3);">
-                    <div style="text-align: center; margin-bottom: var(--space-3);">
-                                <h3 style="font-size: var(--font-size-xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-1);">From Market Noise to Strategic Intelligence</h3>
-                        <p style="font-size: var(--font-size-sm); color: var(--text-secondary);">CIx filters thousands of signals into actionable market intelligence</p>
-                    </div>
-                    
-                    <!-- Market Intelligence Noise Filter Visualization -->
-                    <div style="max-width: 1400px; margin: 0 auto; padding: 0; position: relative;">
-                        <svg width="100%" viewBox="0 0 1400 350" style="display: block; height: auto;">
-                            <defs>
-                                <!-- Gradients for the clean output lines -->
-                                <linearGradient id="line1Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#FB923C;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
-                                </linearGradient>
-                                <linearGradient id="line2Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#34D399;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
-                                </linearGradient>
-                                <linearGradient id="line3Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
-                                </linearGradient>
-                                <!-- Funnel gradient -->
-                                <linearGradient id="funnelGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#E0E7FF;stop-opacity:0.8" />
-                                    <stop offset="50%" style="stop-color:#C7D2FE;stop-opacity:0.9" />
-                                    <stop offset="100%" style="stop-color:#A5B4FC;stop-opacity:1" />
-                                </linearGradient>
-                                
-                                <!-- Glow filters for the lines -->
-                                <filter id="orangeGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
-                                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 0.5 0 0 0  0 0 0.1 0 0  0 0 0 1 0"/>
-                                    <feMerge>
-                                        <feMergeNode/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                                
-                                <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
-                                    <feColorMatrix in="blur" type="matrix" values="0 0.6 0 0 0  0 0.7 0 0 0  0 0 0.5 0 0  0 0 0 1 0"/>
-                                    <feMerge>
-                                        <feMergeNode/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                                
-                                <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
-                                    <feColorMatrix in="blur" type="matrix" values="0.2 0 0 0 0  0 0.5 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-                                    <feMerge>
-                                        <feMergeNode/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            
-                            <style>
-                                @keyframes pulse-line-1 {
-                                    0%, 100% { opacity: 1; }
-                                    50% { opacity: 0.5; }
-                                }
-                                @keyframes pulse-line-2 {
-                                    0%, 100% { opacity: 1; }
-                                    50% { opacity: 0.5; }
-                                }
-                                @keyframes pulse-line-3 {
-                                    0%, 100% { opacity: 1; }
-                                    50% { opacity: 0.5; }
-                                }
-                                .pulse-line-1 {
-                                    animation: pulse-line-1 2.5s ease-in-out infinite;
-                                }
-                                .pulse-line-2 {
-                                    animation: pulse-line-2 2.5s ease-in-out infinite 0.4s;
-                                }
-                                .pulse-line-3 {
-                                    animation: pulse-line-3 2.5s ease-in-out infinite 0.8s;
-                                }
-                            </style>
-                            
-                            <!-- Background -->
-                            <rect x="0" y="0" width="1400" height="350" fill="#FFFFFF"/>
-                            
-                            <!-- Left Side: Market Noise (many chaotic lines converging) -->
-                            <g opacity="0.25">
-                                <!-- Many noise lines converging toward funnel -->
-                                <path d="M 50 30 L 600 140" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 50 L 600 145" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 70 L 600 150" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 90 L 600 155" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 110 L 600 160" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 130 L 600 165" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 150 L 600 170" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 170 L 600 175" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 190 L 600 180" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 210 L 600 185" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 230 L 600 190" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 250 L 600 195" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 270 L 600 200" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 290 L 600 205" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 310 L 600 210" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 40 L 600 142" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 60 L 600 147" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 80 L 600 152" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 100 L 600 157" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 120 L 600 162" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 140 L 600 167" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 160 L 600 172" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 180 L 600 177" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 200 L 600 182" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 220 L 600 187" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 240 L 600 192" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 260 L 600 197" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 280 L 600 202" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 300 L 600 207" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 320 L 600 212" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 35 L 600 141" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 55 L 600 146" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 75 L 600 151" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 95 L 600 156" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 115 L 600 161" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 135 L 600 166" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 155 L 600 171" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 175 L 600 176" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 195 L 600 181" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 215 L 600 186" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 235 L 600 191" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 255 L 600 196" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 275 L 600 201" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 295 L 600 206" stroke="#64748B" stroke-width="1" fill="none"/>
-                                <path d="M 50 315 L 600 211" stroke="#64748B" stroke-width="1" fill="none"/>
-                            </g>
-                            
-                            <!-- Center: Funnel/Filter Shape -->
-                            <ellipse cx="700" cy="175" rx="100" ry="175" fill="url(#funnelGradient)" opacity="0.7"/>
-                            <text x="700" y="170" text-anchor="middle" style="font-size: 32px; font-weight: 700; fill: #1E40AF; font-family: 'Inter', sans-serif;">CIx</text>
-                            <text x="700" y="195" text-anchor="middle" style="font-size: 14px; font-weight: 600; fill: #3B82F6; font-family: 'Inter', sans-serif;">Filters Noise</text>
-                            
-                            <!-- Right Side: Clean Output Lines (thin with glow and pulse) -->
-                            <!-- Glow layers (behind - static, no pulse) -->
-                            <path d="M 800 130 L 1350 130" stroke="#60A5FA" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.2" style="filter: blur(3px);"/>
-                            <path d="M 800 175 L 1350 175" stroke="#4ABCCA" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.2" style="filter: blur(3px);"/>
-                            <path d="M 800 220 L 1350 220" stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.2" style="filter: blur(3px);"/>
-                            
-                            <!-- Main lines (on top - with pulse animation) -->
-                            <path class="pulse-line-1" d="M 800 130 L 1350 130" stroke="#60A5FA" stroke-width="4" fill="none" stroke-linecap="round"/>
-                            <path class="pulse-line-2" d="M 800 175 L 1350 175" stroke="#4ABCCA" stroke-width="4" fill="none" stroke-linecap="round"/>
-                            <path class="pulse-line-3" d="M 800 220 L 1350 220" stroke="#34D399" stroke-width="4" fill="none" stroke-linecap="round"/>
-                            
-                            <!-- Labels -->
-                            <text x="325" y="50" text-anchor="middle" style="font-size: 18px; font-weight: 600; fill: #64748B; font-family: 'Inter', sans-serif;">Market Noise</text>
-                            <text x="1075" y="50" text-anchor="middle" style="font-size: 18px; font-weight: 600; fill: #1E40AF; font-family: 'Inter', sans-serif;">Clear Intelligence</text>
-                            
-                            <!-- Labels for the clean lines on the right -->
-                            <text x="1350" y="120" text-anchor="end" style="font-size: 14px; font-weight: 600; fill: #60A5FA; font-family: 'Inter', sans-serif;">Market Trends</text>
-                            <text x="1350" y="165" text-anchor="end" style="font-size: 14px; font-weight: 600; fill: #4ABCCA; font-family: 'Inter', sans-serif;">Competitive Context</text>
-                            <text x="1350" y="210" text-anchor="end" style="font-size: 14px; font-weight: 600; fill: #34D399; font-family: 'Inter', sans-serif;">Strategic Signals</text>
-                        </svg>
-                    </div>
-                    
-                    <!-- Conclusion Statement -->
-                    <p style="font-size: var(--font-size-2xl); font-weight: 700; color: var(--text-primary); text-align: center; margin: var(--space-8) 0 0;">
-                        CIx filters market noise into clear intelligence: trends, context, and signals.
-                    </p>
-                    
-                    <!-- Original Chart Area (hidden as we replaced with comparison) -->
-                    <div style="display: none;">
-                        <!-- Y-axis labels -->
-                        <div style="position: absolute; left: 0; top: 0; bottom: 40px; display: flex; flex-direction: column; justify-content: space-between; font-size: 12px; color: var(--text-tertiary); padding-right: 12px;">
-                            <span>100%</span>
-                            <span>75%</span>
-                            <span>50%</span>
-                            <span>25%</span>
-                            <span>0%</span>
-                        </div>
-                        
-                        <!-- Chart area -->
-                        <div style="position: absolute; left: 50px; right: 0; top: 0; bottom: 40px; border-left: 2px solid #E2E8F0; border-bottom: 2px solid #E2E8F0;">
-                            <!-- Declining line -->
-                            <svg style="position: absolute; width: 100%; height: 100%;" viewBox="0 0 500 250" preserveAspectRatio="none">
-                                <!-- Grid lines -->
-                                <line x1="0" y1="62.5" x2="500" y2="62.5" stroke="#F1F5F9" stroke-width="1"/>
-                                <line x1="0" y1="125" x2="500" y2="125" stroke="#F1F5F9" stroke-width="1"/>
-                                <line x1="0" y1="187.5" x2="500" y2="187.5" stroke="#F1F5F9" stroke-width="1"/>
-                                
-                                <!-- Declining curve -->
-                                <path d="M 0 20 L 125 62.5 L 250 125 L 375 187.5 L 500 220" 
-                                      fill="none" 
-                                      stroke="url(#declineGradient)" 
-                                      stroke-width="4" 
-                                      stroke-linecap="round"/>
-                                
-                                <!-- Area under curve -->
-                                <path d="M 0 20 L 125 62.5 L 250 125 L 375 187.5 L 500 220 L 500 250 L 0 250 Z" 
-                                      fill="url(#areaGradient)" 
-                                      opacity="0.1"/>
-                                
-                                <defs>
-                                    <linearGradient id="declineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
-                                        <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
-                                    </linearGradient>
-                                    <linearGradient id="areaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            
-                            <!-- Milestone markers -->
-                            <div class="chart-milestone milestone-green" style="position: absolute; left: 0%; top: 8%; transform: translateX(-50%) translateY(-50%);">
-                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #34d399; border: 3px solid white; border-radius: 50%;"></div>
-                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #059669; margin-right: 12px;">Week 0</span>Sales team loves them. Usage is high. You're a hero.</div>
-                            </div>
-                            <div class="chart-milestone milestone-blue" style="position: absolute; left: 25%; top: 25%; transform: translateX(-50%) translateY(-50%);">
-                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #60a5fa; border: 3px solid white; border-radius: 50%;"></div>
-                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #2563eb; margin-right: 12px;">Week 1</span>Competitor changes pricing. Your battlecard has wrong information.</div>
-                            </div>
-                            <div class="chart-milestone milestone-yellow" style="position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);">
-                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #f59e0b; border: 3px solid white; border-radius: 50%;"></div>
-                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #d97706; margin-right: 12px;">Week 2</span>Rep asks "Do we have a battlecard on Competitor Y?" You don't.</div>
-                            </div>
-                            <div class="chart-milestone milestone-orange" style="position: absolute; left: 75%; top: 75%; transform: translateX(-50%) translateY(-50%);">
-                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #f97316; border: 3px solid white; border-radius: 50%;"></div>
-                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #ea580c; margin-right: 12px;">Week 3</span>Reps create their own "updated" battlecards. Inconsistent messaging.</div>
-                            </div>
-                            <div class="chart-milestone milestone-red" style="position: absolute; left: 100%; top: 88%; transform: translateX(-50%) translateY(-50%);">
-                                <div class="milestone-dot" style="width: 15px; height: 15px; background: #ef4444; border: 3px solid white; border-radius: 50%;"></div>
-                                <div class="milestone-tooltip"><span style="font-weight: 700; color: #dc2626; margin-right: 12px;">Week 4</span>Usage has dropped. Battlecards feel stale. The cycle repeats.</div>
-                            </div>
-                        </div>
-                        
-                        <!-- X-axis labels (timeline) -->
-                        <div style="position: absolute; left: 50px; right: 0; bottom: 0; height: 40px; padding-top: 12px;">
-                            <div style="position: absolute; left: 0%; transform: translateX(-50%); text-align: center;">
-                                <div style="font-weight: 700; color: #34d399; font-size: 14px;">Week 0</div>
-                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Launch</div>
-                            </div>
-                            <div style="position: absolute; left: 25%; transform: translateX(-50%); text-align: center;">
-                                <div style="font-weight: 700; color: #60a5fa; font-size: 14px;">Week 1</div>
-                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">First crack</div>
-                            </div>
-                            <div style="position: absolute; left: 50%; transform: translateX(-50%); text-align: center;">
-                                <div style="font-weight: 700; color: #f59e0b; font-size: 14px;">Week 2</div>
-                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Gaps appear</div>
-                            </div>
-                            <div style="position: absolute; left: 75%; transform: translateX(-50%); text-align: center;">
-                                <div style="font-weight: 700; color: #f97316; font-size: 14px;">Week 3</div>
-                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Chaos</div>
-                            </div>
-                            <div style="position: absolute; left: 100%; transform: translateX(-50%); text-align: center;">
-                                <div style="font-weight: 700; color: #ef4444; font-size: 14px;">Week 4</div>
-                                <div style="font-size: 11px; color: var(--text-tertiary); margin-top: 2px;">Abandoned</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </div>
+            <!-- Market noise -> CIx -> intelligence (generated; see modern refresh) -->
+            <div class="mi-flow">
+              <div class="mi-flow-head">
+                <span class="mi-flow-eyebrow">How CIx filters the market</span>
+                <h3>From market noise to intelligence you can act on</h3>
+                <p>Every pricing edit, job post, review and launch goes in. What comes out is scored, deduplicated and linked to its source.</p>
+              </div>
+              <div class="mi-flow-canvas">
+                <div class="mi-flow-labels" aria-hidden="true"><span>Market noise</span><span>CIx</span><span>Intelligence</span></div>
+                <svg class="mi-flow-svg" viewBox="0 0 1000 440" role="img" aria-labelledby="mi-flow-title mi-flow-desc"><title id="mi-flow-title">From market noise to intelligence</title><desc id="mi-flow-desc">Raw competitor changes such as pricing edits, job posts, reviews and changelogs flow into CIx, which scores, deduplicates and source-links them, and comes out as three kinds of intelligence: market trends, competitive context and strategic signals.</desc><defs>
+              <linearGradient id="miCoreStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset=".35" stop-color="#a855f7"/><stop offset=".7" stop-color="#0ea5e9"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+              <radialGradient id="miCoreGlow"><stop offset="0" stop-color="#818cf8" stop-opacity=".55"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></radialGradient>
+              <linearGradient id="miCoreFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1d3a"/><stop offset="1" stop-color="#0b0d1c"/></linearGradient>
+              <linearGradient id="miIn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#94a3b8" stop-opacity=".05"/><stop offset="1" stop-color="#94a3b8" stop-opacity=".35"/></linearGradient>
+            </defs><path id="mi-in-0" class="mi-path-in" d="M170,34 C290,34 330,198 436,198" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.20s" begin="0.00s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.20s" begin="0.00s" repeatCount="indefinite"/></circle><path id="mi-in-1" class="mi-path-in" d="M214,70 C334,70 330,202 436,202" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.75s" begin="0.37s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.75s" begin="0.37s" repeatCount="indefinite"/></circle><path id="mi-in-2" class="mi-path-in" d="M123,106 C243,106 330,206 436,206" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.30s" begin="0.74s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.30s" begin="0.74s" repeatCount="indefinite"/></circle><path id="mi-in-3" class="mi-path-in" d="M175,142 C295,142 330,211 436,211" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.85s" begin="1.11s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.85s" begin="1.11s" repeatCount="indefinite"/></circle><path id="mi-in-4" class="mi-path-in" d="M152,178 C272,178 330,215 436,215" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.20s" begin="1.48s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.20s" begin="1.48s" repeatCount="indefinite"/></circle><path id="mi-in-5" class="mi-path-in" d="M115,214 C235,214 330,219 436,219" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.75s" begin="1.85s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-5"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.75s" begin="1.85s" repeatCount="indefinite"/></circle><path id="mi-in-6" class="mi-path-in" d="M193,250 C313,250 330,224 436,224" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.30s" begin="2.22s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-6"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.30s" begin="2.22s" repeatCount="indefinite"/></circle><path id="mi-in-7" class="mi-path-in" d="M146,286 C266,286 330,228 436,228" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.85s" begin="2.59s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.85s" begin="2.59s" repeatCount="indefinite"/></circle><path id="mi-in-8" class="mi-path-in" d="M179,322 C299,322 330,232 436,232" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.20s" begin="2.96s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-8"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.20s" begin="2.96s" repeatCount="indefinite"/></circle><path id="mi-in-9" class="mi-path-in" d="M147,358 C267,358 330,237 436,237" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.75s" begin="0.33s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-9"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.75s" begin="0.33s" repeatCount="indefinite"/></circle><path id="mi-in-10" class="mi-path-in" d="M170,394 C290,394 330,241 436,241" fill="none" stroke="url(#miIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.30s" begin="0.70s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#mi-in-10"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.30s" begin="0.70s" repeatCount="indefinite"/></circle><g class="mi-chip" opacity="0.9"><rect x="26" y="21" width="144" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="37" y="38" font-size="12" fill="rgba(226,232,240,.78)">Pricing page edited</text></g><g class="mi-chip" opacity="0.7"><rect x="58" y="57" width="156" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="69" y="74" font-size="12" fill="rgba(226,232,240,.78)">New job post: Sr. PMM</text></g><g class="mi-chip" opacity="0.85"><rect x="18" y="93" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="29" y="110" font-size="12" fill="rgba(226,232,240,.78)">G2 review, 2★</text></g><g class="mi-chip" opacity="0.6"><rect x="70" y="129" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="81" y="146" font-size="12" fill="rgba(226,232,240,.78)">Press release</text></g><g class="mi-chip" opacity="0.95"><rect x="34" y="165" width="118" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="45" y="182" font-size="12" fill="rgba(226,232,240,.78)">Changelog: v4.2</text></g><g class="mi-chip" opacity="0.75"><rect x="10" y="201" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="21" y="218" font-size="12" fill="rgba(226,232,240,.78)">Funding round</text></g><g class="mi-chip" opacity="0.6"><rect x="62" y="237" width="131" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="73" y="254" font-size="12" fill="rgba(226,232,240,.78)">Webinar announced</text></g><g class="mi-chip" opacity="0.85"><rect x="28" y="273" width="118" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="39" y="290" font-size="12" fill="rgba(226,232,240,.78)">Docs page added</text></g><g class="mi-chip" opacity="0.65"><rect x="74" y="309" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="85" y="326" font-size="12" fill="rgba(226,232,240,.78)">LinkedIn post</text></g><g class="mi-chip" opacity="0.8"><rect x="16" y="345" width="131" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="27" y="362" font-size="12" fill="rgba(226,232,240,.78)">Partner page live</text></g><g class="mi-chip" opacity="0.6"><rect x="52" y="381" width="118" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="63" y="398" font-size="12" fill="rgba(226,232,240,.78)">Analyst mention</text></g><path id="mi-out-0" d="M564,201 C630,201 600,92 640,92" fill="none" stroke="#0ea5e9" stroke-opacity=".55" stroke-width="2"/><circle class="mi-particle" r="3" fill="#0ea5e9"><animateMotion dur="2.40s" begin="0.00s" repeatCount="indefinite"><mpath href="#mi-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.40s" begin="0.00s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="3" fill="#0ea5e9"><animateMotion dur="2.40s" begin="1.20s" repeatCount="indefinite"><mpath href="#mi-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.40s" begin="1.20s" repeatCount="indefinite"/></circle><path id="mi-out-1" d="M564,220 C630,220 600,220 640,220" fill="none" stroke="#a855f7" stroke-opacity=".55" stroke-width="2"/><circle class="mi-particle" r="3" fill="#a855f7"><animateMotion dur="2.70s" begin="0.20s" repeatCount="indefinite"><mpath href="#mi-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.70s" begin="0.20s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="3" fill="#a855f7"><animateMotion dur="2.70s" begin="1.55s" repeatCount="indefinite"><mpath href="#mi-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.70s" begin="1.55s" repeatCount="indefinite"/></circle><path id="mi-out-2" d="M564,239 C630,239 600,348 640,348" fill="none" stroke="#10b981" stroke-opacity=".55" stroke-width="2"/><circle class="mi-particle" r="3" fill="#10b981"><animateMotion dur="3.00s" begin="0.40s" repeatCount="indefinite"><mpath href="#mi-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.00s" begin="0.40s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="3" fill="#10b981"><animateMotion dur="3.00s" begin="1.90s" repeatCount="indefinite"><mpath href="#mi-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.00s" begin="1.90s" repeatCount="indefinite"/></circle><g class="mi-core"><circle cx="500" cy="220" r="170" fill="url(#miCoreGlow)"/><rect class="mi-pulse" x="432" y="152" width="136" height="136" rx="18" fill="none" stroke="#818cf8" stroke-opacity=".45"><animate attributeName="stroke-opacity" values=".45;0" dur="2.8s" repeatCount="indefinite"/><animate attributeName="x" values="432;410" dur="2.8s" repeatCount="indefinite"/><animate attributeName="y" values="152;130" dur="2.8s" repeatCount="indefinite"/><animate attributeName="width" values="136;180" dur="2.8s" repeatCount="indefinite"/><animate attributeName="height" values="136;180" dur="2.8s" repeatCount="indefinite"/></rect><g fill="#a5b4fc" fill-opacity=".55"><rect x="422.0" y="177.2" width="10" height="4" rx="1.5"/><rect x="568.0" y="177.2" width="10" height="4" rx="1.5"/><rect x="457.2" y="142.0" width="4" height="10" rx="1.5"/><rect x="457.2" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="197.6" width="10" height="4" rx="1.5"/><rect x="568.0" y="197.6" width="10" height="4" rx="1.5"/><rect x="477.6" y="142.0" width="4" height="10" rx="1.5"/><rect x="477.6" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="218.0" width="10" height="4" rx="1.5"/><rect x="568.0" y="218.0" width="10" height="4" rx="1.5"/><rect x="498.0" y="142.0" width="4" height="10" rx="1.5"/><rect x="498.0" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="238.4" width="10" height="4" rx="1.5"/><rect x="568.0" y="238.4" width="10" height="4" rx="1.5"/><rect x="518.4" y="142.0" width="4" height="10" rx="1.5"/><rect x="518.4" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="258.8" width="10" height="4" rx="1.5"/><rect x="568.0" y="258.8" width="10" height="4" rx="1.5"/><rect x="538.8" y="142.0" width="4" height="10" rx="1.5"/><rect x="538.8" y="288.0" width="4" height="10" rx="1.5"/></g><rect x="432" y="152" width="136" height="136" rx="16" fill="url(#miCoreFill)" stroke="url(#miCoreStroke)" stroke-width="2"/><rect x="446" y="166" width="109" height="109" rx="12" fill="rgba(129,140,248,.06)" stroke="rgba(165,180,252,.32)" stroke-width="1"/><circle cx="440" cy="160" r="3" fill="rgba(165,180,252,.7)"/><text x="500" y="223" text-anchor="middle" font-size="29" font-weight="800" fill="#fff" letter-spacing="-.5">CIx</text><text x="500" y="246" text-anchor="middle" font-size="8.6" font-weight="600" letter-spacing=".1" fill="rgba(199,210,254,.85)">watch → score → act</text></g><g class="mi-out-card">
+              <rect x="640" y="42" width="340" height="100" rx="14" fill="rgba(20,23,48,0.88)" stroke="#0ea5e9" stroke-opacity="0.45"/><rect x="641" y="43" width="338" height="40" rx="13" fill="#0ea5e9" fill-opacity="0.07"/>
+              
+              <text x="660" y="70" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#0ea5e9">MARKET TREND</text>
+              <text x="660" y="94" font-size="14" font-weight="600" fill="#f8fafc">Rivals are moving to AI add-on pricing</text>
+              <text x="660" y="118" font-size="12" fill="rgba(203,213,225,0.72)">Seen at 3 of your 5 rivals · 9 sources</text>
+            </g><g class="mi-out-card">
+              <rect x="640" y="170" width="340" height="100" rx="14" fill="rgba(20,23,48,0.88)" stroke="#a855f7" stroke-opacity="0.45"/><rect x="641" y="171" width="338" height="40" rx="13" fill="#a855f7" fill-opacity="0.07"/>
+              
+              <text x="660" y="198" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#a855f7">COMPETITIVE CONTEXT</text>
+              <text x="660" y="222" font-size="14" font-weight="600" fill="#f8fafc">A rival repriced around a new top tier</text>
+              <text x="660" y="246" font-size="12" fill="rgba(203,213,225,0.72)">Linked to pricing page + launch post</text>
+            </g><g class="mi-out-card">
+              <rect x="640" y="298" width="340" height="100" rx="14" fill="rgba(20,23,48,0.88)" stroke="#10b981" stroke-opacity="0.45"/><rect x="641" y="299" width="338" height="40" rx="13" fill="#10b981" fill-opacity="0.07"/>
+              
+              <text x="660" y="326" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#10b981">STRATEGIC SIGNAL</text>
+              <text x="660" y="350" font-size="14" font-weight="600" fill="#f8fafc">A rival shipped a feature you lead on</text>
+              <text x="660" y="374" font-size="12" fill="rgba(203,213,225,0.72)">Scored 9/10 · talk track drafted for Sales</text>
+            </g></svg>
+                <svg class="mi-flow-svg-v" viewBox="0 0 360 676" role="img" aria-labelledby="mv-t"><title id="mv-t">Market noise flows into CIx, which scores, deduplicates and links sources, and comes out as market trends, competitive context, strategic signals.</title><defs>
+  <linearGradient id="mvCoreStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset=".35" stop-color="#a855f7"/><stop offset=".7" stop-color="#0ea5e9"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+  <radialGradient id="mvCoreGlow"><stop offset="0" stop-color="#818cf8" stop-opacity=".45"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></radialGradient>
+  <linearGradient id="mvCoreFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1f40"/><stop offset="1" stop-color="#0b0d1c"/></linearGradient>
+  <linearGradient id="mvIn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#94a3b8" stop-opacity=".08"/><stop offset="1" stop-color="#94a3b8" stop-opacity=".45"/></linearGradient>
+</defs><text x="8" y="12" font-size="10" font-weight="700" letter-spacing="1.2" fill="rgba(226,232,240,.5)">MARKET NOISE</text><path id="mv-in-5" d="M58,112 C58,156 142,136 142,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.05s" begin="2.05s" repeatCount="indefinite"><mpath href="#mv-in-5"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.05s" begin="2.05s" repeatCount="indefinite"/></circle><path id="mv-in-2" d="M71,80 C71,124 161,136 161,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.50s" begin="0.82s" repeatCount="indefinite"><mpath href="#mv-in-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.50s" begin="0.82s" repeatCount="indefinite"/></circle><path id="mv-in-0" d="M104,48 C104,92 161,136 161,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="2.60s" begin="0.00s" repeatCount="indefinite"><mpath href="#mv-in-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.60s" begin="0.00s" repeatCount="indefinite"/></circle><path id="mv-in-3" d="M174,80 C174,124 180,136 180,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.95s" begin="1.23s" repeatCount="indefinite"><mpath href="#mv-in-3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.95s" begin="1.23s" repeatCount="indefinite"/></circle><path id="mv-in-6" d="M174,112 C174,156 180,136 180,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.50s" begin="2.46s" repeatCount="indefinite"><mpath href="#mv-in-6"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.50s" begin="2.46s" repeatCount="indefinite"/></circle><path id="mv-in-1" d="M250,48 C250,92 199,136 199,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.05s" begin="0.41s" repeatCount="indefinite"><mpath href="#mv-in-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.05s" begin="0.41s" repeatCount="indefinite"/></circle><path id="mv-in-4" d="M283,80 C283,124 199,136 199,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="2.60s" begin="1.64s" repeatCount="indefinite"><mpath href="#mv-in-4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.60s" begin="1.64s" repeatCount="indefinite"/></circle><path id="mv-in-7" d="M296,112 C296,156 218,136 218,180" fill="none" stroke="url(#mvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.95s" begin="0.27s" repeatCount="indefinite"><mpath href="#mv-in-7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.95s" begin="0.27s" repeatCount="indefinite"/></circle><g><rect x="37" y="24" width="134" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="46" y="40" font-size="11" fill="rgba(226,232,240,.8)">Pricing page edited</text></g><g><rect x="177" y="24" width="146" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="186" y="40" font-size="11" fill="rgba(226,232,240,.8)">New job post: Sr. PMM</text></g><g><rect x="22" y="56" width="97" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="31" y="72" font-size="11" fill="rgba(226,232,240,.8)">G2 review, 2★</text></g><g><rect x="125" y="56" width="97" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="134" y="72" font-size="11" fill="rgba(226,232,240,.8)">Press release</text></g><g><rect x="229" y="56" width="110" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="238" y="72" font-size="11" fill="rgba(226,232,240,.8)">Changelog: v4.2</text></g><g><rect x="10" y="88" width="97" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="19" y="104" font-size="11" fill="rgba(226,232,240,.8)">Funding round</text></g><g><rect x="113" y="88" width="122" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="122" y="104" font-size="11" fill="rgba(226,232,240,.8)">Webinar announced</text></g><g><rect x="241" y="88" width="110" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="250" y="104" font-size="11" fill="rgba(226,232,240,.8)">Docs page added</text></g><path id="mv-out-0" d="M180,328 L180,380" fill="none" stroke="#0ea5e9" stroke-opacity=".7" stroke-width="2"/><circle class="mi-particle" r="2.8" fill="#0ea5e9"><animateMotion dur="1.40s" begin="0.00s" repeatCount="indefinite"><mpath href="#mv-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.40s" begin="0.00s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="2.8" fill="#0ea5e9"><animateMotion dur="1.40s" begin="0.70s" repeatCount="indefinite"><mpath href="#mv-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.40s" begin="0.70s" repeatCount="indefinite"/></circle><path id="mv-out-1" d="M180,456 L180,486" fill="none" stroke="#a855f7" stroke-opacity=".7" stroke-width="2"/><circle class="mi-particle" r="2.8" fill="#a855f7"><animateMotion dur="1.00s" begin="0.30s" repeatCount="indefinite"><mpath href="#mv-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="0.30s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="2.8" fill="#a855f7"><animateMotion dur="1.00s" begin="0.80s" repeatCount="indefinite"><mpath href="#mv-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="0.80s" repeatCount="indefinite"/></circle><path id="mv-out-2" d="M180,562 L180,592" fill="none" stroke="#10b981" stroke-opacity=".7" stroke-width="2"/><circle class="mi-particle" r="2.8" fill="#10b981"><animateMotion dur="1.00s" begin="0.60s" repeatCount="indefinite"><mpath href="#mv-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="0.60s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="2.8" fill="#10b981"><animateMotion dur="1.00s" begin="1.10s" repeatCount="indefinite"><mpath href="#mv-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="1.10s" repeatCount="indefinite"/></circle><g class="mi-core"><circle cx="180" cy="254" r="130" fill="url(#mvCoreGlow)"/><rect class="mi-pulse" x="116" y="190" width="128" height="128" rx="18" fill="none" stroke="#818cf8" stroke-opacity=".45"><animate attributeName="stroke-opacity" values=".45;0" dur="2.8s" repeatCount="indefinite"/><animate attributeName="x" values="116;96" dur="2.8s" repeatCount="indefinite"/><animate attributeName="y" values="190;170" dur="2.8s" repeatCount="indefinite"/><animate attributeName="width" values="128;169" dur="2.8s" repeatCount="indefinite"/><animate attributeName="height" values="128;169" dur="2.8s" repeatCount="indefinite"/></rect><g fill="#a5b4fc" fill-opacity=".55"><rect x="106.0" y="213.6" width="10" height="4" rx="1.5"/><rect x="244.0" y="213.6" width="10" height="4" rx="1.5"/><rect x="139.6" y="180.0" width="4" height="10" rx="1.5"/><rect x="139.6" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="232.8" width="10" height="4" rx="1.5"/><rect x="244.0" y="232.8" width="10" height="4" rx="1.5"/><rect x="158.8" y="180.0" width="4" height="10" rx="1.5"/><rect x="158.8" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="252.0" width="10" height="4" rx="1.5"/><rect x="244.0" y="252.0" width="10" height="4" rx="1.5"/><rect x="178.0" y="180.0" width="4" height="10" rx="1.5"/><rect x="178.0" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="271.2" width="10" height="4" rx="1.5"/><rect x="244.0" y="271.2" width="10" height="4" rx="1.5"/><rect x="197.2" y="180.0" width="4" height="10" rx="1.5"/><rect x="197.2" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="290.4" width="10" height="4" rx="1.5"/><rect x="244.0" y="290.4" width="10" height="4" rx="1.5"/><rect x="216.4" y="180.0" width="4" height="10" rx="1.5"/><rect x="216.4" y="318.0" width="4" height="10" rx="1.5"/></g><rect x="116" y="190" width="128" height="128" rx="16" fill="url(#mvCoreFill)" stroke="url(#mvCoreStroke)" stroke-width="2"/><rect x="129" y="203" width="102" height="102" rx="12" fill="rgba(129,140,248,.06)" stroke="rgba(165,180,252,.32)" stroke-width="1"/><circle cx="124" cy="198" r="3" fill="rgba(165,180,252,.7)"/><text x="180" y="257" text-anchor="middle" font-size="27" font-weight="800" fill="#fff" letter-spacing="-.5">CIx</text><text x="180" y="279" text-anchor="middle" font-size="8.2" font-weight="600" letter-spacing="0" fill="rgba(199,210,254,.85)">watch → score → act</text></g><text x="8" y="366" font-size="10" font-weight="700" letter-spacing="1.2" fill="rgba(226,232,240,.5)">INTELLIGENCE</text><g class="mi-out-card">
+  <rect x="8" y="380" width="344" height="76" rx="13" fill="rgba(20,23,48,0.94)" stroke="#0ea5e9" stroke-opacity="0.5"/>
+  <rect x="9" y="381" width="342" height="30" rx="12" fill="#0ea5e9" fill-opacity="0.07"/>
+  <circle cx="180" cy="380" r="3.5" fill="#0ea5e9"/>
+  <text x="24" y="402" font-size="10" font-weight="700" letter-spacing="1.1" fill="#0ea5e9">MARKET TREND</text>
+  <text x="24" y="424" font-size="13" font-weight="600" fill="#f8fafc">Rivals are moving to AI add-on pricing</text>
+  <text x="24" y="443" font-size="11" fill="rgba(203,213,225,0.72)">Seen at 3 of your 5 rivals · 9 sources</text>
+</g><g class="mi-out-card">
+  <rect x="8" y="486" width="344" height="76" rx="13" fill="rgba(20,23,48,0.94)" stroke="#a855f7" stroke-opacity="0.5"/>
+  <rect x="9" y="487" width="342" height="30" rx="12" fill="#a855f7" fill-opacity="0.07"/>
+  <circle cx="180" cy="486" r="3.5" fill="#a855f7"/>
+  <text x="24" y="508" font-size="10" font-weight="700" letter-spacing="1.1" fill="#a855f7">COMPETITIVE CONTEXT</text>
+  <text x="24" y="530" font-size="13" font-weight="600" fill="#f8fafc">A rival repriced around a new top tier</text>
+  <text x="24" y="549" font-size="11" fill="rgba(203,213,225,0.72)">Linked to pricing page + launch post</text>
+</g><g class="mi-out-card">
+  <rect x="8" y="592" width="344" height="76" rx="13" fill="rgba(20,23,48,0.94)" stroke="#10b981" stroke-opacity="0.5"/>
+  <rect x="9" y="593" width="342" height="30" rx="12" fill="#10b981" fill-opacity="0.07"/>
+  <circle cx="180" cy="592" r="3.5" fill="#10b981"/>
+  <text x="24" y="614" font-size="10" font-weight="700" letter-spacing="1.1" fill="#10b981">STRATEGIC SIGNAL</text>
+  <text x="24" y="636" font-size="13" font-weight="600" fill="#f8fafc">A rival shipped a feature you lead on</text>
+  <text x="24" y="655" font-size="11" fill="rgba(203,213,225,0.72)">Scored 9/10 · talk track drafted for Sales</text>
+</g></svg>
+              </div>
+            </div>
                 </div>
             </div>
             
@@ -2057,7 +1856,7 @@
                     <!-- Mobile-only sections - shown only on mobile -->
                     <div class="footer-column footer-brand-extra">
                         <h3>Platform</h3>
-                        <a href="../">CIx Platform</a>
+                        <a href="../platform">CIx Platform</a>
                         <a href="../solutions">CI Solutions</a>
                         <a href="../services">CI Services</a>
                     </div>
@@ -2086,7 +1885,7 @@
                 <div class="footer-links">
                     <div class="footer-column footer-hide-mobile">
                         <h3>Platform</h3>
-                        <a href="../">CIx Platform</a>
+                        <a href="../platform">CIx Platform</a>
                         <a href="../solutions">CI Solutions</a>
                         <a href="../services">CI Services</a>
                     </div>
@@ -2299,90 +2098,7 @@
         });
     </script>
 
-    <!-- Chart Auto-Play Animation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const milestones = document.querySelectorAll('.chart-milestone');
-            let hasPlayed = false;
-            let isPlaying = false;
-            
-            console.log('Chart auto-play initialized. Found', milestones.length, 'milestones');
-            
-            // Detect when chart comes into view
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !hasPlayed) {
-                        console.log('Chart came into view, starting auto-play...');
-                        hasPlayed = true;
-                        setTimeout(() => {
-                            playTooltipSequence();
-                        }, 500); // Small delay before starting
-                    }
-                });
-            }, {
-                threshold: 0.3 // Trigger when 30% of chart is visible (lowered threshold)
-            });
-            
-            // Observe the chart container
-            const chartContainer = document.querySelector('#challenge');
-            if (chartContainer) {
-                console.log('Found chart container, observing...');
-                observer.observe(chartContainer);
-            } else {
-                console.error('Chart container #challenge not found!');
-            }
-            
-            function playTooltipSequence() {
-                isPlaying = true;
-                let currentIndex = 0;
-                
-                function showNextTooltip() {
-                    // Check if still playing (user might have hovered)
-                    if (!isPlaying) {
-                        console.log('Auto-play stopped by user interaction');
-                        return;
-                    }
-                    
-                    // Hide all tooltips first
-                    milestones.forEach(milestone => {
-                        milestone.classList.remove('active-tooltip');
-                    });
-                    
-                    if (currentIndex < milestones.length) {
-                        const currentMilestone = milestones[currentIndex];
-                        currentMilestone.classList.add('active-tooltip');
-                        
-                        currentIndex++;
-                        setTimeout(showNextTooltip, 3000); // Show each for 3 seconds
-                    } else {
-                        // Sequence complete
-                        isPlaying = false;
-                        console.log('Auto-play sequence completed');
-                        // Remove all active classes to allow hover to take over
-                        milestones.forEach(milestone => {
-                            milestone.classList.remove('active-tooltip');
-                        });
-                    }
-                }
-                
-                showNextTooltip();
-            }
-            
-            // Stop auto-play on hover
-            milestones.forEach(milestone => {
-                milestone.addEventListener('mouseenter', function() {
-                    if (isPlaying) {
-                        console.log('User hovered during auto-play, stopping auto-play...');
-                        isPlaying = false;
-                        // Remove all active classes to give user full control
-                        milestones.forEach(m => {
-                            m.classList.remove('active-tooltip');
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    
 
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

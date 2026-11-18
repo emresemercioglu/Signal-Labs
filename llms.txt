@@ -29,7 +29,8 @@
 
 ## Key pages
 
-- [Home / CIx platform](https://usesignallabs.com/): what CIx is, the four product pillars, and what it produces.
+- [Home](https://usesignallabs.com/): what CIx is, how it works (watch, score, act) and what it hands each team.
+- [CIx Platform](https://usesignallabs.com/platform): every feature in detail, with screenshots: living competitor pages, signals and actions, battlecards, Battle Rooms, Ask CIx, digests, analytics, data library, API and MCP.
 - [Pricing](https://usesignallabs.com/pricing): Free, Pro, Ultra and Enterprise plans, capability comparison, pricing FAQs.
 - [FAQ](https://usesignallabs.com/faq): competitive intelligence concepts, Signal Labs services, CIx platform and pricing questions.
 - [About](https://usesignallabs.com/about): who Signal Labs is.

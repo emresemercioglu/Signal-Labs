@@ -76,6 +76,7 @@
     <!-- Load full CSS asynchronously (non-render-blocking) -->
     <link rel="preload" href="styles.css?v=14" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.css?v=14"></noscript>
+    <link rel="stylesheet" href="modern.css?v=1">
     
     <!-- Load fonts asynchronously with font-display swap (non-blocking) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -149,7 +150,7 @@
                 </a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="/" class="nav-link active">CIx Platform</a>
+                <a href="/platform" class="nav-link">CIx Platform</a>
                 <div class="solutions-nav-wrapper">
                     <a href="solutions" class="nav-link solutions-nav-link">
                         Solutions
@@ -290,27 +291,24 @@
 
     <!-- Hero Section -->
     <section class="hero hero-dark">
-        <div class="hero-bg-elements">
-            <div class="bg-element bg-circle-1"></div>
-            <div class="bg-element bg-circle-2"></div>
-            <div class="bg-element bg-circle-3"></div>
-            <div class="bg-element bg-chart-1"></div>
-            <div class="bg-element bg-chart-2"></div>
-            <div class="bg-element bg-line-1"></div>
-            <div class="bg-element bg-line-2"></div>
+        <div class="hero-modern-bg" aria-hidden="true">
+            <div class="hero-aurora"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></div>
+            <div class="hero-grid"></div>
+            <div class="hero-beam"></div>
+            <div class="hero-noise"></div>
         </div>
         <div class="container">
             <div class="hero-content">
-                <span class="home-eyebrow">AI-powered competitive intelligence platform</span>
+                <a class="home-announce" href="blog/introducing-signal-labs-api-mcp-server"><span class="home-announce-tag">New</span>Query CIx from Claude, Cursor and your own tools<span class="home-announce-arrow" aria-hidden="true">→</span></a>
                 <h1 class="hero-title">
                     Competitive intelligence<br>that <span class="hero-highlight">updates itself</span>
                 </h1>
                 <p class="hero-subtitle">
-                    CIx turns competitor noise into living intelligence pages, real-time signals, and battlecards, comparisons and emails your GTM team can send as‑is.
+                    CIx watches your competitors, rewrites their pages the moment they move, and turns every change into battlecards, talk tracks and emails your team can send as-is.
                 </p>
                 <div class="hero-cta">
                     <a href="https://app.usesignallabs.com/login" class="btn btn-hero-primary">Start Free →</a>
-                    <a href="#waitlist" class="btn btn-hero-secondary">Book Demo</a>
+                    <a href="contact" class="btn btn-hero-secondary">Book Demo</a>
                 </div>
                 <div class="home-proof-chips">
                     <span class="home-proof-chip">
@@ -333,6 +331,7 @@
             </div>
 
             <!-- Product shot: the competitor set as CIx actually renders it -->
+            <div class="home-hero-stage">
             <div class="home-shot home-hero-shot">
                 <div class="home-shot-bar">
                     <span class="home-shot-dot"></span>
@@ -340,98 +339,166 @@
                     <span class="home-shot-dot"></span>
                     <span class="home-shot-url">app.usesignallabs.com/competitors</span>
                 </div>
-                <!-- Art-directed: the full dashboard is unreadable at phone
-                     widths, so small screens get a single competitor card. -->
-                <picture>
-                    <source srcset="assets/product/competitors-grid.webp" type="image/webp" width="2000" height="1130">
-                    <img src="assets/product/competitors-grid.png"
-                         width="2000" height="1130"
-                         alt="Signal Labs CIx competitor dashboard showing living competitor pages for AlphaSense, Crayon and Klue with real-time signals, recommended actions and a market positioning map"
-                         loading="eager" fetchpriority="high" decoding="async">
-                </picture>
+                <div class="app-mock" role="img" aria-label="Illustration of the CIx competitors dashboard: a market positioning map and living pages for three competitors. A new signal arrives for Globex and its position moves, then a new signal arrives for Initech and its position shifts.">
+                    <aside class="am-side">
+                        <div class="am-brand"><span class="am-logo">S</span><div><strong>Signal Labs</strong><span>CI Platform</span></div></div>
+                        <div class="am-nav">
+                            <span class="on"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>Competitors<b>3</b></span>
+                            <span><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Notifications<b class="am-count"><em class="n0">12</em><em class="n1">13</em><em class="n2">14</em></b></span>
+                            <span><svg viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>Actions<b>6</b></span>
+                            <span><svg viewBox="0 0 24 24"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6"/><path d="m16 16 4 4"/><path d="m19 21 2-2"/></svg>Battle Rooms<b>2</b></span>
+                            <span><svg viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/></svg>Company Profile</span>
+                            <span><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>Newsletters</span>
+                            <span><svg viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>Data Library<b>8</b></span>
+                        </div>
+                        <div class="am-side-foot">
+                            <div class="am-user"><span>A</span>alex@northwind.io</div>
+                            <div class="am-plan">Pro plan<em>Owner</em></div>
+                        </div>
+                    </aside>
+                    <div class="am-main">
+                        <div class="am-top">
+                            <div><h4>Competitors</h4><p>Living intelligence pages for every competitor you track.</p></div>
+                            <span class="am-add">+ Add Competitor</span>
+                        </div>
+                        <div class="am-map-card">
+                            <div class="am-map-head"><strong><svg viewBox="0 0 24 24"><path d="M14.1 6.3 9.9 4.2a2 2 0 0 0-1.8 0L3.6 6.4A1 1 0 0 0 3 7.3v12.1a1 1 0 0 0 1.4.9l3.7-1.8a2 2 0 0 1 1.8 0l4.2 2.1a2 2 0 0 0 1.8 0l4.5-2.2a1 1 0 0 0 .6-.9V5.4a1 1 0 0 0-1.4-.9l-3.7 1.8a2 2 0 0 1-1.8 0z"/></svg>Market Positioning Map</strong><span>Updated just now</span></div>
+                            <div class="am-map">
+                                <span class="am-ax am-ax-t">Platform</span><span class="am-ax am-ax-b">Point solution</span>
+                                <span class="am-ax am-ax-l">Self-serve</span><span class="am-ax am-ax-r">Enterprise</span>
+                                <i class="am-ghost am-ghost-g" style="left:42%;top:66%"></i>
+                                <i class="am-ghost am-ghost-i" style="left:74%;top:72%"></i>
+                                <i class="am-pt am-you" style="left:68%;top:26%">You</i>
+                                <i class="am-pt am-acme" style="left:32%;top:34%">A</i>
+                                <i class="am-pt am-initech">I</i>
+                                <i class="am-pt am-globex">G</i>
+                            </div>
+                            <div class="am-legend"><span><i class="lg-acme"></i>Acme</span><span><i class="lg-globex"></i>Globex</span><span><i class="lg-initech"></i>Initech</span><span><i class="lg-you"></i>You</span></div>
+                        </div>
+                        <div class="am-cards">
+                            <div class="am-card am-acme-card">
+                                <div class="am-card-head"><span class="am-logo-c lg-acme">A</span><div><strong>Acme</strong><span>acme.com</span></div></div>
+                                <div class="am-tags"><span>Direct</span><span>3 signals</span></div>
+                                <div class="am-sig"><span class="am-score s8">8/10</span><span class="am-sig-k">Latest signal</span></div>
+                                <p>Acme repriced its Starter plan</p>
+                                <div class="am-card-foot"><span class="am-hex"></span><div><strong>Acme leads on 2 of 6</strong><span>Biggest gap: Support</span></div></div>
+                            </div>
+                            <div class="am-card am-globex-card">
+                                <span class="am-new">✦ New</span>
+                                <div class="am-card-head"><span class="am-logo-c lg-globex">G</span><div><strong>Globex</strong><span>globex.com</span></div></div>
+                                <div class="am-tags"><span>Direct</span><span class="am-swap-in"><em class="o">1 signal</em><em class="n">2 signals</em></span></div>
+                                <div class="am-sig"><span class="am-swap-in"><em class="o am-score s6">6/10</em><em class="n am-score s9">9/10</em></span><span class="am-sig-k">Latest signal</span><span class="am-just">just now</span></div>
+                                <p class="am-swap-in"><em class="o">Globex hired a VP of Sales</em><em class="n">Globex launched an AI assistant</em></p>
+                                <div class="am-card-foot"><span class="am-hex"></span><div><strong>Globex leads on 3 of 6</strong><span>Biggest gap: Innovation</span></div></div>
+                            </div>
+                            <div class="am-card am-initech-card">
+                                <span class="am-new">✦ New</span>
+                                <div class="am-card-head"><span class="am-logo-c lg-initech">I</span><div><strong>Initech</strong><span>initech.com</span></div></div>
+                                <div class="am-tags"><span>Indirect</span><span class="am-swap-in"><em class="o">5 signals</em><em class="n">6 signals</em></span><span class="am-actions">4 actions</span></div>
+                                <div class="am-sig"><span class="am-swap-in"><em class="o am-score s5">5/10</em><em class="n am-score s8">8/10</em></span><span class="am-sig-k">Latest signal</span><span class="am-just">just now</span></div>
+                                <p class="am-swap-in"><em class="o">Initech opened a London office</em><em class="n">Initech launched a free plan</em></p>
+                                <div class="am-card-foot"><span class="am-hex"></span><div><strong>Initech leads on 1 of 6</strong><span>Biggest gap: Performance</span></div></div>
+                            </div>
+                        </div>
+                        <div class="am-toast t1"><span class="am-toast-dot"></span><div><strong>New signal · Globex</strong><span>Launched an AI assistant</span></div><span class="am-score s9">9/10</span></div>
+                        <div class="am-toast t2"><span class="am-toast-dot"></span><div><strong>New signal · Initech</strong><span>Launched a free plan</span></div><span class="am-score s8">8/10</span></div>
+                    </div>
+                </div>
+            </div>
             </div>
 
     </section>
 
-    <!-- Product Overview -->
 
-    <!-- Trust band -->
-    <section class="home-band">
+    <!-- How it works -->
+    <section class="home-how" id="how-it-works">
         <div class="container">
-            <div class="home-band-grid">
-                <div class="home-band-item">
-                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>Source-linked, always</h3>
-                    <p>Every claim in a competitor page or battlecard carries a link to the page it came from, so your team can verify an insight before repeating it to a buyer.</p>
-                </div>
-                <div class="home-band-item">
-                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>Living, not archived</h3>
-                    <p>Competitor pages re-scrape, re-analyse and rewrite themselves as the market moves. There is no quarterly refresh project and no document that quietly goes stale.</p>
-                </div>
-                <div class="home-band-item">
-                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>Action, not just alerts</h3>
-                    <p>A competitor launch does not arrive as a notification you have to interpret. It arrives as a drafted comparison page, a battlecard edit, or an email your reps can send.</p>
-                </div>
-                <div class="home-band-item">
-                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></span>Wherever you work</h3>
-                    <p>Use it in the dashboard, pull it through the API, or query it from Claude, Cursor and other MCP clients. The intelligence is not trapped in a slide deck.</p>
-                </div>
-            </div>
+            <!-- Homepage: how it works (generated; see modern refresh) -->
+<div class="mi-flow">
+  <div class="mi-flow-head">
+    <span class="mi-flow-eyebrow">How it works</span>
+    <h2>From competitor noise to work your team can ship</h2>
+    <p>CIx watches every page, post and filing, scores what changed, and drafts what to do about it.</p>
+  </div>
+  <div class="mi-flow-canvas">
+    <div class="mi-flow-labels" aria-hidden="true"><span>What competitors do</span><span>CIx</span><span>What your team gets</span></div>
+    <svg class="mi-flow-svg" viewBox="0 0 1000 440" role="img" aria-labelledby="hw-flow-title hw-flow-desc"><title id="hw-flow-title">From market noise to intelligence</title><desc id="hw-flow-desc">Raw competitor changes such as pricing edits, job posts, reviews and changelogs flow into CIx, which scores, deduplicates and source-links them, and comes out as three kinds of intelligence: market trends, competitive context and strategic signals.</desc><defs>
+  <linearGradient id="hwCoreStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset=".35" stop-color="#a855f7"/><stop offset=".7" stop-color="#0ea5e9"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+  <radialGradient id="hwCoreGlow"><stop offset="0" stop-color="#818cf8" stop-opacity=".55"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></radialGradient>
+  <linearGradient id="hwCoreFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1d3a"/><stop offset="1" stop-color="#0b0d1c"/></linearGradient>
+  <linearGradient id="hwIn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#94a3b8" stop-opacity=".05"/><stop offset="1" stop-color="#94a3b8" stop-opacity=".35"/></linearGradient>
+</defs><path id="hw-in-0" class="mi-path-in" d="M170,34 C290,34 330,198 436,198" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.20s" begin="0.00s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.20s" begin="0.00s" repeatCount="indefinite"/></circle><path id="hw-in-1" class="mi-path-in" d="M214,70 C334,70 330,202 436,202" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.75s" begin="0.37s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.75s" begin="0.37s" repeatCount="indefinite"/></circle><path id="hw-in-2" class="mi-path-in" d="M123,106 C243,106 330,206 436,206" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.30s" begin="0.74s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.30s" begin="0.74s" repeatCount="indefinite"/></circle><path id="hw-in-3" class="mi-path-in" d="M175,142 C295,142 330,211 436,211" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.85s" begin="1.11s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.85s" begin="1.11s" repeatCount="indefinite"/></circle><path id="hw-in-4" class="mi-path-in" d="M152,178 C272,178 330,215 436,215" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.20s" begin="1.48s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.20s" begin="1.48s" repeatCount="indefinite"/></circle><path id="hw-in-5" class="mi-path-in" d="M115,214 C235,214 330,219 436,219" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.75s" begin="1.85s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-5"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.75s" begin="1.85s" repeatCount="indefinite"/></circle><path id="hw-in-6" class="mi-path-in" d="M193,250 C313,250 330,224 436,224" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.30s" begin="2.22s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-6"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.30s" begin="2.22s" repeatCount="indefinite"/></circle><path id="hw-in-7" class="mi-path-in" d="M146,286 C266,286 330,228 436,228" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.85s" begin="2.59s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.85s" begin="2.59s" repeatCount="indefinite"/></circle><path id="hw-in-8" class="mi-path-in" d="M179,322 C299,322 330,232 436,232" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.20s" begin="2.96s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-8"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.20s" begin="2.96s" repeatCount="indefinite"/></circle><path id="hw-in-9" class="mi-path-in" d="M147,358 C267,358 330,237 436,237" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="3.75s" begin="0.33s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-9"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.75s" begin="0.33s" repeatCount="indefinite"/></circle><path id="hw-in-10" class="mi-path-in" d="M170,394 C290,394 330,241 436,241" fill="none" stroke="url(#hwIn)" stroke-width="1"/><circle class="mi-particle" r="2.2" fill="#cbd5e1"><animateMotion dur="4.30s" begin="0.70s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#hw-in-10"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="4.30s" begin="0.70s" repeatCount="indefinite"/></circle><g class="mi-chip" opacity="0.9"><rect x="26" y="21" width="144" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="37" y="38" font-size="12" fill="rgba(226,232,240,.78)">Pricing page edited</text></g><g class="mi-chip" opacity="0.7"><rect x="58" y="57" width="156" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="69" y="74" font-size="12" fill="rgba(226,232,240,.78)">New job post: Sr. PMM</text></g><g class="mi-chip" opacity="0.85"><rect x="18" y="93" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="29" y="110" font-size="12" fill="rgba(226,232,240,.78)">G2 review, 2★</text></g><g class="mi-chip" opacity="0.6"><rect x="70" y="129" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="81" y="146" font-size="12" fill="rgba(226,232,240,.78)">Press release</text></g><g class="mi-chip" opacity="0.95"><rect x="34" y="165" width="118" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="45" y="182" font-size="12" fill="rgba(226,232,240,.78)">Changelog: v4.2</text></g><g class="mi-chip" opacity="0.75"><rect x="10" y="201" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="21" y="218" font-size="12" fill="rgba(226,232,240,.78)">Funding round</text></g><g class="mi-chip" opacity="0.6"><rect x="62" y="237" width="131" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="73" y="254" font-size="12" fill="rgba(226,232,240,.78)">Webinar announced</text></g><g class="mi-chip" opacity="0.85"><rect x="28" y="273" width="118" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="39" y="290" font-size="12" fill="rgba(226,232,240,.78)">Docs page added</text></g><g class="mi-chip" opacity="0.65"><rect x="74" y="309" width="105" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="85" y="326" font-size="12" fill="rgba(226,232,240,.78)">LinkedIn post</text></g><g class="mi-chip" opacity="0.8"><rect x="16" y="345" width="131" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="27" y="362" font-size="12" fill="rgba(226,232,240,.78)">Partner page live</text></g><g class="mi-chip" opacity="0.6"><rect x="52" y="381" width="118" height="26" rx="13" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="63" y="398" font-size="12" fill="rgba(226,232,240,.78)">Analyst mention</text></g><path id="hw-out-0" d="M564,201 C630,201 600,92 640,92" fill="none" stroke="#a855f7" stroke-opacity=".55" stroke-width="2"/><circle class="mi-particle" r="3" fill="#a855f7"><animateMotion dur="2.40s" begin="0.00s" repeatCount="indefinite"><mpath href="#hw-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.40s" begin="0.00s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="3" fill="#a855f7"><animateMotion dur="2.40s" begin="1.20s" repeatCount="indefinite"><mpath href="#hw-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.40s" begin="1.20s" repeatCount="indefinite"/></circle><path id="hw-out-1" d="M564,220 C630,220 600,220 640,220" fill="none" stroke="#0ea5e9" stroke-opacity=".55" stroke-width="2"/><circle class="mi-particle" r="3" fill="#0ea5e9"><animateMotion dur="2.70s" begin="0.20s" repeatCount="indefinite"><mpath href="#hw-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.70s" begin="0.20s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="3" fill="#0ea5e9"><animateMotion dur="2.70s" begin="1.55s" repeatCount="indefinite"><mpath href="#hw-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="2.70s" begin="1.55s" repeatCount="indefinite"/></circle><path id="hw-out-2" d="M564,239 C630,239 600,348 640,348" fill="none" stroke="#10b981" stroke-opacity=".55" stroke-width="2"/><circle class="mi-particle" r="3" fill="#10b981"><animateMotion dur="3.00s" begin="0.40s" repeatCount="indefinite"><mpath href="#hw-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.00s" begin="0.40s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="3" fill="#10b981"><animateMotion dur="3.00s" begin="1.90s" repeatCount="indefinite"><mpath href="#hw-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.00s" begin="1.90s" repeatCount="indefinite"/></circle><g class="mi-core"><circle cx="500" cy="220" r="170" fill="url(#hwCoreGlow)"/><rect class="mi-pulse" x="432" y="152" width="136" height="136" rx="18" fill="none" stroke="#818cf8" stroke-opacity=".45"><animate attributeName="stroke-opacity" values=".45;0" dur="2.8s" repeatCount="indefinite"/><animate attributeName="x" values="432;410" dur="2.8s" repeatCount="indefinite"/><animate attributeName="y" values="152;130" dur="2.8s" repeatCount="indefinite"/><animate attributeName="width" values="136;180" dur="2.8s" repeatCount="indefinite"/><animate attributeName="height" values="136;180" dur="2.8s" repeatCount="indefinite"/></rect><g fill="#a5b4fc" fill-opacity=".55"><rect x="422.0" y="177.2" width="10" height="4" rx="1.5"/><rect x="568.0" y="177.2" width="10" height="4" rx="1.5"/><rect x="457.2" y="142.0" width="4" height="10" rx="1.5"/><rect x="457.2" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="197.6" width="10" height="4" rx="1.5"/><rect x="568.0" y="197.6" width="10" height="4" rx="1.5"/><rect x="477.6" y="142.0" width="4" height="10" rx="1.5"/><rect x="477.6" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="218.0" width="10" height="4" rx="1.5"/><rect x="568.0" y="218.0" width="10" height="4" rx="1.5"/><rect x="498.0" y="142.0" width="4" height="10" rx="1.5"/><rect x="498.0" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="238.4" width="10" height="4" rx="1.5"/><rect x="568.0" y="238.4" width="10" height="4" rx="1.5"/><rect x="518.4" y="142.0" width="4" height="10" rx="1.5"/><rect x="518.4" y="288.0" width="4" height="10" rx="1.5"/><rect x="422.0" y="258.8" width="10" height="4" rx="1.5"/><rect x="568.0" y="258.8" width="10" height="4" rx="1.5"/><rect x="538.8" y="142.0" width="4" height="10" rx="1.5"/><rect x="538.8" y="288.0" width="4" height="10" rx="1.5"/></g><rect x="432" y="152" width="136" height="136" rx="16" fill="url(#hwCoreFill)" stroke="url(#hwCoreStroke)" stroke-width="2"/><rect x="446" y="166" width="109" height="109" rx="12" fill="rgba(129,140,248,.06)" stroke="rgba(165,180,252,.32)" stroke-width="1"/><circle cx="440" cy="160" r="3" fill="rgba(165,180,252,.7)"/><text x="500" y="223" text-anchor="middle" font-size="29" font-weight="800" fill="#fff" letter-spacing="-.5">CIx</text><text x="500" y="246" text-anchor="middle" font-size="8.6" font-weight="600" letter-spacing=".1" fill="rgba(199,210,254,.85)">watch → score → act</text></g><g class="mi-out-card">
+  <rect x="640" y="42" width="340" height="100" rx="14" fill="rgba(20,23,48,0.88)" stroke="#a855f7" stroke-opacity="0.45"/><rect x="641" y="43" width="338" height="40" rx="13" fill="#a855f7" fill-opacity="0.07"/>
+  <text x="660" y="70" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#a855f7">SIGNAL SCORED</text>
+  <text x="660" y="94" font-size="14" font-weight="600" fill="#f8fafc">A rival launched an AI assistant</text>
+  <text x="660" y="118" font-size="12" fill="rgba(203,213,225,0.72)">9/10 · Sales and Product notified</text>
+</g><g class="mi-out-card">
+  <rect x="640" y="170" width="340" height="100" rx="14" fill="rgba(20,23,48,0.88)" stroke="#0ea5e9" stroke-opacity="0.45"/><rect x="641" y="171" width="338" height="40" rx="13" fill="#0ea5e9" fill-opacity="0.07"/>
+  <text x="660" y="198" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#0ea5e9">BATTLECARD UPDATED</text>
+  <text x="660" y="222" font-size="14" font-weight="600" fill="#f8fafc">Pricing objection rewritten</text>
+  <text x="660" y="246" font-size="12" fill="rgba(203,213,225,0.72)">Linked to the page it came from</text>
+</g><g class="mi-out-card">
+  <rect x="640" y="298" width="340" height="100" rx="14" fill="rgba(20,23,48,0.88)" stroke="#10b981" stroke-opacity="0.45"/><rect x="641" y="299" width="338" height="40" rx="13" fill="#10b981" fill-opacity="0.07"/>
+  <text x="660" y="326" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#10b981">TALK TRACK DRAFTED</text>
+  <text x="660" y="350" font-size="14" font-weight="600" fill="#f8fafc">Email to reps on the new tier</text>
+  <text x="660" y="374" font-size="12" fill="rgba(203,213,225,0.72)">Ready for your approval</text>
+</g></svg>
+    <svg class="mi-flow-svg-v" viewBox="0 0 360 676" role="img" aria-labelledby="hv-t"><title id="hv-t">What competitors do flows into CIx, which scores, deduplicates and links sources, and comes out as signals scored, battlecards updated, talk tracks drafted.</title><defs>
+  <linearGradient id="hvCoreStroke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset=".35" stop-color="#a855f7"/><stop offset=".7" stop-color="#0ea5e9"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+  <radialGradient id="hvCoreGlow"><stop offset="0" stop-color="#818cf8" stop-opacity=".45"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></radialGradient>
+  <linearGradient id="hvCoreFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c1f40"/><stop offset="1" stop-color="#0b0d1c"/></linearGradient>
+  <linearGradient id="hvIn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#94a3b8" stop-opacity=".08"/><stop offset="1" stop-color="#94a3b8" stop-opacity=".45"/></linearGradient>
+</defs><text x="8" y="12" font-size="10" font-weight="700" letter-spacing="1.2" fill="rgba(226,232,240,.5)">WHAT COMPETITORS DO</text><path id="hv-in-5" d="M58,112 C58,156 142,136 142,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.05s" begin="2.05s" repeatCount="indefinite"><mpath href="#hv-in-5"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.05s" begin="2.05s" repeatCount="indefinite"/></circle><path id="hv-in-2" d="M71,80 C71,124 161,136 161,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.50s" begin="0.82s" repeatCount="indefinite"><mpath href="#hv-in-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.50s" begin="0.82s" repeatCount="indefinite"/></circle><path id="hv-in-0" d="M104,48 C104,92 161,136 161,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="2.60s" begin="0.00s" repeatCount="indefinite"><mpath href="#hv-in-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.60s" begin="0.00s" repeatCount="indefinite"/></circle><path id="hv-in-3" d="M174,80 C174,124 180,136 180,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.95s" begin="1.23s" repeatCount="indefinite"><mpath href="#hv-in-3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.95s" begin="1.23s" repeatCount="indefinite"/></circle><path id="hv-in-6" d="M174,112 C174,156 180,136 180,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.50s" begin="2.46s" repeatCount="indefinite"><mpath href="#hv-in-6"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.50s" begin="2.46s" repeatCount="indefinite"/></circle><path id="hv-in-1" d="M250,48 C250,92 199,136 199,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.05s" begin="0.41s" repeatCount="indefinite"><mpath href="#hv-in-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.05s" begin="0.41s" repeatCount="indefinite"/></circle><path id="hv-in-4" d="M283,80 C283,124 199,136 199,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="2.60s" begin="1.64s" repeatCount="indefinite"><mpath href="#hv-in-4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.60s" begin="1.64s" repeatCount="indefinite"/></circle><path id="hv-in-7" d="M296,112 C296,156 218,136 218,180" fill="none" stroke="url(#hvIn)" stroke-width="1"/><circle class="mi-particle" r="2" fill="#cbd5e1"><animateMotion dur="3.95s" begin="0.27s" repeatCount="indefinite"><mpath href="#hv-in-7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3.95s" begin="0.27s" repeatCount="indefinite"/></circle><g><rect x="37" y="24" width="134" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="46" y="40" font-size="11" fill="rgba(226,232,240,.8)">Pricing page edited</text></g><g><rect x="177" y="24" width="146" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="186" y="40" font-size="11" fill="rgba(226,232,240,.8)">New job post: Sr. PMM</text></g><g><rect x="22" y="56" width="97" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="31" y="72" font-size="11" fill="rgba(226,232,240,.8)">G2 review, 2★</text></g><g><rect x="125" y="56" width="97" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="134" y="72" font-size="11" fill="rgba(226,232,240,.8)">Press release</text></g><g><rect x="229" y="56" width="110" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="238" y="72" font-size="11" fill="rgba(226,232,240,.8)">Changelog: v4.2</text></g><g><rect x="10" y="88" width="97" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="19" y="104" font-size="11" fill="rgba(226,232,240,.8)">Funding round</text></g><g><rect x="113" y="88" width="122" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="122" y="104" font-size="11" fill="rgba(226,232,240,.8)">Webinar announced</text></g><g><rect x="241" y="88" width="110" height="24" rx="12" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.14)"/><text x="250" y="104" font-size="11" fill="rgba(226,232,240,.8)">Docs page added</text></g><path id="hv-out-0" d="M180,328 L180,380" fill="none" stroke="#a855f7" stroke-opacity=".7" stroke-width="2"/><circle class="mi-particle" r="2.8" fill="#a855f7"><animateMotion dur="1.40s" begin="0.00s" repeatCount="indefinite"><mpath href="#hv-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.40s" begin="0.00s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="2.8" fill="#a855f7"><animateMotion dur="1.40s" begin="0.70s" repeatCount="indefinite"><mpath href="#hv-out-0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.40s" begin="0.70s" repeatCount="indefinite"/></circle><path id="hv-out-1" d="M180,456 L180,486" fill="none" stroke="#0ea5e9" stroke-opacity=".7" stroke-width="2"/><circle class="mi-particle" r="2.8" fill="#0ea5e9"><animateMotion dur="1.00s" begin="0.30s" repeatCount="indefinite"><mpath href="#hv-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="0.30s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="2.8" fill="#0ea5e9"><animateMotion dur="1.00s" begin="0.80s" repeatCount="indefinite"><mpath href="#hv-out-1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="0.80s" repeatCount="indefinite"/></circle><path id="hv-out-2" d="M180,562 L180,592" fill="none" stroke="#10b981" stroke-opacity=".7" stroke-width="2"/><circle class="mi-particle" r="2.8" fill="#10b981"><animateMotion dur="1.00s" begin="0.60s" repeatCount="indefinite"><mpath href="#hv-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="0.60s" repeatCount="indefinite"/></circle><circle class="mi-particle" r="2.8" fill="#10b981"><animateMotion dur="1.00s" begin="1.10s" repeatCount="indefinite"><mpath href="#hv-out-2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.00s" begin="1.10s" repeatCount="indefinite"/></circle><g class="mi-core"><circle cx="180" cy="254" r="130" fill="url(#hvCoreGlow)"/><rect class="mi-pulse" x="116" y="190" width="128" height="128" rx="18" fill="none" stroke="#818cf8" stroke-opacity=".45"><animate attributeName="stroke-opacity" values=".45;0" dur="2.8s" repeatCount="indefinite"/><animate attributeName="x" values="116;96" dur="2.8s" repeatCount="indefinite"/><animate attributeName="y" values="190;170" dur="2.8s" repeatCount="indefinite"/><animate attributeName="width" values="128;169" dur="2.8s" repeatCount="indefinite"/><animate attributeName="height" values="128;169" dur="2.8s" repeatCount="indefinite"/></rect><g fill="#a5b4fc" fill-opacity=".55"><rect x="106.0" y="213.6" width="10" height="4" rx="1.5"/><rect x="244.0" y="213.6" width="10" height="4" rx="1.5"/><rect x="139.6" y="180.0" width="4" height="10" rx="1.5"/><rect x="139.6" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="232.8" width="10" height="4" rx="1.5"/><rect x="244.0" y="232.8" width="10" height="4" rx="1.5"/><rect x="158.8" y="180.0" width="4" height="10" rx="1.5"/><rect x="158.8" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="252.0" width="10" height="4" rx="1.5"/><rect x="244.0" y="252.0" width="10" height="4" rx="1.5"/><rect x="178.0" y="180.0" width="4" height="10" rx="1.5"/><rect x="178.0" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="271.2" width="10" height="4" rx="1.5"/><rect x="244.0" y="271.2" width="10" height="4" rx="1.5"/><rect x="197.2" y="180.0" width="4" height="10" rx="1.5"/><rect x="197.2" y="318.0" width="4" height="10" rx="1.5"/><rect x="106.0" y="290.4" width="10" height="4" rx="1.5"/><rect x="244.0" y="290.4" width="10" height="4" rx="1.5"/><rect x="216.4" y="180.0" width="4" height="10" rx="1.5"/><rect x="216.4" y="318.0" width="4" height="10" rx="1.5"/></g><rect x="116" y="190" width="128" height="128" rx="16" fill="url(#hvCoreFill)" stroke="url(#hvCoreStroke)" stroke-width="2"/><rect x="129" y="203" width="102" height="102" rx="12" fill="rgba(129,140,248,.06)" stroke="rgba(165,180,252,.32)" stroke-width="1"/><circle cx="124" cy="198" r="3" fill="rgba(165,180,252,.7)"/><text x="180" y="257" text-anchor="middle" font-size="27" font-weight="800" fill="#fff" letter-spacing="-.5">CIx</text><text x="180" y="279" text-anchor="middle" font-size="8.2" font-weight="600" letter-spacing="0" fill="rgba(199,210,254,.85)">watch → score → act</text></g><text x="8" y="366" font-size="10" font-weight="700" letter-spacing="1.2" fill="rgba(226,232,240,.5)">WHAT YOUR TEAM GETS</text><g class="mi-out-card">
+  <rect x="8" y="380" width="344" height="76" rx="13" fill="rgba(20,23,48,0.94)" stroke="#a855f7" stroke-opacity="0.5"/>
+  <rect x="9" y="381" width="342" height="30" rx="12" fill="#a855f7" fill-opacity="0.07"/>
+  <circle cx="180" cy="380" r="3.5" fill="#a855f7"/>
+  <text x="24" y="402" font-size="10" font-weight="700" letter-spacing="1.1" fill="#a855f7">SIGNAL SCORED</text>
+  <text x="24" y="424" font-size="13" font-weight="600" fill="#f8fafc">A rival launched an AI assistant</text>
+  <text x="24" y="443" font-size="11" fill="rgba(203,213,225,0.72)">9/10 · Sales and Product notified</text>
+</g><g class="mi-out-card">
+  <rect x="8" y="486" width="344" height="76" rx="13" fill="rgba(20,23,48,0.94)" stroke="#0ea5e9" stroke-opacity="0.5"/>
+  <rect x="9" y="487" width="342" height="30" rx="12" fill="#0ea5e9" fill-opacity="0.07"/>
+  <circle cx="180" cy="486" r="3.5" fill="#0ea5e9"/>
+  <text x="24" y="508" font-size="10" font-weight="700" letter-spacing="1.1" fill="#0ea5e9">BATTLECARD UPDATED</text>
+  <text x="24" y="530" font-size="13" font-weight="600" fill="#f8fafc">Pricing objection rewritten</text>
+  <text x="24" y="549" font-size="11" fill="rgba(203,213,225,0.72)">Linked to the page it came from</text>
+</g><g class="mi-out-card">
+  <rect x="8" y="592" width="344" height="76" rx="13" fill="rgba(20,23,48,0.94)" stroke="#10b981" stroke-opacity="0.5"/>
+  <rect x="9" y="593" width="342" height="30" rx="12" fill="#10b981" fill-opacity="0.07"/>
+  <circle cx="180" cy="592" r="3.5" fill="#10b981"/>
+  <text x="24" y="614" font-size="10" font-weight="700" letter-spacing="1.1" fill="#10b981">TALK TRACK DRAFTED</text>
+  <text x="24" y="636" font-size="13" font-weight="600" fill="#f8fafc">Email to reps on the new tier</text>
+  <text x="24" y="655" font-size="11" fill="rgba(203,213,225,0.72)">Ready for your approval</text>
+</g></svg>
+  </div>
+  <div class="mi-steps">
+    <div class="mi-step"><span class="mi-step-n">1</span><div><strong>Watch</strong><p>Competitor sites, pricing, changelogs, jobs, reviews and news, checked on your plan's schedule.</p></div></div>
+    <div class="mi-step"><span class="mi-step-n">2</span><div><strong>Score</strong><p>Each change is deduplicated, rated 1–10 for how much it matters and linked to its source.</p></div></div>
+    <div class="mi-step"><span class="mi-step-n">3</span><div><strong>Act</strong><p>Battlecards update and talk tracks, emails and comparison pages are drafted for you to approve.</p></div></div>
+  </div>
+</div>
         </div>
     </section>
 
-    <!-- Buyer questions: the phrases people actually search and ask, each one
-         routed to the pillar that answers it. -->
-    <section class="content-section home-questions">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The questions behind every competitive deal</h2>
-                <p class="section-subtitle">Four things your team needs to know before the call. CIx answers each one, and links every answer back to its source.</p>
-            </div>
-            <div class="home-question-grid">
-                <a class="home-question-card" href="#competitor-pages">
-                    <span class="home-question-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
-                    <h3>Who are we actually competing with?</h3>
-                    <p>CIx proposes competitors at both the company and the product level, explains why each one belongs on the list, and builds a living intelligence page for the ones you keep.</p>
-                </a>
-                <a class="home-question-card" href="#signals">
-                    <span class="home-question-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
-                    <h3>What did they just change?</h3>
-                    <p>Launches, pricing moves, funding, hiring and repositioning land in one feed, each scored 1&ndash;10 for importance so a homepage tweak never reads like a new pricing tier.</p>
-                </a>
-                <a class="home-question-card" href="#battlecards">
-                    <span class="home-question-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
-                    <h3>How do we win this deal?</h3>
-                    <p>Battlecards, talk tracks and objection handling written for the team using them &mdash; plus a Battle Room where you work one specific deal with CIx answering in the thread.</p>
-                </a>
-                <a class="home-question-card" href="#competitor-pages">
-                    <span class="home-question-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-                    <h3>Where are we exposed?</h3>
-                    <p>Side-by-side comparisons, SWOT and a positioning map that show where you pull ahead, where a rival is genuinely stronger, and which gap is worth closing first.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- A living intelligence page for every rival you track -->
-    <section class="home-pillar home-pillar-alt" id="competitor-pages">
+    <section class="home-pillar" id="competitor-pages">
         <div class="container">
             <div class="home-pillar-inner">
                 <div class="home-pillar-copy">
                     <span class="home-pillar-label">Living competitor pages</span>
-                    <h2>A living intelligence page for every rival you track</h2>
-                    <p class="home-pillar-lede">Point CIx at a competitor and it builds a complete page: offerings, positioning, pricing posture, marketing motion, strengths and weaknesses, and a side-by-side comparison against you. Then it keeps that page current on its own.</p>
+                    <h2>A living intelligence page for every rival</h2>
+                    <p class="home-pillar-lede">Point CIx at a competitor and it builds the whole page: offerings, positioning, pricing, strengths, weaknesses and a head-to-head against you. Then it keeps it current on its own.</p>
                     <div class="home-pillar-list">
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Rebuilt as the market moves. </strong>Re-scrapes and rewrites itself when the competitor ships, repositions or changes pricing.</span>
+                            <span><strong>Rebuilt as the market moves. </strong>Rewrites itself when the competitor ships, repositions or changes pricing.</span>
                         </div>
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Head-to-head scoring. </strong>See exactly where you lead, where you trail, and which gap is costing you deals.</span>
+                            <span><strong>Head-to-head scoring. </strong>See where you lead, where you trail and which gap is costing deals.</span>
                         </div>
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Everything in one place. </strong>Offerings, strategy, signals, battlecards, documents and sources — one page, not eleven tabs of research.</span>
+                            <span><strong>Everything in one place. </strong>Offerings, signals, battlecards and sources on one page.</span>
                         </div>
                     </div>
                     <a class="home-pillar-link" href="use-cases/competitor-monitoring">See competitor monitoring
@@ -439,44 +506,52 @@
                     </a>
                 </div>
                 <div class="home-pillar-visual">
-                    <div class="home-shot">
-                    <div class="home-shot-bar">
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-url">app.usesignallabs.com/competitors/klue</span>
-                    </div>
-                        <picture>
-                            <source srcset="assets/product/competitor-page-crop.webp" type="image/webp" width="1656" height="1000">
-                            <img src="assets/product/competitor-page-crop.png" width="1656" height="1000" loading="lazy" decoding="async"
-                                 alt="A Signal Labs living competitor page for Klue, showing tabs for offerings, marketing, strategy, signals and battlecards, a head-to-head comparison radar, and a last-refreshed timestamp">
-                        </picture>
-                    </div>
+                    <div class="story story-page" role="img" aria-label="Animation: Acme changes its pricing page. CIx detects the change, rewrites the pricing row with the new price and its source, marks the page updated just now and adjusts the head-to-head score.">
+    <div class="sp-detect s1"><span class="pulse-dot"></span>Change detected · acme.com/pricing</div>
+    <div class="mock sp-card">
+        <div class="sp-head">
+            <span class="mock-logo l2">A</span>
+            <div><strong>Acme</strong><span class="mock-muted">Living competitor page</span></div>
+            <span class="sp-time"><span class="t-old">Updated 3 days ago</span><span class="t-new s4">● Updated just now</span></span>
+        </div>
+        <div class="sp-row"><span class="sp-label">Positioning</span><span class="sp-val">Enterprise CI for large teams</span></div>
+        <div class="sp-row sp-price">
+            <span class="sp-label">Pricing</span>
+            <span class="sp-val"><span class="old">Starter $49/mo</span><span class="new s3">Starter $39/mo</span></span>
+            <span class="mock-source sp-src s3">acme.com/pricing</span>
+        </div>
+        <div class="sp-row"><span class="sp-label">Weakness</span><span class="sp-val">Onboarding no longer on Starter <span class="sp-new s4">New</span></span></div>
+        <div class="mock-h2h sp-h2h">
+            <div class="mock-h2h-title"><span>You vs Acme</span><span class="mock-legend"><i class="you"></i>You <i class="them"></i>Acme</span></div>
+            <div class="mock-bar"><span>Price</span><div><i class="you" style="width:68%"></i><i class="them sp-shift s5"></i></div></div>
+            <div class="mock-bar"><span>Onboarding</span><div><i class="you" style="width:84%"></i><i class="them sp-drop s5"></i></div></div>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- When a competitor moves, CIx acts on it for you -->
-    <section class="home-pillar home-pillar-reverse" id="signals">
+    <section class="home-pillar home-pillar-reverse home-pillar-alt" id="signals">
         <div class="container">
             <div class="home-pillar-inner">
                 <div class="home-pillar-copy">
                     <span class="home-pillar-label">Signal to action engine</span>
-                    <h2>When a competitor moves, CIx acts on it for you</h2>
-                    <p class="home-pillar-lede">CIx watches competitor sites, launches, pricing changes, hiring, funding and news, scores what matters, and turns each meaningful move into specific work your team can approve — not another feed to read.</p>
+                    <h2>When a competitor moves, CIx acts on it</h2>
+                    <p class="home-pillar-lede">Every meaningful move becomes specific work your team can approve, not another feed to read.</p>
                     <div class="home-pillar-list">
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Scored, not dumped. </strong>Every signal gets an importance score, so a pricing change outranks a blog post.</span>
+                            <span><strong>Scored, not dumped. </strong>A pricing change outranks a blog post.</span>
                         </div>
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Drafted, not described. </strong>Each signal produces real output: a comparison table, landing page, email draft or battlecard edit.</span>
+                            <span><strong>Drafted, not described. </strong>A comparison page, email or battlecard edit, ready to review.</span>
                         </div>
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Approve or discard. </strong>Review the diff, apply it, and your competitor pages and battlecards update with it.</span>
+                            <span><strong>Approve or discard. </strong>Apply it and your pages and battlecards update with it.</span>
                         </div>
                     </div>
                     <a class="home-pillar-link" href="use-cases/competitor-monitoring">See how signals become actions
@@ -484,43 +559,48 @@
                     </a>
                 </div>
                 <div class="home-pillar-visual">
-                    <div class="home-shot">
-                    <div class="home-shot-bar">
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-url">app.usesignallabs.com/actions</span>
-                    </div>
-                        <picture>
-                            <source srcset="assets/product/actions-crop-v2.webp" type="image/webp" width="1200" height="840">
-                            <img src="assets/product/actions-crop-v2.png" width="1200" height="840" loading="lazy" decoding="async"
-                                 alt="The Signal Labs actions inbox showing AI-proposed work generated from competitor signals, including a comparison landing page, a counter-positioning website snippet, a comparison table and a battlecard update, each linked to its source article">
-                        </picture>
-                    </div>
+                    <div class="story story-signal" role="img" aria-label="Animation: a signal arrives that Globex launched an AI assistant and is scored 9 out of 10. CIx drafts a battlecard update, a cursor clicks Approve, and the battlecard is updated with Sales notified.">
+    <div class="mock ss-card ss-signal s1">
+        <span class="mock-logo l3">G</span>
+        <div><strong>Globex launched an AI assistant</strong><span class="mock-muted">globex.com/blog · just now</span></div>
+        <span class="mock-score s9 ss-score s2">9/10</span>
+    </div>
+    <div class="ss-link s2"><span></span></div>
+    <div class="mock ss-card ss-draft s3">
+        <div class="ss-draft-head"><span class="ss-tag">Draft ready</span><strong>Battlecard: AI assistant objection</strong></div>
+        <div class="ss-lines"><i></i><i></i><i class="short"></i></div>
+        <div class="ss-actions">
+            <span class="mock-btn">Edit</span>
+            <span class="mock-btn primary ss-approve"><span class="a1">Approve</span><span class="a2">Approved ✓</span></span>
+        </div>
+    </div>
+    <svg class="ss-cursor s4" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8-6 1.6L10.5 19z" fill="#0b0d1c" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    <div class="mock-toast ss-toast s6"><span class="mock-check">✓</span>Battlecard updated · Sales notified</div>
+</div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Pillar 3: Battlecard generation -->
+
     <section class="home-pillar" id="battlecards">
         <div class="container">
             <div class="home-pillar-inner">
                 <div class="home-pillar-copy">
-                    <span class="home-pillar-label">Instant battlecard generation</span>
-                    <h2>Battlecards in seconds, not weeks</h2>
-                    <p class="home-pillar-lede">Pick a team, pick a competitor, and CIx writes the card — positioning, strengths and weaknesses, objection handling, win strategies and discovery questions, built from live intelligence rather than last quarter's research.</p>
+                    <span class="home-pillar-label">Battlecards &amp; Battle Rooms</span>
+                    <h2>Battlecards in minutes. Answers mid-deal.</h2>
+                    <p class="home-pillar-lede">Pick a team and a competitor and CIx writes the card from live intelligence. When a deal gets hard, open a Battle Room and ask @CIx.</p>
                     <div class="home-pillar-list">
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Written for the team that reads it. </strong>Sales, product marketing, leadership or the full landscape — each gets a different card from the same intelligence.</span>
+                            <span><strong>Written for the team that reads it. </strong>Sales, marketing, leadership or the full landscape.</span>
                         </div>
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Refine in plain language. </strong>Ask for a sharper objection section or a different angle and the card is rewritten.</span>
+                            <span><strong>@CIx joins the deal. </strong>Ask for a counter-position in a Battle Room and get talk tracks back.</span>
                         </div>
                         <div class="home-pillar-list-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Every claim carries its source. </strong>Reps can check a number before they say it out loud on a call.</span>
+                            <span><strong>Every claim carries its source. </strong>Reps can check it before they say it on a call.</span>
                         </div>
                     </div>
                     <a class="home-pillar-link" href="use-cases/battlecard-generation">See battlecard generation
@@ -528,530 +608,181 @@
                     </a>
                 </div>
                 <div class="home-pillar-visual">
-
-                        <div class="product-mockup battlecard-advanced-mockup" style="border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
-                            
-                            <!-- Header Section -->
-                            <div style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 10px 16px; border-radius: 12px 12px 0 0;">
-                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
-                                    <div style="padding: 6px; background: #dbeafe; border-radius: 7px; flex-shrink: 0;">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
-                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                            <polyline points="14,2 14,8 20,8"/>
-                                        </svg>
-                                    </div>
-                                    <span style="font-weight: 700; color: #1f2937; font-size: 16px;">Hooli</span>
-                                    <span style="font-size: 11px; color: #6b7280;">Competitive Battlecard</span>
-                                    <span style="color: #9ca3af; font-size: 9px; white-space: nowrap;">Updated 2h ago</span>
-                                </div>
-                                <div style="display: flex; gap: 4px; position: relative; margin-left: 38px;" id="bc-focus-tabs">
-                                    <span class="bc-focus-tab active" data-tab="sales">Sales</span>
-                                    <span class="bc-focus-tab" data-tab="product">Product</span>
-                                    <span class="bc-focus-tab" data-tab="marketing">Marketing</span>
-                                    <span class="bc-focus-tab" data-tab="leadership">Leadership</span>
-                                    <span class="bc-focus-tab" data-tab="landscape">Landscape</span>
-                                    <span class="bc-focus-hint">Click to switch battlecard type</span>
-                                    <span class="bc-hint-hand" id="bc-hint-hand"><svg width="18" height="18" viewBox="0 0 32 32" fill="none" stroke="#6b7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14V6a2.5 2.5 0 0 0-5 0v12l-3-3.5a2.2 2.2 0 0 0-3.2 0 2.2 2.2 0 0 0 0 3.1L12 26a6 6 0 0 0 4.5 2h2a7 7 0 0 0 7-7v-7a2.5 2.5 0 0 0-5 0"/><path d="M21 14V9.5a2.5 2.5 0 0 0-5 0V14"/><line x1="13.5" y1="2" x2="13.5" y2="0" opacity="0.5"/><line x1="10" y1="3" x2="8.5" y2="1.5" opacity="0.5"/><line x1="17" y1="3" x2="18.5" y2="1.5" opacity="0.5"/></svg></span>
-                                </div>
-                            </div>
-
-                            <!-- Main Content -->
-                            <div style="padding: 16px 20px; background: white; border-radius: 0 0 12px 12px;">
-
-                                <!-- SALES PANEL -->
-                                <div class="bc-panel active" data-panel="sales">
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-                                        <div>
-                                            <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
-                                            <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0;">
-                                                Hooli dominates enterprise CI with <a href="#" style="color: #2563eb; text-decoration: underline;">[800+ customers]</a> 
-                                                and <a href="#" style="color: #2563eb; text-decoration: underline;">[$72M ARR]</a>, but requires a 
-                                                <a href="#" style="color: #2563eb; text-decoration: underline;">[3-month implementation]</a> and 2-3 dedicated analysts.
-                                                Their platform relies on manual workflows with limited AI automation.
-                                            </p>
-                                        </div>
-                                        <div style="text-align: center; padding-top: 10px;">
-                                            <svg viewBox="0 0 200 130" width="170" height="108" style="display: block; margin: 0 auto;">
-                                                <g transform="translate(100,58)">
-                                                    <polygon points="0,-45 39,-22.5 39,22.5 0,45 -39,22.5 -39,-22.5" fill="none" stroke="#e2e8f0" stroke-width="0.6"/>
-                                                    <polygon points="0,-31.5 27.3,-15.8 27.3,15.8 0,31.5 -27.3,15.8 -27.3,-15.8" fill="none" stroke="#e2e8f0" stroke-width="0.3"/>
-                                                    <polygon points="0,-40.5 31.2,-18 31.2,18 0,31.5 -31.2,18 -35.1,-20.3" fill="rgba(37,99,235,0.15)" stroke="#2563eb" stroke-width="1"/>
-                                                    <polygon points="0,-36 23.4,-13.5 31.2,18 0,40.5 -19.5,11.3 -23.4,-13.5" fill="rgba(249,115,22,0.15)" stroke="#f97316" stroke-width="1"/>
-                                                </g>
-                                                <text x="100" y="7" text-anchor="middle" font-size="6.5" fill="#6b7280">Product</text>
-                                                <text x="148" y="30" text-anchor="start" font-size="6.5" fill="#6b7280">Usability</text>
-                                                <text x="148" y="88" text-anchor="start" font-size="6.5" fill="#6b7280">Performance</text>
-                                                <text x="100" y="117" text-anchor="middle" font-size="6.5" fill="#6b7280">Brand</text>
-                                                <text x="52" y="88" text-anchor="end" font-size="6.5" fill="#6b7280">Support</text>
-                                                <text x="52" y="30" text-anchor="end" font-size="6.5" fill="#6b7280">Innovation</text>
-                                                <circle cx="70" cy="126" r="3" fill="#2563eb"/><text x="76" y="129" font-size="6.5" fill="#6b7280">CIx</text>
-                                                <circle cx="110" cy="126" r="3" fill="#f97316"/><text x="116" y="129" font-size="6.5" fill="#6b7280">Hooli</text>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 12px; margin-top: 20px;">
-                                        <div>
-                                            <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg> Their Strengths
-                                            </h4>
-                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #10b981; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>Market Share:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">800+ customers</a>, 38% enterprise CI market share</span>
-                                            </div>
-                                            <div style="display: flex; align-items: start; gap: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #10b981; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>Ecosystem:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">50+ integrations</a> including Salesforce, HubSpot, Gong</span>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> Our Advantages
-                                            </h4>
-                                            <div style="display: flex; align-items: start; gap: 6px; margin-bottom: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #2563eb; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>AI-First Architecture:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">Battlecards in minutes</a> vs 2-3 weeks manual effort</span>
-                                            </div>
-                                            <div style="display: flex; align-items: start; gap: 6px;">
-                                                <div style="width: 4px; height: 4px; background: #2563eb; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
-                                                <span style="font-size: 11px; color: #374151; line-height: 1.3;"><strong>Rapid Deployment:</strong> <a href="#" style="color: #2563eb; text-decoration: underline;">Same-day setup</a> vs Hooli's 3-month rollout</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="margin-bottom: 12px;">
-                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg> Key Talking Points
-                                        </h4>
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;">
-                                            <div style="background: #eff6ff; padding: 8px; border-radius: 6px; border: 1px solid #bfdbfe;">
-                                                <p style="font-size: 10px; color: #1d4ed8; margin: 0; line-height: 1.3;"><strong>"Built for Speed"</strong><br/>CI from day one with AI automation - no 6-month rollout.</p>
-                                            </div>
-                                            <div style="background: #f0fdf4; padding: 8px; border-radius: 6px; border: 1px solid #bbf7d0;">
-                                                <p style="font-size: 10px; color: #166534; margin: 0; line-height: 1.3;"><strong>"Team-Ready"</strong><br/>Tailored battlecards for Sales, Product, Marketing & Leadership.</p>
-                                            </div>
-                                            <div style="background: #faf5ff; padding: 8px; border-radius: 6px; border: 1px solid #e9d5ff;">
-                                                <p style="font-size: 10px; color: #6b21a8; margin: 0; line-height: 1.3;"><strong>"Always Current"</strong><br/>Real-time signals keep your team ahead - no stale intel.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="margin-bottom: 12px;">
-                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 8px 0; display: flex; align-items: center; gap: 4px;">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg> Objection Handling
-                                        </h4>
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                                            <div style="background: #fff5f5; padding: 8px; border-radius: 6px; border: 1px solid #fee2e2;">
-                                                <p style="font-size: 10px; font-weight: 600; color: #991b1b; margin: 0 0 3px 0;">"Hooli integrates with our CRM already"</p>
-                                                <p style="font-size: 10px; color: #374151; margin: 0; line-height: 1.3;"><strong>How to respond:</strong> CIx connects to your stack in minutes with an open API - not a 3-month integration project.</p>
-                                            </div>
-                                            <div style="background: #fff5f5; padding: 8px; border-radius: 6px; border: 1px solid #fee2e2;">
-                                                <p style="font-size: 10px; font-weight: 600; color: #991b1b; margin: 0 0 3px 0;">"Our team is used to Hooli"</p>
-                                                <p style="font-size: 10px; color: #374151; margin: 0; line-height: 1.3;"><strong>How to respond:</strong> Used to it, or stuck with it? CIx saves your teams 20+ hours a week on manual battlecard creation.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Discovery Questions
-                                        </h4>
-                                        <div style="border: 1px solid #e5e7eb; border-radius: 5px; padding: 8px; margin-bottom: 5px;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 4px 0;">"What does your current CI workflow look like?"</p>
-                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 4px 0;"><strong style="color: #374151;">Listen for:</strong> Manual processes, spreadsheet tracking, quarterly updates</p>
-                                            <p style="font-size: 9px; color: #166534; margin: 0;"><strong>How to position:</strong> "CIx automates that - same-day setup, real-time updates."</p>
-                                        </div>
-                                        <div style="border: 1px solid #e5e7eb; border-radius: 5px; padding: 8px;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 4px 0;">"How many people touch your battlecards today?"</p>
-                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 4px 0;"><strong style="color: #374151;">Listen for:</strong> Dedicated analysts, PMM bottleneck, outdated content</p>
-                                            <p style="font-size: 9px; color: #166534; margin: 0;"><strong>How to position:</strong> "CIx generates and updates battlecards automatically - zero analyst dependency."</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- PRODUCT PANEL -->
-                                <div class="bc-panel" data-panel="product">
-                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
-                                    <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0 0 12px 0;">
-                                        Hooli's CI platform is built on legacy architecture requiring 3-month implementations. Their monolithic approach limits customization and slows feature velocity compared to CIx's modular, AI-first design.
-                                    </p>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/></svg> Side-by-Side Comparison
-                                    </h4>
-                                    <div style="border: 1px solid #e5e7eb; border-radius: 6px; overflow: hidden; margin-bottom: 12px;">
-                                        <table style="width: 100%; font-size: 10px;">
-                                            <thead style="background: #f9fafb;"><tr><th style="padding: 5px 8px; text-align: left; font-weight: 600; color: #374151;">Feature</th><th style="padding: 5px 8px; text-align: center; font-weight: 600; color: #2563eb;">CIx</th><th style="padding: 5px 8px; text-align: center; font-weight: 600; color: #6b7280;">Hooli</th></tr></thead>
-                                            <tbody>
-                                                <tr style="border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">Implementation</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Same day</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">3-6 months</span></td></tr>
-                                                <tr style="background: #f9fafb; border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">AI Battlecards</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Multi-focus</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 4px;">Basic</span></td></tr>
-                                                <tr style="border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">Integrations</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Open API</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px;">50+</span></td></tr>
-                                                <tr style="background: #f9fafb; border-top: 1px solid #e5e7eb;"><td style="padding: 5px 8px; color: #374151;">Signal Tracking</td><td style="padding: 5px 8px; text-align: center;"><span style="background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-weight: 500;">Real-time</span></td><td style="padding: 5px 8px; text-align: center;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">Weekly</span></td></tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> Competitor Offerings
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
-                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">Hooli CI Platform</p>
-                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 2px 0; line-height: 1.3;">Core CI suite with battlecards, dashboards, and analytics. Manual creation workflow.</p>
-                                            <p style="font-size: 9px; color: #991b1b; margin: 0;"><strong>Limitation:</strong> No AI-native battlecard generation. Requires dedicated analysts for updates.</p>
-                                        </div>
-                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">Hooli Integrations Hub</p>
-                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 2px 0; line-height: 1.3;">50+ pre-built integrations with CRM, enablement, and collaboration tools.</p>
-                                            <p style="font-size: 9px; color: #991b1b; margin: 0;"><strong>Limitation:</strong> Closed ecosystem. Custom integrations require professional services engagement.</p>
-                                        </div>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Product Development Recommendations
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 5px;">
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
-                                            <span style="background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Native CRM embedding</strong> - Build Salesforce/HubSpot widgets to counter Hooli's integration depth.</span>
-                                        </div>
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
-                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Win/loss automation</strong> - Auto-capture deal outcomes to build competitive pattern library.</span>
-                                        </div>
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
-                                            <span style="background: #7c3aed; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Role-based dashboards</strong> - Deliver tailored views for Sales, Product, and Marketing to differentiate from Hooli's one-size-fits-all UI.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- MARKETING PANEL -->
-                                <div class="bc-panel" data-panel="marketing">
-                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
-                                    <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0 0 12px 0;">
-                                        Hooli positions as the "enterprise standard" for CI but struggles with perception of being slow and outdated. Their NPS decline signals a messaging vulnerability around speed and innovation.
-                                    </p>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Digital Presence
-                                    </h4>
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 12px;">
-                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
-                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">~120K</p>
-                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Monthly web visits</p>
-                                        </div>
-                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
-                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">15K</p>
-                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">LinkedIn followers</p>
-                                        </div>
-                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
-                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">2x/wk</p>
-                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Blog frequency</p>
-                                        </div>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Competitor Messaging Pillars
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
-                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">"Enterprise-grade CI platform"</p>
-                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 3px 0; line-height: 1.3;">Hooli positions scale and security as core differentiators, targeting CISOs and VP-level buyers.</p>
-                                            <p style="font-size: 9px; color: #1d4ed8; margin: 0;"><strong>Counter:</strong> Enterprise-grade doesn't mean enterprise-speed. CIx delivers the same security with same-day setup.</p>
-                                        </div>
-                                        <div style="padding: 6px 8px; border: 1px solid #e5e7eb; border-radius: 5px;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1f2937; margin: 0 0 2px 0;">"Proven at scale with 800+ customers"</p>
-                                            <p style="font-size: 9px; color: #6b7280; margin: 0 0 3px 0; line-height: 1.3;">Leverages customer count as social proof, often citing Fortune 500 logos.</p>
-                                            <p style="font-size: 9px; color: #1d4ed8; margin: 0;"><strong>Counter:</strong> Scale without satisfaction. Ask about their renewal rates and NPS trajectory.</p>
-                                        </div>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg> Marketing & Growth Recommendations
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 5px;">
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
-                                            <span style="background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Counter "enterprise-grade" narrative</strong> - Emphasize AI-first speed and same-day value vs their 3-month rollout.</span>
-                                        </div>
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
-                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Target their NPS decline</strong> - Create comparison content highlighting customer satisfaction trends.</span>
-                                        </div>
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
-                                            <span style="background: #7c3aed; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Own "real-time CI" category</strong> - Position against their quarterly update model in content and SEO.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- LEADERSHIP PANEL -->
-                                <div class="bc-panel" data-panel="leadership">
-                                    <h3 style="font-size: 14px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0;">Overview</h3>
-                                    <p style="font-size: 11px; color: #374151; line-height: 1.4; margin: 0 0 12px 0;">
-                                        Hooli holds 38% enterprise CI market share but faces declining satisfaction and increased churn to AI-first alternatives. Their enterprise-only focus leaves significant mid-market and SMB opportunity.
-                                    </p>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Financial & Funding Overview
-                                    </h4>
-                                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 12px;">
-                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
-                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">$72M</p>
-                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Est. ARR</p>
-                                        </div>
-                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
-                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">Series D</p>
-                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Funding stage</p>
-                                        </div>
-                                        <div style="background: #f9fafb; padding: 6px; border-radius: 5px; text-align: center;">
-                                            <p style="font-size: 14px; font-weight: 700; color: #1f2937; margin: 0;">~450</p>
-                                            <p style="font-size: 8px; color: #6b7280; margin: 0;">Employees</p>
-                                        </div>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> Market Trends
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
-                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 9px; color: #374151; line-height: 1.3;"><strong>AI-native CI platforms</strong> gaining enterprise traction, displacing legacy manual tools.</span></div>
-                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 9px; color: #374151; line-height: 1.3;"><strong>Buyer expectations shifting</strong> toward self-service CI with real-time updates over quarterly reports.</span></div>
-                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 9px; color: #374151; line-height: 1.3;"><strong>Consolidation accelerating</strong> as legacy CI vendors face M&A pressure from AI-native entrants.</span></div>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> Competitor Strategic Bets
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px;">
-                                        <div style="padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
-                                            <p style="font-size: 9px; font-weight: 600; color: #1d4ed8; margin: 0 0 2px 0;">Short-term (0-12 months)</p>
-                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">Retrofitting AI features onto legacy platform. Launching "AI assistant" to match market demand.</p>
-                                        </div>
-                                        <div style="padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
-                                            <p style="font-size: 9px; font-weight: 600; color: #6b21a8; margin: 0 0 2px 0;">Long-term (1-5 years)</p>
-                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">Expanding into revenue intelligence and deal analytics. Potential M&A to acquire AI capabilities.</p>
-                                        </div>
-                                    </div>
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 12px 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Strategic Leadership Recommendations
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 5px;">
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
-                                            <span style="background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Accelerate mid-market expansion</strong> - Hooli's enterprise-only focus leaves mid-market underserved. Capture before they move downmarket.</span>
-                                        </div>
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
-                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Explore integration partnerships</strong> - Their closed ecosystem creates openings for CRM and enablement platform partnerships.</span>
-                                        </div>
-                                        <div style="display: flex; align-items: start; gap: 6px; padding: 6px 8px; background: #faf5ff; border-radius: 5px; border: 1px solid #e9d5ff;">
-                                            <span style="background: #7c3aed; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
-                                            <span style="font-size: 10px; color: #1f2937; line-height: 1.3;"><strong>Monitor acquisition signals</strong> - Declining NPS and market pressure may trigger strategic moves. Track leadership changes.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- LANDSCAPE PANEL -->
-                                <div class="bc-panel" data-panel="landscape">
-                                    <!-- Compact Market Positioning Map -->
-                                    <h4 style="font-size: 12px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Market Positioning Map
-                                    </h4>
-                                    <div style="margin-bottom: 12px;">
-                                        <svg viewBox="0 0 280 155" width="80%" style="display: block; margin: 0 auto;">
-                                            <line x1="140" y1="12" x2="140" y2="125" stroke="#d1d5db" stroke-width="0.8" stroke-dasharray="3,2"/>
-                                            <line x1="18" y1="68" x2="255" y2="68" stroke="#d1d5db" stroke-width="0.8" stroke-dasharray="3,2"/>
-                                            <polygon points="140,12 138,17 142,17" fill="#9ca3af"/>
-                                            <polygon points="255,68 250,66 250,70" fill="#9ca3af"/>
-                                            <text x="140" y="6" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5">Multi-team GTM</text>
-                                            <text x="140" y="133" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5">Single-team / research</text>
-                                            <text x="10" y="68" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5" transform="rotate(-90, 10, 68)">Manual</text>
-                                            <text x="264" y="68" text-anchor="middle" font-size="5.5" fill="#6b7280" letter-spacing="0.5" transform="rotate(-90, 264, 68)">AI-native</text>
-                                            <rect x="140" y="8" width="125" height="60" fill="#eff6ff" opacity="0.25" rx="2"/>
-                                            <circle cx="115" cy="30" r="7" fill="#f97316" opacity="0.15" stroke="#f97316" stroke-width="1.2"/><text x="115" y="30" text-anchor="middle" font-size="5.5" fill="#f97316" font-weight="700" dominant-baseline="central">H</text>
-                                            <circle cx="200" cy="50" r="6.5" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="1.2"/><text x="200" y="50" text-anchor="middle" font-size="5.5" fill="#10b981" font-weight="700" dominant-baseline="central">PP</text>
-                                            <circle cx="100" cy="90" r="6" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1.2"/><text x="100" y="90" text-anchor="middle" font-size="5.5" fill="#8b5cf6" font-weight="700" dominant-baseline="central">AC</text>
-                                            <circle cx="225" cy="22" r="7" fill="#2563eb" opacity="0.2" stroke="#2563eb" stroke-width="1.5"/><text x="225" y="22" text-anchor="middle" font-size="5" fill="#2563eb" font-weight="700" dominant-baseline="central">CIx</text>
-                                            <circle cx="45" cy="148" r="2.5" fill="#f97316"/><text x="50" y="150" font-size="5.5" fill="#374151">Hooli</text>
-                                            <circle cx="95" cy="148" r="2.5" fill="#10b981"/><text x="100" y="150" font-size="5.5" fill="#374151">Pied Piper</text>
-                                            <circle cx="155" cy="148" r="2.5" fill="#8b5cf6"/><text x="160" y="150" font-size="5.5" fill="#374151">Acme Corp</text>
-                                            <circle cx="215" cy="148" r="2.5" fill="#2563eb"/><text x="220" y="150" font-size="5.5" fill="#374151" font-weight="600">CIx (Us)</text>
-                                        </svg>
-                                    </div>
-
-                                    <!-- Threat Level Assessment -->
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Threat Level Assessment
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
-                                        <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #fef2f2; border-radius: 5px; border: 1px solid #fecaca;">
-                                            <span style="font-size: 9px; color: #1f2937; flex: 1;"><strong>Hooli</strong> - Market leader, 800+ customers, 38% enterprise CI share. Legacy architecture.</span>
-                                            <span style="background: #dc2626; color: white; font-size: 8px; padding: 1px 6px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">High</span>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #fefce8; border-radius: 5px; border: 1px solid #fef08a;">
-                                            <span style="font-size: 9px; color: #1f2937; flex: 1;"><strong>Pied Piper</strong> - Aggressive pricing, growing mid-market. AI capabilities expanding.</span>
-                                            <span style="background: #ca8a04; color: white; font-size: 8px; padding: 1px 6px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Med</span>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 8px; padding: 5px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
-                                            <span style="font-size: 9px; color: #1f2937; flex: 1;"><strong>Acme Corp</strong> - Website monitoring and competitive newsletters. No battlecard automation.</span>
-                                            <span style="background: #16a34a; color: white; font-size: 8px; padding: 1px 6px; border-radius: 3px; font-weight: 600; flex-shrink: 0;">Low</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Market Gaps & Opportunities -->
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Market Gaps & Opportunities
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px;">
-                                        <div style="padding: 6px 8px; background: #eff6ff; border-radius: 5px; border: 1px solid #bfdbfe;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #1d4ed8; margin: 0 0 2px 0;">Unified AI CI for all GTM teams</p>
-                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">No competitor offers team-specific tuning for Sales, Marketing, Product & Leadership.</p>
-                                        </div>
-                                        <div style="padding: 6px 8px; background: #f0fdf4; border-radius: 5px; border: 1px solid #bbf7d0;">
-                                            <p style="font-size: 10px; font-weight: 600; color: #166534; margin: 0 0 2px 0;">Source-attributed AI battlecards</p>
-                                            <p style="font-size: 9px; color: #374151; margin: 0; line-height: 1.3;">Competitors treat AI as a black box. Every CIx insight links back to verified sources.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Market Trends -->
-                                    <h4 style="font-size: 11px; font-weight: 600; color: #1f2937; margin: 0 0 6px 0; display: flex; align-items: center; gap: 4px;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> Market Trends
-                                    </h4>
-                                    <div style="display: flex; flex-direction: column; gap: 4px;">
-                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 10px; color: #374151; line-height: 1.3;"><strong>Agentic AI</strong> - Vendors moving from summarization to autonomous signal-driven actions.</span></div>
-                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 10px; color: #374151; line-height: 1.3;"><strong>Consolidation pressure</strong> - Legacy CI vendors acquiring or being acquired as AI transforms CI.</span></div>
-                                        <div style="display: flex; align-items: start; gap: 5px;"><div style="width: 3px; height: 3px; background: #2563eb; border-radius: 50%; margin-top: 5px; flex-shrink: 0;"></div><span style="font-size: 10px; color: #374151; line-height: 1.3;"><strong>Self-serve demand</strong> - Teams want CI insights to be self-service and available in real-time.</span></div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                                    </div>
+                    <div class="story story-card" role="img" aria-label="Animation: a battlecard for You versus Acme builds itself section by section with a sourced response to the price objection. Then in a Battle Room a rep asks @CIx about Acme's new price and gets an answer drawn from the battlecard.">
+    <div class="mock sc-card">
+        <div class="mock-head"><span class="mock-dot"></span><strong>Battlecard · You vs Acme</strong><span class="sc-status"><span class="g1">Writing…</span><span class="g2 s4">Ready</span></span></div>
+        <div class="sc-sec s1"><span class="sc-k">Why we win</span><p>Live, sourced intelligence and setup in minutes</p></div>
+        <div class="sc-sec s2"><span class="sc-k">Objection</span><p>"Acme is cheaper."</p></div>
+        <div class="sc-sec s3"><span class="sc-k">Response</span><p>Compare total cost: Acme's Starter no longer includes onboarding.</p><span class="mock-source">acme.com/pricing</span></div>
+    </div>
+    <div class="sc-chat">
+        <div class="mock-msg-me s5">@CIx they just asked about Acme's new price</div>
+        <div class="mock-cix s6"><div class="mock-cix-head"><span class="mock-cix-badge">CIx</span><span class="mock-muted">Battle Room · Northwind deal</span></div><p><strong>Lead with total cost.</strong> Then ask: "Who sets this up on your side?"</p></div>
+    </div>
+</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Win deals together in the Battle Room -->
-    <section class="home-pillar home-pillar-alt" id="battle-room">
+    <!-- Built for your team (tabs) -->
+    <section class="home-teams">
         <div class="container">
-            <div class="home-pillar-inner">
-                <div class="home-pillar-copy">
-                    <span class="home-pillar-label">Battle room</span>
-                    <h2>Win deals together in the Battle Room</h2>
-                    <p class="home-pillar-lede">Open a room for a live deal, pull in the competitors involved, and bring Sales, Product and Marketing into one thread. Ask @CIx a question and it answers with your own competitive intelligence behind it.</p>
-                    <div class="home-pillar-list">
-                        <div class="home-pillar-list-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Deal-specific, not general. </strong>Each room carries its own client, competitor set and attachments.</span>
-                        </div>
-                        <div class="home-pillar-list-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>@CIx joins the conversation. </strong>Ask for a counter-position and get a usable answer with talk tracks, not a document link.</span>
-                        </div>
-                        <div class="home-pillar-list-item">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-                            <span><strong>Deliverables land in the room. </strong>Ask for a battlecard, comparison or email and it is drafted and collected where the deal is being worked.</span>
-                        </div>
+            <div class="role-head" data-reveal>
+                <span class="role-kicker">Built for your team</span>
+                <h2>One source of truth, shaped for whoever is using it</h2>
+            </div>
+            <div class="team-tabs" role="tablist" aria-label="Teams" data-tabs>
+                <button class="team-tab" role="tab" id="team-tab-sales" aria-controls="team-panel-sales" aria-selected="true" tabindex="0">Sales</button><button class="team-tab" role="tab" id="team-tab-marketing" aria-controls="team-panel-marketing" aria-selected="false" tabindex="-1">Product marketing</button><button class="team-tab" role="tab" id="team-tab-product" aria-controls="team-panel-product" aria-selected="false" tabindex="-1">Product</button><button class="team-tab" role="tab" id="team-tab-leadership" aria-controls="team-panel-leadership" aria-selected="false" tabindex="-1">Leadership</button>
+            </div>
+            <div class="team-panels">
+                <div class="team-panel" role="tabpanel" id="team-panel-sales" aria-labelledby="team-tab-sales">
+                    <div class="team-panel-copy role-row-copy">
+                        <h3>Walk into every competitive deal with the answer ready</h3>
+                        <ul><li><span>Battlecards that rewrite themselves when a rival moves</span></li><li><span>Ask @CIx in a Battle Room mid-deal and get talk tracks back</span></li><li><span>Every claim sourced, so reps can repeat it with confidence</span></li></ul>
+                        <a class="home-pillar-link" href="solutions/sales">CIx for sales →</a>
                     </div>
-                </div>
-                <div class="home-pillar-visual">
-                    <div class="home-shot">
-                    <div class="home-shot-bar">
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-dot"></span>
-                        <span class="home-shot-url">app.usesignallabs.com/battle-rooms</span>
+                    <div class="team-panel-visual role-row-visual">
+                        <div class="mock mock-sales" role="img" aria-label="Illustration: in a Battle Room, a rep asks how to counter Acme's price cut and @CIx answers with a talk track and its source">
+    <div class="mock-head"><span class="mock-dot"></span><strong>Battle Room</strong><span class="mock-muted">Northwind deal</span><span class="mock-chip">vs Acme</span></div>
+    <div class="mock-msg mock-msg-me">Acme just cut their entry price. How do we handle it on Thursday's call?</div>
+    <div class="mock-cix">
+        <div class="mock-cix-head"><span class="mock-cix-badge">CIx</span><span class="mock-muted">just now</span></div>
+        <p><strong>Don't match on price. Lead with time to value.</strong></p>
+        <ul><li>Acme's new tier drops onboarding support</li><li>Ask: "Who sets this up on your side?"</li></ul>
+        <span class="mock-source">Source: acme.com/pricing</span>
+    </div>
+    <div class="mock-toast"><span class="mock-check">✓</span>Battlecard updated · Pricing objection</div>
+</div>
                     </div>
-                        <picture>
-                            <source srcset="assets/product/battle-room-crop.webp" type="image/webp" width="1600" height="897">
-                            <img src="assets/product/battle-room-crop.png" width="1600" height="897" loading="lazy" decoding="async"
-                                 alt="A Signal Labs Battle Room for the PipedPiper deal, where a rep asks how to counter AlphaSense on research depth and CIx replies with a counter-position, specific talk tracks and a recommendation for the call">
-                        </picture>
+                </div><div class="team-panel" role="tabpanel" id="team-panel-marketing" aria-labelledby="team-tab-marketing" hidden>
+                    <div class="team-panel-copy role-row-copy">
+                        <h3>Keep positioning sharp without a research project</h3>
+                        <ul><li><span>Living pages and a positioning map that maintain themselves</span></li><li><span>Comparison pages, snippets and launch responses drafted for you</span></li><li><span>Approve changes once and they update everywhere</span></li></ul>
+                        <a class="home-pillar-link" href="solutions/marketing">CIx for product marketing →</a>
+                    </div>
+                    <div class="team-panel-visual role-row-visual">
+                        <div class="mock mock-pmm" role="img" aria-label="Illustration: an approval inbox with three drafted actions after a Globex launch">
+    <div class="mock-head"><span class="mock-dot"></span><strong>Actions</strong><span class="mock-muted">3 drafts ready</span></div>
+    <div class="mock-row"><span class="mock-pill high">High</span><div><strong>Comparison page: You vs Globex</strong><span class="mock-muted">From Globex's launch post</span></div><span class="mock-btn primary">Approve</span></div>
+    <div class="mock-row"><span class="mock-pill high">High</span><div><strong>Battlecard: pricing section</strong><span class="mock-muted">2 claims updated, both sourced</span></div><span class="mock-btn">Review</span></div>
+    <div class="mock-row"><span class="mock-pill med">Medium</span><div><strong>Website snippet: counter-positioning</strong><span class="mock-muted">Ready to paste</span></div><span class="mock-btn">Review</span></div>
+    <div class="mock-float mock-map-mini"><span class="mock-muted">Positioning map</span><div class="mini-map"><i class="you"></i><i class="r1"></i><i class="r2"></i><i class="r3"></i></div><span class="mock-updated">Updated today</span></div>
+</div>
+                    </div>
+                </div><div class="team-panel" role="tabpanel" id="team-panel-product" aria-labelledby="team-tab-product" hidden>
+                    <div class="team-panel-copy role-row-copy">
+                        <h3>See what competitors ship, as they ship it</h3>
+                        <ul><li><span>Launches and changelog updates scored for importance</span></li><li><span>Head-to-head scoring shows where you lead and where you trail</span></li><li><span>Sourced evidence for roadmap conversations, not hunches</span></li></ul>
+                        <a class="home-pillar-link" href="solutions/product">CIx for product teams →</a>
+                    </div>
+                    <div class="team-panel-visual role-row-visual">
+                        <div class="mock mock-product" role="img" aria-label="Illustration: competitor launches this week scored for importance, and head-to-head scores against Acme">
+    <div class="mock-head"><span class="mock-dot"></span><strong>Shipped this week</strong><span class="mock-muted">3 competitors</span></div>
+    <div class="mock-feed"><span class="mock-logo l1">I</span><div><strong>Initech</strong><span class="mock-muted">Launched an AI assistant (beta)</span></div><span class="mock-score s9">9/10</span></div>
+    <div class="mock-feed"><span class="mock-logo l2">A</span><div><strong>Acme</strong><span class="mock-muted">SSO now on every plan</span></div><span class="mock-score s7">7/10</span></div>
+    <div class="mock-feed"><span class="mock-logo l3">G</span><div><strong>Globex</strong><span class="mock-muted">New public API docs</span></div><span class="mock-score s6">6/10</span></div>
+    <div class="mock-h2h">
+        <div class="mock-h2h-title"><span>You vs Acme</span><span class="mock-legend"><i class="you"></i>You <i class="them"></i>Acme</span></div>
+        <div class="mock-bar"><span>Product</span><div><i class="you" style="width:82%"></i><i class="them" style="width:64%"></i></div></div>
+        <div class="mock-bar"><span>Usability</span><div><i class="you" style="width:70%"></i><i class="them" style="width:76%"></i></div></div>
+        <div class="mock-bar"><span>Momentum</span><div><i class="you" style="width:88%"></i><i class="them" style="width:58%"></i></div></div>
+    </div>
+</div>
+                    </div>
+                </div><div class="team-panel" role="tabpanel" id="team-panel-leadership" aria-labelledby="team-tab-leadership" hidden>
+                    <div class="team-panel-copy role-row-copy">
+                        <h3>Know where you stand in your market</h3>
+                        <ul><li><span>A positioning map that stays current on its own</span></li><li><span>Scheduled digests by email or Slack for people who never open dashboards</span></li><li><span>Analytics on what your team actually uses</span></li></ul>
+                        <a class="home-pillar-link" href="solutions/leadership">CIx for leadership →</a>
+                    </div>
+                    <div class="team-panel-visual role-row-visual">
+                        <div class="mock mock-lead" role="img" aria-label="Illustration: a market positioning map with you and three competitors, and a Monday digest of notable moves">
+    <div class="mock-head"><span class="mock-dot"></span><strong>Market positioning</strong><span class="mock-muted">kept current automatically</span></div>
+    <div class="pos-map">
+        <span class="ax ax-top">Enterprise</span><span class="ax ax-bottom">Self-serve</span><span class="ax ax-left">Point tool</span><span class="ax ax-right">Platform</span>
+        <i class="pm you" style="left:60%;top:34%"><b>You</b></i>
+        <i class="pm r" style="left:24%;top:26%"><b>Acme</b></i>
+        <i class="pm r" style="left:28%;top:64%"><b>Globex</b></i>
+        <i class="pm r moved" style="left:84%;top:20%"><b>Initech</b></i>
+    </div>
+    <div class="mock-float mock-digest">
+        <div class="mock-digest-head"><strong>Monday digest</strong><span class="mock-muted">Email · Slack</span></div>
+        <div class="dg"><span class="mock-score s9">9</span>Initech launched an AI assistant</div>
+        <div class="dg"><span class="mock-score s8">8</span>Acme repriced its top tier</div>
+        <div class="dg"><span class="mock-score s6">6</span>Globex hired a VP of Sales</div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Deliverables -->
-    <section class="content-section">
+    <section class="home-band home-trust">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What CIx actually hands your team</h2>
-                <p class="section-subtitle">Not a dashboard to interpret — finished work, ready to review and send.</p>
+            <div class="home-band-grid">
+                <div class="home-band-item">
+                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>Source-linked, always</h3>
+                    <p>Every claim links to the page it came from, so your team can check it before repeating it.</p>
+                </div>
+                <div class="home-band-item">
+                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>Living, not archived</h3>
+                    <p>Pages rewrite themselves as the market moves. No quarterly refresh project.</p>
+                </div>
+                <div class="home-band-item">
+                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>Action, not just alerts</h3>
+                    <p>A competitor launch arrives as drafted work, not a notification to interpret.</p>
+                </div>
+                <div class="home-band-item">
+                    <h3><span class="home-band-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></span>Wherever you work</h3>
+                    <p>Use it in the app, by email or Slack, or from Claude, Cursor and the API.</p>
+                </div>
             </div>
-            <div class="home-deliverables">
-                <div class="home-deliverable">
-                    <strong>Battlecards</strong>
-                    <span>Tailored per team and per deal — sales, product marketing, leadership, or the whole landscape at once.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>Comparison tables &amp; pages</strong>
-                    <span>Side-by-side you-versus-them content for your website, ready for paid and organic capture.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>Objection handling &amp; talk tracks</strong>
-                    <span>The exact words reps use when a competitor comes up mid-deal, grounded in what that competitor actually claims.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>Sales emails &amp; snippets</strong>
-                    <span>Drafted responses to a competitor launch, ready to send the same day it happens.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>SWOT &amp; win strategies</strong>
-                    <span>Where each rival is strong, where they are exposed, and the play that beats them.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>Market positioning map</strong>
-                    <span>Where every competitor sits on the two axes that decide your deals — and where you sit against them.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>Ask CIx</strong>
-                    <span>Ask a question in plain language and get an answer drawn from your competitive intelligence, with sources.</span>
-                </div>
-                <div class="home-deliverable">
-                    <strong>API &amp; MCP access</strong>
-                    <span>Pull the same intelligence into your own tools, or query it directly from Claude, Cursor and other MCP clients.</span>
+                    <div class="works-with" data-reveal>
+                <span class="works-with-label">Works where your team works</span>
+                <div class="works-with-chips">
+                    <span>Web app</span><span>Slack</span><span>Email digests</span><span>Claude</span><span>Cursor</span><span>MCP server</span><span>REST API</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roles -->
-    <section class="content-section home-roles" style="background: var(--bg-secondary);">
+    <!-- Pricing preview -->
+    <section class="home-pricing-lite">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Built for every go-to-market role</h2>
-                <p class="section-subtitle">One source of competitive truth, shaped differently for the team using it.</p>
+            <div class="role-head" data-reveal>
+                <span class="role-kicker">Pricing</span>
+                <h2>Pricing that scales with you</h2>
+                <p>Start free. Add competitors, battlecards and seats as your team grows.</p>
             </div>
-            <!-- Value Propositions - Below the fold -->
-            <div class="wayfinding-grid">
-                    <a href="use-cases/sales-enablement" class="wayfinding-card">
-                        <div class="wayfinding-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                            </svg>
-                        </div>
-                        <h3 class="wayfinding-title">Sales Enablement <span aria-hidden="true">→</span></h3>
-                        <p class="wayfinding-text">Battlecards and talking points that help reps handle objections and win more deals.</p>
-                    </a>
-                    <a href="use-cases/product-positioning" class="wayfinding-card">
-                        <div class="wayfinding-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <circle cx="12" cy="12" r="6"/>
-                                <circle cx="12" cy="12" r="2"/>
-                            </svg>
-                        </div>
-                        <h3 class="wayfinding-title">Product Positioning <span aria-hidden="true">→</span></h3>
-                        <p class="wayfinding-text">Market insights that sharpen your positioning and shape your product roadmap.</p>
-                    </a>
-                    <a href="use-cases/competitor-monitoring" class="wayfinding-card">
-                        <div class="wayfinding-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </div>
-                        <h3 class="wayfinding-title">Competitor Monitoring <span aria-hidden="true">→</span></h3>
-                        <p class="wayfinding-text">Real-time competitor signals so your team responds before the market does.</p>
-                    </a>
+            <div class="price-lite">
+                <div class="price-lite-card" data-reveal>
+                    <div class="price-lite-name">Free</div>
+                    <div class="price-lite-price">$0<small>forever</small></div>
+                    <p>2 competitors · daily signals · 1 battlecard a month</p>
+                    <a class="price-lite-cta" href="https://app.usesignallabs.com/login">Start free</a>
+                </div><div class="price-lite-card popular" data-reveal><span class="price-lite-badge">Most popular</span>
+                    <div class="price-lite-name">Pro</div>
+                    <div class="price-lite-price">$29<small>/month</small></div>
+                    <p>5 competitors · signals every 4 hours · 10 battlecards</p>
+                    <a class="price-lite-cta" href="https://app.usesignallabs.com/login?plan=pro&amp;cycle=monthly">Get Pro</a>
+                </div><div class="price-lite-card" data-reveal>
+                    <div class="price-lite-name">Ultra</div>
+                    <div class="price-lite-price">$99<small>/month</small></div>
+                    <p>15 competitors · hourly signals · 50 battlecards</p>
+                    <a class="price-lite-cta" href="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=monthly">Get Ultra</a>
+                </div><div class="price-lite-card" data-reveal>
+                    <div class="price-lite-name">Enterprise</div>
+                    <div class="price-lite-price">Custom<small></small></div>
+                    <p>Custom limits, onboarding and CI strategy calls</p>
+                    <a class="price-lite-cta" href="https://calendly.com/emre-usesignallabs/30min" target="_blank" rel="noopener noreferrer">Talk to us</a>
                 </div>
+            </div>
+            <p class="price-lite-more"><a href="pricing">Compare every plan in detail →</a></p>
         </div>
     </section>
 
-    <!-- Questions -->
     <section class="content-section">
         <div class="container">
             <div class="section-header">
@@ -1085,144 +816,7 @@
             </div>
         </div>
     </section>
-    <!-- Pricing Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Pricing that scales with you</h2>
-                <p class="section-subtitle">Start free. Add competitors, battlecards and seats as your team grows.</p>
-            </div>
 
-            <div class="billing-toggle">
-                <span class="toggle-label" id="monthly-label">Monthly</span>
-                <div class="toggle-switch">
-                    <input type="checkbox" id="billing-toggle" aria-labelledby="billing-toggle-label" aria-describedby="monthly-label annual-label">
-                    <label for="billing-toggle" class="toggle-slider" id="billing-toggle-label"><span class="sr-only">Switch between monthly and yearly billing</span></label>
-                </div>
-                <span class="toggle-label" id="annual-label">Yearly <span class="savings-text">(save about 20%)</span></span>
-            </div>
-            <div class="pricing-grid pricing-grid-v3">
-                <!-- Free -->
-                <div class="plan-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Free</h3>
-                        <div class="pricing-price"><span class="price-amount">$0</span><span class="price-period">Free forever</span></div>
-                        <p class="pricing-description">See Signal Labs work on your top competitors.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>2 competitors tracked, each a living page</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Daily signals + suggested-actions inbox</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>1 battlecard a month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>10 chat questions a month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>1 creator + 2 viewers</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Battle Rooms</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Email support</span></div>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com/login" class="btn btn-outline">Start Free</a>
-                    </div>
-                </div>
-
-                <!-- Pro -->
-                <div class="plan-card plan-card-popular">
-                    <div class="popular-badge">MOST POPULAR</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Pro</h3>
-                        <div class="pricing-price"><span class="price-amount" data-monthly="$29" data-annual="$24">$29</span><span class="price-period" data-monthly="per month" data-annual="per month, billed $288 yearly">per month</span></div>
-                        <p class="pricing-description">Track your core competitive set and arm your team.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-0" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-0)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span style="font-weight:600">Everything in Free, plus:</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>5 competitors tracked</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-6" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-6)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>Signals checked every 4 hours</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>Pages refresh automatically every month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>10 battlecards a month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-4" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>100 chat questions a month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-5" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>2 creators + 8 viewers</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-gradient"><svg viewBox="0 0 24 24" fill="none" width="16" height="16" aria-hidden="true"><defs><linearGradient id="cix-check-pro-7" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff6b6b" /><stop offset="25%" stop-color="#c44dff" /><stop offset="50%" stop-color="#6366f1" /><stop offset="75%" stop-color="#0ea5e9" /><stop offset="100%" stop-color="#10b981" /></linearGradient></defs><path d="M20 6 9 17l-5-5" stroke="url(#cix-check-pro-7)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span><span>API &amp; MCP access</span></div>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com/login?plan=pro&amp;cycle=monthly" data-href-monthly="https://app.usesignallabs.com/login?plan=pro&amp;cycle=monthly" data-href-annual="https://app.usesignallabs.com/login?plan=pro&amp;cycle=yearly" class="ai-gradient-btn">Get Pro</a>
-                    </div>
-                </div>
-
-                <!-- Ultra -->
-                <div class="plan-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Ultra</h3>
-                        <div class="pricing-price"><span class="price-amount" data-monthly="$99" data-annual="$79">$99</span><span class="price-period" data-monthly="per month" data-annual="per month, billed $948 yearly">per month</span></div>
-                        <p class="pricing-description">Your whole market, for your whole go-to-market team.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-weight:600">Everything in Pro, plus:</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>15 competitors tracked</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Signals checked every hour</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>50 battlecards a month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>500 chat questions a month</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>5 creators + 25 viewers</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Higher API &amp; MCP limits</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Priority support</span></div>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=monthly" data-href-monthly="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=monthly" data-href-annual="https://app.usesignallabs.com/login?plan=ultra&amp;cycle=yearly" class="ai-gradient-btn">Get Ultra</a>
-                    </div>
-                </div>
-
-                <!-- Enterprise -->
-                <div class="plan-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Enterprise</h3>
-                        <div class="pricing-price"><span class="price-amount">Custom</span><span class="price-period">Tailored to your team</span></div>
-                        <p class="pricing-description">Custom limits, onboarding and CI strategy calls.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-weight:600">Everything in Ultra, plus:</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom number of competitors</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom signal frequency</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom battlecard, chat and API limits</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Custom seats</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Onboarding for your team</span></div>
-                        <div class="feature-item"><span class="feature-icon feature-icon-free"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Monthly CI strategy calls</span></div>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="https://calendly.com/emre-usesignallabs/30min" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Talk to us</a>
-                    </div>
-                </div>
-            </div>
-
-            <p class="pricing-email-note">Prices in USD. All plans require a company email; personal addresses (Gmail, Outlook, etc.) are not supported. <a href="pricing" style="color: var(--primary); font-weight: 600;">Compare plans in detail →</a></p>
-        </div>
-    </section>
-
-    <!-- Demo Request Section -->
-    <section class="content-section" id="waitlist" style="background: var(--bg-secondary); padding-bottom: var(--space-16);">
-        <div class="container">
-            <div class="waitlist-content">
-                <div class="waitlist-text">
-                    <h2>Schedule a Demo</h2>
-                    <p>See how Signal Labs CIx automates competitive intelligence for your team.</p>
-                    <div class="waitlist-benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-                            <span>A live walkthrough tailored to your competitors and use cases</span>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
-                            <span>A sample battlecard built for your market</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Calendly inline widget begin -->
-                <!-- min-width:0 rather than Calendly's suggested 320px: with the
-                     container's 16px gutters, 320 overflows a 320px-wide phone. -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/emre-usesignallabs/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:0;width:100%;height:600px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -1236,7 +830,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1255,7 +848,7 @@
                     <!-- Mobile-only sections - shown only on mobile -->
                     <div class="footer-column footer-brand-extra">
                         <h3>Platform</h3>
-                        <a href="/">CIx Platform</a>
+                        <a href="/platform">CIx Platform</a>
                         <a href="solutions">CI Solutions</a>
                         <a href="services">CI Services</a>
                     </div>
@@ -1284,7 +877,7 @@
                 <div class="footer-links">
                     <div class="footer-column footer-hide-mobile">
                         <h3>Platform</h3>
-                        <a href="/">CIx Platform</a>
+                        <a href="/platform">CIx Platform</a>
                         <a href="solutions">CI Solutions</a>
                         <a href="services">CI Services</a>
                     </div>
@@ -1932,5 +1525,7 @@
             });
         });
     </script>
+    <script src="modern.js?v=1" defer></script>
+    <script src="hero-signals.js?v=1" defer></script>
 </body>
 </html>

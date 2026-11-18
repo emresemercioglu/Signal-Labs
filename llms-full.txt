@@ -8,7 +8,7 @@
 > Per-page Markdown: append .md to any URL, or send Accept: text/markdown
 > MCP server card: https://usesignallabs.com/.well-known/mcp.json
 >
-> Generated: 2026-07-28 | 50 pages
+> Generated: 2026-11-18 | 51 pages
 
 
 ---
@@ -16,378 +16,207 @@
 # Signal Labs | AI-Powered Competitive Intelligence Platform
 Source: https://usesignallabs.com/
 
-AI-powered competitive intelligence platform
+[New: Query CIx from Claude, Cursor and your own tools](https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server)
 
-# Competitive intelligence  
-that updates itself
+# Competitive intelligence that updates itself
 
-CIx turns competitor noise into living intelligence pages, real-time signals, and battlecards, comparisons and emails your GTM team can send as‑is.
+CIx watches your competitors, rewrites their pages the moment they move, and turns every change into battlecards, talk tracks and emails your team can send as-is.
 
-[Start Free →](https://app.usesignallabs.com/login) [Book Demo](#waitlist)
+[Start Free →](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
 Every claim links to its source Every signal comes with an action Battlecards in minutes, not weeks Free plan, no credit card
 
 app.usesignallabs.com/competitors
 
- ![Signal Labs CIx competitor dashboard showing living competitor pages for AlphaSense, Crayon and Klue with real-time signals, recommended actions and a market positioning map](https://usesignallabs.com/assets/product/competitors-grid.png)
+*Illustration: the CIx competitors dashboard: a market positioning map and living pages for three competitors. A new signal arrives for Globex and its position moves, then a new signal arrives for Initech and its position shifts.*
 
-### Source-linked, always
+How it works
 
-Every claim in a competitor page or battlecard carries a link to the page it came from, so your team can verify an insight before repeating it to a buyer.
+## From competitor noise to work your team can ship
 
-### Living, not archived
+CIx watches every page, post and filing, scores what changed, and drafts what to do about it.
 
-Competitor pages re-scrape, re-analyse and rewrite themselves as the market moves. There is no quarterly refresh project and no document that quietly goes stale.
+*Illustration: From market noise to intelligence*
 
-### Action, not just alerts
+1
 
-A competitor launch does not arrive as a notification you have to interpret. It arrives as a drafted comparison page, a battlecard edit, or an email your reps can send.
+**Watch**
 
-### Wherever you work
+Competitor sites, pricing, changelogs, jobs, reviews and news, checked on your plan's schedule.
 
-Use it in the dashboard, pull it through the API, or query it from Claude, Cursor and other MCP clients. The intelligence is not trapped in a slide deck.
+2
 
-## The questions behind every competitive deal
+**Score**
 
-Four things your team needs to know before the call. CIx answers each one, and links every answer back to its source.
+Each change is deduplicated, rated 1–10 for how much it matters and linked to its source.
 
-[
+3
 
-### Who are we actually competing with?
+**Act**
 
-CIx proposes competitors at both the company and the product level, explains why each one belongs on the list, and builds a living intelligence page for the ones you keep.
-
-](#competitor-pages)[
-
-### What did they just change?
-
-Launches, pricing moves, funding, hiring and repositioning land in one feed, each scored 1–10 for importance so a homepage tweak never reads like a new pricing tier.
-
-](#signals)[
-
-### How do we win this deal?
-
-Battlecards, talk tracks and objection handling written for the team using them — plus a Battle Room where you work one specific deal with CIx answering in the thread.
-
-](#battlecards)[
-
-### Where are we exposed?
-
-Side-by-side comparisons, SWOT and a positioning map that show where you pull ahead, where a rival is genuinely stronger, and which gap is worth closing first.
-
-](#competitor-pages)
+Battlecards update and talk tracks, emails and comparison pages are drafted for you to approve.
 
 Living competitor pages
 
-## A living intelligence page for every rival you track
+## A living intelligence page for every rival
 
-Point CIx at a competitor and it builds a complete page: offerings, positioning, pricing posture, marketing motion, strengths and weaknesses, and a side-by-side comparison against you. Then it keeps that page current on its own.
+Point CIx at a competitor and it builds the whole page: offerings, positioning, pricing, strengths, weaknesses and a head-to-head against you. Then it keeps it current on its own.
 
-**Rebuilt as the market moves.** Re-scrapes and rewrites itself when the competitor ships, repositions or changes pricing.
+**Rebuilt as the market moves.** Rewrites itself when the competitor ships, repositions or changes pricing.
 
-**Head-to-head scoring.** See exactly where you lead, where you trail, and which gap is costing you deals.
+**Head-to-head scoring.** See where you lead, where you trail and which gap is costing deals.
 
-**Everything in one place.** Offerings, strategy, signals, battlecards, documents and sources — one page, not eleven tabs of research.
+**Everything in one place.** Offerings, signals, battlecards and sources on one page.
 
 [See competitor monitoring](https://usesignallabs.com/use-cases/competitor-monitoring)
 
-app.usesignallabs.com/competitors/klue
-
- ![A Signal Labs living competitor page for Klue, showing tabs for offerings, marketing, strategy, signals and battlecards, a head-to-head comparison radar, and a last-refreshed timestamp](https://usesignallabs.com/assets/product/competitor-page-crop.png)
+*Animation: Acme changes its pricing page. CIx detects the change, rewrites the pricing row with the new price and its source, marks the page updated just now and adjusts the head-to-head score.*
 
 Signal to action engine
 
-## When a competitor moves, CIx acts on it for you
+## When a competitor moves, CIx acts on it
 
-CIx watches competitor sites, launches, pricing changes, hiring, funding and news, scores what matters, and turns each meaningful move into specific work your team can approve — not another feed to read.
+Every meaningful move becomes specific work your team can approve, not another feed to read.
 
-**Scored, not dumped.** Every signal gets an importance score, so a pricing change outranks a blog post.
+**Scored, not dumped.** A pricing change outranks a blog post.
 
-**Drafted, not described.** Each signal produces real output: a comparison table, landing page, email draft or battlecard edit.
+**Drafted, not described.** A comparison page, email or battlecard edit, ready to review.
 
-**Approve or discard.** Review the diff, apply it, and your competitor pages and battlecards update with it.
+**Approve or discard.** Apply it and your pages and battlecards update with it.
 
 [See how signals become actions](https://usesignallabs.com/use-cases/competitor-monitoring)
 
-app.usesignallabs.com/actions
+*Animation: a signal arrives that Globex launched an AI assistant and is scored 9 out of 10. CIx drafts a battlecard update, a cursor clicks Approve, and the battlecard is updated with Sales notified.*
 
- ![The Signal Labs actions inbox showing AI-proposed work generated from competitor signals, including a comparison landing page, a counter-positioning website snippet, a comparison table and a battlecard update, each linked to its source article](https://usesignallabs.com/assets/product/actions-crop-v2.png)
+Battlecards & Battle Rooms
 
-Instant battlecard generation
+## Battlecards in minutes. Answers mid-deal.
 
-## Battlecards in seconds, not weeks
+Pick a team and a competitor and CIx writes the card from live intelligence. When a deal gets hard, open a Battle Room and ask @CIx.
 
-Pick a team, pick a competitor, and CIx writes the card — positioning, strengths and weaknesses, objection handling, win strategies and discovery questions, built from live intelligence rather than last quarter's research.
+**Written for the team that reads it.** Sales, marketing, leadership or the full landscape.
 
-**Written for the team that reads it.** Sales, product marketing, leadership or the full landscape — each gets a different card from the same intelligence.
+**@CIx joins the deal.** Ask for a counter-position in a Battle Room and get talk tracks back.
 
-**Refine in plain language.** Ask for a sharper objection section or a different angle and the card is rewritten.
-
-**Every claim carries its source.** Reps can check a number before they say it out loud on a call.
+**Every claim carries its source.** Reps can check it before they say it on a call.
 
 [See battlecard generation](https://usesignallabs.com/use-cases/battlecard-generation)
 
-Hooli Competitive Battlecard Updated 2h ago
+*Animation: a battlecard for You versus Acme builds itself section by section with a sourced response to the price objection. Then in a Battle Room a rep asks @CIx about Acme's new price and gets an answer drawn from the battlecard.*
 
-Sales Product Marketing Leadership Landscape Click to switch battlecard type
+Built for your team
 
-### Overview
+## One source of truth, shaped for whoever is using it
 
-Hooli dominates enterprise CI with [\[800+ customers\]](#) and [\[$72M ARR\]](#), but requires a [\[3-month implementation\]](#) and 2-3 dedicated analysts. Their platform relies on manual workflows with limited AI automation.
+### Walk into every competitive deal with the answer ready
 
-#### Their Strengths
+- Battlecards that rewrite themselves when a rival moves
 
-**Market Share:** [800+ customers](#), 38% enterprise CI market share
+- Ask @CIx in a Battle Room mid-deal and get talk tracks back
 
-**Ecosystem:** [50+ integrations](#) including Salesforce, HubSpot, Gong
+- Every claim sourced, so reps can repeat it with confidence
 
-#### Our Advantages
+[CIx for sales →](https://usesignallabs.com/solutions/sales)
 
-**AI-First Architecture:** [Battlecards in minutes](#) vs 2-3 weeks manual effort
+*Illustration: in a Battle Room, a rep asks how to counter Acme's price cut and @CIx answers with a talk track and its source*
 
-**Rapid Deployment:** [Same-day setup](#) vs Hooli's 3-month rollout
+### Keep positioning sharp without a research project
 
-#### Key Talking Points
+- Living pages and a positioning map that maintain themselves
 
-**"Built for Speed"**  
-CI from day one with AI automation - no 6-month rollout.
+- Comparison pages, snippets and launch responses drafted for you
 
-**"Team-Ready"**  
-Tailored battlecards for Sales, Product, Marketing & Leadership.
+- Approve changes once and they update everywhere
 
-**"Always Current"**  
-Real-time signals keep your team ahead - no stale intel.
+[CIx for product marketing →](https://usesignallabs.com/solutions/marketing)
 
-#### Objection Handling
+*Illustration: an approval inbox with three drafted actions after a Globex launch*
 
-"Hooli integrates with our CRM already"
+### See what competitors ship, as they ship it
 
-**How to respond:** CIx connects to your stack in minutes with an open API - not a 3-month integration project.
+- Launches and changelog updates scored for importance
 
-"Our team is used to Hooli"
+- Head-to-head scoring shows where you lead and where you trail
 
-**How to respond:** Used to it, or stuck with it? CIx saves your teams 20+ hours a week on manual battlecard creation.
+- Sourced evidence for roadmap conversations, not hunches
 
-#### Discovery Questions
+[CIx for product teams →](https://usesignallabs.com/solutions/product)
 
-"What does your current CI workflow look like?"
+*Illustration: competitor launches this week scored for importance, and head-to-head scores against Acme*
 
-**Listen for:** Manual processes, spreadsheet tracking, quarterly updates
+### Know where you stand in your market
 
-**How to position:** "CIx automates that - same-day setup, real-time updates."
+- A positioning map that stays current on its own
 
-"How many people touch your battlecards today?"
+- Scheduled digests by email or Slack for people who never open dashboards
 
-**Listen for:** Dedicated analysts, PMM bottleneck, outdated content
+- Analytics on what your team actually uses
 
-**How to position:** "CIx generates and updates battlecards automatically - zero analyst dependency."
+[CIx for leadership →](https://usesignallabs.com/solutions/leadership)
 
-### Overview
+*Illustration: a market positioning map with you and three competitors, and a Monday digest of notable moves*
 
-Hooli's CI platform is built on legacy architecture requiring 3-month implementations. Their monolithic approach limits customization and slows feature velocity compared to CIx's modular, AI-first design.
+### Source-linked, always
 
-#### Side-by-Side Comparison
+Every claim links to the page it came from, so your team can check it before repeating it.
 
-| Feature | CIx | Hooli |
-| --- | --- | --- |
-| Implementation | Same day | 3-6 months |
-| AI Battlecards | Multi-focus | Basic |
-| Integrations | Open API | 50+ |
-| Signal Tracking | Real-time | Weekly |
+### Living, not archived
 
-#### Competitor Offerings
+Pages rewrite themselves as the market moves. No quarterly refresh project.
 
-Hooli CI Platform
+### Action, not just alerts
 
-Core CI suite with battlecards, dashboards, and analytics. Manual creation workflow.
+A competitor launch arrives as drafted work, not a notification to interpret.
 
-**Limitation:** No AI-native battlecard generation. Requires dedicated analysts for updates.
+### Wherever you work
 
-Hooli Integrations Hub
+Use it in the app, by email or Slack, or from Claude, Cursor and the API.
 
-50+ pre-built integrations with CRM, enablement, and collaboration tools.
+Works where your team works
 
-**Limitation:** Closed ecosystem. Custom integrations require professional services engagement.
+Web app Slack Email digests Claude Cursor MCP server REST API
 
-#### Product Development Recommendations
+Pricing
 
-High **Native CRM embedding** - Build Salesforce/HubSpot widgets to counter Hooli's integration depth.
+## Pricing that scales with you
 
-Med **Win/loss automation** - Auto-capture deal outcomes to build competitive pattern library.
+Start free. Add competitors, battlecards and seats as your team grows.
 
-Med **Role-based dashboards** - Deliver tailored views for Sales, Product, and Marketing to differentiate from Hooli's one-size-fits-all UI.
+Free
 
-### Overview
+$0forever
 
-Hooli positions as the "enterprise standard" for CI but struggles with perception of being slow and outdated. Their NPS decline signals a messaging vulnerability around speed and innovation.
+2 competitors · daily signals · 1 battlecard a month
 
-#### Digital Presence
+[Start free](https://app.usesignallabs.com/login)
 
-~120K
+Most popular
 
-Monthly web visits
+Pro
 
-15K
+$29/month
 
-LinkedIn followers
+5 competitors · signals every 4 hours · 10 battlecards
 
-2x/wk
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
-Blog frequency
+Ultra
 
-#### Competitor Messaging Pillars
+$99/month
 
-"Enterprise-grade CI platform"
+15 competitors · hourly signals · 50 battlecards
 
-Hooli positions scale and security as core differentiators, targeting CISOs and VP-level buyers.
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=monthly)
 
-**Counter:** Enterprise-grade doesn't mean enterprise-speed. CIx delivers the same security with same-day setup.
+Enterprise
 
-"Proven at scale with 800+ customers"
+Custom
 
-Leverages customer count as social proof, often citing Fortune 500 logos.
+Custom limits, onboarding and CI strategy calls
 
-**Counter:** Scale without satisfaction. Ask about their renewal rates and NPS trajectory.
+[Talk to us](https://calendly.com/emre-usesignallabs/30min)
 
-#### Marketing & Growth Recommendations
-
-High **Counter "enterprise-grade" narrative** - Emphasize AI-first speed and same-day value vs their 3-month rollout.
-
-Med **Target their NPS decline** - Create comparison content highlighting customer satisfaction trends.
-
-Med **Own "real-time CI" category** - Position against their quarterly update model in content and SEO.
-
-### Overview
-
-Hooli holds 38% enterprise CI market share but faces declining satisfaction and increased churn to AI-first alternatives. Their enterprise-only focus leaves significant mid-market and SMB opportunity.
-
-#### Financial & Funding Overview
-
-$72M
-
-Est. ARR
-
-Series D
-
-Funding stage
-
-~450
-
-Employees
-
-#### Market Trends
-
-**AI-native CI platforms** gaining enterprise traction, displacing legacy manual tools.
-
-**Buyer expectations shifting** toward self-service CI with real-time updates over quarterly reports.
-
-**Consolidation accelerating** as legacy CI vendors face M&A pressure from AI-native entrants.
-
-#### Competitor Strategic Bets
-
-Short-term (0-12 months)
-
-Retrofitting AI features onto legacy platform. Launching "AI assistant" to match market demand.
-
-Long-term (1-5 years)
-
-Expanding into revenue intelligence and deal analytics. Potential M&A to acquire AI capabilities.
-
-#### Strategic Leadership Recommendations
-
-High **Accelerate mid-market expansion** - Hooli's enterprise-only focus leaves mid-market underserved. Capture before they move downmarket.
-
-High **Explore integration partnerships** - Their closed ecosystem creates openings for CRM and enablement platform partnerships.
-
-Med **Monitor acquisition signals** - Declining NPS and market pressure may trigger strategic moves. Track leadership changes.
-
-#### Market Positioning Map
-
-#### Threat Level Assessment
-
-**Hooli** - Market leader, 800+ customers, 38% enterprise CI share. Legacy architecture. High
-
-**Pied Piper** - Aggressive pricing, growing mid-market. AI capabilities expanding. Med
-
-**Acme Corp** - Website monitoring and competitive newsletters. No battlecard automation. Low
-
-#### Market Gaps & Opportunities
-
-Unified AI CI for all GTM teams
-
-No competitor offers team-specific tuning for Sales, Marketing, Product & Leadership.
-
-Source-attributed AI battlecards
-
-Competitors treat AI as a black box. Every CIx insight links back to verified sources.
-
-#### Market Trends
-
-**Agentic AI** - Vendors moving from summarization to autonomous signal-driven actions.
-
-**Consolidation pressure** - Legacy CI vendors acquiring or being acquired as AI transforms CI.
-
-**Self-serve demand** - Teams want CI insights to be self-service and available in real-time.
-
-Battle room
-
-## Win deals together in the Battle Room
-
-Open a room for a live deal, pull in the competitors involved, and bring Sales, Product and Marketing into one thread. Ask @CIx a question and it answers with your own competitive intelligence behind it.
-
-**Deal-specific, not general.** Each room carries its own client, competitor set and attachments.
-
-**@CIx joins the conversation.** Ask for a counter-position and get a usable answer with talk tracks, not a document link.
-
-**Deliverables land in the room.** Ask for a battlecard, comparison or email and it is drafted and collected where the deal is being worked.
-
-app.usesignallabs.com/battle-rooms
-
- ![A Signal Labs Battle Room for the PipedPiper deal, where a rep asks how to counter AlphaSense on research depth and CIx replies with a counter-position, specific talk tracks and a recommendation for the call](https://usesignallabs.com/assets/product/battle-room-crop.png)
-
-## What CIx actually hands your team
-
-Not a dashboard to interpret — finished work, ready to review and send.
-
-**Battlecards** Tailored per team and per deal — sales, product marketing, leadership, or the whole landscape at once.
-
-**Comparison tables & pages** Side-by-side you-versus-them content for your website, ready for paid and organic capture.
-
-**Objection handling & talk tracks** The exact words reps use when a competitor comes up mid-deal, grounded in what that competitor actually claims.
-
-**Sales emails & snippets** Drafted responses to a competitor launch, ready to send the same day it happens.
-
-**SWOT & win strategies** Where each rival is strong, where they are exposed, and the play that beats them.
-
-**Market positioning map** Where every competitor sits on the two axes that decide your deals — and where you sit against them.
-
-**Ask CIx** Ask a question in plain language and get an answer drawn from your competitive intelligence, with sources.
-
-**API & MCP access** Pull the same intelligence into your own tools, or query it directly from Claude, Cursor and other MCP clients.
-
-## Built for every go-to-market role
-
-One source of competitive truth, shaped differently for the team using it.
-
-[
-
-### Sales Enablement →
-
-Battlecards and talking points that help reps handle objections and win more deals.
-
-](https://usesignallabs.com/use-cases/sales-enablement)[
-
-### Product Positioning →
-
-Market insights that sharpen your positioning and shape your product roadmap.
-
-](https://usesignallabs.com/use-cases/product-positioning)[
-
-### Competitor Monitoring →
-
-Real-time competitor signals so your team responds before the market does.
-
-](https://usesignallabs.com/use-cases/competitor-monitoring)
+[Compare every plan in detail →](https://usesignallabs.com/pricing)
 
 ## The questions teams ask before they switch
 
@@ -415,121 +244,158 @@ Adding a competitor takes about a minute, and the first living page is generated
 
 Yes. Signal Labs exposes a REST API and a hosted MCP server, so you can pull competitor intelligence into your own tools or query it directly from MCP clients such as Claude and Cursor. Official Python and JavaScript SDKs are available.
 
-## Pricing that scales with you
+## Stop researching competitors. Start beating them.
 
-Start free. Add competitors, battlecards and seats as your team grows.
+Track your top two competitors free: living pages, daily signals and a battlecard every month. No credit card, no expiry.
 
-Monthly Yearly (save about 20%)
+[Start Free](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
-### Free
+---
 
-$0
+# CIx Platform: Competitive Intelligence Features - Signal Labs
+Source: https://usesignallabs.com/platform
 
-Free forever
+The CIx platform
 
-See Signal Labs work on your top competitors.
+# Watch every competitor. Act on every move.
 
-2 competitors tracked, each a living page
+Living competitor pages, scored signals, drafted actions, battlecards, Battle Rooms and an API, all built on intelligence that links back to its source.
 
-Daily signals + suggested-actions inbox
+[Start Free →](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
-1 battlecard a month
+Free for 2 competitors No credit card Every claim sourced
 
-10 chat questions a month
+![The CIx competitor overview with a market positioning map and living pages for each competitor](https://usesignallabs.com/assets/product/competitors-grid.png)
 
-1 creator + 2 viewers
+Living competitor pages
+
+### A page for every competitor that maintains itself
+
+Point CIx at a competitor and it builds the whole picture, then rewrites it as the competitor changes.
+
+- **Offerings, positioning, pricing and SWOT** on one page, not eleven tabs of research.
+
+- **Head-to-head scoring** across product, usability, performance, brand, support and momentum.
+
+- **A market positioning map** that stays current instead of being redrawn in a slide.
+
+- **Full version history**: see what changed, when, and roll it back.
+
+![A living competitor page with an overview, SWOT and head-to-head scoring](https://usesignallabs.com/assets/product/competitor-page.png)
+
+Signals & actions
+
+### Every competitor move, scored and turned into work
+
+Websites, pricing, launches, funding, hiring and news are checked on your plan's schedule: daily on Free, every 4 hours on Pro, hourly on Ultra.
+
+- **Scored 1–10** so a pricing change outranks a blog post.
+
+- **Drafted for you**: a comparison page, battlecard edit, website snippet or email.
+
+- **Approve, edit or discard**, and pages and battlecards update with it.
+
+![The Actions inbox with drafted responses to competitor moves](https://usesignallabs.com/assets/product/actions-inbox.png)
+
+Battlecards
+
+### Battlecards in minutes, written for whoever reads them
+
+Built from live intelligence rather than last quarter's research.
+
+- **Tailored to the team**: sales, marketing, product or leadership.
+
+- **Landscape cards** compare several competitors in one view.
+
+- **Objection handling, discovery questions and win strategies**, refined in plain language.
+
+![A CIx battlecard with a head-to-head radar and competitor summary](https://usesignallabs.com/assets/product/battlecard.png)
 
 Battle Rooms
 
-Email support
+### Work live deals together, with @CIx in the thread
 
-[Start Free](https://app.usesignallabs.com/login)
+One room per deal, with the client, the competitors involved and everyone who can help win it.
 
-MOST POPULAR
+- **Ask @CIx** for a counter-position and get talk tracks, not a document link.
 
-### Pro
+- **Mention teammates** and they're notified. Deliverables land in the room.
 
-$29/month, or $24/month billed yearly ($288/year)
+- **Close as won or lost** with a note, so the reasoning stays with the deal.
 
-Track your core competitive set and arm your team.
+![A Battle Room for a live deal with @CIx answering in the thread](https://usesignallabs.com/assets/product/battle-room.png)
 
-Everything in Free, plus:
+And everything around it
 
-5 competitors tracked
+## The rest of the toolkit
 
-Signals checked every 4 hours
+### Ask CIx
 
-Pages refresh automatically every month
+Ask a question in plain language and get an answer drawn from your competitive intelligence, with sources. In the app, in a Battle Room or from Slack.
 
-10 battlecards a month
+### Digests & newsletters
 
-100 chat questions a month
+Scheduled newsletters by email or Slack for the people who will never open a dashboard.
 
-2 creators + 8 viewers
+### Analytics
 
-API & MCP access
+Battlecards created, chat questions, actions approved, and which pages and battlecards actually get read.
 
-[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
+### Data library
 
-### Ultra
+Upload PDFs, decks and documents. They're tagged to the competitors they mention and used in battlecards, answers and drafts.
 
-$99/month, or $79/month billed yearly ($948/year)
+### Version history
 
-Your whole market, for your whole go-to-market team.
+Every page and battlecard keeps its history, so you can see what changed and when, and roll back.
 
-Everything in Pro, plus:
+### Creators & viewers
 
-15 competitors tracked
+Creators build and approve; viewers read and ask. Seats scale with your plan.
 
-Signals checked every hour
+API & MCP
 
-50 battlecards a month
+## Your competitive intelligence, wherever you work
 
-500 chat questions a month
+Everything in the app is available through a REST API and an MCP server, so you can query it from Claude, Cursor and your own tools. Included on Pro and up.
 
-5 creators + 25 viewers
+[Read the docs →](https://usesignallabs.com/docs)
 
-Higher API & MCP limits
+terminal
 
-Priority support
+```
 
-[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=monthly)
+# Add CIx to Claude Code
+ $ claude mcp add signallabs -- npx -y signallabs-mcp
 
-### Enterprise
+ # Then just ask
+ > What are the latest competitive signals?
 
-Custom
+ # Or call the REST API
+ $ curl https://app.usesignallabs.com/api/v1/companies \
+    -H "Authorization: Bearer sl_live_..."
 
-Tailored to your team
+```
 
-Custom limits, onboarding and CI strategy calls.
+Sources & trust
 
-Everything in Ultra, plus:
+## Intelligence your team can repeat with confidence
 
-Custom number of competitors
+CIx is built so nothing reaches a buyer that nobody can check.
 
-Custom signal frequency
+**Every claim is sourced**
 
-Custom battlecard, chat and API limits
+Each statement on a page, signal or battlecard links to the page, article or filing it came from.
 
-Custom seats
+**It says when it doesn't know**
 
-Onboarding for your team
+Where CIx has no confirmation, it says so instead of filling the gap.
 
-Monthly CI strategy calls
+**You approve the changes**
 
-[Talk to us](https://calendly.com/emre-usesignallabs/30min)
+Drafted actions wait for review, so nothing updates your content without a person saying yes.
 
-Prices in USD. All plans require a company email; personal addresses (Gmail, Outlook, etc.) are not supported. [Compare plans in detail →](https://usesignallabs.com/pricing)
-
-## Schedule a Demo
-
-See how Signal Labs CIx automates competitive intelligence for your team.
-
-A live walkthrough tailored to your competitors and use cases
-
-A sample battlecard built for your market
-
-## Stop researching competitors. Start beating them.
+## See it on your own competitors
 
 Track your top two competitors free: living pages, daily signals and a battlecard every month. No credit card, no expiry.
 
@@ -2057,49 +1923,19 @@ Source: https://usesignallabs.com/use-cases/market-intelligence
 
 Track market trends, industry dynamics, and competitive movements. Understand how competitive moves connect to broader market forces with continuous market intelligence.
 
-[Book Demo](https://usesignallabs.com/use-cases/../contact) [Start Free →](https://app.usesignallabs.com)
+[Book Demo](https://usesignallabs.com/contact) [Start Free →](https://app.usesignallabs.com)
 
 ## Endless Signals. Zero Clarity.
 
 Most companies drown in market noise — tracking competitor moves, industry shifts, and customer signals without the ability to filter what matters from what doesn't.
 
-### From Market Noise to Strategic Intelligence
+How CIx filters the market
 
-CIx filters thousands of signals into actionable market intelligence
+### From market noise to intelligence you can act on
 
-CIx filters market noise into clear intelligence: trends, context, and signals.
+Every pricing edit, job post, review and launch goes in. What comes out is scored, deduplicated and linked to its source.
 
-100% 75% 50% 25% 0%
-
-Week 0Sales team loves them. Usage is high. You're a hero.
-
-Week 1Competitor changes pricing. Your battlecard has wrong information.
-
-Week 2Rep asks "Do we have a battlecard on Competitor Y?" You don't.
-
-Week 3Reps create their own "updated" battlecards. Inconsistent messaging.
-
-Week 4Usage has dropped. Battlecards feel stale. The cycle repeats.
-
-Week 0
-
-Launch
-
-Week 1
-
-First crack
-
-Week 2
-
-Gaps appear
-
-Week 3
-
-Chaos
-
-Week 4
-
-Abandoned
+*Illustration: From market noise to intelligence*
 
 ### Isolated Data Points
 
@@ -2121,19 +1957,25 @@ Weeks spent aggregating market reports, industry news, and trend data
 
 Tracking moves without understanding market context
 
--   Competitive data **without market trends**
--   Can't predict **next competitive moves**
--   Miss **market shifts** driving competitor behavior
--   Strategy becomes **reactive** instead of proactive
+- Competitive data **without market trends**
+
+- Can't predict **next competitive moves**
+
+- Miss **market shifts** driving competitor behavior
+
+- Strategy becomes **reactive** instead of proactive
 
 ### The Solution
 
 Market intelligence connected to competitive moves
 
--   **Trend correlation:** connect competitor moves to market forces
--   **Market signals:** anticipate competitive shifts early
--   **Industry intelligence:** automated news and report aggregation
--   **Strategic context:** understand the "why" behind competitive behavior
+- **Trend correlation:** connect competitor moves to market forces
+
+- **Market signals:** anticipate competitive shifts early
+
+- **Industry intelligence:** automated news and report aggregation
+
+- **Strategic context:** understand the "why" behind competitive behavior
 
 ## Market Intelligence That Connects the Dots
 
@@ -2143,49 +1985,61 @@ Track competitive moves within market context. Connect competitor behavior to in
 
 Monitor industry trends, market shifts, and broader forces affecting your competitive landscape. Stay ahead of market dynamics.
 
--   Industry trend aggregation
--   Market shift identification
--   Economic and regulatory signals
+- Industry trend aggregation
+
+- Market shift identification
+
+- Economic and regulatory signals
 
 ### Competitive Move Contextualization
 
 Connect competitive moves to market trends. Understand why competitors launch features, change pricing, or enter markets.
 
--   Link moves to market forces
--   Understand competitive strategy drivers
--   Predict next competitive moves
+- Link moves to market forces
+
+- Understand competitive strategy drivers
+
+- Predict next competitive moves
 
 ### Industry Intelligence Aggregation
 
 Automated aggregation of industry news, analyst reports, and market signals. Stay informed without manual research.
 
--   Automated industry news monitoring
--   Analyst report synthesis
--   Market signal detection
+- Automated industry news monitoring
+
+- Analyst report synthesis
+
+- Market signal detection
 
 ### Strategic Market Intelligence
 
 High-level market intelligence for leadership and strategy teams. Move beyond tactical CI to strategic market understanding.
 
--   Executive-level market insights
--   Strategic opportunity identification
--   Market threat early warning
+- Executive-level market insights
+
+- Strategic opportunity identification
+
+- Market threat early warning
 
 ### Competitive + Market Integration
 
 One platform for both competitive and market intelligence. Stop switching between tools to understand the full picture.
 
--   Unified intelligence platform
--   Competitive data + market context
--   Complete strategic picture
+- Unified intelligence platform
+
+- Competitive data + market context
+
+- Complete strategic picture
 
 ### Predictive Market Intelligence
 
 Anticipate market shifts before they happen. Use trend data and competitive signals to stay ahead of industry changes.
 
--   Trend-based predictions
--   Early market shift detection
--   Proactive strategy recommendations
+- Trend-based predictions
+
+- Early market shift detection
+
+- Proactive strategy recommendations
 
 ## Aggregate Market Intelligence from Every Source
 
@@ -2195,49 +2049,61 @@ CIx monitors market trends, industry dynamics, and competitive movements across 
 
 ### Industry News
 
--   Automated news monitoring
--   Industry trend identification
--   Market signal detection
+- Automated news monitoring
+
+- Industry trend identification
+
+- Market signal detection
 
 ![Analyst Reports](https://img.logo.dev/gartner.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true)
 
 ### Analyst Reports
 
--   Gartner & Forrester insights
--   Market research synthesis
--   Analyst predictions tracking
+- Gartner & Forrester insights
+
+- Market research synthesis
+
+- Analyst predictions tracking
 
 ![Financial Data](https://img.logo.dev/crunchbase.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true)
 
 ### Financial Data
 
--   Funding rounds & valuations
--   Earnings & revenue signals
--   M&A activity tracking
+- Funding rounds & valuations
+
+- Earnings & revenue signals
+
+- M&A activity tracking
 
 ![Social Media](https://img.logo.dev/linkedin.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true)
 
 ### Social Media
 
--   Industry sentiment tracking
--   Thought leader insights
--   Real-time market conversations
+- Industry sentiment tracking
+
+- Thought leader insights
+
+- Real-time market conversations
 
 ![Regulatory Data](https://img.logo.dev/sec.gov?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true)
 
 ### Regulatory Data
 
--   Compliance & regulation changes
--   Policy impact analysis
--   Industry legislation tracking
+- Compliance & regulation changes
+
+- Policy impact analysis
+
+- Industry legislation tracking
 
 ![User Reviews](https://img.logo.dev/g2.com?token=pk_KHNxk-qeTFWvMVVS6lOgvQ&retina=true)
 
 ### User Reviews
 
--   Customer sentiment & satisfaction trends
--   Competitive win/loss signals from reviews
--   Feature gaps & product feedback patterns
+- Customer sentiment & satisfaction trends
+
+- Competitive win/loss signals from reviews
+
+- Feature gaps & product feedback patterns
 
 Market Intelligence Drives ROI
 
@@ -2249,35 +2115,51 @@ Monitor market intelligence effectiveness, measure strategic impact, and prove R
 
 ### Market Intelligence Capture
 
--   •Market trends tracked
--   •Industry signals monitored
--   •Competitive moves contextualized
--   •Market force identification
--   •Intelligence breadth coverage
+- •Market trends tracked
+
+- •Industry signals monitored
+
+- •Competitive moves contextualized
+
+- •Market force identification
+
+- •Intelligence breadth coverage
 
 ### Trend Analysis
 
--   •Market trend velocity
--   •Industry shift indicators
--   •Competitive pattern detection
--   •Market timing insights
--   •Trend correlation scores
+- •Market trend velocity
+
+- •Industry shift indicators
+
+- •Competitive pattern detection
+
+- •Market timing insights
+
+- •Trend correlation scores
 
 ### Competitive Context
 
--   •Move-to-trend correlation
--   •Market force attribution
--   •Strategic intent analysis
--   •Prediction accuracy rating
--   •Intelligence depth index
+- •Move-to-trend correlation
+
+- •Market force attribution
+
+- •Strategic intent analysis
+
+- •Prediction accuracy rating
+
+- •Intelligence depth index
 
 ### Strategic Impact ROI
 
--   •Decision quality improvement
--   •Threat avoidance metrics
--   •Opportunity capture rate
--   •Strategic timing advantage
--   •Intelligence value index
+- •Decision quality improvement
+
+- •Threat avoidance metrics
+
+- •Opportunity capture rate
+
+- •Strategic timing advantage
+
+- •Intelligence value index
 
 ### Market Intelligence ROI
 
@@ -2393,7 +2275,7 @@ Intelligence for deals and conversations
 
 Learn more →
 
-](https://usesignallabs.com/use-cases/../solutions/sales)[
+](https://usesignallabs.com/solutions/sales) [
 
 ### For Marketing Teams
 
@@ -2401,7 +2283,7 @@ Positioning and messaging alignment
 
 Learn more →
 
-](https://usesignallabs.com/use-cases/../solutions/marketing)[
+](https://usesignallabs.com/solutions/marketing) [
 
 ### For CI Teams
 
@@ -2409,13 +2291,13 @@ Scale competitive intelligence organization-wide
 
 Learn more →
 
-](https://usesignallabs.com/use-cases/../solutions/competitive-intelligence)
+](https://usesignallabs.com/solutions/competitive-intelligence)
 
 ## Stop Tracking Moves. Start Understanding Why.
 
 Transform competitive data into strategic market intelligence with context-driven insights.
 
-[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/use-cases/../contact)
+[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/contact)
 
 ---
 
@@ -3937,259 +3819,145 @@ Whether you're a sales team closing deals, a marketing team positioning your bra
 # Competitive Intelligence for Sales & Revenue Teams | CIx
 Source: https://usesignallabs.com/solutions/sales
 
-# Competitive Intelligence for Sales & Revenue Teams
+CIx for Sales & Revenue teams
 
-Real-time battlecards, competitive insights, and win strategies that help your revenue team close more deals. From discovery to close - give your sales team the competitive edge they need.
+# Walk into every competitive deal with the answer ready
 
-[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/contact)
+When a rival changes pricing, ships a feature or repositions, CIx rewrites the battlecard and drafts the talk track before your next call. Every claim links to its source, so reps can repeat it with confidence.
 
-## Outdated Intelligence. Lost Deals.
+[Start Free →](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
-Manual research, outdated battlecards, and lost deals - this is the reality for most sales teams.
+Free for 2 competitors No credit card Set up in minutes
 
-### Manual Research
+![A CIx battlecard comparing Signal Labs and AlphaSense](https://usesignallabs.com/assets/product/battlecard.png)
 
-Sales reps spend hours researching competitors before big calls instead of selling.
+![A rep asks @CIx in a Battle Room how to counter a competitor and gets a counter-position with talk tracks](https://usesignallabs.com/assets/product/battle-room-crop.png)
 
-### Outdated Battlecards
+How it works
 
-Battlecards are outdated within days of being published as competitors move fast.
+## Your competitor moves on Monday. Your reps are ready by Tuesday.
 
-### Intelligence Scattered
+No quarterly battlecard refresh, no waiting on product marketing. CIx watches, rewrites and hands reps the words to use.
 
-Competitive intelligence lives in scattered Slack threads, old emails, and forgotten PDFs.
+1
 
-### Revenue Left on Table
+Monday, 9:00
 
-Lost deals. Missed quota. Revenue opportunities slipping away to better-prepared competitors.
+### A rival cuts its entry price
 
-### Win Deals with Real-Time CI
+CIx spots the pricing page change, checks it against what it already knows and scores how much it matters to your deals.
 
-Real-time competitive intelligence that meets your sales team where they work - in Salesforce, on Zoom calls, in Gmail, on Slack. Not another tool to remember. Not another PDF to download. Competitive intelligence embedded in your sales workflow.
+2
 
-## Stop Losing Deals. Start Winning with Real-Time CI
+Monday, minutes later
 
-### Discover Competitors Before They're Mentioned
+### The battlecard rewrites itself
 
-Don't wait for prospects to bring up competitors. CIx identifies which competitors might enter your deal based on your product, industry, and deal size.
+Pricing, objection handling and win themes update, with a link to the page the change came from.
 
--   Prep for competitor objections before first calls
--   Position against likely competitors from discovery
--   Never be caught off-guard by competitive mentions
+3
 
-### Real-Time Battlecards That Never Go Stale
+Tuesday
 
-Forget quarterly battlecard updates. CIx battlecards update automatically when competitors change pricing, launch features, or shift positioning.
+### A talk track lands in the inbox
 
--   Generate battlecards in 60 seconds
--   Automatic updates when competitors move
--   Always-current competitive intelligence
+A drafted email and the exact words to use are waiting in the Actions inbox and in Slack, ready to review and send.
 
-### Win with Strategic Positioning
+4
 
-Get winning talk tracks, objection handlers, and differentiation points for every competitive scenario.
+Thursday
 
--   Know exactly what to say when competitors come up
--   Consistent messaging across your team
--   Confidence in competitive conversations
+### Live deal, live answer
 
-### Ask Discovery Questions That Win
+Mid-deal, a rep asks @CIx in the Battle Room how to counter the new price and gets an answer grounded in your intelligence.
 
-CIx suggests strategic discovery questions that expose your competitors' weaknesses while highlighting your advantages.
+An example week. Timing depends on your plan's signal frequency.
 
--   Control the conversation from discovery
--   Surface pain points competitors can't solve
--   Frame evaluation criteria around your strengths
+What reps get
 
-### Meet Your Team Where Deals Happen
+## Everything a rep needs. Nothing they have to build.
 
-CIx embeds directly into your sales workflow - Salesforce, Gmail, Zoom, Slack, Gong. No context switching required.
+Finished work, not a dashboard to interpret.
 
--   CI in Salesforce opportunity records
--   Competitive prompts during Zoom/Gong calls
--   Instant answers in Slack & email
+Battlecards
 
-## Competitive Intelligence for Sales Enablement Leaders
+### Battlecards that keep up with the market
 
-### Automate Battlecards, Scale CI Across Your Team
+Generated per competitor and per deal, and rewritten when the rival moves.
 
-You spend weeks creating the perfect battlecard. It's thorough, well-researched, and formatted beautifully. You roll it out to the sales team with enthusiasm.
+- **Objection handling and discovery questions** written for the person on the call.
 
-Sound Familiar?
+- **Landscape cards** when a deal has three rivals, not one.
 
-The competitor launches a new pricing tier the next week. Your battlecard is already outdated.
+- **Every claim sourced**, so nothing gets repeated to a buyer unchecked.
 
-A rep asks a question that's answered in the battlecard - they clearly haven't read it.
+![A full CIx battlecard](https://usesignallabs.com/assets/product/battlecard.png)
 
-Another rep creates their own "updated" version, now you have inconsistent messaging.
+Battle Rooms
 
-#### How CIx Solves This
+### Work live deals together
 
-##### Automated Battlecards
+One room per deal, with the client, the competitors involved and everyone who can help win it.
 
-Generate comprehensive battlecards in 60 seconds using AI. Role-specific battlecards for every team.
+- **Ask @CIx** for a counter-position and get talk tracks, not a document link.
 
-##### Automatic Updates
+- **Bring in Product and Marketing** without a dozen DMs.
 
-Keep battlecards current without manual work. Updates when competitors move.
+- **Deliverables land in the room**: battlecards, comparisons and follow-up emails.
 
-##### Usage Analytics
+![A CIx Battle Room for a live deal with @CIx answering in the thread](https://usesignallabs.com/assets/product/battle-room.png)
 
-See which battlecards are viewed, used in deals, and driving wins.
+Signals to actions
 
-##### Self-Service for Reps
+### Every competitor move comes with a next step
 
-Empower reps to find competitive answers themselves. Reduce requests by 80%.
+Launches, pricing changes and repositioning are scored for importance and turned into drafted work.
 
-## Competitive Intelligence for SDRs & BDRs
+- **Scored, not dumped**: a homepage tweak never reads like a new pricing tier.
 
-### Prep for Calls in Seconds, Not Hours
+- **Drafted for you**: a comparison page, battlecard edit or email to review.
 
-You've got 5 discovery calls today. Each prospect is evaluating different competitors. You've got 10 minutes between calls to research each one.
+- **Approve in one click** and it updates everywhere reps look.
 
-Sound Familiar?
+![The CIx Actions inbox with drafted responses to competitor moves](https://usesignallabs.com/assets/product/actions-crop-v2.png)
 
--   You spend hours researching competitors before calls instead of focusing on outreach.
-    
--   Every prospect evaluates different competitors - you can't prep for every scenario.
-    
--   You wing discovery questions because you don't have time to craft strategic, competitor-specific angles.
-    
+The difference
 
-#### How CIx Solves This
+## What changes for your sales team
 
-##### Instant Account Prep
+Without CIx
 
-Get account-specific competitive intelligence in 30 seconds based on prospect industry and size.
+With CIx
 
-##### Competitor Lookup
+Battlecards
 
-Search any competitor and get instant, relevant intelligence with key differentiation points.
+Rebuilt each quarter, stale within weeks
 
-##### AI Opening Angles
+Rewritten when the competitor moves
 
-Get personalized, competitor-aware opening angles for every call. Position from minute one.
+An answer mid-deal
 
-##### Discovery Questions
+Ping product marketing and wait
 
-Pre-built questions that expose competitor weaknesses while highlighting your strengths.
+Ask @CIx in the Battle Room
 
-## Competitive Intelligence for Account Executives
+Trust in the content
 
-### Close Competitive Deals with Real-Time Intelligence
+Unsourced claims reps won't repeat
 
-You're deep in a competitive deal. The prospect just mentioned your main competitor. You need to differentiate confidently and understand exactly where you have competitive advantage.
+Every claim links to its source
 
-Sound Familiar?
+A competitor launch
 
--   You're caught off guard when a prospect mentions a competitor you didn't prep for.
-    
--   You lose deals because your competitive positioning is based on outdated information from last quarter.
-    
--   You waste time digging through PDFs and Slack threads when you need competitive intelligence most - during live deals.
-    
+Reps hear about it from the buyer
 
-#### How CIx Solves This
+Talk track drafted the same day
 
-##### Deal-Stage Insights
+Effort for enablement
 
-Context-aware competitive insights tailored to exactly where you are in your deal cycle.
+A full-time research project
 
-##### Live Deal Support
-
-Real-time competitive intelligence during active calls and deal conversations when you need it most.
-
-##### Avoid Landmines
-
-Avoid common competitive traps, positioning mistakes, and deal-killing objections before they happen.
-
-##### Win/Loss Insights
-
-Learn from past competitive deals. Understand what works, what doesn't, and how to improve.
-
-## The ROI Your Sales Team Needs
-
-Sales teams with real-time competitive intelligence see measurable performance improvements
-
-### 25-35% Faster Deal Cycles
-
-Close deals faster with real-time competitive intelligence vs. quarterly battlecard updates
-
-### 15-25% Higher Win Rates
-
-Win more competitive deals with structured competitive intelligence programs
-
-### 70-80% Less Research Time
-
-Reduce time spent on manual competitive research, giving reps more time to sell
-
-### Real Impact for Your Team
-
-SDRs & BDRs
-
-Prep for calls in minutes, skip hours of competitive research
-
-Account Executives
-
-Win 15-20% more deals with better competitive objection handling
-
-Enablement Leaders
-
-Create battlecards in 60 seconds instead of 2 weeks
-
-## Competitive Intelligence for Your Entire Team
-
-Sales doesn't operate in isolation. Give your entire go-to-market team competitive intelligence
-
-[
-
-### For Marketing Teams
-
-Help your marketing team differentiate your brand with competitive positioning, messaging intelligence, and campaign insights.
-
-Explore Marketing Solutions](https://usesignallabs.com/solutions/../solutions/marketing)[
-
-### For Product Teams
-
-Give your product team competitive context to build winning products and prioritize roadmaps with feature gap analysis.
-
-Explore Product Solutions](https://usesignallabs.com/solutions/../solutions/product)[
-
-### For CI Teams
-
-Transform your CI team from manual researchers to strategic enablers with automation and self-service intelligence.
-
-Explore CI Solutions](https://usesignallabs.com/solutions/../solutions/competitive-intelligence)
-
-## Solve Specific Sales Challenges
-
-Explore competitive intelligence solutions for specific sales use cases
-
-[
-
-### Sales Enablement
-
-Automate battlecard creation, keep content current, and scale CI across your revenue team
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/sales-enablement)[
-
-### Battlecard Generation
-
-Generate comprehensive, role-specific battlecards in 60 seconds using AI
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/battlecard-generation)[
-
-### Win/Loss Analysis
-
-Understand why deals are won or lost with competitive intelligence and pattern detection
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/win-loss-analysis)[
-
-### Market Intelligence
-
-Understand market trends and competitive dynamics to position deals strategically
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/market-intelligence)
+Review and approve
 
 ## Frequently Asked Questions
 
@@ -4241,20 +4009,6 @@ CIx uses source-verified intelligence with citations for every claim. You can re
 
 Yes. CIx supports custom battlecard templates, brand guidelines, tone of voice, and role-specific formats. You can create different battlecard types for SDRs, AEs, leadership, or customer success teams - all auto-generated from the same intelligence.
 
-## The Competitive Intelligence Your Sales Team Needs
-
-60s
-
-Generate a battlecard
-
-24/7
-
-Competitor monitoring
-
-80%
-
-Reduction in CI requests
-
 ### Related Reading
 
 [
@@ -4265,7 +4019,7 @@ Why battlecards age in days, not quarters—and how to fix it
 
 Read more →
 
-](https://usesignallabs.com/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters)[
+](https://usesignallabs.com/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters) [
 
 #### Competing in Real Time
 
@@ -4273,7 +4027,7 @@ A CI playbook for high-growth teams that need to move as fast as the market
 
 Read more →
 
-](https://usesignallabs.com/blog/competing-in-real-time-a-ci-playbook-for-high-growth-teams)[
+](https://usesignallabs.com/blog/competing-in-real-time-a-ci-playbook-for-high-growth-teams) [
 
 #### Sales Enablement Battlecards
 
@@ -4287,7 +4041,7 @@ Read more →
 
 Start giving your sales team real-time competitive intelligence today.
 
-[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/solutions/../contact)
+[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/contact)
 
 ---
 

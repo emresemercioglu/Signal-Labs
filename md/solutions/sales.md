@@ -5,259 +5,145 @@ image: https://usesignallabs.com/og-image-home-v2.png
 url: https://usesignallabs.com/solutions/sales
 ---
 
-# Competitive Intelligence for Sales & Revenue Teams
+CIx for Sales & Revenue teams
 
-Real-time battlecards, competitive insights, and win strategies that help your revenue team close more deals. From discovery to close - give your sales team the competitive edge they need.
+# Walk into every competitive deal with the answer ready
 
-[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/contact)
+When a rival changes pricing, ships a feature or repositions, CIx rewrites the battlecard and drafts the talk track before your next call. Every claim links to its source, so reps can repeat it with confidence.
 
-## Outdated Intelligence. Lost Deals.
+[Start Free →](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
-Manual research, outdated battlecards, and lost deals - this is the reality for most sales teams.
+Free for 2 competitors No credit card Set up in minutes
 
-### Manual Research
+![A CIx battlecard comparing Signal Labs and AlphaSense](https://usesignallabs.com/assets/product/battlecard.png)
 
-Sales reps spend hours researching competitors before big calls instead of selling.
+![A rep asks @CIx in a Battle Room how to counter a competitor and gets a counter-position with talk tracks](https://usesignallabs.com/assets/product/battle-room-crop.png)
 
-### Outdated Battlecards
+How it works
 
-Battlecards are outdated within days of being published as competitors move fast.
+## Your competitor moves on Monday. Your reps are ready by Tuesday.
 
-### Intelligence Scattered
+No quarterly battlecard refresh, no waiting on product marketing. CIx watches, rewrites and hands reps the words to use.
 
-Competitive intelligence lives in scattered Slack threads, old emails, and forgotten PDFs.
+1
 
-### Revenue Left on Table
+Monday, 9:00
 
-Lost deals. Missed quota. Revenue opportunities slipping away to better-prepared competitors.
+### A rival cuts its entry price
 
-### Win Deals with Real-Time CI
+CIx spots the pricing page change, checks it against what it already knows and scores how much it matters to your deals.
 
-Real-time competitive intelligence that meets your sales team where they work - in Salesforce, on Zoom calls, in Gmail, on Slack. Not another tool to remember. Not another PDF to download. Competitive intelligence embedded in your sales workflow.
+2
 
-## Stop Losing Deals. Start Winning with Real-Time CI
+Monday, minutes later
 
-### Discover Competitors Before They're Mentioned
+### The battlecard rewrites itself
 
-Don't wait for prospects to bring up competitors. CIx identifies which competitors might enter your deal based on your product, industry, and deal size.
+Pricing, objection handling and win themes update, with a link to the page the change came from.
 
--   Prep for competitor objections before first calls
--   Position against likely competitors from discovery
--   Never be caught off-guard by competitive mentions
+3
 
-### Real-Time Battlecards That Never Go Stale
+Tuesday
 
-Forget quarterly battlecard updates. CIx battlecards update automatically when competitors change pricing, launch features, or shift positioning.
+### A talk track lands in the inbox
 
--   Generate battlecards in 60 seconds
--   Automatic updates when competitors move
--   Always-current competitive intelligence
+A drafted email and the exact words to use are waiting in the Actions inbox and in Slack, ready to review and send.
 
-### Win with Strategic Positioning
+4
 
-Get winning talk tracks, objection handlers, and differentiation points for every competitive scenario.
+Thursday
 
--   Know exactly what to say when competitors come up
--   Consistent messaging across your team
--   Confidence in competitive conversations
+### Live deal, live answer
 
-### Ask Discovery Questions That Win
+Mid-deal, a rep asks @CIx in the Battle Room how to counter the new price and gets an answer grounded in your intelligence.
 
-CIx suggests strategic discovery questions that expose your competitors' weaknesses while highlighting your advantages.
+An example week. Timing depends on your plan's signal frequency.
 
--   Control the conversation from discovery
--   Surface pain points competitors can't solve
--   Frame evaluation criteria around your strengths
+What reps get
 
-### Meet Your Team Where Deals Happen
+## Everything a rep needs. Nothing they have to build.
 
-CIx embeds directly into your sales workflow - Salesforce, Gmail, Zoom, Slack, Gong. No context switching required.
+Finished work, not a dashboard to interpret.
 
--   CI in Salesforce opportunity records
--   Competitive prompts during Zoom/Gong calls
--   Instant answers in Slack & email
+Battlecards
 
-## Competitive Intelligence for Sales Enablement Leaders
+### Battlecards that keep up with the market
 
-### Automate Battlecards, Scale CI Across Your Team
+Generated per competitor and per deal, and rewritten when the rival moves.
 
-You spend weeks creating the perfect battlecard. It's thorough, well-researched, and formatted beautifully. You roll it out to the sales team with enthusiasm.
+- **Objection handling and discovery questions** written for the person on the call.
 
-Sound Familiar?
+- **Landscape cards** when a deal has three rivals, not one.
 
-The competitor launches a new pricing tier the next week. Your battlecard is already outdated.
+- **Every claim sourced**, so nothing gets repeated to a buyer unchecked.
 
-A rep asks a question that's answered in the battlecard - they clearly haven't read it.
+![A full CIx battlecard](https://usesignallabs.com/assets/product/battlecard.png)
 
-Another rep creates their own "updated" version, now you have inconsistent messaging.
+Battle Rooms
 
-#### How CIx Solves This
+### Work live deals together
 
-##### Automated Battlecards
+One room per deal, with the client, the competitors involved and everyone who can help win it.
 
-Generate comprehensive battlecards in 60 seconds using AI. Role-specific battlecards for every team.
+- **Ask @CIx** for a counter-position and get talk tracks, not a document link.
 
-##### Automatic Updates
+- **Bring in Product and Marketing** without a dozen DMs.
 
-Keep battlecards current without manual work. Updates when competitors move.
+- **Deliverables land in the room**: battlecards, comparisons and follow-up emails.
 
-##### Usage Analytics
+![A CIx Battle Room for a live deal with @CIx answering in the thread](https://usesignallabs.com/assets/product/battle-room.png)
 
-See which battlecards are viewed, used in deals, and driving wins.
+Signals to actions
 
-##### Self-Service for Reps
+### Every competitor move comes with a next step
 
-Empower reps to find competitive answers themselves. Reduce requests by 80%.
+Launches, pricing changes and repositioning are scored for importance and turned into drafted work.
 
-## Competitive Intelligence for SDRs & BDRs
+- **Scored, not dumped**: a homepage tweak never reads like a new pricing tier.
 
-### Prep for Calls in Seconds, Not Hours
+- **Drafted for you**: a comparison page, battlecard edit or email to review.
 
-You've got 5 discovery calls today. Each prospect is evaluating different competitors. You've got 10 minutes between calls to research each one.
+- **Approve in one click** and it updates everywhere reps look.
 
-Sound Familiar?
+![The CIx Actions inbox with drafted responses to competitor moves](https://usesignallabs.com/assets/product/actions-crop-v2.png)
 
--   You spend hours researching competitors before calls instead of focusing on outreach.
-    
--   Every prospect evaluates different competitors - you can't prep for every scenario.
-    
--   You wing discovery questions because you don't have time to craft strategic, competitor-specific angles.
-    
+The difference
 
-#### How CIx Solves This
+## What changes for your sales team
 
-##### Instant Account Prep
+Without CIx
 
-Get account-specific competitive intelligence in 30 seconds based on prospect industry and size.
+With CIx
 
-##### Competitor Lookup
+Battlecards
 
-Search any competitor and get instant, relevant intelligence with key differentiation points.
+Rebuilt each quarter, stale within weeks
 
-##### AI Opening Angles
+Rewritten when the competitor moves
 
-Get personalized, competitor-aware opening angles for every call. Position from minute one.
+An answer mid-deal
 
-##### Discovery Questions
+Ping product marketing and wait
 
-Pre-built questions that expose competitor weaknesses while highlighting your strengths.
+Ask @CIx in the Battle Room
 
-## Competitive Intelligence for Account Executives
+Trust in the content
 
-### Close Competitive Deals with Real-Time Intelligence
+Unsourced claims reps won't repeat
 
-You're deep in a competitive deal. The prospect just mentioned your main competitor. You need to differentiate confidently and understand exactly where you have competitive advantage.
+Every claim links to its source
 
-Sound Familiar?
+A competitor launch
 
--   You're caught off guard when a prospect mentions a competitor you didn't prep for.
-    
--   You lose deals because your competitive positioning is based on outdated information from last quarter.
-    
--   You waste time digging through PDFs and Slack threads when you need competitive intelligence most - during live deals.
-    
+Reps hear about it from the buyer
 
-#### How CIx Solves This
+Talk track drafted the same day
 
-##### Deal-Stage Insights
+Effort for enablement
 
-Context-aware competitive insights tailored to exactly where you are in your deal cycle.
+A full-time research project
 
-##### Live Deal Support
-
-Real-time competitive intelligence during active calls and deal conversations when you need it most.
-
-##### Avoid Landmines
-
-Avoid common competitive traps, positioning mistakes, and deal-killing objections before they happen.
-
-##### Win/Loss Insights
-
-Learn from past competitive deals. Understand what works, what doesn't, and how to improve.
-
-## The ROI Your Sales Team Needs
-
-Sales teams with real-time competitive intelligence see measurable performance improvements
-
-### 25-35% Faster Deal Cycles
-
-Close deals faster with real-time competitive intelligence vs. quarterly battlecard updates
-
-### 15-25% Higher Win Rates
-
-Win more competitive deals with structured competitive intelligence programs
-
-### 70-80% Less Research Time
-
-Reduce time spent on manual competitive research, giving reps more time to sell
-
-### Real Impact for Your Team
-
-SDRs & BDRs
-
-Prep for calls in minutes, skip hours of competitive research
-
-Account Executives
-
-Win 15-20% more deals with better competitive objection handling
-
-Enablement Leaders
-
-Create battlecards in 60 seconds instead of 2 weeks
-
-## Competitive Intelligence for Your Entire Team
-
-Sales doesn't operate in isolation. Give your entire go-to-market team competitive intelligence
-
-[
-
-### For Marketing Teams
-
-Help your marketing team differentiate your brand with competitive positioning, messaging intelligence, and campaign insights.
-
-Explore Marketing Solutions](https://usesignallabs.com/solutions/../solutions/marketing)[
-
-### For Product Teams
-
-Give your product team competitive context to build winning products and prioritize roadmaps with feature gap analysis.
-
-Explore Product Solutions](https://usesignallabs.com/solutions/../solutions/product)[
-
-### For CI Teams
-
-Transform your CI team from manual researchers to strategic enablers with automation and self-service intelligence.
-
-Explore CI Solutions](https://usesignallabs.com/solutions/../solutions/competitive-intelligence)
-
-## Solve Specific Sales Challenges
-
-Explore competitive intelligence solutions for specific sales use cases
-
-[
-
-### Sales Enablement
-
-Automate battlecard creation, keep content current, and scale CI across your revenue team
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/sales-enablement)[
-
-### Battlecard Generation
-
-Generate comprehensive, role-specific battlecards in 60 seconds using AI
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/battlecard-generation)[
-
-### Win/Loss Analysis
-
-Understand why deals are won or lost with competitive intelligence and pattern detection
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/win-loss-analysis)[
-
-### Market Intelligence
-
-Understand market trends and competitive dynamics to position deals strategically
-
-Learn more →](https://usesignallabs.com/solutions/../use-cases/market-intelligence)
+Review and approve
 
 ## Frequently Asked Questions
 
@@ -309,20 +195,6 @@ CIx uses source-verified intelligence with citations for every claim. You can re
 
 Yes. CIx supports custom battlecard templates, brand guidelines, tone of voice, and role-specific formats. You can create different battlecard types for SDRs, AEs, leadership, or customer success teams - all auto-generated from the same intelligence.
 
-## The Competitive Intelligence Your Sales Team Needs
-
-60s
-
-Generate a battlecard
-
-24/7
-
-Competitor monitoring
-
-80%
-
-Reduction in CI requests
-
 ### Related Reading
 
 [
@@ -333,7 +205,7 @@ Why battlecards age in days, not quarters—and how to fix it
 
 Read more →
 
-](https://usesignallabs.com/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters)[
+](https://usesignallabs.com/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters) [
 
 #### Competing in Real Time
 
@@ -341,7 +213,7 @@ A CI playbook for high-growth teams that need to move as fast as the market
 
 Read more →
 
-](https://usesignallabs.com/blog/competing-in-real-time-a-ci-playbook-for-high-growth-teams)[
+](https://usesignallabs.com/blog/competing-in-real-time-a-ci-playbook-for-high-growth-teams) [
 
 #### Sales Enablement Battlecards
 
@@ -355,101 +227,104 @@ Read more →
 
 Start giving your sales team real-time competitive intelligence today.
 
-[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/solutions/../contact)
+[Start Free →](https://app.usesignallabs.com) [Book Demo](https://usesignallabs.com/contact)
 
 ```json
 {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-                {
-                        "@type": "Question",
-                        "name": "How is CIx different from Crayon or Klue?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "CIx is built for real-time competitive intelligence with AI at its core. While traditional CI tools require manual content creation and updates, CIx automates battlecard generation, monitors competitors 24/7, and updates intelligence automatically. We also embed directly into your workflow (Salesforce, Slack, Gong) rather than being a separate platform. Traditional tools are designed for CI teams to create content. CIx is designed for every team to access intelligence."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "How long does it take to get our sales team using CIx?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Most sales teams are up and running the same day. Add your competitors (or use AI discovery), generate battlecards, integrate with Salesforce/Slack, and start enabling your team within hours. No lengthy implementations or training required."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Can CIx integrate with our existing sales tools?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. CIx integrates with Salesforce, HubSpot, Slack, Microsoft Teams, Gong, Chorus, and major sales enablement platforms (Highspot, Seismic, Guru). We also offer a REST API, native SDKs, and MCP server for custom integrations and AI-powered workflows. We meet your team where they already work, embedding competitive intelligence directly into their daily workflow."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Where does CIx get its competitive data?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "CIx monitors public sources (competitor websites, product updates, pricing pages, press releases, reviews, social media) and can also integrate your internal data sources (sales calls, win/loss interviews, internal docs, CRM data). You control what intelligence is tracked and how it's organized."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "How much does CIx cost for sales teams?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "CIx has public, self-serve pricing: Free for 2 competitors, Pro at $29/month for 5 competitors, and Ultra at $99/month for 15 competitors and larger teams. Most sales teams start on Pro or Ultra. Enterprise adds custom limits, onboarding and CI strategy calls. See the pricing page for details."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Do we need a dedicated CI team to use CIx?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "No. CIx is designed for sales teams to use directly without requiring a CI team. However, if you have a CI team, CIx amplifies their impact by automating research and distribution, letting them focus on strategy instead of manual updates."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "How accurate is the AI-generated content?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "CIx uses source-verified intelligence with citations for every claim. You can review sources, edit content, and add internal context. Think of CIx as an intelligent research assistant that drafts content 80-90% complete, which you can refine and approve before distribution."
-                        }
-                },
-                {
-                        "@type": "Question",
-                        "name": "Can we customize battlecards for our brand?",
-                        "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. CIx supports custom battlecard templates, brand guidelines, tone of voice, and role-specific formats. You can create different battlecard types for SDRs, AEs, leadership, or customer success teams - all auto-generated from the same intelligence."
-                        }
-                }
-        ]
-}
-{
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://usesignallabs.com/"
+            "@type": "Question",
+            "name": "How is CIx different from Crayon or Klue?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CIx is built for real-time competitive intelligence with AI at its core. While traditional CI tools require manual content creation and updates, CIx automates battlecard generation, monitors competitors 24/7, and updates intelligence automatically. We also embed directly into your workflow (Salesforce, Slack, Gong) rather than being a separate platform. Traditional tools are designed for CI teams to create content. CIx is designed for every team to access intelligence."
+            }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Solutions",
-          "item": "https://usesignallabs.com/solutions"
+            "@type": "Question",
+            "name": "How long does it take to get our sales team using CIx?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most sales teams are up and running the same day. Add your competitors (or use AI discovery), generate battlecards, integrate with Salesforce/Slack, and start enabling your team within hours. No lengthy implementations or training required."
+            }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Sales & Revenue",
-          "item": "https://usesignallabs.com/solutions/sales"
+            "@type": "Question",
+            "name": "Can CIx integrate with our existing sales tools?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. CIx integrates with Salesforce, HubSpot, Slack, Microsoft Teams, Gong, Chorus, and major sales enablement platforms (Highspot, Seismic, Guru). We also offer a REST API, native SDKs, and MCP server for custom integrations and AI-powered workflows. We meet your team where they already work, embedding competitive intelligence directly into their daily workflow."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where does CIx get its competitive data?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CIx monitors public sources (competitor websites, product updates, pricing pages, press releases, reviews, social media) and can also integrate your internal data sources (sales calls, win/loss interviews, internal docs, CRM data). You control what intelligence is tracked and how it's organized."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much does CIx cost for sales teams?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CIx has public, self-serve pricing: Free for 2 competitors, Pro at $29/month for 5 competitors, and Ultra at $99/month for 15 competitors and larger teams. Most sales teams start on Pro or Ultra. Enterprise adds custom limits, onboarding and CI strategy calls. See the pricing page for details."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do we need a dedicated CI team to use CIx?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. CIx is designed for sales teams to use directly without requiring a CI team. However, if you have a CI team, CIx amplifies their impact by automating research and distribution, letting them focus on strategy instead of manual updates."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How accurate is the AI-generated content?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CIx uses source-verified intelligence with citations for every claim. You can review sources, edit content, and add internal context. Think of CIx as an intelligent research assistant that drafts content 80-90% complete, which you can refine and approve before distribution."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can we customize battlecards for our brand?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. CIx supports custom battlecard templates, brand guidelines, tone of voice, and role-specific formats. You can create different battlecard types for SDRs, AEs, leadership, or customer success teams - all auto-generated from the same intelligence."
+            }
         }
-      ]
-    }
+    ]
+}
+```
+
+```json
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://usesignallabs.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Solutions",
+            "item": "https://usesignallabs.com/solutions"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sales & Revenue",
+            "item": "https://usesignallabs.com/solutions/sales"
+        }
+    ]
+}
 ```
