@@ -1,7 +1,7 @@
 ---
 title: "Pricing - Signal Labs CIx"
 description: "Signal Labs CIx pricing. Free forever for 2 competitors, Pro at $29/month, Ultra at $99/month, and Enterprise for custom limits. Upgrade in the app, cancel any time."
-image: https://usesignallabs.com/og-image-pricing-v2.png
+image: https://usesignallabs.com/og-image-pricing-v3.png
 url: https://usesignallabs.com/pricing
 ---
 
