@@ -10,7 +10,7 @@ Pricing
 # Start free.  
 Upgrade when you need more.
 
-Track your top two competitors free, forever: living intelligence pages, real-time signals, and a battlecard every month. When you need more competitors, battlecards and seats, upgrade to Pro or Ultra in a couple of clicks. No sales call needed.
+Track your top two competitors free, forever: living intelligence pages, daily signals, and a battlecard every month. When you need more competitors, battlecards and seats, upgrade to Pro or Ultra in a couple of clicks. No sales call needed.
 
 Free plan, no credit card Work email required Upgrade or downgrade any time Cancel anytime
 
@@ -26,13 +26,15 @@ See Signal Labs work on your top competitors.
 
 2 competitors tracked, each a living page
 
-Real-time signals + suggested-actions inbox
+Daily signals + suggested-actions inbox
 
 1 battlecard a month
 
 10 chat questions a month
 
 1 creator + 2 viewers
+
+Battle Rooms
 
 Email support
 
@@ -50,6 +52,8 @@ Everything in Free, plus:
 
 5 competitors tracked
 
+Signals checked every 4 hours
+
 Pages refresh automatically every month
 
 10 battlecards a month
@@ -58,11 +62,9 @@ Pages refresh automatically every month
 
 2 creators + 8 viewers
 
-Battle Rooms
-
 API & MCP access
 
-[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
 ### Ultra
 
@@ -74,6 +76,8 @@ Everything in Pro, plus:
 
 15 competitors tracked
 
+Signals checked every hour
+
 50 battlecards a month
 
 500 chat questions a month
@@ -84,7 +88,7 @@ Higher API & MCP limits
 
 Priority support
 
-[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=yearly)
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=monthly)
 
 ### Enterprise
 
@@ -97,6 +101,8 @@ Custom limits, onboarding and CI strategy calls.
 Everything in Ultra, plus:
 
 Custom number of competitors
+
+Custom signal frequency
 
 Custom battlecard, chat and API limits
 
@@ -120,13 +126,13 @@ Free is a real working product, not a demo. Move up when you need more competito
 | Competitors tracked | 2 | 5 | 15 | Custom |
 | Living competitor pages | Included | Included | Included | Included |
 | Automatic monthly refresh | Not included | Included | Included | Included |
-| Real-time signals | Included | Included | Included | Included |
+| Competitor signals | Checked daily | Every 4 hours | Every hour | Custom |
 | Suggested actions inbox | Included | Included | Included | Included |
 | Battlecards (incl. landscape) | 1 a month | 10 a month | 50 a month | Custom |
 | Ask CIx chat | 10 questions a month | 100 a month | 500 a month | Custom |
 | Source-linked citations | Every claim | Every claim | Every claim | Every claim |
 | Seats | 1 creator + 2 viewers | 2 creators + 8 viewers | 5 creators + 25 viewers | Custom |
-| Battle Rooms | Not included | Included | Included | Included |
+| Battle Rooms | Included | Included | Included | Included |
 | API & MCP access | Not included | 1,000 requests/day | 10,000 requests/day | Custom |
 | Support | Email | Email | Priority | CI strategy calls + onboarding |
 
@@ -156,7 +162,7 @@ Switch plans or billing cycle whenever you like. If you downgrade, nothing is de
 
 ### Is the Free plan really free, or is it a trial that expires?
 
-It is genuinely free and it does not expire. You get two competitors tracked as living pages, real-time signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address.
+It is genuinely free and it does not expire. You get two competitors tracked as living pages, daily signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address.
 
 ### How does upgrading work?
 
@@ -194,7 +200,7 @@ Traditional competitive intelligence platforms are collection tools: they gather
 
 Track your top two competitors free today. No credit card, no sales call, no expiry.
 
-[Start Free](https://app.usesignallabs.com/login) [Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+[Start Free](https://app.usesignallabs.com/login) [Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
 ```json
 {
@@ -236,7 +242,7 @@ Track your top two competitors free today. No credit card, no sales call, no exp
             "availability": "https://schema.org/InStock",
             "price": "0",
             "url": "https://usesignallabs.com/pricing",
-            "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Real-time signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Email support."
+            "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Daily signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Battle Rooms; Email support."
         },
         {
             "@type": "Offer",
@@ -252,7 +258,7 @@ Track your top two competitors free today. No credit card, no sales call, no exp
                 "unitText": "MONTH"
             },
             "url": "https://usesignallabs.com/pricing",
-            "description": "Track your core competitive set and arm your team. 5 competitors tracked; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; Battle Rooms; API & MCP access."
+            "description": "Track your core competitive set and arm your team. 5 competitors tracked; Signals checked every 4 hours; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; API & MCP access."
         },
         {
             "@type": "Offer",
@@ -268,7 +274,7 @@ Track your top two competitors free today. No credit card, no sales call, no exp
                 "unitText": "MONTH"
             },
             "url": "https://usesignallabs.com/pricing",
-            "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
+            "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; Signals checked every hour; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
         },
         {
             "@type": "Offer",
@@ -276,7 +282,7 @@ Track your top two competitors free today. No credit card, no sales call, no exp
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
             "url": "https://calendly.com/emre-usesignallabs/30min",
-            "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
+            "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom signal frequency; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
         }
     ]
 }
@@ -292,7 +298,7 @@ Track your top two competitors free today. No credit card, no sales call, no exp
             "name": "Is the Free plan really free, or is it a trial that expires?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "It is genuinely free and it does not expire. You get two competitors tracked as living pages, real-time signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address."
+                "text": "It is genuinely free and it does not expire. You get two competitors tracked as living pages, daily signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address."
             }
         },
         {

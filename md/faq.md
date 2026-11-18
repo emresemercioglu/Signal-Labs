@@ -469,9 +469,9 @@ Monthly allowances reset every month; unused ones don't roll over. See [pricing]
 
 Yes. The free plan is free forever and needs no credit card.
 
-**The free plan doesn't expire.** Track two competitors as living intelligence pages, with real-time signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain.
+**The free plan doesn't expire.** Track two competitors as living intelligence pages, with daily signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain.
 
-**Upgrade whenever you need more.** Pro ($29/month) tracks 5 competitors with automatic refresh, Battle Rooms and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted.
+**Upgrade whenever you need more.** Pro ($29/month) tracks 5 competitors with automatic refresh and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted.
 
 **To start:** [create an account](https://app.usesignallabs.com/auth), add your top competitors, and you'll have living pages within minutes.
 
@@ -606,21 +606,24 @@ Four plans: Free, Pro, Ultra and Enterprise.
 **Free** - $0, no credit card, no expiry
 
 -   2 competitors, each a living page
--   Real-time signals and the suggested-actions inbox
+-   Daily signals and the suggested-actions inbox
 -   1 battlecard and 10 chat questions a month
 -   3 seats (1 creator + 2 viewers)
+-   Battle Rooms
 -   Email support
 
 **Pro** - $29/month, or $24/month billed yearly
 
 -   5 competitors, with pages that refresh automatically every month
+-   Signals checked every 4 hours
 -   10 battlecards and 100 chat questions a month
 -   2 creators + 8 viewers
--   Battle Rooms and API & MCP access
+-   API & MCP access
 
 **Ultra** - $99/month, or $79/month billed yearly
 
 -   15 competitors, 50 battlecards and 500 chat questions a month
+-   Signals checked every hour
 -   5 creators + 25 viewers
 -   Priority support
 
@@ -869,7 +872,7 @@ API access is included on Pro, Ultra and Enterprise at no extra cost. [View the 
           "name": "Can I try CIx for free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The free plan is free forever and needs no credit card. The free plan doesn't expire. Track two competitors as living intelligence pages, with real-time signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain. Upgrade whenever you need more. Pro ($29/month) tracks 5 competitors with automatic refresh, Battle Rooms and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted. To start: create an account, add your top competitors, and you'll have living pages within minutes."
+            "text": "Yes. The free plan is free forever and needs no credit card. The free plan doesn't expire. Track two competitors as living intelligence pages, with daily signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain. Upgrade whenever you need more. Pro ($29/month) tracks 5 competitors with automatic refresh and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted. To start: create an account, add your top competitors, and you'll have living pages within minutes."
           }
         },
         {
@@ -917,7 +920,7 @@ API access is included on Pro, Ultra and Enterprise at no extra cost. [View the 
           "name": "How much does CIx platform cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Four plans: Free, Pro, Ultra and Enterprise. Free - $0, no credit card, no expiry. 2 competitors, each a living page. Real-time signals and the suggested-actions inbox. 1 battlecard and 10 chat questions a month. 3 seats (1 creator + 2 viewers). Email support. Pro - $29/month, or $24/month billed yearly: 5 competitors with automatic monthly refresh, 10 battlecards and 100 chat questions a month, 2 creators + 8 viewers, Battle Rooms and API & MCP access. Ultra - $99/month, or $79/month billed yearly: 15 competitors, 50 battlecards and 500 chat questions a month, 5 creators + 25 viewers, priority support. Enterprise - custom limits, onboarding and monthly CI strategy calls. Upgrade, switch or cancel any time from the Plan page in the app. API, SDK and MCP access are included on Pro, Ultra and Enterprise. See the full comparison."
+            "text": "Four plans: Free, Pro, Ultra and Enterprise. Free - $0, no credit card, no expiry. 2 competitors, each a living page. Daily signals and the suggested-actions inbox. 1 battlecard and 10 chat questions a month. 3 seats (1 creator + 2 viewers). Battle Rooms. Email support. Pro - $29/month, or $24/month billed yearly: 5 competitors with automatic monthly refresh and signals every 4 hours, 10 battlecards and 100 chat questions a month, 2 creators + 8 viewers, and API & MCP access. Ultra - $99/month, or $79/month billed yearly: 15 competitors with hourly signals, 50 battlecards and 500 chat questions a month, 5 creators + 25 viewers, priority support. Enterprise - custom limits, onboarding and monthly CI strategy calls. Upgrade, switch or cancel any time from the Plan page in the app. API, SDK and MCP access are included on Pro, Ultra and Enterprise. See the full comparison."
           }
         },
         {

@@ -415,9 +415,9 @@ Adding a competitor takes about a minute, and the first living page is generated
 
 Yes. Signal Labs exposes a REST API and a hosted MCP server, so you can pull competitor intelligence into your own tools or query it directly from MCP clients such as Claude and Cursor. Official Python and JavaScript SDKs are available.
 
-## Simple pricing
+## Pricing that scales with you
 
-Start free on your top two competitors. Upgrade in the app when you need more.
+Start free. Add competitors, battlecards and seats as your team grows.
 
 Monthly Yearly (save about 20%)
 
@@ -431,13 +431,15 @@ See Signal Labs work on your top competitors.
 
 2 competitors tracked, each a living page
 
-Real-time signals + suggested-actions inbox
+Daily signals + suggested-actions inbox
 
 1 battlecard a month
 
 10 chat questions a month
 
 1 creator + 2 viewers
+
+Battle Rooms
 
 Email support
 
@@ -455,6 +457,8 @@ Everything in Free, plus:
 
 5 competitors tracked
 
+Signals checked every 4 hours
+
 Pages refresh automatically every month
 
 10 battlecards a month
@@ -463,11 +467,9 @@ Pages refresh automatically every month
 
 2 creators + 8 viewers
 
-Battle Rooms
-
 API & MCP access
 
-[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
 ### Ultra
 
@@ -479,6 +481,8 @@ Everything in Pro, plus:
 
 15 competitors tracked
 
+Signals checked every hour
+
 50 battlecards a month
 
 500 chat questions a month
@@ -489,7 +493,7 @@ Higher API & MCP limits
 
 Priority support
 
-[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=yearly)
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=monthly)
 
 ### Enterprise
 
@@ -502,6 +506,8 @@ Custom limits, onboarding and CI strategy calls.
 Everything in Ultra, plus:
 
 Custom number of competitors
+
+Custom signal frequency
 
 Custom battlecard, chat and API limits
 
@@ -525,7 +531,7 @@ A sample battlecard built for your market
 
 ## Stop researching competitors. Start beating them.
 
-Track your top two competitors free: living pages, real-time signals and a battlecard every month. No credit card, no expiry.
+Track your top two competitors free: living pages, daily signals and a battlecard every month. No credit card, no expiry.
 
 [Start Free](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
@@ -539,7 +545,7 @@ Pricing
 # Start free.  
 Upgrade when you need more.
 
-Track your top two competitors free, forever: living intelligence pages, real-time signals, and a battlecard every month. When you need more competitors, battlecards and seats, upgrade to Pro or Ultra in a couple of clicks. No sales call needed.
+Track your top two competitors free, forever: living intelligence pages, daily signals, and a battlecard every month. When you need more competitors, battlecards and seats, upgrade to Pro or Ultra in a couple of clicks. No sales call needed.
 
 Free plan, no credit card Work email required Upgrade or downgrade any time Cancel anytime
 
@@ -555,13 +561,15 @@ See Signal Labs work on your top competitors.
 
 2 competitors tracked, each a living page
 
-Real-time signals + suggested-actions inbox
+Daily signals + suggested-actions inbox
 
 1 battlecard a month
 
 10 chat questions a month
 
 1 creator + 2 viewers
+
+Battle Rooms
 
 Email support
 
@@ -579,6 +587,8 @@ Everything in Free, plus:
 
 5 competitors tracked
 
+Signals checked every 4 hours
+
 Pages refresh automatically every month
 
 10 battlecards a month
@@ -587,11 +597,9 @@ Pages refresh automatically every month
 
 2 creators + 8 viewers
 
-Battle Rooms
-
 API & MCP access
 
-[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
 ### Ultra
 
@@ -603,6 +611,8 @@ Everything in Pro, plus:
 
 15 competitors tracked
 
+Signals checked every hour
+
 50 battlecards a month
 
 500 chat questions a month
@@ -613,7 +623,7 @@ Higher API & MCP limits
 
 Priority support
 
-[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=yearly)
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=monthly)
 
 ### Enterprise
 
@@ -626,6 +636,8 @@ Custom limits, onboarding and CI strategy calls.
 Everything in Ultra, plus:
 
 Custom number of competitors
+
+Custom signal frequency
 
 Custom battlecard, chat and API limits
 
@@ -649,13 +661,13 @@ Free is a real working product, not a demo. Move up when you need more competito
 | Competitors tracked | 2 | 5 | 15 | Custom |
 | Living competitor pages | Included | Included | Included | Included |
 | Automatic monthly refresh | Not included | Included | Included | Included |
-| Real-time signals | Included | Included | Included | Included |
+| Competitor signals | Checked daily | Every 4 hours | Every hour | Custom |
 | Suggested actions inbox | Included | Included | Included | Included |
 | Battlecards (incl. landscape) | 1 a month | 10 a month | 50 a month | Custom |
 | Ask CIx chat | 10 questions a month | 100 a month | 500 a month | Custom |
 | Source-linked citations | Every claim | Every claim | Every claim | Every claim |
 | Seats | 1 creator + 2 viewers | 2 creators + 8 viewers | 5 creators + 25 viewers | Custom |
-| Battle Rooms | Not included | Included | Included | Included |
+| Battle Rooms | Included | Included | Included | Included |
 | API & MCP access | Not included | 1,000 requests/day | 10,000 requests/day | Custom |
 | Support | Email | Email | Priority | CI strategy calls + onboarding |
 
@@ -685,7 +697,7 @@ Switch plans or billing cycle whenever you like. If you downgrade, nothing is de
 
 ### Is the Free plan really free, or is it a trial that expires?
 
-It is genuinely free and it does not expire. You get two competitors tracked as living pages, real-time signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address.
+It is genuinely free and it does not expire. You get two competitors tracked as living pages, daily signals, the suggested-actions inbox, one battlecard a month and ten chat questions a month. There is no credit card at signup and no countdown clock. The only requirement is a work email address.
 
 ### How does upgrading work?
 
@@ -723,7 +735,7 @@ Traditional competitive intelligence platforms are collection tools: they gather
 
 Track your top two competitors free today. No credit card, no sales call, no expiry.
 
-[Start Free](https://app.usesignallabs.com/login) [Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+[Start Free](https://app.usesignallabs.com/login) [Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
 ---
 
@@ -1673,7 +1685,7 @@ CIx suggests them. It analyses your website and category and proposes competitor
 
 +
 
-The free plan tracks two competitors with real-time signals and a monthly battlecard, with no credit card and no expiry. Pro ($29/month) tracks 5 competitors and Ultra ($99/month) tracks 15, both with automatic monthly refresh; Enterprise is custom.
+The free plan tracks two competitors with daily signals and a monthly battlecard, with no credit card and no expiry. Pro ($29/month) tracks 5 competitors and Ultra ($99/month) tracks 15, both with automatic monthly refresh; Enterprise is custom.
 
 ## Competitive Intelligence Across Functions
 
@@ -7773,9 +7785,9 @@ Monthly allowances reset every month; unused ones don't roll over. See [pricing]
 
 Yes. The free plan is free forever and needs no credit card.
 
-**The free plan doesn't expire.** Track two competitors as living intelligence pages, with real-time signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain.
+**The free plan doesn't expire.** Track two competitors as living intelligence pages, with daily signals, the suggested-actions inbox, one battlecard and ten chat questions a month, and 3 seats (1 creator + 2 viewers). There's no countdown clock and no card at signup. The only requirement is a work email address - CIx builds intelligence around your company, so we match your account to your domain.
 
-**Upgrade whenever you need more.** Pro ($29/month) tracks 5 competitors with automatic refresh, Battle Rooms and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted.
+**Upgrade whenever you need more.** Pro ($29/month) tracks 5 competitors with automatic refresh and API access; Ultra ($99/month) tracks 15. Upgrade from the Plan page in the app, and downgrade or cancel any time - nothing is deleted.
 
 **To start:** [create an account](https://app.usesignallabs.com/auth), add your top competitors, and you'll have living pages within minutes.
 
@@ -7910,21 +7922,24 @@ Four plans: Free, Pro, Ultra and Enterprise.
 **Free** - $0, no credit card, no expiry
 
 -   2 competitors, each a living page
--   Real-time signals and the suggested-actions inbox
+-   Daily signals and the suggested-actions inbox
 -   1 battlecard and 10 chat questions a month
 -   3 seats (1 creator + 2 viewers)
+-   Battle Rooms
 -   Email support
 
 **Pro** - $29/month, or $24/month billed yearly
 
 -   5 competitors, with pages that refresh automatically every month
+-   Signals checked every 4 hours
 -   10 battlecards and 100 chat questions a month
 -   2 creators + 8 viewers
--   Battle Rooms and API & MCP access
+-   API & MCP access
 
 **Ultra** - $99/month, or $79/month billed yearly
 
 -   15 competitors, 50 battlecards and 500 chat questions a month
+-   Signals checked every hour
 -   5 creators + 25 viewers
 -   Priority support
 
@@ -8818,7 +8833,7 @@ Here's the toolkit that actually works for solo founders:
 
 **Getting started:** Start on the free CIx plan — two competitors tracked as living pages, no credit card — or use Google Alerts plus manual website checks. Time investment: 15-20 minutes per week.
 
-**Growing tier:** A CIx [Pro plan](https://usesignallabs.com/pricing) ($29/month) once two competitors stop being enough: 5 competitors, automatic refresh and Battle Rooms. Time investment: 1-2 hours per week.
+**Growing tier:** A CIx [Pro plan](https://usesignallabs.com/pricing) ($29/month) once two competitors stop being enough: 5 competitors, automatic refresh and API access. Time investment: 1-2 hours per week.
 
 **Enterprise tier:** CIx Enterprise plan for advanced needs (custom integrations, SSO, dedicated support, monthly CI strategy consulting calls). Time investment: Full-time CI role(s).
 
@@ -9896,7 +9911,7 @@ Proof the program is being used, not just funded.
 
 ## Try it on your top competitor
 
-The [free plan](https://usesignallabs.com/pricing) covers two competitors with living pages, the real-time signal feed, the suggested-actions inbox and a battlecard a month, on three seats. No credit card, no expiry, and about a minute to set up. Pro ($29/month) and Ultra ($99/month) add more competitors, automatic refresh, Battle Rooms and more battlecards.
+The [free plan](https://usesignallabs.com/pricing) covers two competitors with living pages, a daily signal feed, the suggested-actions inbox and a battlecard a month, on three seats. No credit card, no expiry, and about a minute to set up. Pro ($29/month) and Ultra ($99/month) add more competitors, automatic refresh, Battle Rooms and more battlecards.
 
 [**Start free**](https://app.usesignallabs.com/login), or [book a walkthrough](https://usesignallabs.com/contact) if you would rather see it run against your own market first.
 

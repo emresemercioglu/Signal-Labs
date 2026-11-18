@@ -273,7 +273,7 @@ Here's the toolkit that actually works for solo founders:
 
 **Getting started:** Start on the free CIx plan — two competitors tracked as living pages, no credit card — or use Google Alerts plus manual website checks. Time investment: 15-20 minutes per week.
 
-**Growing tier:** A CIx [Pro plan](https://usesignallabs.com/pricing) ($29/month) once two competitors stop being enough: 5 competitors, automatic refresh and Battle Rooms. Time investment: 1-2 hours per week.
+**Growing tier:** A CIx [Pro plan](https://usesignallabs.com/pricing) ($29/month) once two competitors stop being enough: 5 competitors, automatic refresh and API access. Time investment: 1-2 hours per week.
 
 **Enterprise tier:** CIx Enterprise plan for advanced needs (custom integrations, SSO, dedicated support, monthly CI strategy consulting calls). Time investment: Full-time CI role(s).
 

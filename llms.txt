@@ -20,10 +20,10 @@
 
 ## Pricing model
 
-- **Free** ($0) — two competitors tracked as living pages, the signal feed and suggested-actions inbox, one battlecard and ten chat questions a month, and three seats (one creator plus two viewers). No credit card, no expiry. A company email address is required; personal addresses are not supported.
-- **Pro** ($29/month, or $24/month billed yearly) — five competitors with automatic monthly refresh, ten battlecards and 100 chat questions a month, two creators plus eight viewers, Battle Rooms, and API & MCP access (1,000 requests/day).
-- **Ultra** ($99/month, or $79/month billed yearly) — fifteen competitors, 50 battlecards and 500 chat questions a month, five creators plus 25 viewers, API & MCP (10,000 requests/day), and priority support.
-- **Enterprise** — custom limits, seats and API rate limits, onboarding and monthly CI strategy calls. Book a call.
+- **Free** ($0) — two competitors tracked as living pages, a daily signal feed and the suggested-actions inbox, one battlecard and ten chat questions a month, three seats (one creator plus two viewers), and Battle Rooms. No credit card, no expiry. A company email address is required; personal addresses are not supported.
+- **Pro** ($29/month, or $24/month billed yearly) — five competitors with automatic monthly refresh and signals checked every 4 hours, ten battlecards and 100 chat questions a month, two creators plus eight viewers, and API & MCP access (1,000 requests/day).
+- **Ultra** ($99/month, or $79/month billed yearly) — fifteen competitors with signals checked every hour, 50 battlecards and 500 chat questions a month, five creators plus 25 viewers, API & MCP (10,000 requests/day), and priority support.
+- **Enterprise** — custom limits, signal frequency, seats and API rate limits, onboarding and monthly CI strategy calls. Book a call.
 - Self-serve: upgrade, switch or cancel from the Plan page in the app. Upgrades apply immediately (prorated); downgrades and cancellations take effect at the end of the billing period, and nothing is deleted.
 - Details: [Pricing](https://usesignallabs.com/pricing)
 

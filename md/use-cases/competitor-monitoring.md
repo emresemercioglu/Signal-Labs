@@ -329,7 +329,7 @@ CIx suggests them. It analyses your website and category and proposes competitor
 
 +
 
-The free plan tracks two competitors with real-time signals and a monthly battlecard, with no credit card and no expiry. Pro ($29/month) tracks 5 competitors and Ultra ($99/month) tracks 15, both with automatic monthly refresh; Enterprise is custom.
+The free plan tracks two competitors with daily signals and a monthly battlecard, with no credit card and no expiry. Pro ($29/month) tracks 5 competitors and Ultra ($99/month) tracks 15, both with automatic monthly refresh; Enterprise is custom.
 
 ## Competitive Intelligence Across Functions
 
@@ -429,7 +429,7 @@ Never miss a competitor move again. Automated monitoring with instant alerts for
                         "name": "How many competitors can we monitor?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "The free plan tracks two competitors with real-time signals and a monthly battlecard, with no credit card and no expiry. Pro ($29/month) tracks 5 competitors and Ultra ($99/month) tracks 15, both with automatic monthly refresh; Enterprise is custom."
+                                "text": "The free plan tracks two competitors with daily signals and a monthly battlecard, with no credit card and no expiry. Pro ($29/month) tracks 5 competitors and Ultra ($99/month) tracks 15, both with automatic monthly refresh; Enterprise is custom."
                         }
                 }
         ]

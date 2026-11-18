@@ -404,9 +404,9 @@ Adding a competitor takes about a minute, and the first living page is generated
 
 Yes. Signal Labs exposes a REST API and a hosted MCP server, so you can pull competitor intelligence into your own tools or query it directly from MCP clients such as Claude and Cursor. Official Python and JavaScript SDKs are available.
 
-## Simple pricing
+## Pricing that scales with you
 
-Start free on your top two competitors. Upgrade in the app when you need more.
+Start free. Add competitors, battlecards and seats as your team grows.
 
 Monthly Yearly (save about 20%)
 
@@ -420,13 +420,15 @@ See Signal Labs work on your top competitors.
 
 2 competitors tracked, each a living page
 
-Real-time signals + suggested-actions inbox
+Daily signals + suggested-actions inbox
 
 1 battlecard a month
 
 10 chat questions a month
 
 1 creator + 2 viewers
+
+Battle Rooms
 
 Email support
 
@@ -444,6 +446,8 @@ Everything in Free, plus:
 
 5 competitors tracked
 
+Signals checked every 4 hours
+
 Pages refresh automatically every month
 
 10 battlecards a month
@@ -452,11 +456,9 @@ Pages refresh automatically every month
 
 2 creators + 8 viewers
 
-Battle Rooms
-
 API & MCP access
 
-[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=yearly)
+[Get Pro](https://app.usesignallabs.com/login?plan=pro&cycle=monthly)
 
 ### Ultra
 
@@ -468,6 +470,8 @@ Everything in Pro, plus:
 
 15 competitors tracked
 
+Signals checked every hour
+
 50 battlecards a month
 
 500 chat questions a month
@@ -478,7 +482,7 @@ Higher API & MCP limits
 
 Priority support
 
-[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=yearly)
+[Get Ultra](https://app.usesignallabs.com/login?plan=ultra&cycle=monthly)
 
 ### Enterprise
 
@@ -491,6 +495,8 @@ Custom limits, onboarding and CI strategy calls.
 Everything in Ultra, plus:
 
 Custom number of competitors
+
+Custom signal frequency
 
 Custom battlecard, chat and API limits
 
@@ -514,7 +520,7 @@ A sample battlecard built for your market
 
 ## Stop researching competitors. Start beating them.
 
-Track your top two competitors free: living pages, real-time signals and a battlecard every month. No credit card, no expiry.
+Track your top two competitors free: living pages, daily signals and a battlecard every month. No credit card, no expiry.
 
 [Start Free](https://app.usesignallabs.com/login) [Book Demo](https://usesignallabs.com/contact)
 
@@ -534,7 +540,7 @@ Track your top two competitors free: living pages, real-time signals and a battl
             "availability": "https://schema.org/InStock",
             "price": "0",
             "url": "https://usesignallabs.com/pricing",
-            "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Real-time signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Email support."
+            "description": "See Signal Labs work on your top competitors. 2 competitors tracked, each a living page; Daily signals + suggested-actions inbox; 1 battlecard a month; 10 chat questions a month; 1 creator + 2 viewers; Battle Rooms; Email support."
         },
         {
             "@type": "Offer",
@@ -543,7 +549,7 @@ Track your top two competitors free: living pages, real-time signals and a battl
             "availability": "https://schema.org/InStock",
             "price": "29",
             "url": "https://usesignallabs.com/pricing",
-            "description": "Track your core competitive set and arm your team. 5 competitors tracked; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; Battle Rooms; API & MCP access."
+            "description": "Track your core competitive set and arm your team. 5 competitors tracked; Signals checked every 4 hours; Pages refresh automatically every month; 10 battlecards a month; 100 chat questions a month; 2 creators + 8 viewers; API & MCP access."
         },
         {
             "@type": "Offer",
@@ -552,7 +558,7 @@ Track your top two competitors free: living pages, real-time signals and a battl
             "availability": "https://schema.org/InStock",
             "price": "99",
             "url": "https://usesignallabs.com/pricing",
-            "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
+            "description": "Your whole market, for your whole go-to-market team. 15 competitors tracked; Signals checked every hour; 50 battlecards a month; 500 chat questions a month; 5 creators + 25 viewers; Higher API & MCP limits; Priority support."
         },
         {
             "@type": "Offer",
@@ -560,7 +566,7 @@ Track your top two competitors free: living pages, real-time signals and a battl
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
             "url": "https://usesignallabs.com/pricing",
-            "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
+            "description": "Custom limits, onboarding and CI strategy calls. Custom number of competitors; Custom signal frequency; Custom battlecard, chat and API limits; Custom seats; Onboarding for your team; Monthly CI strategy calls."
         }
     ],
     "featureList": [

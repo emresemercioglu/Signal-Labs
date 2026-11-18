@@ -134,7 +134,7 @@ Proof the program is being used, not just funded.
 
 ## Try it on your top competitor
 
-The [free plan](https://usesignallabs.com/pricing) covers two competitors with living pages, the real-time signal feed, the suggested-actions inbox and a battlecard a month, on three seats. No credit card, no expiry, and about a minute to set up. Pro ($29/month) and Ultra ($99/month) add more competitors, automatic refresh, Battle Rooms and more battlecards.
+The [free plan](https://usesignallabs.com/pricing) covers two competitors with living pages, a daily signal feed, the suggested-actions inbox and a battlecard a month, on three seats. No credit card, no expiry, and about a minute to set up. Pro ($29/month) and Ultra ($99/month) add more competitors, automatic refresh, Battle Rooms and more battlecards.
 
 [**Start free**](https://app.usesignallabs.com/login), or [book a walkthrough](https://usesignallabs.com/contact) if you would rather see it run against your own market first.
 
