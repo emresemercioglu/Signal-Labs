@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence Solutions | CIx - Signal Labs"
 description: "Comprehensive competitive intelligence solutions for every team, use case, and industry. Real-time insights, automated battlecards, and continuous monitoring. Find the perfect CI solution for your needs."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions.png
 url: https://usesignallabs.com/solutions
 ---
 

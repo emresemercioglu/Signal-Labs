@@ -1,7 +1,7 @@
 ---
 title: "The Real-Time CI Playbook for Product Marketing Teams - Signal Labs Blog"
 description: "A practical playbook for product marketers to build real-time competitive intelligence into positioning, messaging, battlecards, and launches. Stop being surprised by competitor moves."
-image: https://usesignallabs.com/og-image-blog-post-pmm-ci-playbook-v2.png
+image: https://usesignallabs.com/og/blog-pmm-playbook.png
 url: https://usesignallabs.com/blog/real-time-ci-playbook-for-product-marketing
 ---
 
@@ -320,7 +320,7 @@ Read more →
       "datePublished": "2026-02-17",
       "dateModified": "2026-02-17",
       "mainEntityOfPage": "https://usesignallabs.com/blog/real-time-ci-playbook-for-product-marketing",
-      "image": "https://usesignallabs.com/og-image-blog-post-pmm-ci-playbook-v2.png",
+      "image": "https://usesignallabs.com/og/blog-pmm-playbook.png",
       "articleSection": "Product Marketing",
       "keywords": ["product marketing", "competitive intelligence", "PMM", "positioning", "battlecards", "real-time CI", "competitive analysis", "product positioning"]
     }

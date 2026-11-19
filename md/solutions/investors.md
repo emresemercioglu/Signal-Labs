@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Investors & VCs | Due Diligence & Portfolio Monitoring"
 description: "Competitive intelligence for investment due diligence and portfolio monitoring. Assess startup competitive moats, validate positioning claims, and track portfolio company performance with real-time CI."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-investors.png
 url: https://usesignallabs.com/solutions/investors
 ---
 

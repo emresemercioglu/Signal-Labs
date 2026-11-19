@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Solopreneurs: Founder's Guide - Signal Labs Blog"
 description: "Solo founders need competitive intelligence, but not enterprise tools. Learn how to track competitors, sharpen positioning, and win deals as a team of one."
-image: https://usesignallabs.com/og-image-blog-post-solopreneurs-v2.png
+image: https://usesignallabs.com/og/blog-solopreneurs.png
 url: https://usesignallabs.com/blog/competitive-intelligence-for-solopreneurs
 ---
 

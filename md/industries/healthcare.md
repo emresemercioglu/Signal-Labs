@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Healthcare & Pharmaceuticals | CIx"
 description: "Competitive intelligence for healthcare, pharma, biotech, and medical devices. Clinical trial intelligence, regulatory pathways, reimbursement landscape, and patent monitoring."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-healthcare.png
 url: https://usesignallabs.com/industries/healthcare
 ---
 

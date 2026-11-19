@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Strategy & Leadership Teams | CIx"
 description: "Strategic competitive intelligence for executives and leadership teams. Market movement dashboards, M&A intelligence, and board-ready insights. Make confident strategic decisions with real-time CI."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-leadership.png
 url: https://usesignallabs.com/solutions/leadership
 ---
 

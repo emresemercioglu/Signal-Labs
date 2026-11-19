@@ -1,7 +1,7 @@
 ---
 title: "Real-Time Competitor Monitoring | 24/7 Competitive Tracking"
 description: "Never miss a competitor move. 24/7 real-time monitoring of websites, pricing, products, press, and social media. Instant alerts when competitors change."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/use-case-monitoring.png
 url: https://usesignallabs.com/use-cases/competitor-monitoring
 ---
 

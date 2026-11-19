@@ -1,7 +1,7 @@
 ---
 title: "Sales Enablement Battlecards: From Static Docs to Real-Time Competitive Intelligence - Signal Labs Blog"
 description: "Static battlecards go stale fast. Learn how real-time competitive intelligence keeps battlecards up-to-date, embedded in sales workflow, and trusted in competitive deals."
-image: https://usesignallabs.com/og-image-blog-post-sales-enablement-v2.png
+image: https://usesignallabs.com/og/blog-sales-enablement.png
 url: https://usesignallabs.com/blog/sales-enablement-battlecards-real-time-competitive-intelligence
 ---
 

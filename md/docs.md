@@ -1,6 +1,7 @@
 ---
 title: "API Introduction — Signal Labs Docs"
 description: "Signal Labs API documentation. Authentication, error handling, rate limits, and getting started with the competitive intelligence API."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs
 ---
 

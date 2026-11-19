@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions - Signal Labs"
 description: "Get answers to common questions about competitive intelligence, Signal Labs services, CIx platform, pricing, and getting started with CI enablement."
-image: https://usesignallabs.com/og-image-faq-v2.png
+image: https://usesignallabs.com/og/faq.png
 url: https://usesignallabs.com/faq
 ---
 

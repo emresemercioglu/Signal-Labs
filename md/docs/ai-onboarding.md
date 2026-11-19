@@ -1,6 +1,7 @@
 ---
 title: "AI Onboarding — Signal Labs Docs"
 description: "Everything an AI agent needs to know to use Signal Labs: authentication, core workflow, endpoints, and credits."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs/ai-onboarding
 ---
 

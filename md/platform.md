@@ -1,7 +1,7 @@
 ---
 title: "CIx Platform: Competitive Intelligence Features - Signal Labs"
 description: "Everything in the CIx competitive intelligence platform: living competitor pages, scored signals and drafted actions, battlecards, Battle Rooms, Ask CIx, digests, analytics and an API & MCP server."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/platform.png
 url: https://usesignallabs.com/platform
 ---
 

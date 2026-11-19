@@ -1,7 +1,7 @@
 ---
 title: "Klue Alternative | Signal Labs CIx vs Klue"
 description: "Signal Labs CIx vs Klue: an honest comparison. CIx automates competitive intelligence end to end and tailors battlecards for every go-to-market team."
-image: https://usesignallabs.com/og-image-vs-klue-v2.png
+image: https://usesignallabs.com/og/vs-klue.png
 url: https://usesignallabs.com/vs/klue
 ---
 

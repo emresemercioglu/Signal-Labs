@@ -1,7 +1,7 @@
 ---
 title: "Contact - Signal Labs"
 description: "Schedule a free competitive intelligence consultation with Signal Labs. Get expert guidance on battlecards, CI strategy, and the CIx platform. No obligation."
-image: https://usesignallabs.com/og-image-contact-v2.png
+image: https://usesignallabs.com/og/contact.png
 url: https://usesignallabs.com/contact
 ---
 

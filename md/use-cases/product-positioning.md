@@ -1,7 +1,7 @@
 ---
 title: "Product Positioning with Real-Time Intelligence | CIx"
 description: "Position your product for differentiation with competitive intelligence. Find positioning white space, craft unique value props, and stand out in crowded markets."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/use-case-positioning.png
 url: https://usesignallabs.com/use-cases/product-positioning
 ---
 

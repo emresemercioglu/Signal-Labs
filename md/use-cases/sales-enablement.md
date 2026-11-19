@@ -1,7 +1,7 @@
 ---
 title: "Sales Enablement with Competitive Intelligence | Real-Time Battlecards"
 description: "Enable your sales team with real-time competitive intelligence. Automated battlecards, competitive talk tracks, and intelligence integrated with Highspot, Seismic, Salesforce. Scale enablement 10x."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/use-case-sales-enablement.png
 url: https://usesignallabs.com/use-cases/sales-enablement
 ---
 

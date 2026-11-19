@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Marketing & Growth Teams | CIx"
 description: "Competitive positioning, messaging intelligence, and market insights for marketing teams. Track competitor campaigns, differentiate your brand, and win in crowded markets with real-time CI."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-marketing.png
 url: https://usesignallabs.com/solutions/marketing
 ---
 

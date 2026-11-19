@@ -1,7 +1,7 @@
 ---
 title: "Compare CIx vs Klue, Crayon & AlphaSense | Signal Labs"
 description: "Honest, source-attributed comparisons of Signal Labs CIx against Klue, Crayon and AlphaSense — on capability and operating model, not price."
-image: https://usesignallabs.com/og-image-vs-v2.png
+image: https://usesignallabs.com/og/compare.png
 url: https://usesignallabs.com/vs
 ---
 

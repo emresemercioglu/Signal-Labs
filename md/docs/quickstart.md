@@ -1,6 +1,7 @@
 ---
 title: "Quickstart — Signal Labs Docs"
 description: "Track your first competitor in 3 minutes using the Signal Labs API with curl, JavaScript, or Python."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs/quickstart
 ---
 

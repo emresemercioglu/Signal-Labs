@@ -1,7 +1,7 @@
 ---
 title: "AI-Powered Competitive Battlecard Generation | CIx"
 description: "Generate competitive battlecards in 60 seconds with AI. Multi-focus battlecards for sales, marketing, product, and leadership. Always current with automatic refresh."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/use-case-battlecards.png
 url: https://usesignallabs.com/use-cases/battlecard-generation
 ---
 

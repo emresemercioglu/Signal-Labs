@@ -1,7 +1,7 @@
 ---
 title: "Competing in Real Time: A CI Playbook for High-Growth Teams - Signal Labs Blog"
 description: "Real-time competitive intelligence is no longer a 'nice-to-have.' Learn how Sales, Product Marketing, Marketing, and Product teams can turn intel into action."
-image: https://usesignallabs.com/og-image-blog-post-2-v2.png
+image: https://usesignallabs.com/og/blog-competing-in-real-time.png
 url: https://usesignallabs.com/blog/competing-in-real-time-a-ci-playbook-for-high-growth-teams
 ---
 
@@ -143,7 +143,7 @@ Read more →
       "@type": "Article",
       "headline": "Competing in Real Time: A CI Playbook for High-Growth Teams",
       "description": "Real-time competitive intelligence is no longer a 'nice-to-have.' Learn how Sales, Product Marketing, Marketing, and Product teams can turn intel into action.",
-      "image": "https://usesignallabs.com/og-image-blog-post-2-v2.png",
+      "image": "https://usesignallabs.com/og/blog-competing-in-real-time.png",
       "datePublished": "2024-11-05T00:00:00Z",
       "dateModified": "2024-11-05T00:00:00Z",
       "author": {

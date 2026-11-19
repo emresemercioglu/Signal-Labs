@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Sales & Revenue Teams | CIx"
 description: "Real-time competitive intelligence for sales teams. Battlecards, win/loss analysis, and competitive insights that help reps close deals faster. Embedded in Salesforce, Gong, and your workflow."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-sales.png
 url: https://usesignallabs.com/solutions/sales
 ---
 

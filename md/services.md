@@ -1,7 +1,7 @@
 ---
 title: "Consulting Services - Signal Labs"
 description: "Expert competitive intelligence consulting for B2B teams. Battlecards, win/loss analysis, CI programs, and sales enablement. Partnering with growth-stage companies for smarter GTM decisions."
-image: https://usesignallabs.com/og-image-services-v2.png
+image: https://usesignallabs.com/og/services.png
 url: https://usesignallabs.com/services
 ---
 

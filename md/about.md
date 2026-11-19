@@ -1,7 +1,7 @@
 ---
 title: "About Signal Labs - The Team Behind CIx"
 description: "Signal Labs builds CIx, the competitive intelligence platform that keeps itself current. Meet founder Emre Semercioglu and the thinking behind living competitor intelligence."
-image: https://usesignallabs.com/og-image-about-v2.png
+image: https://usesignallabs.com/og/about.png
 url: https://usesignallabs.com/about
 ---
 

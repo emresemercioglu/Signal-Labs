@@ -1,7 +1,7 @@
 ---
 title: "The CI Treadmill Is Broken: Why Battlecards Age in Days, Not Quarters - Signal Labs Blog"
 description: "The speed of market change outpaces the speed of enablement. Competitors adjust positioning weekly, yet sellers often get static battlecard updates once a quarter."
-image: https://usesignallabs.com/og-image-blog-post-1-v2.png
+image: https://usesignallabs.com/og/blog-ci-treadmill.png
 url: https://usesignallabs.com/blog/the-ci-treadmill-is-broken-why-battlecards-age-in-days-not-quarters
 ---
 
@@ -111,7 +111,7 @@ Read more →
       "@type": "Article",
       "headline": "The CI Treadmill Is Broken: Why Battlecards Age in Days, Not Quarters",
       "description": "The speed of market change outpaces the speed of enablement. Competitors adjust positioning weekly, yet sellers often get static battlecard updates once a quarter.",
-      "image": "https://usesignallabs.com/og-image-blog-post-1-v2.png",
+      "image": "https://usesignallabs.com/og/blog-ci-treadmill.png",
       "datePublished": "2025-11-03T00:00:00Z",
       "dateModified": "2025-11-03T00:00:00Z",
       "author": {

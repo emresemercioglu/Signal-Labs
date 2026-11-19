@@ -1,7 +1,7 @@
 ---
 title: "Crayon Alternative | Signal Labs CIx vs Crayon"
 description: "Signal Labs CIx vs Crayon: an honest comparison. CIx removes the curation step and generates enablement tailored to each team, automatically."
-image: https://usesignallabs.com/og-image-vs-crayon-v2.png
+image: https://usesignallabs.com/og/vs-crayon.png
 url: https://usesignallabs.com/vs/crayon
 ---
 

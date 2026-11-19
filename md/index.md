@@ -1,7 +1,7 @@
 ---
 title: "Signal Labs | AI-Powered Competitive Intelligence Platform"
 description: "Living competitor pages that keep themselves current, real-time signals with a recommended action, and battlecards ready to send. Start free, no credit card."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/home.png
 url: https://usesignallabs.com/
 ---
 
@@ -366,7 +366,7 @@ Track your top two competitors free: living pages, daily signals and a battlecar
         "AI-driven competitor discovery at company and product level",
         "REST API, JavaScript and Python SDKs, and an MCP server"
     ],
-    "screenshot": "https://usesignallabs.com/og-image-home-v2.png",
+    "screenshot": "https://usesignallabs.com/og/home.png",
     "sameAs": [
         "https://www.npmjs.com/package/@signal-labs/sdk",
         "https://pypi.org/project/signallabs/"

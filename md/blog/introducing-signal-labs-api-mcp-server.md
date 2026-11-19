@@ -1,7 +1,7 @@
 ---
 title: "Introducing the Signal Labs API and MCP Server: Give Your AI Agents Real-Time Competitive Intelligence - Signal Labs Blog"
 description: "Launch of the Signal Labs public API, native SDKs for JavaScript and Python, and an MCP server for Claude, Cursor, Copilot, and Gemini. Everything you can do in the dashboard, now programmable."
-image: https://usesignallabs.com/og-image-blog-api-mcp-launch-v2.png
+image: https://usesignallabs.com/og/blog-api-mcp.png
 url: https://usesignallabs.com/blog/introducing-signal-labs-api-mcp-server
 ---
 

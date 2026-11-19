@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Deep Tech Companies | CIx"
 description: "Competitive intelligence for deep tech: technical differentiation validation, patent landscape monitoring, R&D intelligence, and long sales cycle competitive tracking."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-deep-tech.png
 url: https://usesignallabs.com/industries/deep-tech
 ---
 

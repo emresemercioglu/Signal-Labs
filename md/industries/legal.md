@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Law Firms & Legal Services | CIx"
 description: "Competitive intelligence for law firms: client pitch intelligence, practice area positioning, lateral hire decisions, and RFP/bid competitive analysis."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-legal.png
 url: https://usesignallabs.com/industries/legal
 ---
 

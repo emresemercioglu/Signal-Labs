@@ -1,7 +1,7 @@
 ---
 title: "Win/Loss Analysis with Real-Time Competitive Intelligence | CIx"
 description: "Understand why you're winning and losing competitive deals. Automated pattern detection, competitor-specific win rates, and actionable insights. Integrate with Salesforce, Clozd, and Gong."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/use-case-win-loss.png
 url: https://usesignallabs.com/use-cases/win-loss-analysis
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for AI Agents | Clean, Structured CI Data"
 description: "Feed your AI agents clean, structured competitive intelligence. Reduce noise, minimize hallucination, and increase AI effectiveness with real-time, verified CI data."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-ai-agents.png
 url: https://usesignallabs.com/solutions/ai-agents
 ---
 

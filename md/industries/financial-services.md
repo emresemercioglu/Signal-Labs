@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Financial Services & Fintech | CIx"
 description: "Competitive intelligence for financial services, fintech, banks, and investment firms. Regulatory positioning, trust factors, competitive analysis, and market intelligence."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-financial-services.png
 url: https://usesignallabs.com/industries/financial-services
 ---
 

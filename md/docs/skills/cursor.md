@@ -1,6 +1,7 @@
 ---
 title: "Cursor Skill — Signal Labs Docs"
 description: "AI prompt and instructions for using the Signal Labs competitive intelligence API in Cursor IDE."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs/skills/cursor
 ---
 

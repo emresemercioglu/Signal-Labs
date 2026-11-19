@@ -1,7 +1,7 @@
 ---
 title: "AlphaSense Alternative for GTM Teams | CIx vs AlphaSense"
 description: "Signal Labs CIx vs AlphaSense: research depth versus competitive enablement. An honest look at which job each platform actually does, and when to run both."
-image: https://usesignallabs.com/og-image-vs-alphasense-v2.png
+image: https://usesignallabs.com/og/vs-alphasense.png
 url: https://usesignallabs.com/vs/alphasense
 ---
 

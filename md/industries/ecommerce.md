@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Ecommerce & Retail | CIx"
 description: "Competitive intelligence for ecommerce: pricing wars, product catalog competition, marketing channel intelligence, and seller competitive analysis."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-ecommerce.png
 url: https://usesignallabs.com/industries/ecommerce
 ---
 

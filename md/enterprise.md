@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Competitive Intelligence Software | CIx"
 description: "Enterprise-grade competitive intelligence with scale, governance and customization. Integrate internal data, embed CI in existing workflows, and roll intelligence out to hundreds of users. Security and deployment requirements scoped with your team."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/enterprise.png
 url: https://usesignallabs.com/enterprise
 ---
 

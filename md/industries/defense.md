@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Defense & Aerospace | CIx"
 description: "Competitive intelligence for defense contractors: bid intelligence, capability comparison, strategic partnership monitoring, and regulatory compliance tracking."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-defense.png
 url: https://usesignallabs.com/industries/defense
 ---
 

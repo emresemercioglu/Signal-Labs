@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Startups | CIx"
 description: "Compete with giants even with lean teams. Competitive intelligence for startups, solo founders, and early-stage companies. No dedicated CI team required. Start free."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/startups.png
 url: https://usesignallabs.com/startups
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "MCP Server — Signal Labs Docs"
 description: "Use Signal Labs competitive intelligence from Claude, Cursor, Copilot, Gemini, and other AI tools via the Model Context Protocol."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs/mcp
 ---
 

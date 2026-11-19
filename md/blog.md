@@ -1,7 +1,7 @@
 ---
 title: "Blog - Signal Labs"
 description: "Insights and updates on competitive intelligence, market analysis, and CI strategies."
-image: https://usesignallabs.com/og-image-blog-v2.png
+image: https://usesignallabs.com/og/blog.png
 url: https://usesignallabs.com/blog
 ---
 

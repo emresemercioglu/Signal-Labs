@@ -1,7 +1,7 @@
 ---
 title: "Signal to Action: Competitive Intelligence That Finishes the Work - Signal Labs Blog"
 description: "What's new in CIx: living competitor pages, an actions inbox that turns every competitor move into drafted work, Battle Rooms, custom battlecards and org-wide analytics."
-image: https://usesignallabs.com/og-image-blog-signal-to-action.png
+image: https://usesignallabs.com/og/blog-signal-to-action.png
 url: https://usesignallabs.com/blog/signal-to-action
 ---
 

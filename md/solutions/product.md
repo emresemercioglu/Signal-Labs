@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Product & Engineering Teams | CIx"
 description: "Build products that win with competitive feature analysis, UI/UX intelligence, and roadmap insights. Track competitor product development and validate your strategy with real-time CI."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-product.png
 url: https://usesignallabs.com/solutions/product
 ---
 

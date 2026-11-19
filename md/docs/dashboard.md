@@ -1,6 +1,7 @@
 ---
 title: "Using the Dashboard — Signal Labs Docs"
 description: "Overview of the Signal Labs web application dashboard: companies, competitors, battlecards, signals, AI chat, and API key management."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs/dashboard
 ---
 

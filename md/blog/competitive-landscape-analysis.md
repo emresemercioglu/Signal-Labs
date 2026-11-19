@@ -1,7 +1,7 @@
 ---
 title: "Competitive Landscape Analysis: Compare 10+ Competitors in One View - Signal Labs Blog"
 description: "Stop stitching together isolated battlecards. Landscape Analysis helps you compare 10+ competitors at once with positioning maps, side-by-side comparisons, and market gaps."
-image: https://usesignallabs.com/og-image-blog-post-landscape-analysis-v2.png
+image: https://usesignallabs.com/og/blog-landscape-analysis.png
 url: https://usesignallabs.com/blog/competitive-landscape-analysis
 ---
 
@@ -151,7 +151,7 @@ Read more →
       "@type": "Article",
       "headline": "Competitive Landscape Analysis: Compare 10+ Competitors in One View",
       "description": "Stop stitching together isolated battlecards. Landscape Analysis helps you compare 10+ competitors at once with positioning maps, side-by-side comparisons, and market gaps.",
-      "image": "https://usesignallabs.com/og-image-blog-post-landscape-analysis-v2.png",
+      "image": "https://usesignallabs.com/og/blog-landscape-analysis.png",
       "datePublished": "2026-01-23T00:00:00Z",
       "dateModified": "2026-01-23T00:00:00Z",
       "author": {

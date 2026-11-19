@@ -1,7 +1,7 @@
 ---
 title: "Market Intelligence Platform | Competitive & Market Intelligence"
 description: "Track market trends, industry dynamics, and competitive movements. Continuous market intelligence that connects competitive intelligence to broader market forces."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/use-case-market-intelligence.png
 url: https://usesignallabs.com/use-cases/market-intelligence
 ---
 

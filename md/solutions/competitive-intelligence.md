@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for CI & Research Teams | CIx"
 description: "Transform your CI team from manual researchers to strategic enablers. Automate 80% of routine work, scale insights 10x, and democratize competitive intelligence across your organization."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/solutions-ci-teams.png
 url: https://usesignallabs.com/solutions/competitive-intelligence
 ---
 

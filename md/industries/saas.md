@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for SaaS Companies | CIx"
 description: "Competitive intelligence for SaaS: feature comparison, pricing intelligence, PLG competitive insights, and positioning in crowded SaaS markets. Built for fast-moving SaaS companies."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-saas.png
 url: https://usesignallabs.com/industries/saas
 ---
 

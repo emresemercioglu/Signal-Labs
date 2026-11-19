@@ -1,6 +1,7 @@
 ---
 title: "Claude Code Snippet — Signal Labs Docs"
 description: "CLAUDE.md snippet for persistent AI knowledge about the Signal Labs competitive intelligence API."
+image: https://usesignallabs.com/og/docs.png
 url: https://usesignallabs.com/docs/skills/claude-code
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Competitive Intelligence for Gaming Companies | CIx"
 description: "Competitive intelligence for gaming: live-service game monitoring, feature and content update tracking, player acquisition strategies, and monetization model intelligence."
-image: https://usesignallabs.com/og-image-home-v2.png
+image: https://usesignallabs.com/og/industry-gaming.png
 url: https://usesignallabs.com/industries/gaming
 ---
 
